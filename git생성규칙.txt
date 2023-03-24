@@ -1,0 +1,13 @@
+git-flow
+- master - 기준
+- develop - 간단기능 및 QA
+- feature-M - 기능 및 모션
+- feature-S - 기능 및 모션
+
+commit 코멘트
+ • summary
+	- [브랜치명] 수정파일명 
+	  ex)[feature-M] index.html
+ • Description
+	- 수정내용 간단하게 
+	    ex) 탭버튼 타겟 수정
