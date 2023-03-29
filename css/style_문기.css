@@ -1,0 +1,122 @@
+@import url("./reset.css");
+
+
+
+
+/* .test {
+  width: 2000px;
+  height: 500px;
+  background-color: lightgreen;
+} */
+
+/* section3(회사정보 및 연결) */
+
+#section3 .container{
+  margin: 0 auto;
+  width: 1920px;
+  height: 1080px;
+  background-color: #f7f7f7;
+}
+.top_box{
+  width: 1920px;height: 200px;
+  background-color: #3CB4E5;
+}
+.contact_container{
+  position: absolute;
+  top: 348px;left: 235px;
+  font-size: 18px;
+}
+.contact_container b{font-size: 18px;font-weight: bold;}
+address{margin-top: 40px;}
+.contact_btn{
+  width: 166px;height: 50px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16; font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 80px;
+  cursor: pointer;
+  transition: all .2s;
+  margin-top: 50px;
+}
+.contact_btn .contact_wrap{opacity: 0;}
+/* contact버튼 마우스 호버 */
+.contact_btn:hover{
+  width: 730px;height: 313px;
+  border-radius: 25px;
+  padding: 20px 30px;
+  background-color: #000;
+  color: #fff;
+  cursor: auto;
+}
+.contact_btn:hover>p{display: none;}
+.contact_btn:hover .contact_wrap{
+  opacity: 1;
+  transition: all 1s;
+  position: relative;
+  top: -20px;left: -30px;
+}
+/* 회사 정보 및 연결 정보 기입 창 */
+.contact_wrap{
+  width: 790px;height: 313px;
+  display: flex;
+  opacity: 0;
+}
+.contact_wrapper{
+  width: 730px;height: 313px;
+  border-radius: 25px;
+  padding: 20px 30px;
+  background-color: #000;
+  color: #fff;
+}
+.input_box{
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+.input_box p:last-child input{
+  width: 670px;
+}
+.input_box p:nth-child(2) input,
+.input_box p:nth-child(4) input{
+  margin-left: 30px;
+}
+input[placeholder] {
+  width: 320px;height: 50px;
+  font-size: 14px;color: #fff;
+  border: 0;
+  background-color: #000;
+  outline: none;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 20px;
+}
+.send_btn{
+  width: 670px;height: 50px;
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  text-align: center;line-height: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.close_btn{
+  width: 50px;height: 50px;
+  margin-left: 10px;
+  background: url(../images/close_btn.png) no-repeat 0 0 / auto 100%;
+  cursor: pointer;
+}
+
+/* section4(인력 구인) */
+
+#section4 .container{
+  margin: 0 auto;
+  width: 1920px;
+  height: 1080px;
+  background-color: #f7f7f7;
+  border: 1px solid red;
+}
+.top_view{
+  display: flex;
+  justify-content: flex-end;
+}
