@@ -4,6 +4,7 @@
 #wrap .bg {
   display: none;
   position: absolute;
+  top: 0;
   left: 50%;
   width: 1920px;
   height: 1080px;
@@ -23,7 +24,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: 80px 10px;
+  padding: clamp(1rem, 5.8694057227vw, 8rem) 10px;
 }
 #wrap #header .container .left {
   width: auto;
@@ -32,14 +33,14 @@
   width: 100%;
 }
 #wrap #header .container .left a img {
-  height: 43px;
+  height: clamp(1rem, 3.1548055759vw, 4.3rem);
 }
 #wrap #header .container .right {
   width: auto;
 }
 #wrap #header .container .right a {
   width: 100%;
-  height: 43px;
+  height: clamp(1rem, 3.1548055759vw, 4.3rem);
 }
 #wrap #main {
   width: 100%;
@@ -50,6 +51,7 @@
 #wrap #main #section1 .container {
   width: 100%;
   max-width: 1920px;
+  max-height: 1080px;
   margin: 0 auto;
 }
 #wrap #main #section1 .container .loader {
@@ -155,22 +157,81 @@
 }
 #wrap #main #section1 .container .textBox {
   position: absolute;
-  top: 41.2%;
-  left: 11.8%;
+  top: clamp(1rem, 28.613352898vw, 39rem);
+  left: 11.7%;
 }
 #wrap #main #section1 .container .textBox h1 {
+  opacity: 0;
   font-family: "SUIT-ExtraBold";
-  font-size: 75px;
+  font-size: clamp(1rem, 5.502567865vw, 7.5rem);
   letter-spacing: 5px;
-  margin-bottom: 35px;
+  margin-bottom: clamp(1rem, 2.5678650037vw, 3.5rem);
   color: #000;
 }
+#wrap #main #section1 .container .textBox h1:nth-child(1) {
+  animation: textUp 3s 10s forwards;
+}
+#wrap #main #section1 .container .textBox h1:nth-child(2) {
+  animation: textUp 3s 11s forwards;
+}
+#wrap #main #section1 .container .textBox h1:nth-child(3) {
+  animation: textUp 3s 12s forwards;
+}
 #wrap #main #section1 .container .textBox p {
+  opacity: 0;
   padding-top: 15px;
   font-family: "SUIT-Regular";
-  font-size: 17px;
+  font-size: clamp(1rem, 1.2472487161vw, 1.7rem);
   line-height: 1.5;
   font-weight: 600;
+  animation: textRight 3s 14s forwards;
+}
+#wrap #main #section2 {
+  position: relative;
+  width: 100%;
+  border: 1px solid red;
+  padding: clamp(1rem, 37.417461482vw, 51rem) 0 0 0;
+}
+#wrap #main #section2 h1 {
+  max-width: 1430px;
+  margin: 0 auto;
+  font-family: "SUIT-ExtraBold";
+  font-size: clamp(1rem, 6.603081438vw, 9rem);
+  color: #3CB4E5;
+  margin-bottom: 20px;
+}
+#wrap #main #section2 .sec2-bg {
+  width: 100%;
+  height: 455px;
+  background-color: #3CB4E5;
+  padding: clamp(1rem, 3.6683785767vw, 5rem) 0 0 0;
+}
+#wrap #main #section2 .sec2-bg .container {
+  position: relative;
+  width: 100%;
+  max-width: 1430px;
+  height: 1080px;
+  margin: 0 auto;
+}
+#wrap #main #section2 .sec2-bg .container .text-box {
+  width: 100%;
+}
+#wrap #main #section2 .sec2-bg .container .text-box p {
+  font-family: "SUIT-SemiBold";
+  font-size: clamp(1rem, 2.201027146vw, 3rem);
+  color: #fff;
+  line-height: 1.7;
+}
+#wrap #main #section2 .bg2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  background: url(../images/bak3.png) 50% 50% no-repeat;
+  background-size: cover;
+  opacity: 0.5;
 }
 
 @keyframes preloader {
@@ -223,5 +284,25 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes textUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes textRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
   }
 }
