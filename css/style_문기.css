@@ -14,16 +14,23 @@
 #section3 .container{
   margin: 0 auto;
   width: 1920px;
-  height: 1080px;
   background-color: #f7f7f7;
+  color: #000;
+  position: relative;
 }
 .top_box{
-  width: 1920px;height: 200px;
+  width: 100%;height: 200px;
   background-color: #3CB4E5;
 }
+.cnt_box{
+  margin: 0 auto;
+  width: 1600px;
+  height: 880px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .contact_container{
-  position: absolute;
-  top: 348px;left: 235px;
   font-size: 18px;
 }
 .contact_container b{font-size: 18px;font-weight: bold;}
@@ -41,7 +48,8 @@ address{margin-top: 40px;}
   margin-top: 50px;
 }
 .contact_btn .contact_wrap{opacity: 0;}
-/* contact버튼 마우스 호버 */
+
+/* contact버튼 마우스 호버 - 추후 클릭으로 변경 예정*/
 .contact_btn:hover{
   width: 730px;height: 313px;
   border-radius: 25px;
@@ -57,6 +65,7 @@ address{margin-top: 40px;}
   position: relative;
   top: -20px;left: -30px;
 }
+
 /* 회사 정보 및 연결 정보 기입 창 */
 .contact_wrap{
   width: 790px;height: 313px;
@@ -112,11 +121,48 @@ input[placeholder] {
 #section4 .container{
   margin: 0 auto;
   width: 1920px;
-  height: 1080px;
   background-color: #f7f7f7;
-  border: 1px solid red;
+  color: #000;
+  position: relative;
+  /* border: 1px solid red; */
 }
 .top_view{
+  position: absolute;
+  right: 0;
+}
+#section4 .cnt_box{
+  margin: 0 auto;
+  width: 1600px;
+  height: 1080px;
+  background-color: #f7f7f7;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo_container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 300px;
+}
+.career_container b{
+  font-size: 40px;font-weight: bold;
+}
+.career_container p{
+  font-size: 18px;line-height: 30px;
+  margin-top: 25px;
+  width: 430px;
+}
+.job_btn{
+  width: 230px;height: 50px;
+  font-size: 18px;line-height: 50px;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 25px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.big_logo{
+  width: 789px;height: 212px;
+  background: url(../images/logo_large.png) no-repeat 0 0 / auto 100%;
 }
