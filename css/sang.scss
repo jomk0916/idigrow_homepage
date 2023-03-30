@@ -1,0 +1,223 @@
+#wrap {
+  width: 100%;
+  .bg {
+    display: none;
+    position: absolute;
+    // top: 0;
+    left: 50%;
+    width: 1920px;
+    height: 1080px;
+    margin:0 auto;
+    background:url(../images/bak.png) 50% 50% no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    transform: translate(-50%, 0%);
+  }
+  #header {
+    position: fixed;
+    width: 100%;
+    .container {
+      width: 100%;
+      max-width: 1620px;
+      margin:0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding:80px 10px;
+      .left {
+        width: auto;
+        a {
+          width: 100%;
+          img {
+            height: 43px;
+          }
+        }
+      }
+      .right {
+        width: auto;
+        a {
+          width: 100%;
+          height: 43px;
+        }
+      }
+    }
+  }
+
+  #main {
+    width: 100%;
+    #section1 {
+      width: 100%;
+      .container {
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        .loader {
+          width: 100%;
+          max-width: 1920px;
+          max-height: 1261px;
+          width: 100%;
+          circle {
+            fill: none;
+            stroke-width: 0.5;
+            // animation:preloader 6s 1 forwards;
+            animation-name: preloader;
+            animation-duration: 6s;
+            animation-timing-function: ease-in-out;
+            transform-origin: 555px 555px; // 기준점
+            will-change: transform;
+            animation-fill-mode:forwards;
+            &:nth-of-type(1) {
+              stroke-dasharray: 5px;
+              opacity: 0.2;
+            }
+
+            &:nth-of-type(2) {
+              stroke-dasharray: 5px;
+              opacity: 0.4;
+            }
+
+            &:nth-of-type(3) {
+              stroke-dasharray: 5px;
+              opacity: 0.6;
+            }
+
+            &:nth-of-type(4) {
+              stroke-dasharray: 5px;
+              opacity: 0.9;
+            }
+
+            &:nth-of-type(5) {
+              stroke-width: 0.8px;
+              background-color: lightcoral;
+            }
+
+
+            // 작은원
+            &:nth-of-type(6) {
+              fill: #54C0E8;
+            }
+
+            &:nth-of-type(7) {
+              fill: #FF5C35;
+            }
+
+            &:nth-of-type(8) {
+              fill: #54C0E8;
+            }
+
+            &:nth-of-type(9) {
+              fill: #FF5C35;
+            }
+
+            &:nth-of-type(10) {
+              fill: #FF5C35;
+            }
+
+            &:nth-of-type(11) {
+              fill: #54C0E8;
+            }
+
+            @for $i from 1 through 11 {
+              &:nth-of-type(#{$i}) {
+                animation-delay: -#{$i * 0.15}s;
+              }
+            }
+
+            &.main_circle {
+              fill: #FF5C35;
+              animation: circleScale 5s ease-in-out 1 both, circleScale2 3s ease-in-out 8s forwards;
+            }
+
+            &.second_circle {
+              opacity: 0;
+              fill: #FF4713;
+              animation: circleSecond 1s 5s forwards, circleScale3 3s ease-in-out 8s forwards;
+            }
+          }
+          .halfCircle {
+            opacity: 0;
+            fill: #FF4713;
+            animation: circleThird 1s 6s forwards, circleScale3 3s ease-in-out 8s forwards;
+          }
+        }
+
+        .textBox {
+          position: absolute;
+          top: 41.2%;
+          left: 11.8%;
+          h1 {
+            font-family: 'SUIT-ExtraBold';
+            font-size: 75px;
+            letter-spacing : 5px;
+            margin-bottom: 35px;
+            color:#000;
+          }
+          p {
+            padding-top: 15px;
+            font-family: 'SUIT-Regular';
+            font-size: 17px;
+            line-height: 1.5;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes preloader {
+	50% {
+		transform: rotate(360deg);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(10);
+	}
+}
+
+@keyframes circleScale {
+  15% {
+		transform: scale(1);
+	}
+	100% {
+    fill:#FF4713;
+    transform: scale(24.5);
+	}
+}
+
+@keyframes circleScale2 {
+  0% {
+    fill:#FF4713;
+    transform: scale(24.5);
+	}
+	100% {
+    fill:#FF4713;
+    transform: scale(24.5) translateX(0.7%);
+	}
+}
+
+@keyframes circleScale3 {
+  0% {
+    transform: translateX(0%);
+	}
+	100% {
+    transform: translateX(17%);
+	}
+}
+
+@keyframes circleSecond {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes circleThird {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
