@@ -49,6 +49,13 @@
 
             <path class="halfCircle" d="M643.3,1257.7c163.3-60,247.4-242.1,187.9-406.8L240,1068.1C299.5,1232.8,480,1317.7,643.3,1257.7z"/>
 
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+              </filter>
+            </defs>
           </svg>
 
           <div class="textBox">
