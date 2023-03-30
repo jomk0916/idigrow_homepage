@@ -154,7 +154,7 @@
 #wrap #main #section1 .container .loader .halfCircle {
   opacity: 0;
   fill: #FF4713;
-  animation: circleThird 1s 6s forwards, circleScale3 3s ease-in-out 8s forwards;
+  animation: circleThird 2s 6s forwards, circleScale3 3s ease-in-out 8s forwards;
 }
 #wrap #main #section1 .container .textBox {
   position: absolute;
@@ -282,7 +282,7 @@
 }
 @keyframes circleThird {
   0% {
-    transform: translateY(-10%);
+    transform: translateY(-5%);
     opacity: 0;
   }
   100% {
