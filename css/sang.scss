@@ -10,7 +10,7 @@
 #wrap {
   width: 100%;
   .bg {
-    // display: none;
+    display: none;
     position: absolute;
     top: 114%;
     left: 50%;
@@ -177,22 +177,22 @@
             .main_circle {
               opacity: 1;
               fill: #FF5C35;
-              animation: circleScale 5s ease-in-out 1 both, circleScale2 3s ease-in-out 8s forwards;
-              // animation: circleScale 5s ease-in-out 1 both, circleScale2 3s ease-in-out 0s forwards;
+              // animation: circleScale 5s ease-in-out 1 both, circleScale2 3s ease-in-out 8s forwards;
+              animation: circleScale 5s ease-in-out 1 both, circleScale2 3s ease-in-out 0s forwards;
             }
             .second_circle {
               opacity: 0;
               fill: #FF4713;
-              animation: circleSecond 3s 5s forwards, circleScale3 3s ease-in-out 8s forwards;
-              // animation: circleSecond 1s 0s forwards, circleScale3 3s ease-in-out 0s forwards;
+              // animation: circleSecond 3s 5s forwards, circleScale3 3s ease-in-out 8s forwards;
+              animation: circleSecond 1s 0s forwards, circleScale3 3s ease-in-out 0s forwards;
             }
           }
 
           .halfCircle {
             opacity: 0;
             fill: #FF4713;
-            animation: circleThird 2s 6s forwards, circleScale3 3s ease-in-out 8s forwards;
-            // animation: circleThird 1s 0s forwards, circleScale3 3s ease-in-out 0s forwards;
+            // animation: circleThird 2s 6s forwards, circleScale3 3s ease-in-out 8s forwards;
+            animation: circleThird 1s 0s forwards, circleScale3 3s ease-in-out 0s forwards;
           }
         }
 
@@ -202,7 +202,7 @@
           left: 11.7%;
           // animation:oneEnd 2s ease-in-out 15s forwards;
           h1 {
-            opacity: 0;
+            // opacity: 0;
             font-family: 'SUIT-ExtraBold';
             font-size: clampSang(75);
             letter-spacing : 5px;
@@ -219,7 +219,7 @@
             }
           }
           p {
-            opacity: 0;
+            // opacity: 0;
             padding-top: 15px;
             font-family: 'SUIT-Regular';
             font-size: clampSang(17);
@@ -234,19 +234,20 @@
       position: relative;
       width: 100%;
       // border: 1px solid red;
-      // padding:clampSang(510) 0 0 0;
+      padding:clampSang(510) 0 0 0;
       .ani {
         .circle1 {
+          display: none;
           width: 600px;
           height: 300px;
           background-color: #FF4713;
           border-radius: 0 0 300px 300px;
-          // transform: rotate(-15deg) translate(150%);
-          transform: rotate(0deg) translate(150%, 100%);
+          transform: rotate(-15deg) translate(150%);
+          // transform: rotate(0deg) translate(130%, 250%) scale(2.5);
         }
       }
       h1 {
-        display: none;
+        // display: none;
         max-width: 1430px;
         margin:0 auto;
         font-family: 'SUIT-ExtraBold';
@@ -255,7 +256,7 @@
         margin-bottom: 20px;
       }
       .sec2-bg {
-        display: none;
+        // display: none;
         width: 100%;
         height: clampSang(455);
         background-color: #3CB4E5;
@@ -296,13 +297,13 @@
 }
 
 @keyframes preloader {
-  // 0% {
-  //   opacity: 0;
-	// 	transform: scale(10);
-  // }
-	50% {
-		transform: rotate(360deg);
-	}
+  0% {
+    opacity: 0;
+		transform: scale(10);
+  }
+	// 50% {
+	// 	transform: rotate(360deg);
+	// }
 	100% {
 		opacity: 0;
 		transform: scale(10);
@@ -311,9 +312,9 @@
 
 @keyframes circleScale {
   15% {
-		transform: scale(1);
-    // fill:#FF4713;
-    // transform: scale(24.5);
+		// transform: scale(1);
+    fill:#FF4713;
+    transform: scale(24.5);
 	}
 	100% {
     fill:#FF4713;
@@ -323,10 +324,10 @@
 
 @keyframes circleScale2 {
   0% {
-    fill:#FF4713;
-    transform: scale(24.5);
     // fill:#FF4713;
-    // transform: scale(24.5) translateX(0.7%);
+    // transform: scale(24.5);
+    fill:#FF4713;
+    transform: scale(24.5) translateX(0.7%);
 	}
 	100% {
     fill:#FF4713;
@@ -336,8 +337,8 @@
 
 @keyframes circleScale3 {
   0% {
-    transform: translateX(0%);
-    // transform: translateX(17%);
+    // transform: translateX(0%);
+    transform: translateX(17%);
 	}
 	100% {
     transform: translateX(17%);
@@ -346,9 +347,9 @@
 
 @keyframes circleSecond {
 	0% {
-    transform: translate(-20%, 20%);
-		opacity: 0;
-    // opacity: 1;
+    // transform: translate(-20%, 20%);
+		// opacity: 0;
+    opacity: 1;
 	}
 	100% {
 		opacity: 1;
@@ -357,9 +358,9 @@
 
 @keyframes circleThird {
 	0% {
-    transform: translateY(-5%);
-		opacity: 0;
-    // opacity: 1;
+    // transform: translateY(-5%);
+		// opacity: 0;
+    opacity: 1;
 	}
 	100% {
 		opacity: 1;
@@ -368,8 +369,10 @@
 
 @keyframes textUp {
   0% {
-		opacity: 0;
-    transform: translateY(20%);
+		// opacity: 0;
+    // transform: translateY(20%);
+    opacity: 1;
+    transform: translateY(0%);
 	}
 	100% {
 		opacity: 1;
@@ -379,8 +382,10 @@
 
 @keyframes textRight {
   0% {
-		opacity: 0;
-    transform: translateX(-5%);
+		// opacity: 0;
+    // transform: translateX(-5%);
+    opacity: 1;
+    transform: translateX(0%);
 	}
 	100% {
 		opacity: 1;

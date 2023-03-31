@@ -2,6 +2,7 @@
   width: 100%;
 }
 #wrap .bg {
+  display: none;
   position: absolute;
   top: 114%;
   left: 50%;
@@ -178,17 +179,17 @@
 #wrap #main #section1 .container .loader .circle_g .main_circle {
   opacity: 1;
   fill: #FF5C35;
-  animation: circleScale 5s ease-in-out 1 both, circleScale2 3s ease-in-out 8s forwards;
+  animation: circleScale 5s ease-in-out 1 both, circleScale2 3s ease-in-out 0s forwards;
 }
 #wrap #main #section1 .container .loader .circle_g .second_circle {
   opacity: 0;
   fill: #FF4713;
-  animation: circleSecond 3s 5s forwards, circleScale3 3s ease-in-out 8s forwards;
+  animation: circleSecond 1s 0s forwards, circleScale3 3s ease-in-out 0s forwards;
 }
 #wrap #main #section1 .container .loader .halfCircle {
   opacity: 0;
   fill: #FF4713;
-  animation: circleThird 2s 6s forwards, circleScale3 3s ease-in-out 8s forwards;
+  animation: circleThird 1s 0s forwards, circleScale3 3s ease-in-out 0s forwards;
 }
 #wrap #main #section1 .container .textBox {
   position: absolute;
@@ -196,7 +197,6 @@
   left: 11.7%;
 }
 #wrap #main #section1 .container .textBox h1 {
-  opacity: 0;
   font-family: "SUIT-ExtraBold";
   font-size: clamp(1rem, 5.502567865vw, 7.5rem);
   letter-spacing: 5px;
@@ -213,7 +213,6 @@
   animation: textUp 3s 12s forwards;
 }
 #wrap #main #section1 .container .textBox p {
-  opacity: 0;
   padding-top: 15px;
   font-family: "SUIT-Regular";
   font-size: clamp(1rem, 1.2472487161vw, 1.7rem);
@@ -224,16 +223,17 @@
 #wrap #main #section2 {
   position: relative;
   width: 100%;
+  padding: clamp(1rem, 37.417461482vw, 51rem) 0 0 0;
 }
 #wrap #main #section2 .ani .circle1 {
+  display: none;
   width: 600px;
   height: 300px;
   background-color: #FF4713;
   border-radius: 0 0 300px 300px;
-  transform: rotate(0deg) translate(150%, 100%);
+  transform: rotate(-15deg) translate(150%);
 }
 #wrap #main #section2 h1 {
-  display: none;
   max-width: 1430px;
   margin: 0 auto;
   font-family: "SUIT-ExtraBold";
@@ -242,7 +242,6 @@
   margin-bottom: 20px;
 }
 #wrap #main #section2 .sec2-bg {
-  display: none;
   width: 100%;
   height: clamp(1rem, 33.3822450477vw, 45.5rem);
   background-color: #3CB4E5;
@@ -277,8 +276,9 @@
 }
 
 @keyframes preloader {
-  50% {
-    transform: rotate(360deg);
+  0% {
+    opacity: 0;
+    transform: scale(10);
   }
   100% {
     opacity: 0;
@@ -287,7 +287,8 @@
 }
 @keyframes circleScale {
   15% {
-    transform: scale(1);
+    fill: #FF4713;
+    transform: scale(24.5);
   }
   100% {
     fill: #FF4713;
@@ -297,7 +298,7 @@
 @keyframes circleScale2 {
   0% {
     fill: #FF4713;
-    transform: scale(24.5);
+    transform: scale(24.5) translateX(0.7%);
   }
   100% {
     fill: #FF4713;
@@ -306,7 +307,7 @@
 }
 @keyframes circleScale3 {
   0% {
-    transform: translateX(0%);
+    transform: translateX(17%);
   }
   100% {
     transform: translateX(17%);
@@ -314,8 +315,7 @@
 }
 @keyframes circleSecond {
   0% {
-    transform: translate(-20%, 20%);
-    opacity: 0;
+    opacity: 1;
   }
   100% {
     opacity: 1;
@@ -323,8 +323,7 @@
 }
 @keyframes circleThird {
   0% {
-    transform: translateY(-5%);
-    opacity: 0;
+    opacity: 1;
   }
   100% {
     opacity: 1;
@@ -332,8 +331,8 @@
 }
 @keyframes textUp {
   0% {
-    opacity: 0;
-    transform: translateY(20%);
+    opacity: 1;
+    transform: translateY(0%);
   }
   100% {
     opacity: 1;
@@ -342,8 +341,8 @@
 }
 @keyframes textRight {
   0% {
-    opacity: 0;
-    transform: translateX(-5%);
+    opacity: 1;
+    transform: translateX(0%);
   }
   100% {
     opacity: 1;
