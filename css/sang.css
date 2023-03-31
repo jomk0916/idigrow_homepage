@@ -1,5 +1,7 @@
 #wrap {
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 #wrap .bg {
   display: none;
