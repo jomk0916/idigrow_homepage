@@ -14,8 +14,8 @@
 #section3 .container{
   margin: 0 auto;
   width: 1920px;
-  /* background-color: #f7f7f7; */
-  background-color: #fff;
+  background-color: #f7f7f7;
+  /* background-color: #fff; */
   color: #000;
   position: relative;
 }
@@ -34,19 +34,28 @@
 .contact_container{
   font-size: 18px;
 }
-.contact_container b{font-size: 18px;font-weight: bold;}
-address{margin-top: 40px;}
+.contact_container b{
+  font-size: 18px;
+  font-family: "SUIT-Bold";
+}
+address{
+  margin-top: 40px;font-size: 18px;
+  font-family: "SUIT-Regular";
+}
 .contact_btn{
   width: 166px;height: 50px;
   background-color: #000;
   color: #fff;
-  font-size: 16; font-weight: bold;
   text-align: center;
   line-height: 50px;
   border-radius: 80px;
   cursor: pointer;
   transition: all .2s;
   margin-top: 50px;
+}
+.contact_btn p{
+  font-size: 16px;
+  font-family: "SUIT-Bold";
 }
 .contact_btn .contact_wrap{opacity: 0;}
 
@@ -95,6 +104,7 @@ address{margin-top: 40px;}
 input[placeholder] {
   width: 320px;height: 50px;
   font-size: 14px;color: #fff;
+  font-family: "SUIT-Light";
   border: 0;
   background-color: #000;
   outline: none;
@@ -106,6 +116,7 @@ input[placeholder] {
   background-color: #fff;
   color: #000;
   font-size: 14px;
+  font-family: "SUIT-Bold";
   text-align: center;line-height: 50px;
   border-radius: 25px;
   cursor: pointer;
@@ -123,7 +134,7 @@ input[placeholder] {
   margin: 0 auto;
   width: 1920px;
   /* background-color: #f7f7f7; */
-  background-color: #fff;
+  /* background-color: #fff; */
   color: #000;
   position: relative;
   /* border: 1px solid red; */
@@ -148,15 +159,18 @@ input[placeholder] {
 }
 .career_container b{
   font-size: 40px;font-weight: bold;
+  font-family: "SUIT-Heavy";
 }
 .career_container p{
   font-size: 18px;line-height: 30px;
+  font-family: "SUIT-Regular";
   margin-top: 25px;
-  width: 430px;
+  width: 410px;
 }
 .job_btn{
   width: 230px;height: 50px;
   font-size: 18px;line-height: 50px;
+  font-family: "SUIT-Bold";
   text-align: center;
   border: 1px solid #000;
   border-radius: 25px;
