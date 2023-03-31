@@ -2,17 +2,46 @@
   width: 100%;
 }
 #wrap .bg {
-  display: none;
   position: absolute;
-  top: 0;
+  top: 114%;
   left: 50%;
   width: 1920px;
   height: 1080px;
   margin: 0 auto;
-  background: url(../images/bak.png) 50% 50% no-repeat;
+  background: url(../images/bak4.png) 50% 50% no-repeat;
   background-size: cover;
   opacity: 0.5;
   transform: translate(-50%, 0%);
+}
+#wrap .testbtn {
+  display: none;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background-color: lightcoral;
+  border: 0;
+  font-size: 20px;
+  color: #fff;
+}
+#wrap .endbtn {
+  display: none;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 100px;
+  padding: 20px;
+  background-color: lightcoral;
+  border: 0;
+  font-size: 20px;
+  color: #fff;
+}
+#wrap .js_animation {
+  animation: oneEnd 3s ease-in-out forwards;
+}
+#wrap .js_animation_re {
+  animation: oneRe 2s ease-in-out forwards;
 }
 #wrap #header {
   position: fixed;
@@ -40,7 +69,9 @@
 }
 #wrap #header .container .right a {
   width: 100%;
-  height: clamp(1rem, 3.1548055759vw, 4.3rem);
+}
+#wrap #header .container .right a img {
+  height: clamp(1rem, 1.8341892883vw, 2.5rem);
 }
 #wrap #main {
   width: 100%;
@@ -57,8 +88,8 @@
 #wrap #main #section1 .container .loader {
   width: 100%;
   max-width: 1920px;
+  height: auto;
   max-height: 1261px;
-  width: 100%;
 }
 #wrap #main #section1 .container .loader circle {
   fill: none;
@@ -193,10 +224,16 @@
 #wrap #main #section2 {
   position: relative;
   width: 100%;
-  border: 1px solid red;
-  padding: clamp(1rem, 37.417461482vw, 51rem) 0 0 0;
+}
+#wrap #main #section2 .ani .circle1 {
+  width: 600px;
+  height: 300px;
+  background-color: #FF4713;
+  border-radius: 0 0 300px 300px;
+  transform: rotate(0deg) translate(150%, 100%);
 }
 #wrap #main #section2 h1 {
+  display: none;
   max-width: 1430px;
   margin: 0 auto;
   font-family: "SUIT-ExtraBold";
@@ -205,8 +242,9 @@
   margin-bottom: 20px;
 }
 #wrap #main #section2 .sec2-bg {
+  display: none;
   width: 100%;
-  height: 455px;
+  height: clamp(1rem, 33.3822450477vw, 45.5rem);
   background-color: #3CB4E5;
   padding: clamp(1rem, 3.6683785767vw, 5rem) 0 0 0;
 }
@@ -214,7 +252,7 @@
   position: relative;
   width: 100%;
   max-width: 1430px;
-  height: 1080px;
+  height: auto;
   margin: 0 auto;
 }
 #wrap #main #section2 .sec2-bg .container .text-box {
@@ -312,3 +350,24 @@
     transform: translateX(0%);
   }
 }
+@keyframes oneEnd {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+@keyframes oneRe {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes sec2Circle {}
