@@ -59,7 +59,6 @@
   max-width: 1920px;
   max-height: 1261px;
   width: 100%;
-  filter: url("#goo");
 }
 #wrap #main #section1 .container .loader circle {
   fill: none;
@@ -142,11 +141,15 @@
 #wrap #main #section1 .container .loader circle:nth-of-type(11) {
   animation-delay: -1.65s;
 }
-#wrap #main #section1 .container .loader circle.main_circle {
+#wrap #main #section1 .container .loader .circle_g {
+  filter: url("#goo");
+}
+#wrap #main #section1 .container .loader .circle_g .main_circle {
+  opacity: 1;
   fill: #FF5C35;
   animation: circleScale 5s ease-in-out 1 both, circleScale2 3s ease-in-out 8s forwards;
 }
-#wrap #main #section1 .container .loader circle.second_circle {
+#wrap #main #section1 .container .loader .circle_g .second_circle {
   opacity: 0;
   fill: #FF4713;
   animation: circleSecond 3s 5s forwards, circleScale3 3s ease-in-out 8s forwards;

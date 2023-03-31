@@ -65,7 +65,6 @@
           max-width: 1920px;
           max-height: 1261px;
           width: 100%;
-          filter:url('#goo');
           circle {
             fill: none;
             stroke-width: 0.5;
@@ -132,19 +131,25 @@
               }
             }
 
-            &.main_circle {
+
+          }
+
+          .circle_g {
+            filter:url('#goo');
+            .main_circle {
+              opacity: 1;
               fill: #FF5C35;
               animation: circleScale 5s ease-in-out 1 both, circleScale2 3s ease-in-out 8s forwards;
               // animation: circleScale 5s ease-in-out 1 both, circleScale2 3s ease-in-out 0s forwards;
             }
-
-            &.second_circle {
+            .second_circle {
               opacity: 0;
               fill: #FF4713;
               animation: circleSecond 3s 5s forwards, circleScale3 3s ease-in-out 8s forwards;
               // animation: circleSecond 1s 0s forwards, circleScale3 3s ease-in-out 0s forwards;
             }
           }
+
           .halfCircle {
             opacity: 0;
             fill: #FF4713;
