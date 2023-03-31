@@ -45,6 +45,7 @@
   animation: oneRe 2s ease-in-out forwards;
 }
 #wrap #header {
+  z-index: 3;
   position: fixed;
   width: 100%;
 }
@@ -75,6 +76,8 @@
   height: clamp(1rem, 1.8341892883vw, 2.5rem);
 }
 #wrap #main {
+  position: relative;
+  z-index: -2;
   width: 100%;
 }
 #wrap #main #section1 {
