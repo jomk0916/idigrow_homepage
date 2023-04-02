@@ -15,7 +15,7 @@
   margin: 0 auto;
   /* width: 1920px; */
   width: 100vw;
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
   /* background-color: #fff; */
   color: #000;
   position: relative;
@@ -168,6 +168,24 @@ input[placeholder] {
   background-size: contain;
   cursor: pointer;
 }
+
+.can_box{
+  width: 100%;
+  height: clamp(1rem,56.25vw,108rem);
+  position: absolute;
+  top: 0; left: 0;
+}
+/* section3_animation */
+
+/* #section3 canvas{
+  width: 100%;
+  height: clamp(1rem,56.25vw,108rem);
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 5;
+  background-color: bisque;
+} */
+
 
 /* section4(인력 구인) */
 
