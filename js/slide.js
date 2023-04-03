@@ -5,9 +5,9 @@ $(document).ready(function(){
 function fullset(){
     var pageindex = $("main > section").size(); //main 안에 section이 몇개인지 확인
     for (var i = 1; i <= pageindex; i++){
-        $("main > .quick > ul").append("<li></li>");
+        $("#btn > .quick > ul").append("<li></li>");
     }
-    $("main .quick ul :first-child").addClass("on"); //화면 로드시 첫번째 퀵버튼 활성화
+    $("#btn .quick ul :first-child").addClass("on"); //화면 로드시 첫번째 퀵버튼 활성화
     // 마우스 휠 이벤트
     $(window).bind("mousewheel", function(event){
 		var page = $(".quick ul li.on");
@@ -77,6 +77,6 @@ function quickClick(){
 };
 
 // 탑버튼 기능이 되지 않음 오류 수정 할 것
-$(".top_btn").click(function(){
-    window.scrollTo({top:0});
-});
+// $(".top_btn").click(function(){
+//     window.scrollTo({top:0});
+// });
