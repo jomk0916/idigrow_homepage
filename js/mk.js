@@ -1,8 +1,7 @@
 function draw(){
     var canvas = document.getElementById("sec3_ani");
-    canvas.width = 1920;
-    canvas.height = 1080;
-    // canvas.height = 3000;
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
     if(canvas.getContext){
         var ctx = canvas.getContext("2d");
 
