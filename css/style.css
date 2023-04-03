@@ -235,6 +235,8 @@ input {
   position: relative;
   z-index: -2;
   width: 100%;
+  /* section3(회사정보 및 연결) */
+  /* section4(인력 구인) */
 }
 #wrap #main #section1 {
   width: 100%;
@@ -338,17 +340,17 @@ input {
 #wrap #main #section1 .container .loader .circle_g .main_circle {
   opacity: 1;
   fill: #FF5C35;
-  animation: circleScale 5s ease-in-out 1 both, circleScale2 3s ease-in-out 0s forwards;
+  animation: circleScale 5s ease-in-out 1 both, circleScale2 3s ease-in-out 8s forwards;
 }
 #wrap #main #section1 .container .loader .circle_g .second_circle {
   opacity: 0;
   fill: #FF4713;
-  animation: circleSecond 1s 0s forwards, circleScale3 3s ease-in-out 0s forwards;
+  animation: circleSecond 3s 5s forwards, circleScale3 3s ease-in-out 8s forwards;
 }
 #wrap #main #section1 .container .loader .halfCircle {
   opacity: 0;
   fill: #FF4713;
-  animation: circleThird 1s 0s forwards, circleScale3 3s ease-in-out 0s forwards;
+  animation: circleThird 2s 6s forwards, circleScale3 3s ease-in-out 8s forwards;
 }
 #wrap #main #section1 .container .textBox {
   position: absolute;
@@ -356,6 +358,7 @@ input {
   left: 11.7%;
 }
 #wrap #main #section1 .container .textBox h1 {
+  opacity: 0;
   font-family: "SUIT-ExtraBold";
   font-size: clamp(1rem, 5.502567865vw, 7.5rem);
   letter-spacing: 5px;
@@ -372,6 +375,7 @@ input {
   animation: textUp 3s 12s forwards;
 }
 #wrap #main #section1 .container .textBox p {
+  opacity: 0;
   padding-top: 15px;
   font-family: "SUIT-Regular";
   font-size: clamp(1rem, 1.2472487161vw, 1.7rem);
@@ -382,41 +386,39 @@ input {
 #wrap #main #section2 {
   position: relative;
   width: 100%;
+  border: 1px solid red;
   padding: clamp(1rem, 37.417461482vw, 51rem) 0 0 0;
 }
-#wrap #main #section2 .ani .circle1 {
-  display: none;
-  width: 600px;
-  height: 300px;
-  background-color: #FF4713;
-  border-radius: 0 0 300px 300px;
-  transform: rotate(-15deg) translate(150%);
+#wrap #main #section2 .gap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
 }
-#wrap #main #section2 h1 {
+#wrap #main #section2 .gap h1 {
   max-width: 1430px;
   margin: 0 auto;
   font-family: "SUIT-ExtraBold";
   font-size: clamp(1rem, 6.603081438vw, 9rem);
-  color: #3CB4E5;
   margin-bottom: 20px;
+  color: #fff;
+  text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5, 1px 0px #3CB4E5, 0px -1px #3CB4E5;
 }
-#wrap #main #section2 .sec2-bg {
+#wrap #main #section2 .gap .sec2-bg {
   width: 100%;
   height: clamp(1rem, 33.3822450477vw, 45.5rem);
-  background-color: #3CB4E5;
   padding: clamp(1rem, 3.6683785767vw, 5rem) 0 0 0;
 }
-#wrap #main #section2 .sec2-bg .container {
+#wrap #main #section2 .gap .sec2-bg .container {
   position: relative;
   width: 100%;
   max-width: 1430px;
   height: auto;
   margin: 0 auto;
 }
-#wrap #main #section2 .sec2-bg .container .text-box {
+#wrap #main #section2 .gap .sec2-bg .container .text-box {
   width: 100%;
 }
-#wrap #main #section2 .sec2-bg .container .text-box p {
+#wrap #main #section2 .gap .sec2-bg .container .text-box p {
   font-family: "SUIT-SemiBold";
   font-size: clamp(1rem, 2.201027146vw, 3rem);
   color: #fff;
@@ -433,11 +435,293 @@ input {
   background-size: cover;
   opacity: 0.5;
 }
+#wrap #main #section2 .sec2_loader {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#wrap #main #section2 .sec2_loader #circle_g_sec2 {
+  width: 100%;
+}
+#wrap #main #section2 .sec2_loader #circle_g_sec2 .sec2_circle {
+  fill: #FF4713;
+  transform: translate(70%, 7%) rotate(-30deg);
+  transform-origin: 0 0;
+}
+#wrap #main #section2 .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(1) {
+  opacity: 0.7;
+  animation: sec2Circle 3s ease-in-out forwards;
+}
+#wrap #main #section2 .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(2) {
+  opacity: 0.5;
+  animation: sec2Circle 3s ease-in-out 0.5s forwards;
+}
+#wrap #main #section2 .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(3) {
+  opacity: 0.3;
+  animation: sec2Circle 3s ease-in-out 1s forwards;
+}
+#wrap #main #section2 .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(4) {
+  opacity: 0.1;
+  animation: sec2Circle 3s ease-in-out 1.5s forwards;
+}
+#wrap #main #section3 {
+  /* contact버튼 마우스 호버 - 추후 클릭으로 변경 예정*/
+  /* 회사 정보 및 연결 정보 기입 창 */
+  /* section3_animation */
+}
+#wrap #main #section3 .container {
+  margin: 0 auto;
+  /* width: 1920px; */
+  width: 100vw;
+  color: #000;
+  position: relative;
+}
+#wrap #main #section3 .top_box {
+  width: 100%;
+  /* height: 200px; */
+  height: clamp(1rem, 10.41667vw, 20rem);
+  background-color: #3CB4E5;
+}
+#wrap #main #section3 .container {
+  margin: 0 auto;
+  /* width: 1920px; */
+  width: 100vw;
+  color: #000;
+  position: relative;
+}
+#wrap #main #section3 .top_box {
+  width: 100%;
+  /* height: 200px; */
+  height: clamp(1rem, 10.41667vw, 20rem);
+  background-color: #3CB4E5;
+}
+#wrap #main #section3 .cnt_box {
+  margin: 0 auto;
+  width: clamp(1rem, 83.334%, 160rem);
+  height: clamp(1rem, 45.8333vw, 88rem);
+  /* height: 880px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+#wrap #main #section3 .contact_container b {
+  font-size: clamp(1rem, 0.9375vw, 1.8rem);
+  /* font-size: 18px; */
+  font-family: "SUIT-Bold";
+}
+#wrap #main #section3 address {
+  font-size: clamp(1rem, 0.9375vw, 1.8rem);
+  /* font-size: 18px; */
+  /* margin-top: 40px; */
+  margin-top: clamp(1rem, 2.08333vw, 4rem);
+  font-family: "SUIT-Regular";
+}
+#wrap #main #section3 .contact_btn {
+  /* width: 166px;
+  height: 50px; */
+  width: clamp(1rem, 8.6458334vw, 16.6rem);
+  height: clamp(1rem, 2.6041667vw, 5rem);
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  /* line-height: 50px; */
+  line-height: clamp(1rem, 2.6041667vw, 5rem);
+  /* border-radius: 80px; */
+  border-radius: clamp(1rem, 4.1667vw, 8rem);
+  cursor: pointer;
+  transition: all 0.3s;
+  /* margin-top: 50px; */
+  margin-top: clamp(1rem, 2.6041776vw, 5rem);
+}
+#wrap #main #section3 .contact_btn p {
+  /* font-size: 16px; */
+  font-size: clamp(5px, 0.8333vw, 1.6rem);
+  font-family: "SUIT-Bold";
+}
+#wrap #main #section3 .contact_btn .contact_wrap {
+  opacity: 0;
+}
+#wrap #main #section3 .contact_btn:hover {
+  /* width: 730px;height: 313px;
+  border-radius: 25px;
+  padding: 20px 30px; */
+  width: clamp(1rem, 38.0208333vw, 73rem);
+  height: clamp(1rem, 16.30208333vw, 31.3rem);
+  border-radius: clamp(1rem, 1.30208333vw, 2.5rem);
+  padding: clamp(1rem, 1.041667vw, 2rem) clamp(1rem, 1.5625vw, 3rem);
+  background-color: #000;
+  color: #fff;
+  cursor: auto;
+}
+#wrap #main #section3 .contact_btn:hover > p {
+  display: none;
+}
+#wrap #main #section3 .contact_btn:hover .contact_wrap {
+  opacity: 1;
+  transition: all 0.3s;
+  /* margin-top: -20px;
+  margin-left: -30px; */
+  margin-top: clamp(-2rem, -1.041667vw, -1rem);
+  margin-left: clamp(-3rem, -1.5625vw, -1rem);
+}
+#wrap #main #section3 .contact_wrap {
+  /* width: 790px;height: 313px; */
+  width: clamp(1rem, 41.1458333vw, 79rem);
+  height: clamp(1rem, 16.30208333vw, 31.3rem);
+  display: flex;
+  opacity: 0;
+}
+#wrap #main #section3 .contact_wrapper {
+  /* width: 730px;height: 313px;
+  border-radius: 25px;
+  padding: 20px 30px; */
+  width: clamp(1rem, 38.0208333vw, 73rem);
+  height: clamp(1rem, 16.30208333vw, 31.3rem);
+  border-radius: clamp(1rem, 1.30208333vw, 2.5rem);
+  padding: clamp(1rem, 1.041667vw, 2rem) clamp(1rem, 1.5625vw, 3rem);
+  background-color: #000;
+  color: #fff;
+}
+#wrap #main #section3 .input_box {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+#wrap #main #section3 .input_box p:last-child input {
+  /* width: 670px; */
+  width: clamp(1rem, 34.8958333vw, 67rem);
+}
+#wrap #main #section3 .input_box p:nth-child(2) input,
+#wrap #main #section3 .input_box p:nth-child(4) input {
+  /* margin-left: 30px; */
+  margin-left: clamp(1rem, 1.5625vw, 3rem);
+}
+#wrap #main #section3 input[placeholder] {
+  /* width: 320px;height: 50px; */
+  width: clamp(1rem, 16.667vw, 32rem);
+  height: clamp(1rem, 2.6041667vw, 5rem);
+  /* font-size: 14px; */
+  font-size: clamp(0.5rem, 0.7291667vw, 1.4rem);
+  color: #fff;
+  font-family: "SUIT-Light";
+  border: 0;
+  background-color: #000;
+  outline: none;
+  border-bottom: 1px solid #d9d9d9;
+  /* margin-bottom: 20px; */
+  margin-bottom: clamp(1rem, 1.041667vw, 2rem);
+}
+#wrap #main #section3 .send_btn {
+  /* width: 670px;height: 50px; */
+  width: clamp(1rem, 34.8958333vw, 67rem);
+  height: clamp(1rem, 2.6041667vw, 5rem);
+  background-color: #fff;
+  color: #000;
+  /* font-size: 14px; */
+  font-size: clamp(1rem, 0.7291667vw, 1.4rem);
+  font-family: "SUIT-Bold";
+  text-align: center;
+  /* line-height: 50px; */
+  line-height: clamp(1rem, 2.6041667vw, 5rem);
+  /* border-radius: 25px; */
+  border-radius: clamp(1rem, 1.30208333vw, 2.5rem);
+  cursor: pointer;
+}
+#wrap #main #section3 .close_btn {
+  /* width: 50px;height: 50px; */
+  width: clamp(1rem, 2.6041667vw, 5rem);
+  height: clamp(1rem, 2.6041667vw, 5rem);
+  /* margin-left: 10px; */
+  margin-left: clamp(1rem, 0.5208333vw, 1rem);
+  background: url(../images/close_btn.png) no-repeat 0 0/auto 100%;
+  background-size: contain;
+  cursor: pointer;
+}
+#wrap #main #section3 canvas {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#wrap #main #section4 .container {
+  margin: 0 auto;
+  /* width: 1920px; */
+  width: 100%;
+  color: #000;
+  position: relative;
+}
+#wrap #main #section4 .top_view {
+  /* width: 1419px;height: 227px; */
+  width: clamp(1rem, 73.90625vw, 141.9rem);
+  height: clamp(1rem, 11.82291667vw, 22.7rem);
+  background: url(../images/s4_top.png) no-repeat 0 0/auto 100%;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+}
+#wrap #main #section4 .cnt_box {
+  margin: 0 auto;
+  /* width: 1600px;
+  height: 1080px; */
+  width: clamp(1rem, 83.333vw, 160rem);
+  height: clamp(1rem, 56.25vw, 108rem);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#wrap #main #section4 .logo_container {
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 300px; */
+  margin-top: clamp(1rem, 15.625vw, 30rem);
+}
+#wrap #main #section4 .career_container b {
+  /* font-size: 40px; */
+  font-size: clamp(1rem, 2.08333vw, 4rem);
+  font-weight: bold;
+  font-family: "SUIT-Heavy";
+}
+#wrap #main #section4 .career_container p {
+  /* font-size: 18px;line-height: 30px; */
+  font-size: clamp(1rem, 0.9375vw, 1.8rem);
+  line-height: clamp(1rem, 1.5625vw, 3rem);
+  font-family: "SUIT-Regular";
+  /* margin-top: 25px;
+  width: 410px; */
+  margin-top: clamp(1rem, 1.30208333vw, 2.5rem);
+  width: clamp(1rem, 21.3541667vw, 41rem);
+}
+#wrap #main #section4 .job_btn {
+  /* width: 230px;height: 50px;
+  font-size: 18px;line-height: 50px; */
+  width: clamp(1rem, 11.9791667vw, 23rem);
+  height: 1rem, 2.6041667vw, 5rem;
+  font-size: clamp(0.5rem, 0.9375vw, 1.8rem);
+  height: 1rem, 2.6041667vw, 5rem;
+  font-family: "SUIT-Bold";
+  text-align: center;
+  border: 1px solid #000;
+  /* border-radius: 25px;
+  margin-top: 40px; */
+  border-radius: clamp(1rem, 1.30208333vw, 2.5rem);
+  margin-top: clamp(1rem, 2.08333vw, 4rem);
+  cursor: pointer;
+}
+#wrap #main #section4 .big_logo {
+  /* width: 789px;height: 212px; */
+  width: clamp(1rem, 41.09375vw, 78.9rem);
+  height: clamp(1rem, 11.041667vw, 21.2rem);
+  background: url(../images/logo_large.png) no-repeat 0 0/auto 100%;
+  background-size: contain;
+}
 
 @keyframes preloader {
-  0% {
-    opacity: 0;
-    transform: scale(10);
+  50% {
+    transform: rotate(360deg);
   }
   100% {
     opacity: 0;
@@ -446,8 +730,7 @@ input {
 }
 @keyframes circleScale {
   15% {
-    fill: #FF4713;
-    transform: scale(24.5);
+    transform: scale(1);
   }
   100% {
     fill: #FF4713;
@@ -457,7 +740,7 @@ input {
 @keyframes circleScale2 {
   0% {
     fill: #FF4713;
-    transform: scale(24.5) translateX(0.7%);
+    transform: scale(24.5);
   }
   100% {
     fill: #FF4713;
@@ -466,7 +749,7 @@ input {
 }
 @keyframes circleScale3 {
   0% {
-    transform: translateX(17%);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(17%);
@@ -474,7 +757,8 @@ input {
 }
 @keyframes circleSecond {
   0% {
-    opacity: 1;
+    transform: translate(-20%, 20%);
+    opacity: 0;
   }
   100% {
     opacity: 1;
@@ -482,7 +766,8 @@ input {
 }
 @keyframes circleThird {
   0% {
-    opacity: 1;
+    transform: translateY(-5%);
+    opacity: 0;
   }
   100% {
     opacity: 1;
@@ -490,8 +775,8 @@ input {
 }
 @keyframes textUp {
   0% {
-    opacity: 1;
-    transform: translateY(0%);
+    opacity: 0;
+    transform: translateY(20%);
   }
   100% {
     opacity: 1;
@@ -500,8 +785,8 @@ input {
 }
 @keyframes textRight {
   0% {
-    opacity: 1;
-    transform: translateX(0%);
+    opacity: 0;
+    transform: translateX(-5%);
   }
   100% {
     opacity: 1;
@@ -528,260 +813,14 @@ input {
     transform: translateY(0%);
   }
 }
-@keyframes sec2Circle {}
-/* section3(회사정보 및 연결) */
-#section3 {
-  /* contact버튼 마우스 호버 - 추후 클릭으로 변경 예정*/
-  /* 회사 정보 및 연결 정보 기입 창 */
-  /* section3_animation */
-}
-#section3 .container {
-  margin: 0 auto;
-  /* width: 1920px; */
-  width: 100vw;
-  color: #000;
-  position: relative;
-}
-#section3 .top_box {
-  width: 100%;
-  /* height: 200px; */
-  height: clamp(1rem, 10.41667vw, 20rem);
-  background-color: #3CB4E5;
-}
-#section3 .container {
-  margin: 0 auto;
-  /* width: 1920px; */
-  width: 100vw;
-  color: #000;
-  position: relative;
-}
-#section3 .top_box {
-  width: 100%;
-  /* height: 200px; */
-  height: clamp(1rem, 10.41667vw, 20rem);
-  background-color: #3CB4E5;
-}
-#section3 .cnt_box {
-  margin: 0 auto;
-  width: clamp(1rem, 83.334%, 160rem);
-  height: clamp(1rem, 45.8333vw, 88rem);
-  /* height: 880px; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  z-index: 10;
-}
-#section3 .contact_container b {
-  font-size: clamp(1rem, 0.9375vw, 1.8rem);
-  /* font-size: 18px; */
-  font-family: "SUIT-Bold";
-}
-#section3 address {
-  font-size: clamp(1rem, 0.9375vw, 1.8rem);
-  /* font-size: 18px; */
-  /* margin-top: 40px; */
-  margin-top: clamp(1rem, 2.08333vw, 4rem);
-  font-family: "SUIT-Regular";
-}
-#section3 .contact_btn {
-  /* width: 166px;
-  height: 50px; */
-  width: clamp(1rem, 8.6458334vw, 16.6rem);
-  height: clamp(1rem, 2.6041667vw, 5rem);
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  /* line-height: 50px; */
-  line-height: clamp(1rem, 2.6041667vw, 5rem);
-  /* border-radius: 80px; */
-  border-radius: clamp(1rem, 4.1667vw, 8rem);
-  cursor: pointer;
-  transition: all 0.3s;
-  /* margin-top: 50px; */
-  margin-top: clamp(1rem, 2.6041776vw, 5rem);
-}
-#section3 .contact_btn p {
-  /* font-size: 16px; */
-  font-size: clamp(5px, 0.8333vw, 1.6rem);
-  font-family: "SUIT-Bold";
-}
-#section3 .contact_btn .contact_wrap {
-  opacity: 0;
-}
-#section3 .contact_btn:hover {
-  /* width: 730px;height: 313px;
-  border-radius: 25px;
-  padding: 20px 30px; */
-  width: clamp(1rem, 38.0208333vw, 73rem);
-  height: clamp(1rem, 16.30208333vw, 31.3rem);
-  border-radius: clamp(1rem, 1.30208333vw, 2.5rem);
-  padding: clamp(1rem, 1.041667vw, 2rem) clamp(1rem, 1.5625vw, 3rem);
-  background-color: #000;
-  color: #fff;
-  cursor: auto;
-}
-#section3 .contact_btn:hover > p {
-  display: none;
-}
-#section3 .contact_btn:hover .contact_wrap {
-  opacity: 1;
-  transition: all 0.3s;
-  /* margin-top: -20px;
-  margin-left: -30px; */
-  margin-top: clamp(-2rem, -1.041667vw, -1rem);
-  margin-left: clamp(-3rem, -1.5625vw, -1rem);
-}
-#section3 .contact_wrap {
-  /* width: 790px;height: 313px; */
-  width: clamp(1rem, 41.1458333vw, 79rem);
-  height: clamp(1rem, 16.30208333vw, 31.3rem);
-  display: flex;
-  opacity: 0;
-}
-#section3 .contact_wrapper {
-  /* width: 730px;height: 313px;
-  border-radius: 25px;
-  padding: 20px 30px; */
-  width: clamp(1rem, 38.0208333vw, 73rem);
-  height: clamp(1rem, 16.30208333vw, 31.3rem);
-  border-radius: clamp(1rem, 1.30208333vw, 2.5rem);
-  padding: clamp(1rem, 1.041667vw, 2rem) clamp(1rem, 1.5625vw, 3rem);
-  background-color: #000;
-  color: #fff;
-}
-#section3 .input_box {
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-}
-#section3 .input_box p:last-child input {
-  /* width: 670px; */
-  width: clamp(1rem, 34.8958333vw, 67rem);
-}
-#section3 .input_box p:nth-child(2) input,
-#section3 .input_box p:nth-child(4) input {
-  /* margin-left: 30px; */
-  margin-left: clamp(1rem, 1.5625vw, 3rem);
-}
-#section3 input[placeholder] {
-  /* width: 320px;height: 50px; */
-  width: clamp(1rem, 16.667vw, 32rem);
-  height: clamp(1rem, 2.6041667vw, 5rem);
-  /* font-size: 14px; */
-  font-size: clamp(0.5rem, 0.7291667vw, 1.4rem);
-  color: #fff;
-  font-family: "SUIT-Light";
-  border: 0;
-  background-color: #000;
-  outline: none;
-  border-bottom: 1px solid #d9d9d9;
-  /* margin-bottom: 20px; */
-  margin-bottom: clamp(1rem, 1.041667vw, 2rem);
-}
-#section3 .send_btn {
-  /* width: 670px;height: 50px; */
-  width: clamp(1rem, 34.8958333vw, 67rem);
-  height: clamp(1rem, 2.6041667vw, 5rem);
-  background-color: #fff;
-  color: #000;
-  /* font-size: 14px; */
-  font-size: clamp(1rem, 0.7291667vw, 1.4rem);
-  font-family: "SUIT-Bold";
-  text-align: center;
-  /* line-height: 50px; */
-  line-height: clamp(1rem, 2.6041667vw, 5rem);
-  /* border-radius: 25px; */
-  border-radius: clamp(1rem, 1.30208333vw, 2.5rem);
-  cursor: pointer;
-}
-#section3 .close_btn {
-  /* width: 50px;height: 50px; */
-  width: clamp(1rem, 2.6041667vw, 5rem);
-  height: clamp(1rem, 2.6041667vw, 5rem);
-  /* margin-left: 10px; */
-  margin-left: clamp(1rem, 0.5208333vw, 1rem);
-  background: url(../images/close_btn.png) no-repeat 0 0/auto 100%;
-  background-size: contain;
-  cursor: pointer;
-}
-#section3 canvas {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* section4(인력 구인) */
-#section4 .container {
-  margin: 0 auto;
-  /* width: 1920px; */
-  width: 100%;
-  color: #000;
-  position: relative;
-}
-#section4 .top_view {
-  /* width: 1419px;height: 227px; */
-  width: clamp(1rem, 73.90625vw, 141.9rem);
-  height: clamp(1rem, 11.82291667vw, 22.7rem);
-  background: url(../images/s4_top.png) no-repeat 0 0/auto 100%;
-  background-size: contain;
-  position: absolute;
-  right: 0;
-}
-#section4 .cnt_box {
-  margin: 0 auto;
-  /* width: 1600px;
-  height: 1080px; */
-  width: clamp(1rem, 83.333vw, 160rem);
-  height: clamp(1rem, 56.25vw, 108rem);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-#section4 .logo_container {
-  display: flex;
-  flex-direction: column;
-  /* margin-top: 300px; */
-  margin-top: clamp(1rem, 15.625vw, 30rem);
-}
-#section4 .career_container b {
-  /* font-size: 40px; */
-  font-size: clamp(1rem, 2.08333vw, 4rem);
-  font-weight: bold;
-  font-family: "SUIT-Heavy";
-}
-#section4 .career_container p {
-  /* font-size: 18px;line-height: 30px; */
-  font-size: clamp(1rem, 0.9375vw, 1.8rem);
-  line-height: clamp(1rem, 1.5625vw, 3rem);
-  font-family: "SUIT-Regular";
-  /* margin-top: 25px;
-  width: 410px; */
-  margin-top: clamp(1rem, 1.30208333vw, 2.5rem);
-  width: clamp(1rem, 21.3541667vw, 41rem);
-}
-#section4 .job_btn {
-  /* width: 230px;height: 50px;
-  font-size: 18px;line-height: 50px; */
-  width: clamp(1rem, 11.9791667vw, 23rem);
-  height: 1rem, 2.6041667vw, 5rem;
-  font-size: clamp(0.5rem, 0.9375vw, 1.8rem);
-  height: 1rem, 2.6041667vw, 5rem;
-  font-family: "SUIT-Bold";
-  text-align: center;
-  border: 1px solid #000;
-  /* border-radius: 25px;
-  margin-top: 40px; */
-  border-radius: clamp(1rem, 1.30208333vw, 2.5rem);
-  margin-top: clamp(1rem, 2.08333vw, 4rem);
-  cursor: pointer;
-}
-#section4 .big_logo {
-  /* width: 789px;height: 212px; */
-  width: clamp(1rem, 41.09375vw, 78.9rem);
-  height: clamp(1rem, 11.041667vw, 21.2rem);
-  background: url(../images/logo_large.png) no-repeat 0 0/auto 100%;
-  background-size: contain;
+@keyframes sec2Circle {
+  80% {
+    fill: #FF4713;
+    opacity: 0.9;
+  }
+  100% {
+    transform: rotate(-0.2deg) translate(50%, 115%) scale(4);
+    fill: #3CB4E5;
+    opacity: 1;
+  }
 }
