@@ -4,9 +4,33 @@
 
 
 
-html, body {width:100%;height:100%;margin:0px;padding:0px;overflow:hidden;}
+/* html, body {width:100%;height:100%;margin:0px;padding:0px;overflow:hidden;} */
+/* 풀페이지 스크롤 시 주석 풀 것 */
 
 ul, li{margin:0;padding:0;list-style:none}
 	.quick {position:fixed;right:30px;top:50%;transform:translateY(-50%); z-index:100}
 	.quick li {width:12px;height:12px;margin-bottom:10px; border-radius:50%;border:1px solid #000;cursor:pointer;}
 	.quick .on {background:#000;}
+
+.top_btn{
+  width: 60px;height: 60px;
+  border-radius: 50%;
+  position: fixed;
+  left: 50%;
+  bottom: 10%;
+  background: #FFFFFF;
+  box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.25);
+  z-index: 100;
+  cursor: pointer;
+}
+.arrow{
+  content: '';
+  width: 18px;
+  height: 18px;
+  border-top: 2px solid rgba(0, 0, 0, 0.40);
+  border-right: 2px solid rgba(0, 0, 0, 0.40);
+  transform: rotate(-45deg);
+  display: inline-block;
+  position: relative;
+  top: 40%;left: 35%;
+}
