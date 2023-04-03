@@ -6,6 +6,11 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "SUIT-Variable";
+  src: url("../font/SUIT-Variable-woff2/SUIT-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+}
+@font-face {
   font-family: "SUIT-ExtraBold";
   src: url(../font/SUIT-woff2/SUIT-ExtraBold.woff2);
 }
@@ -172,7 +177,7 @@ input {
 }
 #wrap .testbtn {
   display: none;
-  z-index: 2;
+  z-index: 4;
   position: absolute;
   top: 0;
   left: 0;
@@ -184,7 +189,7 @@ input {
 }
 #wrap .endbtn {
   display: none;
-  z-index: 2;
+  z-index: 4;
   position: absolute;
   top: 0;
   left: 100px;
@@ -211,7 +216,7 @@ input {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: clamp(1rem, 5.8694057227vw, 8rem) 10px;
+  padding: clamp(1rem, 3.6683785767vw, 5rem) 30px clamp(1rem, 5.8694057227vw, 8rem) 30px;
 }
 #wrap #header .container .left {
   width: auto;
@@ -359,11 +364,12 @@ input {
 }
 #wrap #main #section1 .container .textBox h1 {
   opacity: 0;
-  font-family: "SUIT-ExtraBold";
+  font-family: "SUIT-Variable";
   font-size: clamp(1rem, 5.502567865vw, 7.5rem);
   letter-spacing: 5px;
   margin-bottom: clamp(1rem, 2.5678650037vw, 3.5rem);
   color: #000;
+  font-weight: 900;
 }
 #wrap #main #section1 .container .textBox h1:nth-child(1) {
   animation: textUp 3s 10s forwards;
@@ -387,12 +393,12 @@ input {
   position: relative;
   width: 100%;
   border: 1px solid red;
-  padding: clamp(1rem, 37.417461482vw, 51rem) 0 0 0;
 }
 #wrap #main #section2 .gap {
   position: relative;
   z-index: 2;
   width: 100%;
+  margin: clamp(1rem, 37.417461482vw, 51rem) 0 0 0;
 }
 #wrap #main #section2 .gap h1 {
   max-width: 1430px;

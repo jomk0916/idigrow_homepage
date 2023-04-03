@@ -5,6 +5,11 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'SUIT-Variable';
+    src: url('../font/SUIT-Variable-woff2/SUIT-Variable.woff2') format('woff2');
+    font-weight: 100 900;
+}
 @font-face{
     font-family:'SUIT-ExtraBold';
     src:url(../font/SUIT-woff2/SUIT-ExtraBold.woff2);
@@ -73,7 +78,6 @@ input {outline-offset:-1px;}
 }
 
 // 상호
-
 @function clampSang($pi){
     $a : 1rem;
     $b : (($pi * 100) / 1363)+vw; //  (‘px수치’ * 100) / ‘viewport width(변동)’
@@ -102,7 +106,7 @@ input {outline-offset:-1px;}
     }
     .testbtn {
       display: none;
-      z-index: 2;
+      z-index: 4;
       position: absolute;
       top: 0;
       left: 0;
@@ -114,7 +118,7 @@ input {outline-offset:-1px;}
     }
     .endbtn {
       display: none;
-      z-index: 2;
+      z-index: 4;
       position: absolute;
       top: 0;
       left: 100px;
@@ -133,8 +137,8 @@ input {outline-offset:-1px;}
     }
 
     #header {
-      z-index: 3;
-      position: fixed;
+      z-index:3;
+      position:fixed;
       width: 100%;
       .container {
         width: 100%;
@@ -142,7 +146,7 @@ input {outline-offset:-1px;}
         margin:0 auto;
         display: flex;
         justify-content: space-between;
-        padding:clampSang(80) 10px;
+        padding:clampSang(50) 30px clampSang(80) 30px;
         .left {
           width: auto;
           a {
@@ -163,7 +167,6 @@ input {outline-offset:-1px;}
         }
       }
     }
-
 
     #main {
       position: relative;
@@ -284,11 +287,12 @@ input {outline-offset:-1px;}
             // animation:oneEnd 2s ease-in-out 15s forwards;
             h1 {
               opacity: 0;
-              font-family: 'SUIT-ExtraBold';
+              font-family: 'SUIT-Variable';
               font-size: clampSang(75);
               letter-spacing : 5px;
               margin-bottom: clampSang(35);;
               color:#000;
+              font-weight: 900;
               &:nth-child(1){
                 animation: textUp 3s 10s forwards;
               }
@@ -315,12 +319,12 @@ input {outline-offset:-1px;}
         position: relative;
         width: 100%;
         border: 1px solid red;
-        padding:clampSang(510) 0 0 0;
         .gap {
           position: relative;
           z-index: 2;
           // display: none;
           width: 100%;
+          margin:clampSang(510) 0 0 0;
           h1 {
             max-width: 1430px;
             margin:0 auto;
