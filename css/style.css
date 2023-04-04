@@ -380,9 +380,9 @@ section {
 #wrap #main #section1 .container .textBox h1 {
   opacity: 0;
   font-family: "SUIT-Variable";
-  font-size: clamp(1rem, 5.502567865vw, 7.5rem);
+  font-size: clamp(1rem, 5.8694057227vw, 8rem);
   letter-spacing: 5px;
-  margin-bottom: clamp(1rem, 2.5678650037vw, 3.5rem);
+  margin-bottom: clamp(1rem, 2.9347028613vw, 4rem);
   color: #000;
   font-weight: 900;
 }
@@ -845,5 +845,13 @@ section {
     transform: rotate(-0.2deg) translate(50%, 115%) scale(4);
     fill: #3CB4E5;
     opacity: 1;
+  }
+}
+@keyframes wave {
+  0% {
+    background-position: left 0px bottom -80px;
+  }
+  100% {
+    background-position: left 1500px bottom 20px;
   }
 }

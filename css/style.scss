@@ -291,9 +291,9 @@ section{position: absolute;top: 0;left: 0;opacity: 0;}
             h1 {
               opacity: 0;
               font-family: 'SUIT-Variable';
-              font-size: clampSang(75);
+              font-size: clampSang(80);
               letter-spacing : 5px;
-              margin-bottom: clampSang(35);;
+              margin-bottom: clampSang(40);;
               color:#000;
               font-weight: 900;
               &:nth-child(1){
@@ -328,7 +328,7 @@ section{position: absolute;top: 0;left: 0;opacity: 0;}
           // display: none;
           width: 100%;
           margin:clampSang(510) 0 0 0;
-          h1 {
+          h1 {   // 디지털교과서부터 AI교과서까지
             max-width: 1430px;
             margin:0 auto;
             font-family: 'SUIT-ExtraBold';
@@ -336,8 +336,7 @@ section{position: absolute;top: 0;left: 0;opacity: 0;}
             // color:#3CB4E5;
             margin-bottom: 20px;
             color:#fff;
-            text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5,
-            1px 0px #3CB4E5, 0px -1px #3CB4E5;
+            text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5,1px 0px #3CB4E5, 0px -1px #3CB4E5;
           }
           .sec2-bg {
             width: 100%;
@@ -802,3 +801,11 @@ section{position: absolute;top: 0;left: 0;opacity: 0;}
     }
   }
 
+  @keyframes wave {
+    0% {
+        background-position: left 0px bottom -80px;
+    }
+    100% {
+        background-position: left 1500px bottom 20px;
+    }
+  }
