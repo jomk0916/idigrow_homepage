@@ -83,7 +83,7 @@ input {outline-offset:-1px;}
 }
 
 // section{position: absolute;top: 0;left: 0;opacity: 0;}
-#main section{position: absolute;top: 0;left: 0;display: none;}
+#main section{position: absolute;top: 0;left: 0;opacity: 0;}
 // 풀페이지 스크롤 시 주석 풀 것
 
 // 상호
@@ -273,7 +273,7 @@ input {outline-offset:-1px;}
       width: 100%;
       #section1 {
         width: 100%;
-        display: block;
+        opacity: 1;
         // border: 1px solid blue;
         .container {
           width: 100%;
