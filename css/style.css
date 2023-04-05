@@ -170,13 +170,15 @@ input {
   left: 35%;
 }
 
+.scrollLock {
+  overflow: hidden;
+}
+
 #main section {
   position: absolute;
   top: 0;
   left: 0;
   display: none;
-.scrollLock {
-  overflow: hidden;
 }
 
 #wrap {
