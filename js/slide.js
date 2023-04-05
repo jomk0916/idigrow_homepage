@@ -3,7 +3,48 @@ $(document).ready(function(){
     // console.log(i);
     var value = 0;
 
+
+    // 네비게이션
+    function navi_start(){
+        // console.log("네비 스타트");
+        for(let k=0; k<4; k++){
+            $('#modal .container ul li').eq(k).on({
+                click: function(){
+                    i = k;
+                    value = 1;
+                    $("#btn li").removeClass("on");
+                    $("#btn li").eq(k).addClass("on");
+                    $("#main section").css({'opacity':'0','transition':'all 0.5s'});
+                    $('#main section').eq(k).css({'opacity':1});
+                }
+            });
+
+            if( k==0){
+                $('#modal .container ul li').eq(k).on({
+                    click: function(){
+                        $('.circle_all').addClass('js_animation_re');
+                        $('.textBox').addClass('js_animation_re');
+
+                        $('.circle_all').removeClass('js_animation');
+                        $('.textBox').removeClass('js_animation');
+                    }
+                });
+            }
+            else if( k==1){
+                $('#modal .container ul li').eq(k).on({
+                    click: function(){
+                        $('#section2').addClass('sec2_ani_start');
+                    }
+                });
+            }
+        }
+    }
+
+    navi_start();
+
+
     $(window).on("wheel",function(e){
+        // console.log(i);
         // console.log(e.originalEvent.deltaY);
 
         // 스크롤 내릴 때
@@ -12,7 +53,6 @@ $(document).ready(function(){
 
             }else{
                 i++;
-
             }
             $("#btn li").removeClass("on");
             $("#btn li").eq(i).addClass("on");
@@ -21,10 +61,10 @@ $(document).ready(function(){
             // $("#main section").eq(i).stop().fadeIn();
             $("#main section").eq(i).css({'opacity':'1','transition':'all 0.5s'});
             if(i == 0){
-                console.log("1p");
+                // console.log("1p");
             }
             if(i == 1){
-                console.log("1번");
+                // console.log("2p");
                 // 1p 끝
                 $('.circle_all').addClass('js_animation');
                 $('.textBox').addClass('js_animation');
@@ -46,10 +86,10 @@ $(document).ready(function(){
                 value = 1;
             }
             if(i == 2){
-                console.log("3p");
+                // console.log("3p");
             }
             if(i == 3){
-                console.log("4p");
+                // console.log("4p");
             }
 
         // 스크롤 올릴 때
@@ -66,7 +106,6 @@ $(document).ready(function(){
             // $("#main section").eq(i).stop().fadeIn();
             $("#main section").eq(i).css('opacity','1');
             if(i == 0 && value == 1){
-                console.log("2번");
                 $('.circle_all').addClass('js_animation_re');
                 $('.textBox').addClass('js_animation_re');
 
@@ -74,9 +113,14 @@ $(document).ready(function(){
                 $('.textBox').removeClass('js_animation');
             }
             else if (i == 1){
-
+                if($("#section2").hasClass("sec2_ani_start") === false) {
+                    $('#section2').addClass('sec2_ani_start');
+                }
             }
         }
+
+        navi_start();
+
     });
     $(".top_btn").click(function(){
         i = $(".btn li.on").index(0);
@@ -85,4 +129,5 @@ $(document).ready(function(){
         $("#main section").stop().fadeOut();
         $("#main section").eq(0).stop().fadeIn();
     });
+
 });
