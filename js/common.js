@@ -61,8 +61,8 @@
     section3:function(){
       function draw(){
         var canvas = document.getElementById("sec3_ani");
-        canvas.width = innerWidth;
-        canvas.height = innerHeight;
+        canvas.width = 1920;
+        canvas.height = 1080;
         if(canvas.getContext){
           var ctx = canvas.getContext("2d");
 
