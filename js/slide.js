@@ -19,13 +19,13 @@ $(document).ready(function(){
             }
             if(i == 1){
                 console.log("2p");
-                // $('.circle_all').addClass('js_animation');
-                // $('.textBox').addClass('js_animation');
+                $('.circle_all').addClass('js_animation');
+                $('.textBox').addClass('js_animation');
 
-                // $('.circle_all').removeClass('js_animation_re');
-                // $('.textBox').removeClass('js_animation_re');
-                // $("#main section").stop().fadeOut(6000);
-                // $("#main section").eq(i).stop().fadeIn(9000);
+                $('.circle_all').removeClass('js_animation_re');
+                $('.textBox').removeClass('js_animation_re');
+                $("#main section").stop().fadeOut(6000);
+                $("#main section").eq(i).stop().fadeIn(9000);
             }
             if(i == 2){
                 console.log("3p");
@@ -43,13 +43,13 @@ $(document).ready(function(){
             $("#btn li").eq(i).addClass("on");
             $("#main section").stop().fadeOut();
             $("#main section").eq(i).stop().fadeIn();
-            // if(i == 0){
-            //     // $('.circle_all').addClass('js_animation_re');
-            //     // $('.textBox').addClass('js_animation_re');
+            if(i == 0){
+                // $('.circle_all').addClass('js_animation_re');
+                // $('.textBox').addClass('js_animation_re');
 
-            //     // $('.circle_all').removeClass('js_animation');
-            //     // $('.textBox').removeClass('js_animation');
-            // }
+                // $('.circle_all').removeClass('js_animation');
+                // $('.textBox').removeClass('js_animation');
+            }
         }
     });
     $(".top_btn").click(function(){
