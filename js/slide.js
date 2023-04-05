@@ -72,10 +72,15 @@ $(document).ready(function(){
         }
     });
     $(".top_btn").click(function(){
-        i = $(".btn li.on").index(0);
+        i = $(".btn li.on").index() + 1;
         $("#btn li").removeClass("on");
         $("#btn li").eq(0).addClass("on");
-        $("#main section").stop().fadeOut();
-        $("#main section").eq(0).stop().fadeIn();
+        $("#main section").css('opacity','0');
+        $("#main section").eq(0).css('opacity','1');
+
+        $('.circle_all').addClass('js_animation_re');
+        $('.textBox').addClass('js_animation_re');
+        $('.circle_all').removeClass('js_animation');
+        $('.textBox').removeClass('js_animation');
     });
 });
