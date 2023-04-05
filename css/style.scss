@@ -178,6 +178,7 @@ input {outline-offset:-1px;}
       width: 100%;
       #section1 {
         width: 100%;
+        display: block;
         // border: 1px solid blue;
         .container {
           width: 100%;
@@ -596,7 +597,7 @@ input {outline-offset:-1px;}
         .container{
             margin: 0 auto;
             /* width: 1920px; */
-            width: 100%;
+            width: 100vw;
             color: #000;
             position: relative;
           }
