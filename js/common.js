@@ -56,7 +56,7 @@
     },
     section2:function(){
       // 2p ani 실행 코드
-      $('#section2').addClass('sec2_ani_start');
+      // $('#section2').addClass('sec2_ani_start');
     },
     section3:function(){
       function draw(){
