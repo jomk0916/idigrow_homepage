@@ -9,8 +9,20 @@
   <link rel="stylesheet" href="./css/style.css">
   <script src="./js/lib/jquery.min.js"></script>
 </head>
-<body>
+<body class="">
   <div id="wrap">
+    <!-- modal -->
+    <div id="modal">
+      <div class="container">
+        <ul>
+          <li><a href="#section1">Intro</a></li>
+          <li><a href="#section2">Work</a></li>
+          <li><a href="#section3">Contact us</a></li>
+          <li><a href="#section4">Carrers</a></li>
+        </ul>
+      </div>
+    </div>
+
     <div class="bg"></div>
     <button class="testbtn">next</button>
     <button class="endbtn">prev</button>
@@ -21,7 +33,11 @@
           <a href="#"><img src="./images/logo_main.png" alt=""></a>
         </div>
         <div class="right">
-          <a href="#"><img src="./images/Menu.png" alt=""></a>
+          <a href="#" class="ham">
+            <div class="first_bar"></div>
+            <div class="second_bar"></div>
+            <!-- <img src="./images/Menu.png" alt="">     -->
+          </a>
         </div>
       </div>
     </header>
@@ -83,14 +99,15 @@
       </section>
       <section id="section2">
         <div class="gap">
-          <h1>디지털교과서부터 AI교과서까지</h1>
-          <div class="sec2-bg">
-            <div class="container">
-              <div class="text-box">
-                <p>국내 초.중.고 교과 기반 디지털 콘텐츠 전문 개발<br>
-                  웹 기반 인터랙션 콘텐츠, 멀티미디어, 실감형 콘텐츠 통합 개발<br>
-                  교과별학습교구및서비스개발</p>
-              </div>
+          <div class="container">
+            <div class="main_text">
+              <h1>디지털교과서부터 </h1>
+              <span>AI교과서까지</span>
+            </div>
+            <div class="sec_text">
+              <p>국내 초.중.고 교과 기반 디지털 콘텐츠 전문 개발<br>
+                웹 기반 인터랙션 콘텐츠, 멀티미디어, 실감형 콘텐츠 통합 개발<br>
+                교과별학습교구및서비스개발</p>
             </div>
           </div>
         </div>

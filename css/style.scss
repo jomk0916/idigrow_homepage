@@ -78,6 +78,10 @@ input {outline-offset:-1px;}
     }
 }
 
+.scrollLock {
+  overflow: hidden;
+}
+
 // section{position: absolute;top: 0;left: 0;opacity: 0;}
 // 풀페이지 스크롤 시 주석 풀 것
 
@@ -89,11 +93,48 @@ input {outline-offset:-1px;}
     @return clamp($a, $b, $c);
   }
 
-
   #wrap {
     width: 100%;
     position: relative;
     z-index: 1;
+    // modal
+    #modal {
+      // opacity: 0;
+      display: none;
+      width: 100%;
+      .container {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ul {
+          padding:0 80px;
+          width: 1430px;
+          height: 600px;
+          font-size: clamp(9rem, 9.5377842993vw, 13rem);
+          font-family: 'SUIT-Variable';
+          font-weight: 1000;
+          li {
+            width: 100%;
+            line-height: 1.3;
+            a {
+              color:#fff;
+              transition: all 0.5s;
+              &:hover {
+                color:#FF5C35;
+              }
+            }
+          }
+        }
+      }
+    }
+
+
     .bg {
       display: none;
       position: absolute;
@@ -156,16 +197,54 @@ input {outline-offset:-1px;}
           a {
             width: 100%;
             img {
-              height: clampSang(43);
+              height: 43px;
             }
           }
         }
         .right {
           width: auto;
-          a {
-            width: 100%;
-            img {
-              height: clampSang(25);
+          .ham {
+            position: relative;
+            display: block;
+            width: 25px;
+            height: 23px;
+            .first_bar {
+              position: absolute;
+              top: 0;
+              width: 100%;
+              height: 6px;
+              background-color: #000;
+              border-radius: 0 6px 0 0;
+              transition: all 0.5s;
+            }
+            .second_bar {
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              height: 6px;
+              background-color: #000;
+              border-radius: 0 0 0 6px;
+              transition: all 0.5s;
+            }
+            &.active {
+              &:hover {
+                .first_bar {
+                  background-color: #3CB4E5;
+                }
+                .second_bar {
+                  background-color: #3CB4E5;
+                }
+              }
+              .first_bar {
+                transform: translateY(8.5px) rotate(-45deg);
+                border-radius: 5px;
+                background-color: #fff;
+              }
+              .second_bar {
+                transform: translateY(-8.5px) rotate(45deg);
+                border-radius: 5px;
+                background-color: #fff;
+              }
             }
           }
         }
@@ -322,42 +401,51 @@ input {outline-offset:-1px;}
       #section2 {
         position: relative;
         width: 100%;
-        border: 1px solid red;
+        // border: 1px solid red;
         .gap {
-          position: relative;
+          position: absolute;
+          top: 48%;
+          left: 0%;
           z-index: 2;
-          // display: none;
           width: 100%;
-          margin:clampSang(510) 0 0 0;
-          h1 {   // 디지털교과서부터 AI교과서까지
-            max-width: 1430px;
-            margin:0 auto;
-            font-family: 'SUIT-ExtraBold';
-            font-size: clampSang(90);
-            // color:#3CB4E5;
-            margin-bottom: 20px;
-            color:#fff;
-            text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5,1px 0px #3CB4E5, 0px -1px #3CB4E5;
-          }
-          .sec2-bg {
+          .container {
             width: 100%;
-            height: clampSang(455);
-            // background-color: #3CB4E5;
-            padding:clampSang(50) 0 0 0;
-            .container {
-              position: relative;
-              width: 100%;
+            max-width: 1430px;
+            margin: 0 auto;
+            .main_text {
+              display: flex;
               max-width: 1430px;
-              height: auto;
-              margin: 0 auto;
-              .text-box {
-                width: 100%;
-                p {
-                  font-family: 'SUIT-SemiBold';
-                  font-size: clampSang(30);
-                  color:#fff;
-                  line-height: 1.7;
-                }
+              h1 {   // 디지털교과서부터 AI교과서까지
+                opacity: 0;
+                font-size: clampSang(90);
+                font-family: 'SUIT-ExtraBold';
+                margin-bottom: 20px;
+                color:#fff;
+                text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5,1px 0px #3CB4E5, 0px -1px #3CB4E5;
+                animation:textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 7s forwards;
+              }
+              span {
+                opacity: 0;
+                font-size: clampSang(90);
+                font-family: 'SUIT-ExtraBold';
+                text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5,1px 0px #3CB4E5, 0px -1px #3CB4E5;
+                color:#fff;
+                padding:0 0 0 25px;
+                animation:textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 8s forwards;
+              }
+            }
+            .sec_text {
+              opacity: 0;
+              width: 100%;
+              transform: scale(0.8);
+              transform-origin : 0 0;
+              padding:50px 0 0 0;
+              animation:textUp_sec2 2s ease-in-out 5s forwards, sizeUp 1s ease-in-out 9s forwards;
+              p {
+                font-family: 'SUIT-SemiBold';
+                font-size: clampSang(30);
+                color:#fff;
+                line-height: 1.7;
               }
             }
           }
@@ -376,11 +464,9 @@ input {outline-offset:-1px;}
         }
 
         .sec2_loader {
+          max-width: 1920px;
+          max-height: 1080px;
           z-index: 1;
-          position: absolute;
-          top: 0;
-          left: 0;
-          // background-color: lightcoral;
           #circle_g_sec2 {
             width: 100%;
             .sec2_circle {
@@ -808,5 +894,87 @@ input {outline-offset:-1px;}
     }
     100% {
         background-position: left 1500px bottom 20px;
+    }
+  }
+
+  @keyframes sec2_h1 {
+    0% {
+
+    }
+    100% {
+      color:#3CB4E5;
+      text-shadow: none;
+    }
+  }
+
+  @keyframes sizeUp {
+    0% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes textUp_sec2 {
+    0% {
+      opacity: 0;
+      transform: translateY(20%) scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%) scale(0.8);
+    }
+  }
+
+
+
+  ///////////////// 반응형 ///////////////////////////
+  @media all and (max-width:576px){
+    #wrap #header .container .left a img {
+      height: 25px;
+    }
+    #wrap #header .container .right .ham {
+      width: 15px;
+      height: 13px;
+    }
+    #wrap #header .container .right .ham .first_bar {
+      height: 4px;
+      border-radius: 0 3px 0 0;
+    }
+    #wrap #header .container .right .ham .second_bar {
+      height: 4px;
+      border-radius: 0 0 0 3px;
+    }
+    #wrap #header .container .right .ham.active .first_bar {
+      transform: translateY(4.5px) rotate(-45deg);
+      border-radius: 5px;
+      background-color: #fff;
+    }
+    #wrap #header .container .right .ham.active .second_bar {
+      transform: translateY(-4.5px) rotate(45deg);
+      border-radius: 5px;
+      background-color: #fff;
+    }
+  }
+
+  @media all and (max-width:768px){
+
+  }
+
+  @media all and (max-width:992px){
+    #wrap #main #section2 .gap {
+      position: absolute;
+      top: 45%;
+      padding:0 0 0 30px;
+    }
+    #wrap #main #section2 .gap .container .main_text h1 {
+      margin-bottom: 0px;
+    }
+    #wrap #main #section2 .gap .container .main_text span {
+      padding: 0 0 0 5px;
+    }
+    #wrap #main #section2 .gap .container .sec_text {
+      padding: 10px 0 0 0;
     }
   }
