@@ -185,6 +185,18 @@ input {outline-offset:-1px;}
       z-index:3;
       position:fixed;
       width: 100%;
+      &.logo_active {
+        .container .left a .logo {
+          background: url(../images/logo_sub.png) no-repeat 0% 0%/contain;
+        }
+        .container .right .ham .first_bar {
+          background-color: #fff;
+        }
+        .container .right .ham .second_bar {
+          background-color: #fff;
+        }
+      }
+
       .container {
         width: 100%;
         max-width: 1620px;
@@ -196,8 +208,11 @@ input {outline-offset:-1px;}
           width: auto;
           a {
             width: 100%;
-            img {
+            .logo {
+              width: 160px;
+              background:url(../images/logo_main.png) no-repeat 0% 0%/contain;
               height: 43px;
+
             }
           }
         }
@@ -402,6 +417,33 @@ input {outline-offset:-1px;}
         position: relative;
         width: 100%;
         // border: 1px solid red;
+        &.sec2_ani_start {
+          .gap .container {
+            .main_text {
+              h1 {
+                animation:textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 7s forwards;
+              }
+              span {
+                animation:textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 8s forwards;
+              }
+            }
+            .sec_text {
+              animation:textUp_sec2 2s ease-in-out 5s forwards, sizeUp 1s ease-in-out 9s forwards;
+            }
+          }
+          .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(1) {
+            animation: sec2Circle 3s ease-in-out forwards;
+          }
+          .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(2) {
+            animation: sec2Circle 3s ease-in-out 0.5s forwards;
+          }
+          .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(3) {
+            animation: sec2Circle 3s ease-in-out 1s forwards;
+          }
+          .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(4) {
+            animation: sec2Circle 3s ease-in-out 1.5s forwards;
+          }
+        }
         .gap {
           position: absolute;
           top: 48%;
@@ -422,7 +464,7 @@ input {outline-offset:-1px;}
                 margin-bottom: 20px;
                 color:#fff;
                 text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5,1px 0px #3CB4E5, 0px -1px #3CB4E5;
-                animation:textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 7s forwards;
+                // animation:textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 7s forwards;
               }
               span {
                 opacity: 0;
@@ -431,7 +473,7 @@ input {outline-offset:-1px;}
                 text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5,1px 0px #3CB4E5, 0px -1px #3CB4E5;
                 color:#fff;
                 padding:0 0 0 25px;
-                animation:textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 8s forwards;
+                // animation:textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 8s forwards;
               }
             }
             .sec_text {
@@ -440,7 +482,7 @@ input {outline-offset:-1px;}
               transform: scale(0.8);
               transform-origin : 0 0;
               padding:50px 0 0 0;
-              animation:textUp_sec2 2s ease-in-out 5s forwards, sizeUp 1s ease-in-out 9s forwards;
+              // animation:textUp_sec2 2s ease-in-out 5s forwards, sizeUp 1s ease-in-out 9s forwards;
               p {
                 font-family: 'SUIT-SemiBold';
                 font-size: clampSang(30);
@@ -475,19 +517,19 @@ input {outline-offset:-1px;}
               transform-origin: 0 0;
               &:nth-child(1){
                 opacity: 0.7 ;
-                animation: sec2Circle 3s ease-in-out forwards;
+                // animation: sec2Circle 3s ease-in-out forwards;
               }
               &:nth-child(2){
                 opacity: 0.5;
-                animation: sec2Circle 3s ease-in-out 0.5s forwards;
+                // animation: sec2Circle 3s ease-in-out 0.5s forwards;
               }
               &:nth-child(3){
                 opacity: 0.3;
-                animation: sec2Circle 3s ease-in-out 1s forwards;
+                // animation: sec2Circle 3s ease-in-out 1s forwards;
               }
               &:nth-child(4){
                 opacity: 0.1;
-                animation: sec2Circle 3s ease-in-out 1.5s forwards;
+                // animation: sec2Circle 3s ease-in-out 1.5s forwards;
               }
             }
           }
@@ -931,9 +973,10 @@ input {outline-offset:-1px;}
 
   ///////////////// 반응형 ///////////////////////////
   @media all and (max-width:576px){
-    #wrap #header .container .left a img {
+    #wrap #header .container .left a .logo {
       height: 25px;
     }
+
     #wrap #header .container .right .ham {
       width: 15px;
       height: 13px;

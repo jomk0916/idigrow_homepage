@@ -14,6 +14,7 @@
           $(this).toggleClass('active');
           $('body').toggleClass('scrollLock');
           $('#modal').toggle(300);
+          $('#header').removeClass('logo_active');
 
         }
       });
@@ -23,6 +24,7 @@
           $('.ham').toggleClass('active');
           $('body').toggleClass('scrollLock');
           $('#modal').toggle(300);
+          $('#header').removeClass('logo_active');
         }
       });
 
@@ -53,7 +55,8 @@
 
     },
     section2:function(){
-
+      // 2p ani 실행 코드
+      $('#section2').addClass('sec2_ani_start');
     },
     section3:function(){
       function draw(){

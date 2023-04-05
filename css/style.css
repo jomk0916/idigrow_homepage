@@ -253,6 +253,15 @@ input {
   position: fixed;
   width: 100%;
 }
+#wrap #header.logo_active .container .left a .logo {
+  background: url(../images/logo_sub.png) no-repeat 0% 0%/contain;
+}
+#wrap #header.logo_active .container .right .ham .first_bar {
+  background-color: #fff;
+}
+#wrap #header.logo_active .container .right .ham .second_bar {
+  background-color: #fff;
+}
 #wrap #header .container {
   width: 100%;
   max-width: 1620px;
@@ -267,7 +276,9 @@ input {
 #wrap #header .container .left a {
   width: 100%;
 }
-#wrap #header .container .left a img {
+#wrap #header .container .left a .logo {
+  width: 160px;
+  background: url(../images/logo_main.png) no-repeat 0% 0%/contain;
   height: 43px;
 }
 #wrap #header .container .right {
@@ -470,6 +481,27 @@ input {
   position: relative;
   width: 100%;
 }
+#wrap #main #section2.sec2_ani_start .gap .container .main_text h1 {
+  animation: textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 7s forwards;
+}
+#wrap #main #section2.sec2_ani_start .gap .container .main_text span {
+  animation: textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 8s forwards;
+}
+#wrap #main #section2.sec2_ani_start .gap .container .sec_text {
+  animation: textUp_sec2 2s ease-in-out 5s forwards, sizeUp 1s ease-in-out 9s forwards;
+}
+#wrap #main #section2.sec2_ani_start .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(1) {
+  animation: sec2Circle 3s ease-in-out forwards;
+}
+#wrap #main #section2.sec2_ani_start .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(2) {
+  animation: sec2Circle 3s ease-in-out 0.5s forwards;
+}
+#wrap #main #section2.sec2_ani_start .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(3) {
+  animation: sec2Circle 3s ease-in-out 1s forwards;
+}
+#wrap #main #section2.sec2_ani_start .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(4) {
+  animation: sec2Circle 3s ease-in-out 1.5s forwards;
+}
 #wrap #main #section2 .gap {
   position: absolute;
   top: 48%;
@@ -493,7 +525,6 @@ input {
   margin-bottom: 20px;
   color: #fff;
   text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5, 1px 0px #3CB4E5, 0px -1px #3CB4E5;
-  animation: textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 7s forwards;
 }
 #wrap #main #section2 .gap .container .main_text span {
   opacity: 0;
@@ -502,7 +533,6 @@ input {
   text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5, 1px 0px #3CB4E5, 0px -1px #3CB4E5;
   color: #fff;
   padding: 0 0 0 25px;
-  animation: textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 8s forwards;
 }
 #wrap #main #section2 .gap .container .sec_text {
   opacity: 0;
@@ -510,7 +540,6 @@ input {
   transform: scale(0.8);
   transform-origin: 0 0;
   padding: 50px 0 0 0;
-  animation: textUp_sec2 2s ease-in-out 5s forwards, sizeUp 1s ease-in-out 9s forwards;
 }
 #wrap #main #section2 .gap .container .sec_text p {
   font-family: "SUIT-SemiBold";
@@ -544,19 +573,15 @@ input {
 }
 #wrap #main #section2 .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(1) {
   opacity: 0.7;
-  animation: sec2Circle 3s ease-in-out forwards;
 }
 #wrap #main #section2 .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(2) {
   opacity: 0.5;
-  animation: sec2Circle 3s ease-in-out 0.5s forwards;
 }
 #wrap #main #section2 .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(3) {
   opacity: 0.3;
-  animation: sec2Circle 3s ease-in-out 1s forwards;
 }
 #wrap #main #section2 .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(4) {
   opacity: 0.1;
-  animation: sec2Circle 3s ease-in-out 1.5s forwards;
 }
 #wrap #main #section3 {
   /* contact버튼 마우스 호버 - 추후 클릭으로 변경 예정*/
@@ -952,7 +977,7 @@ input {
   }
 }
 @media all and (max-width: 576px) {
-  #wrap #header .container .left a img {
+  #wrap #header .container .left a .logo {
     height: 25px;
   }
   #wrap #header .container .right .ham {
