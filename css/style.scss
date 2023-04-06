@@ -186,7 +186,7 @@ input {outline-offset:-1px;}
       z-index:3;
       position:fixed;
       width: 100%;
-      &.logo_active {
+      &.logo_active { // 헤더 흰색 전환
         .container .left a .logo {
           background: url(../images/logo_sub.png) no-repeat 0% 0%/contain;
         }

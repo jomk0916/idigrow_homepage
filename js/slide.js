@@ -9,7 +9,8 @@ $(document).ready(function(){
         // console.log("네비 스타트");
         for(let k=0; k<4; k++){
             $('#modal .container ul li').eq(k).on({
-                click: function(){
+                click: function(e){
+                    e.preventDefault();
                     i = k;
                     value = 1;
                     $("#btn li").removeClass("on");
@@ -21,12 +22,15 @@ $(document).ready(function(){
 
             if( k==0){
                 $('#modal .container ul li').eq(k).on({
-                    click: function(){
+                    click: function(e){
+                        e.preventDefault();
                         $('.circle_all').addClass('js_animation_re');
                         $('.textBox').addClass('js_animation_re');
 
                         $('.circle_all').removeClass('js_animation');
                         $('.textBox').removeClass('js_animation');
+
+                        $('#header').removeClass('logo_active');
                     }
                 });
             }
@@ -34,6 +38,21 @@ $(document).ready(function(){
                 $('#modal .container ul li').eq(k).on({
                     click: function(){
                         $('#section2').addClass('sec2_ani_start');
+                        $('#header').removeClass('logo_active');
+                    }
+                });
+            }
+            else if( k==2 ){
+                $('#modal .container ul li').eq(k).on({
+                    click: function(){
+                        $('#header').addClass('logo_active');
+                    }
+                });
+            }
+            else if( k==3 ){
+                $('#modal .container ul li').eq(k).on({
+                    click: function(){
+                        $('#header').removeClass('logo_active');
                     }
                 });
             }
@@ -83,13 +102,18 @@ $(document).ready(function(){
                         $('#section2').addClass('sec2_ani_start');
                     }
                 }, 1000);
+                // 헤더 흰색 로고 제거
+                $('#header').removeClass('logo_active');
+
                 value = 1;
             }
             if(i == 2){
                 // console.log("3p");
+                $('#header').addClass('logo_active');
             }
             if(i == 3){
                 // console.log("4p");
+                $('#header').removeClass('logo_active');
             }
 
         // 스크롤 올릴 때
@@ -111,11 +135,17 @@ $(document).ready(function(){
 
                 $('.circle_all').removeClass('js_animation');
                 $('.textBox').removeClass('js_animation');
+
+                $('#header').removeClass('logo_active');
             }
             else if (i == 1){
                 if($("#section2").hasClass("sec2_ani_start") === false) {
                     $('#section2').addClass('sec2_ani_start');
                 }
+                $('#header').removeClass('logo_active');
+            }
+            else if (i == 2){
+                $('#header').addClass('logo_active');
             }
         }
 

@@ -14,8 +14,6 @@
           $(this).toggleClass('active');
           $('body').toggleClass('scrollLock');
           $('#modal').toggle(300);
-          $('#header').removeClass('logo_active');
-
         }
       });
 
@@ -24,7 +22,6 @@
           $('.ham').toggleClass('active');
           $('body').toggleClass('scrollLock');
           $('#modal').toggle(300);
-          $('#header').removeClass('logo_active');
         }
       });
 
