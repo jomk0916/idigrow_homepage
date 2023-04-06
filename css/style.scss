@@ -418,9 +418,8 @@ input {outline-offset:-1px;}
       #section2 {
         position: relative;
         width: 100%;
-        // border: 1px solid red;
-        &.sec2_ani_start {
-          .gap .container {
+        &.sec2_ani_start { // 애니메이션
+          .gap {
             .main_text {
               h1 {
                 animation:textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 7s forwards;
@@ -446,54 +445,91 @@ input {outline-offset:-1px;}
             animation: sec2Circle 3s ease-in-out 1.5s forwards;
           }
         }
-        .gap {
-          position: absolute;
-          top: 48%;
-          left: 0%;
-          z-index: 2;
+        .container {
           width: 100%;
-          .container {
+          max-width: 1920px;
+          height: 100vh;
+          margin: 0 auto;
+          .gap {
+            position: absolute;
+            top: 34%;
+            left: 0%;
+            z-index: 2;
             width: 100%;
-            max-width: 1430px;
-            margin: 0 auto;
-            .main_text {
-              display: flex;
-              max-width: 1430px;
-              h1 {   // 디지털교과서부터 AI교과서까지
-                opacity: 0;
-                font-size: clampSang(90);
-                font-family: 'SUIT-ExtraBold';
-                margin-bottom: 20px;
-                color:#fff;
-                text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5,1px 0px #3CB4E5, 0px -1px #3CB4E5;
-                // animation:textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 7s forwards;
+            .sec2_textBox {
+              max-width: 1435px;
+              margin: 0 auto;
+              .main_text {
+                display: flex;
+                h1 {   // 디지털교과서부터 AI교과서까지
+                  opacity: 0;
+                  font-size: clampSang(90);
+                  font-family: 'SUIT-ExtraBold';
+                  margin-bottom: 20px;
+                  color:#fff;
+                  text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5,1px 0px #3CB4E5, 0px -1px #3CB4E5;
+                  // animation:textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 7s forwards;
+                }
+                span {
+                  opacity: 0;
+                  font-size: clampSang(90);
+                  font-family: 'SUIT-ExtraBold';
+                  text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5,1px 0px #3CB4E5, 0px -1px #3CB4E5;
+                  color:#fff;
+                  padding:0 0 0 25px;
+                  // animation:textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 8s forwards;
+                }
               }
-              span {
+              .sec_text {
                 opacity: 0;
-                font-size: clampSang(90);
-                font-family: 'SUIT-ExtraBold';
-                text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5,1px 0px #3CB4E5, 0px -1px #3CB4E5;
-                color:#fff;
-                padding:0 0 0 25px;
-                // animation:textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 8s forwards;
+                width: 100%;
+                transform: scale(0.8);
+                transform-origin : 0 0;
+                padding:50px 0 0 0;
+                // animation:textUp_sec2 2s ease-in-out 5s forwards, sizeUp 1s ease-in-out 9s forwards;
+                p {
+                  font-family: 'SUIT-SemiBold';
+                  font-size: clampSang(30);
+                  color:#fff;
+                  line-height: 1.7;
+                }
               }
             }
-            .sec_text {
-              opacity: 0;
+          }
+
+
+          .sec2_loader {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            margin: 0 auto;
+            #circle_g_sec2 {
               width: 100%;
-              transform: scale(0.8);
-              transform-origin : 0 0;
-              padding:50px 0 0 0;
-              // animation:textUp_sec2 2s ease-in-out 5s forwards, sizeUp 1s ease-in-out 9s forwards;
-              p {
-                font-family: 'SUIT-SemiBold';
-                font-size: clampSang(30);
-                color:#fff;
-                line-height: 1.7;
+              .sec2_circle {
+                fill:#FF4713;
+                transform: translate(70%, 7%) rotate(-30deg);
+                transform-origin: 0 0;
+                &:nth-child(1){
+                  opacity: 0 ;
+                  // animation: sec2Circle 3s ease-in-out forwards;
+                }
+                &:nth-child(2){
+                  opacity: 0;
+                  // animation: sec2Circle 3s ease-in-out 0.5s forwards;
+                }
+                &:nth-child(3){
+                  opacity: 0;
+                  // animation: sec2Circle 3s ease-in-out 1s forwards;
+                }
+                &:nth-child(4){
+                  opacity: 0;
+                  // animation: sec2Circle 3s ease-in-out 1.5s forwards;
+                }
               }
             }
           }
         }
+
 
         .bg2 {
           display: none;
@@ -507,35 +543,7 @@ input {outline-offset:-1px;}
           opacity: 0.5;
         }
 
-        .sec2_loader {
-          max-width: 1920px;
-          max-height: 1080px;
-          z-index: 1;
-          #circle_g_sec2 {
-            width: 100%;
-            .sec2_circle {
-              fill:#FF4713;
-              transform: translate(70%, 7%) rotate(-30deg);
-              transform-origin: 0 0;
-              &:nth-child(1){
-                opacity: 0 ;
-                // animation: sec2Circle 3s ease-in-out forwards;
-              }
-              &:nth-child(2){
-                opacity: 0;
-                // animation: sec2Circle 3s ease-in-out 0.5s forwards;
-              }
-              &:nth-child(3){
-                opacity: 0;
-                // animation: sec2Circle 3s ease-in-out 1s forwards;
-              }
-              &:nth-child(4){
-                opacity: 0;
-                // animation: sec2Circle 3s ease-in-out 1.5s forwards;
-              }
-            }
-          }
-        }
+
       }
       // 문기
       /* section3(회사정보 및 연결) */
@@ -933,6 +941,21 @@ input {outline-offset:-1px;}
     }
   }
 
+  @keyframes sec2Circle_m {
+    0% {
+      opacity: 0;
+    }
+    80% {
+      fill: #FF4713;
+      opacity: 0.9;
+    }
+    100% {
+      transform: rotate(-0.2deg) translate(50%, 180%) scaleX(4) scaleY(9);
+      fill: #3CB4E5;
+      opacity: 1;
+    }
+  }
+
   @keyframes wave {
     0% {
         background-position: left 0px bottom -80px;
@@ -975,7 +998,37 @@ input {outline-offset:-1px;}
 
 
   ///////////////// 반응형 ///////////////////////////
+
+  @media all and (max-width:992px){
+    // 2p
+    #wrap #main #section2 .container .gap {
+      top: 40%;
+      padding:0 0 0 15px;
+    }
+    #wrap #main #section2 .container .gap .sec2_textBox .main_text {
+      margin-bottom: 20px;
+      h1 {
+        margin-bottom: 15px;
+      }
+      span {
+        padding: 0 0 0 0;
+      }
+    }
+
+    #wrap #main #section2 .container .gap .sec2_textBox .sec_text {
+      padding: 10px 0 0 0;
+      p {
+
+      }
+    }
+  }
+
+  @media all and (max-width:768px){
+
+  }
+
   @media all and (max-width:576px){
+     // 헤더
     #wrap #header .container .left a .logo {
       height: 25px;
     }
@@ -1002,25 +1055,32 @@ input {outline-offset:-1px;}
       border-radius: 5px;
       background-color: #fff;
     }
-  }
 
-  @media all and (max-width:768px){
+    // 2p
+    #wrap #main #section2 .container .gap {
+      top: 35%;
+      padding:0 0 0 15px;
+    }
+    #wrap #main #section2 .container .gap .sec2_textBox .main_text {
+      display: block;
+      margin-bottom: 70px;
+      h1 {
+        margin-bottom: 15px;
+        font-size: 35px;
+      }
+      span {
+        font-size: 35px;
+        padding: 0 0 0 0;
+      }
+    }
 
-  }
-
-  @media all and (max-width:992px){
-    #wrap #main #section2 .gap {
-      position: absolute;
-      top: 45%;
-      padding:0 0 0 30px;
-    }
-    #wrap #main #section2 .gap .container .main_text h1 {
-      margin-bottom: 0px;
-    }
-    #wrap #main #section2 .gap .container .main_text span {
-      padding: 0 0 0 5px;
-    }
-    #wrap #main #section2 .gap .container .sec_text {
+    #wrap #main #section2 .container .gap .sec2_textBox .sec_text {
       padding: 10px 0 0 0;
+      p {
+        font-size: 10px;
+      }
     }
+
   }
+
+
