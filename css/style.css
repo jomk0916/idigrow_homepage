@@ -641,7 +641,7 @@ input {
   position: relative;
   z-index: 10;
 }
-#wrap #main #section3 .contact_container b {
+#wrap #main #section3 .contact_container h1 {
   font-size: clamp(1rem, 0.9375vw, 1.8rem);
   /* font-size: 18px; */
   font-weight: 600;
@@ -815,7 +815,7 @@ input {
   /* margin-top: 300px; */
   margin-top: clamp(1rem, 15.625vw, 30rem);
 }
-#wrap #main #section4 .career_container b {
+#wrap #main #section4 .career_container h1 {
   /* font-size: 40px; */
   font-size: clamp(1rem, 2.08333vw, 4rem);
   font-weight: bold;
