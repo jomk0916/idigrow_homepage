@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #262626;
+  font-family: arial;
+}
+
+.loader {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translate(-10%, -10%);
+}
+.loader div {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 5em;
+  text-shadow: -2px 0px #3CB4E5, 0px 2px #3CB4E5, 2px 0px #3CB4E5, 0px -2px #3CB4E5;
+  color: #fff;
+}
+.loader h1 {
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 5em;
+  color: rgba(255, 255, 255, 0.1);
+  background-image: url(../wave.svg);
+  background-repeat: repeat-x;
+  background-size: contain;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-position: left 0px top 100px;
+  animation: animate 5s linear forwards;
+  animation-direction: alternate;
+}
+
+@keyframes animate {
+  0% {
+    background-position: left 0px top 100px;
+  }
+  100% {
+    background-position: left 1500px top -10px;
+  }
+}

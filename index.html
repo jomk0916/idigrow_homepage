@@ -4,24 +4,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>이디그로</title>
-  <link rel="shortcut icon" href="" type="image/x-icon">
+  <title>IDIGROW</title>
+  <link rel="shortcut icon" href="./images/icon_idi.png" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css">
   <script src="./js/lib/jquery.min.js"></script>
 </head>
-<body>
+<body class="">
   <div id="wrap">
+    <!-- modal -->
+    <div id="modal">
+      <div class="container">
+        <ul>
+          <li><a href="#section1">Intro</a></li>
+          <li><a href="#section2">Work</a></li>
+          <li><a href="#section3">Contact us</a></li>
+          <li><a href="#section4">Carrers</a></li>
+        </ul>
+      </div>
+    </div>
+
     <div class="bg"></div>
     <button class="testbtn">next</button>
     <button class="endbtn">prev</button>
     <!-- 헤더 -->
-    <header id="header">
+    <header id="header" class="">
       <div class="container">
         <div class="left">
-          <a href="#"><img src="./images/logo_main.png" alt=""></a>
+          <a href="#"><div class="logo"></div></a>
         </div>
         <div class="right">
-          <a href="#"><img src="./images/Menu.png" alt=""></a>
+          <a href="#" class="ham">
+            <div class="first_bar"></div>
+            <div class="second_bar"></div>
+            <!-- <img src="./images/Menu.png" alt="">     -->
+          </a>
         </div>
       </div>
     </header>
@@ -62,47 +78,61 @@
             <defs>
               <filter id="goo">
                 <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="goo" />
+                <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="goo" />
                 <feBlend in="SourceGraphic" in2="goo" />
               </filter>
             </defs>
           </svg>
 
           <div class="textBox">
-          <h1>Creative thinking</h1>
-          <h1>Great efforts</h1>
-          <h1>Lead to flow</h1>
-          <p>
-            교육에 대한 이디그로만의 신념을 가지고<br>
-            창의적인 아이디어와 감각을 통해<br>
-            디지털 교육 콘텐츠를 만들어 갑니다
-          </p>
-        </div>
+            <h1>Creative thinking</h1>
+            <h1>Great efforts</h1>
+            <h1>Lead to flow</h1>
+            <p>
+              교육에 대한 이디그로만의 신념을 가지고<br>
+              창의적인 아이디어와 감각을 통해<br>
+              디지털 교육 콘텐츠를 만들어 갑니다
+            </p>
+          </div>
 
         </div>
       </section>
-      <section id="section2">
-        <div class="ani">
-          <div class="circle1"></div>
-        </div>
-        <h1>디지털교과서부터 AI교과서까지</h1>
-        <div class="sec2-bg">
-          <div class="container">
-            <div class="text-box">
-              <p>국내 초.중.고 교과 기반 디지털 콘텐츠 전문 개발<br>
-                웹 기반 인터랙션 콘텐츠, 멀티미디어, 실감형 콘텐츠 통합 개발<br>
-                교과별학습교구및서비스개발</p>
+      <section id="section2" class="">
+        <div class="bg2"></div>
+        <div class="container">
+          <div class="gap">
+            <div class="sec2_textBox">
+              <div class="main_text">
+                <h1>디지털교과서부터 </h1>
+                <span>AI교과서까지</span>
+              </div>
+              <div class="sec_text">
+                <p>국내 초.중.고 교과 기반 디지털 콘텐츠 전문 개발<br>
+                  웹 기반 인터랙션 콘텐츠, 멀티미디어, 실감형 콘텐츠 통합 개발<br>
+                  교과별 학습 교구 및 서비스 개발</p>
+              </div>
             </div>
           </div>
+          <svg class="sec2_loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+            <defs>
+              <path id="cir1_use" d="M306.2-151.4C305.6,17.7,168,154.3-1.1,153.6C-170.2,153-306.8,15.5-306.2-153.6L306.2-151.4z"/>
+            </defs>
+
+            <g id="circle_g_sec2">
+              <use xlink:href="#cir1_use" class="sec2_circle"></use>
+              <use xlink:href="#cir1_use" class="sec2_circle"></use>
+              <use xlink:href="#cir1_use" class="sec2_circle"></use>
+              <use xlink:href="#cir1_use" class="sec2_circle"></use>
+            </g>
+          </svg>
         </div>
-        <div class="bg2"></div>
       </section>
       <section id="section3">
         <div class="container">
           <div class="top_box"></div>
           <div class="cnt_box">
             <div class="contact_container">
-              <b>(주)이디그로</b>
+              <h1>(주)이디그로</h1>
               <address>서울시 성동구 연무장 5가길, 25 성수역 SK V1 Tower 1410호 02-6953-2385</address>
               <div class="contact_btn">
                 <p>CONTACT US</p>
@@ -132,10 +162,12 @@
           <div class="top_view"></div>
           <div class="cnt_box">
             <div class="career_container">
-              <b>IDI + GROW = 자아(自我) + 성장(成長)</b>
+              <h1>IDI + GROW = 자아(自我) + 성장(成長)</h1>
               <p>가치있는 새로운 시도를 즐기고, 실패 경험을 통해 배우며 도전과 성장을 멈추지 않을 동료를 기다립니다.</p>
               <div class="job_btn">
-                JOB APPLICATION
+                <a href="https://www.saramin.co.kr/zf_user/search?search_area=main&search_done=y&search_optional_item=n&searchType=search&searchword=%EC%9D%B4%EB%94%94%EA%B7%B8%EB%A1%9C" target="_blank">
+                  JOB APPLICATION
+                </a>
               </div>
             </div>
             <div class="logo_container">
@@ -155,13 +187,19 @@
 
   </div>
   <div id="btn">
-    <div class="quick"><ul></ul></div>
-    <a href="#" class="top_btn"><span class="arrow"></span></a>
+    <div class="quick">
+      <ul>
+        <li class="on"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <a href="#section1" class="top_btn"><span class="arrow"></span></a>
   </div>
   <!-- 공용 js -->
   <script src="./js/common.js"></script>
-  <script src="./js/mk.js"></script>
-  <!-- <script src="./js/slide.js"></script> -->
+  <script src="./js/slide.js"></script>
   <!-- 풀페이지 스크롤 시 주석 풀 것 -->
 </body>
 </html>
