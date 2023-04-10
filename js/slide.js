@@ -18,6 +18,19 @@ $(document).ready(function(){
         }
 
         // 슬라이드 if 위치 따른 모션 넣어야 함.
+        if(i == 0){
+            $('.circle_all').addClass('js_animation_re');
+            $('.textBox').addClass('js_animation_re');
+
+            $('.circle_all').removeClass('js_animation');
+            $('.textBox').removeClass('js_animation');
+
+            $('#header').removeClass('logo_active');
+        }
+        if( i == 1 ){
+            $('#section2').addClass('sec2_ani_start');
+            $('#header').removeClass('logo_active');
+        }
         if(i == 2){
             //3p 모션
             const canvas = document.querySelector('.sec3_ani') // canvas 불러와서 변수 지정
@@ -25,36 +38,36 @@ $(document).ready(function(){
             canvas.height = 1080; // 세로크기 윈도우 세로에 맞게
             const ctx = canvas.getContext('2d') // 2d 그래픽 작업을 할 수 있게 해주는 것
             // getContext() 메서드는 렌더링 컨텍스트 타입을 지정하는 하나의 파라메터를 가짐.
-            
+
             const TOTAL = 5 // 갯수지정
             const petalArray = [] // 이미지를 담을 배열
-            const TOTAL2 = 15 
-            const petalArray2 = [] 
-            const TOTAL3 = 10 
+            const TOTAL2 = 15
+            const petalArray2 = []
+            const TOTAL3 = 10
             const petalArray3 = []
-            const TOTAL4 = 8 
-            const petalArray4 = [] 
-            
+            const TOTAL4 = 8
+            const petalArray4 = []
+
             const petalImg = new Image() // 이미지 불러오기위함
             petalImg.src = './images/circle.png' // 이미지 불러오기
-            const petalImg2 = new Image() 
-            petalImg2.src = './images/circle2.png' 
-            const petalImg3 = new Image() 
+            const petalImg2 = new Image()
+            petalImg2.src = './images/circle2.png'
+            const petalImg3 = new Image()
             petalImg3.src = './images/circle3.png'
-            const petalImg4 = new Image() 
+            const petalImg4 = new Image()
             petalImg4.src = './images/circle4.png'
-            
+
             petalImg.onload = () => { // 이미지가 다 불러와지고 난 후
-              for (let i = 0; i < TOTAL; i++){ 
+              for (let i = 0; i < TOTAL; i++){
                   petalArray.push(new Petal()) // 배열에 'petal'을 넣음
               }  console.log(petalArray)
-              for (let i = 0; i < TOTAL2; i++){ 
+              for (let i = 0; i < TOTAL2; i++){
                   petalArray2.push(new Circle()) // 배열에 'petal'을 넣음
               }  // console.log(petalArray2)
-              for (let i = 0; i < TOTAL3; i++){ 
+              for (let i = 0; i < TOTAL3; i++){
                   petalArray3.push(new Circle3()) // 배열에 'petal'을 넣음
               }  // console.log(petalArray3)
-              for (let i = 0; i < TOTAL4; i++){ 
+              for (let i = 0; i < TOTAL4; i++){
                   petalArray4.push(new Circle4()) // 배열에 'petal'을 넣음
               }  // console.log(petalArray4)
               render() // 랜더함수 실행
@@ -63,7 +76,7 @@ $(document).ready(function(){
             // 캐릭터 준비
             function circle () {
                 // 캐릭터
-            
+
                       // 머리
                       ctx.beginPath();
                       ctx.arc(1431, 991, 218, 0, Math.PI * 2, true);
@@ -71,7 +84,7 @@ $(document).ready(function(){
                       ctx.fill();
                       ctx.strokeStyle = "#ff4713"
                       ctx.stroke();
-            
+
                       // 머리 꽁지
                       ctx.beginPath();
                       ctx.arc(1651, 779, 57, 0, Math.PI * 2, true);
@@ -79,7 +92,7 @@ $(document).ready(function(){
                       ctx.fill();
                       ctx.strokeStyle = "#ff4713"
                       ctx.stroke();
-            
+
                       // 몸
                       ctx.beginPath();
                       // ctx.arc(1431, 1000, 210, 1.9, 0.8, Math.PI, true);
@@ -104,7 +117,7 @@ $(document).ready(function(){
                 petalArray4.forEach(circle4 => { // 각각의 'petal'을 불러옴
                     circle4.animate()
                 })
-            
+
                 window.requestAnimationFrame(render) // 반복실행 1초에 60번 정도 - 애니메이션 관련
             }
 
@@ -124,7 +137,7 @@ $(document).ready(function(){
                     this.xSpeed = 1.5 + Math.random() // 가로 스피드를 2px ~ 3px
                     this.ySpeed = 1 + Math.random() // 세로 스피드를 1px ~ 2px
                 }
-            
+
                 draw() { // draw 클래스 정의
                     if (this.y > canvas.height && this.x > canvas.width) { // 화면 끝을 지났을 경우 - 만약 y값이 캔버스의 높이보다 클 경우 그리고 x값이 캔버스의 가로보다 클 경우
                         this.x = -petalImg.width // 이미지의 가로값을 뺌
@@ -143,7 +156,7 @@ $(document).ready(function(){
                     )
                     circle()
                 }
-            
+
                 animate() {
                     // this.x += 1 // x값을 1씩 증가
                     // this.y += 1 // y값을 1씩 증가
@@ -165,7 +178,7 @@ $(document).ready(function(){
                     this.xSpeed = 1.5 + Math.random() // 가로 스피드를 2px ~ 3px
                     this.ySpeed = 1 + Math.random() // 세로 스피드를 1px ~ 2px
                 }
-            
+
                 draw() { // draw 클래스 정의
                     if (this.y > canvas.height && this.x > canvas.width) { // 화면 끝을 지났을 경우 - 만약 y값이 캔버스의 높이보다 클 경우 그리고 x값이 캔버스의 가로보다 클 경우
                         this.x = -petalImg2.width // 이미지의 가로값을 뺌
@@ -184,7 +197,7 @@ $(document).ready(function(){
                     )
                     circle()
                 }
-            
+
                 animate() {
                     // this.x += 1 // x값을 1씩 증가
                     // this.y += 1 // y값을 1씩 증가
@@ -206,7 +219,7 @@ $(document).ready(function(){
                     this.xSpeed = 1.2 + Math.random() // 가로 스피드를 2px ~ 3px
                     this.ySpeed = 1.5 + Math.random() // 세로 스피드를 1px ~ 2px
                 }
-            
+
                 draw() { // draw 클래스 정의
                     if (this.y > canvas.height && this.x > canvas.width) { // 화면 끝을 지났을 경우 - 만약 y값이 캔버스의 높이보다 클 경우 그리고 x값이 캔버스의 가로보다 클 경우
                         this.x = -petalImg3.width // 이미지의 가로값을 뺌
@@ -225,7 +238,7 @@ $(document).ready(function(){
                     )
                     circle()
                 }
-            
+
                 animate() {
                     // this.x += 1 // x값을 1씩 증가
                     // this.y += 1 // y값을 1씩 증가
@@ -247,7 +260,7 @@ $(document).ready(function(){
                     this.xSpeed = 1.5 + Math.random() // 가로 스피드를 2px ~ 3px
                     this.ySpeed = 1 + Math.random() // 세로 스피드를 1px ~ 2px
                 }
-            
+
                 draw() { // draw 클래스 정의
                     if (this.y > canvas.height && this.x > canvas.width) { // 화면 끝을 지났을 경우 - 만약 y값이 캔버스의 높이보다 클 경우 그리고 x값이 캔버스의 가로보다 클 경우
                         this.x = -petalImg4.width // 이미지의 가로값을 뺌
@@ -266,7 +279,7 @@ $(document).ready(function(){
                     )
                     circle()
                 }
-            
+
                 animate() {
                     // this.x += 1 // x값을 1씩 증가
                     // this.y += 1 // y값을 1씩 증가
@@ -277,7 +290,7 @@ $(document).ready(function(){
 
             }
         }
-        
+
     });
 
     // 네비게이션
@@ -331,36 +344,36 @@ $(document).ready(function(){
             //     canvas.height = 1080; // 세로크기 윈도우 세로에 맞게
             //     const ctx = canvas.getContext('2d') // 2d 그래픽 작업을 할 수 있게 해주는 것
             //     // getContext() 메서드는 렌더링 컨텍스트 타입을 지정하는 하나의 파라메터를 가짐.
-                
+
             //     const TOTAL = 5 // 갯수지정
             //     const petalArray = [] // 이미지를 담을 배열
-            //     const TOTAL2 = 15 
-            //     const petalArray2 = [] 
-            //     const TOTAL3 = 10 
+            //     const TOTAL2 = 15
+            //     const petalArray2 = []
+            //     const TOTAL3 = 10
             //     const petalArray3 = []
-            //     const TOTAL4 = 8 
-            //     const petalArray4 = [] 
-                
+            //     const TOTAL4 = 8
+            //     const petalArray4 = []
+
             //     const petalImg = new Image() // 이미지 불러오기위함
             //     petalImg.src = './images/circle.png' // 이미지 불러오기
-            //     const petalImg2 = new Image() 
-            //     petalImg2.src = './images/circle2.png' 
-            //     const petalImg3 = new Image() 
+            //     const petalImg2 = new Image()
+            //     petalImg2.src = './images/circle2.png'
+            //     const petalImg3 = new Image()
             //     petalImg3.src = './images/circle3.png'
-            //     const petalImg4 = new Image() 
+            //     const petalImg4 = new Image()
             //     petalImg4.src = './images/circle4.png'
-                
+
             //     petalImg.onload = () => { // 이미지가 다 불러와지고 난 후
-            //       for (let i = 0; i < TOTAL; i++){ 
+            //       for (let i = 0; i < TOTAL; i++){
             //           petalArray.push(new Petal()) // 배열에 'petal'을 넣음
             //       }  console.log(petalArray)
-            //       for (let i = 0; i < TOTAL2; i++){ 
+            //       for (let i = 0; i < TOTAL2; i++){
             //           petalArray2.push(new Circle()) // 배열에 'petal'을 넣음
             //       }  // console.log(petalArray2)
-            //       for (let i = 0; i < TOTAL3; i++){ 
+            //       for (let i = 0; i < TOTAL3; i++){
             //           petalArray3.push(new Circle3()) // 배열에 'petal'을 넣음
             //       }  // console.log(petalArray3)
-            //       for (let i = 0; i < TOTAL4; i++){ 
+            //       for (let i = 0; i < TOTAL4; i++){
             //           petalArray4.push(new Circle4()) // 배열에 'petal'을 넣음
             //       }  // console.log(petalArray4)
             //       render() // 랜더함수 실행
@@ -369,7 +382,7 @@ $(document).ready(function(){
             //     // 캐릭터 준비
             //     function circle () {
             //         // 캐릭터
-                
+
             //               // 머리
             //               ctx.beginPath();
             //               ctx.arc(1431, 991, 218, 0, Math.PI * 2, true);
@@ -377,7 +390,7 @@ $(document).ready(function(){
             //               ctx.fill();
             //               ctx.strokeStyle = "#ff4713"
             //               ctx.stroke();
-                
+
             //               // 머리 꽁지
             //               ctx.beginPath();
             //               ctx.arc(1651, 779, 57, 0, Math.PI * 2, true);
@@ -385,7 +398,7 @@ $(document).ready(function(){
             //               ctx.fill();
             //               ctx.strokeStyle = "#ff4713"
             //               ctx.stroke();
-                
+
             //               // 몸
             //               ctx.beginPath();
             //               // ctx.arc(1431, 1000, 210, 1.9, 0.8, Math.PI, true);
@@ -410,7 +423,7 @@ $(document).ready(function(){
             //         petalArray4.forEach(circle4 => { // 각각의 'petal'을 불러옴
             //             circle4.animate()
             //         })
-                
+
             //         window.requestAnimationFrame(render) // 반복실행 1초에 60번 정도 - 애니메이션 관련
             //     }
 
@@ -430,7 +443,7 @@ $(document).ready(function(){
             //             this.xSpeed = 1.5 + Math.random() // 가로 스피드를 2px ~ 3px
             //             this.ySpeed = 1 + Math.random() // 세로 스피드를 1px ~ 2px
             //         }
-                
+
             //         draw() { // draw 클래스 정의
             //             if (this.y > canvas.height && this.x > canvas.width) { // 화면 끝을 지났을 경우 - 만약 y값이 캔버스의 높이보다 클 경우 그리고 x값이 캔버스의 가로보다 클 경우
             //                 this.x = -petalImg.width // 이미지의 가로값을 뺌
@@ -449,7 +462,7 @@ $(document).ready(function(){
             //             )
             //             circle()
             //         }
-                
+
             //         animate() {
             //             // this.x += 1 // x값을 1씩 증가
             //             // this.y += 1 // y값을 1씩 증가
@@ -471,7 +484,7 @@ $(document).ready(function(){
             //             this.xSpeed = 1.5 + Math.random() // 가로 스피드를 2px ~ 3px
             //             this.ySpeed = 1 + Math.random() // 세로 스피드를 1px ~ 2px
             //         }
-                
+
             //         draw() { // draw 클래스 정의
             //             if (this.y > canvas.height && this.x > canvas.width) { // 화면 끝을 지났을 경우 - 만약 y값이 캔버스의 높이보다 클 경우 그리고 x값이 캔버스의 가로보다 클 경우
             //                 this.x = -petalImg2.width // 이미지의 가로값을 뺌
@@ -490,7 +503,7 @@ $(document).ready(function(){
             //             )
             //             circle()
             //         }
-                
+
             //         animate() {
             //             // this.x += 1 // x값을 1씩 증가
             //             // this.y += 1 // y값을 1씩 증가
@@ -512,7 +525,7 @@ $(document).ready(function(){
             //             this.xSpeed = 1.2 + Math.random() // 가로 스피드를 2px ~ 3px
             //             this.ySpeed = 1.5 + Math.random() // 세로 스피드를 1px ~ 2px
             //         }
-                
+
             //         draw() { // draw 클래스 정의
             //             if (this.y > canvas.height && this.x > canvas.width) { // 화면 끝을 지났을 경우 - 만약 y값이 캔버스의 높이보다 클 경우 그리고 x값이 캔버스의 가로보다 클 경우
             //                 this.x = -petalImg3.width // 이미지의 가로값을 뺌
@@ -531,7 +544,7 @@ $(document).ready(function(){
             //             )
             //             circle()
             //         }
-                
+
             //         animate() {
             //             // this.x += 1 // x값을 1씩 증가
             //             // this.y += 1 // y값을 1씩 증가
@@ -553,7 +566,7 @@ $(document).ready(function(){
             //             this.xSpeed = 1.5 + Math.random() // 가로 스피드를 2px ~ 3px
             //             this.ySpeed = 1 + Math.random() // 세로 스피드를 1px ~ 2px
             //         }
-                
+
             //         draw() { // draw 클래스 정의
             //             if (this.y > canvas.height && this.x > canvas.width) { // 화면 끝을 지났을 경우 - 만약 y값이 캔버스의 높이보다 클 경우 그리고 x값이 캔버스의 가로보다 클 경우
             //                 this.x = -petalImg4.width // 이미지의 가로값을 뺌
@@ -572,7 +585,7 @@ $(document).ready(function(){
             //             )
             //             circle()
             //         }
-                
+
             //         animate() {
             //             // this.x += 1 // x값을 1씩 증가
             //             // this.y += 1 // y값을 1씩 증가
@@ -611,7 +624,7 @@ $(document).ready(function(){
             $("#main section").eq(i).css({'opacity':'1','transition':'all 0.5s'});
 
             if(i == 0){
-                
+
             }
             if(i == 1){
                 // 1p 끝
@@ -646,36 +659,36 @@ $(document).ready(function(){
                 canvas.height = 1080; // 세로크기 윈도우 세로에 맞게
                 const ctx = canvas.getContext('2d') // 2d 그래픽 작업을 할 수 있게 해주는 것
                 // getContext() 메서드는 렌더링 컨텍스트 타입을 지정하는 하나의 파라메터를 가짐.
-                
+
                 const TOTAL = 5 // 갯수지정
                 const petalArray = [] // 이미지를 담을 배열
-                const TOTAL2 = 15 
-                const petalArray2 = [] 
-                const TOTAL3 = 10 
+                const TOTAL2 = 15
+                const petalArray2 = []
+                const TOTAL3 = 10
                 const petalArray3 = []
-                const TOTAL4 = 8 
-                const petalArray4 = [] 
-                
+                const TOTAL4 = 8
+                const petalArray4 = []
+
                 const petalImg = new Image() // 이미지 불러오기위함
                 petalImg.src = './images/circle.png' // 이미지 불러오기
-                const petalImg2 = new Image() 
-                petalImg2.src = './images/circle2.png' 
-                const petalImg3 = new Image() 
+                const petalImg2 = new Image()
+                petalImg2.src = './images/circle2.png'
+                const petalImg3 = new Image()
                 petalImg3.src = './images/circle3.png'
-                const petalImg4 = new Image() 
+                const petalImg4 = new Image()
                 petalImg4.src = './images/circle4.png'
-                
+
                 petalImg.onload = () => { // 이미지가 다 불러와지고 난 후
-                  for (let i = 0; i < TOTAL; i++){ 
+                  for (let i = 0; i < TOTAL; i++){
                       petalArray.push(new Petal()) // 배열에 'petal'을 넣음
                   }  console.log(petalArray)
-                  for (let i = 0; i < TOTAL2; i++){ 
+                  for (let i = 0; i < TOTAL2; i++){
                       petalArray2.push(new Circle()) // 배열에 'petal'을 넣음
                   }  // console.log(petalArray2)
-                  for (let i = 0; i < TOTAL3; i++){ 
+                  for (let i = 0; i < TOTAL3; i++){
                       petalArray3.push(new Circle3()) // 배열에 'petal'을 넣음
                   }  // console.log(petalArray3)
-                  for (let i = 0; i < TOTAL4; i++){ 
+                  for (let i = 0; i < TOTAL4; i++){
                       petalArray4.push(new Circle4()) // 배열에 'petal'을 넣음
                   }  // console.log(petalArray4)
                   render() // 랜더함수 실행
@@ -684,7 +697,7 @@ $(document).ready(function(){
                 // 캐릭터 준비
                 function circle () {
                     // 캐릭터
-                
+
                           // 머리
                           ctx.beginPath();
                           ctx.arc(1431, 991, 218, 0, Math.PI * 2, true);
@@ -692,7 +705,7 @@ $(document).ready(function(){
                           ctx.fill();
                           ctx.strokeStyle = "#ff4713"
                           ctx.stroke();
-                
+
                           // 머리 꽁지
                           ctx.beginPath();
                           ctx.arc(1651, 779, 57, 0, Math.PI * 2, true);
@@ -700,7 +713,7 @@ $(document).ready(function(){
                           ctx.fill();
                           ctx.strokeStyle = "#ff4713"
                           ctx.stroke();
-                
+
                           // 몸
                           ctx.beginPath();
                           // ctx.arc(1431, 1000, 210, 1.9, 0.8, Math.PI, true);
@@ -725,7 +738,7 @@ $(document).ready(function(){
                     petalArray4.forEach(circle4 => { // 각각의 'petal'을 불러옴
                         circle4.animate()
                     })
-                
+
                     window.requestAnimationFrame(render) // 반복실행 1초에 60번 정도 - 애니메이션 관련
                 }
 
@@ -745,7 +758,7 @@ $(document).ready(function(){
                         this.xSpeed = 1.5 + Math.random() // 가로 스피드를 2px ~ 3px
                         this.ySpeed = 1 + Math.random() // 세로 스피드를 1px ~ 2px
                     }
-                
+
                     draw() { // draw 클래스 정의
                         if (this.y > canvas.height && this.x > canvas.width) { // 화면 끝을 지났을 경우 - 만약 y값이 캔버스의 높이보다 클 경우 그리고 x값이 캔버스의 가로보다 클 경우
                             this.x = -petalImg.width // 이미지의 가로값을 뺌
@@ -764,7 +777,7 @@ $(document).ready(function(){
                         )
                         circle()
                     }
-                
+
                     animate() {
                         // this.x += 1 // x값을 1씩 증가
                         // this.y += 1 // y값을 1씩 증가
@@ -786,7 +799,7 @@ $(document).ready(function(){
                         this.xSpeed = 1.5 + Math.random() // 가로 스피드를 2px ~ 3px
                         this.ySpeed = 1 + Math.random() // 세로 스피드를 1px ~ 2px
                     }
-                
+
                     draw() { // draw 클래스 정의
                         if (this.y > canvas.height && this.x > canvas.width) { // 화면 끝을 지났을 경우 - 만약 y값이 캔버스의 높이보다 클 경우 그리고 x값이 캔버스의 가로보다 클 경우
                             this.x = -petalImg2.width // 이미지의 가로값을 뺌
@@ -805,7 +818,7 @@ $(document).ready(function(){
                         )
                         circle()
                     }
-                
+
                     animate() {
                         // this.x += 1 // x값을 1씩 증가
                         // this.y += 1 // y값을 1씩 증가
@@ -827,7 +840,7 @@ $(document).ready(function(){
                         this.xSpeed = 1.2 + Math.random() // 가로 스피드를 2px ~ 3px
                         this.ySpeed = 1.5 + Math.random() // 세로 스피드를 1px ~ 2px
                     }
-                
+
                     draw() { // draw 클래스 정의
                         if (this.y > canvas.height && this.x > canvas.width) { // 화면 끝을 지났을 경우 - 만약 y값이 캔버스의 높이보다 클 경우 그리고 x값이 캔버스의 가로보다 클 경우
                             this.x = -petalImg3.width // 이미지의 가로값을 뺌
@@ -846,7 +859,7 @@ $(document).ready(function(){
                         )
                         circle()
                     }
-                
+
                     animate() {
                         // this.x += 1 // x값을 1씩 증가
                         // this.y += 1 // y값을 1씩 증가
@@ -868,7 +881,7 @@ $(document).ready(function(){
                         this.xSpeed = 1.5 + Math.random() // 가로 스피드를 2px ~ 3px
                         this.ySpeed = 1 + Math.random() // 세로 스피드를 1px ~ 2px
                     }
-                
+
                     draw() { // draw 클래스 정의
                         if (this.y > canvas.height && this.x > canvas.width) { // 화면 끝을 지났을 경우 - 만약 y값이 캔버스의 높이보다 클 경우 그리고 x값이 캔버스의 가로보다 클 경우
                             this.x = -petalImg4.width // 이미지의 가로값을 뺌
@@ -887,7 +900,7 @@ $(document).ready(function(){
                         )
                         circle()
                     }
-                
+
                     animate() {
                         // this.x += 1 // x값을 1씩 증가
                         // this.y += 1 // y값을 1씩 증가
@@ -939,36 +952,36 @@ $(document).ready(function(){
                 canvas.height = 1080; // 세로크기 윈도우 세로에 맞게
                 const ctx = canvas.getContext('2d') // 2d 그래픽 작업을 할 수 있게 해주는 것
                 // getContext() 메서드는 렌더링 컨텍스트 타입을 지정하는 하나의 파라메터를 가짐.
-                
+
                 const TOTAL = 5 // 갯수지정
                 const petalArray = [] // 이미지를 담을 배열
-                const TOTAL2 = 15 
-                const petalArray2 = [] 
-                const TOTAL3 = 10 
+                const TOTAL2 = 15
+                const petalArray2 = []
+                const TOTAL3 = 10
                 const petalArray3 = []
-                const TOTAL4 = 8 
-                const petalArray4 = [] 
-                
+                const TOTAL4 = 8
+                const petalArray4 = []
+
                 const petalImg = new Image() // 이미지 불러오기위함
                 petalImg.src = './images/circle.png' // 이미지 불러오기
-                const petalImg2 = new Image() 
-                petalImg2.src = './images/circle2.png' 
-                const petalImg3 = new Image() 
+                const petalImg2 = new Image()
+                petalImg2.src = './images/circle2.png'
+                const petalImg3 = new Image()
                 petalImg3.src = './images/circle3.png'
-                const petalImg4 = new Image() 
+                const petalImg4 = new Image()
                 petalImg4.src = './images/circle4.png'
-                
+
                 petalImg.onload = () => { // 이미지가 다 불러와지고 난 후
-                  for (let i = 0; i < TOTAL; i++){ 
+                  for (let i = 0; i < TOTAL; i++){
                       petalArray.push(new Petal()) // 배열에 'petal'을 넣음
                   }  console.log(petalArray)
-                  for (let i = 0; i < TOTAL2; i++){ 
+                  for (let i = 0; i < TOTAL2; i++){
                       petalArray2.push(new Circle()) // 배열에 'petal'을 넣음
                   }  // console.log(petalArray2)
-                  for (let i = 0; i < TOTAL3; i++){ 
+                  for (let i = 0; i < TOTAL3; i++){
                       petalArray3.push(new Circle3()) // 배열에 'petal'을 넣음
                   }  // console.log(petalArray3)
-                  for (let i = 0; i < TOTAL4; i++){ 
+                  for (let i = 0; i < TOTAL4; i++){
                       petalArray4.push(new Circle4()) // 배열에 'petal'을 넣음
                   }  // console.log(petalArray4)
                   render() // 랜더함수 실행
@@ -977,7 +990,7 @@ $(document).ready(function(){
                 // 캐릭터 준비
                 function circle () {
                     // 캐릭터
-                
+
                           // 머리
                           ctx.beginPath();
                           ctx.arc(1431, 991, 218, 0, Math.PI * 2, true);
@@ -985,7 +998,7 @@ $(document).ready(function(){
                           ctx.fill();
                           ctx.strokeStyle = "#ff4713"
                           ctx.stroke();
-                
+
                           // 머리 꽁지
                           ctx.beginPath();
                           ctx.arc(1651, 779, 57, 0, Math.PI * 2, true);
@@ -993,7 +1006,7 @@ $(document).ready(function(){
                           ctx.fill();
                           ctx.strokeStyle = "#ff4713"
                           ctx.stroke();
-                
+
                           // 몸
                           ctx.beginPath();
                           // ctx.arc(1431, 1000, 210, 1.9, 0.8, Math.PI, true);
@@ -1018,7 +1031,7 @@ $(document).ready(function(){
                     petalArray4.forEach(circle4 => { // 각각의 'petal'을 불러옴
                         circle4.animate()
                     })
-                
+
                     window.requestAnimationFrame(render) // 반복실행 1초에 60번 정도 - 애니메이션 관련
                 }
 
@@ -1038,7 +1051,7 @@ $(document).ready(function(){
                         this.xSpeed = 1.5 + Math.random() // 가로 스피드를 2px ~ 3px
                         this.ySpeed = 1 + Math.random() // 세로 스피드를 1px ~ 2px
                     }
-                
+
                     draw() { // draw 클래스 정의
                         if (this.y > canvas.height && this.x > canvas.width) { // 화면 끝을 지났을 경우 - 만약 y값이 캔버스의 높이보다 클 경우 그리고 x값이 캔버스의 가로보다 클 경우
                             this.x = -petalImg.width // 이미지의 가로값을 뺌
@@ -1057,7 +1070,7 @@ $(document).ready(function(){
                         )
                         circle()
                     }
-                
+
                     animate() {
                         // this.x += 1 // x값을 1씩 증가
                         // this.y += 1 // y값을 1씩 증가
@@ -1079,7 +1092,7 @@ $(document).ready(function(){
                         this.xSpeed = 1.5 + Math.random() // 가로 스피드를 2px ~ 3px
                         this.ySpeed = 1 + Math.random() // 세로 스피드를 1px ~ 2px
                     }
-                
+
                     draw() { // draw 클래스 정의
                         if (this.y > canvas.height && this.x > canvas.width) { // 화면 끝을 지났을 경우 - 만약 y값이 캔버스의 높이보다 클 경우 그리고 x값이 캔버스의 가로보다 클 경우
                             this.x = -petalImg2.width // 이미지의 가로값을 뺌
@@ -1098,7 +1111,7 @@ $(document).ready(function(){
                         )
                         circle()
                     }
-                
+
                     animate() {
                         // this.x += 1 // x값을 1씩 증가
                         // this.y += 1 // y값을 1씩 증가
@@ -1120,7 +1133,7 @@ $(document).ready(function(){
                         this.xSpeed = 1.2 + Math.random() // 가로 스피드를 2px ~ 3px
                         this.ySpeed = 1.5 + Math.random() // 세로 스피드를 1px ~ 2px
                     }
-                
+
                     draw() { // draw 클래스 정의
                         if (this.y > canvas.height && this.x > canvas.width) { // 화면 끝을 지났을 경우 - 만약 y값이 캔버스의 높이보다 클 경우 그리고 x값이 캔버스의 가로보다 클 경우
                             this.x = -petalImg3.width // 이미지의 가로값을 뺌
@@ -1139,7 +1152,7 @@ $(document).ready(function(){
                         )
                         circle()
                     }
-                
+
                     animate() {
                         // this.x += 1 // x값을 1씩 증가
                         // this.y += 1 // y값을 1씩 증가
@@ -1161,7 +1174,7 @@ $(document).ready(function(){
                         this.xSpeed = 1.5 + Math.random() // 가로 스피드를 2px ~ 3px
                         this.ySpeed = 1 + Math.random() // 세로 스피드를 1px ~ 2px
                     }
-                
+
                     draw() { // draw 클래스 정의
                         if (this.y > canvas.height && this.x > canvas.width) { // 화면 끝을 지났을 경우 - 만약 y값이 캔버스의 높이보다 클 경우 그리고 x값이 캔버스의 가로보다 클 경우
                             this.x = -petalImg4.width // 이미지의 가로값을 뺌
@@ -1180,7 +1193,7 @@ $(document).ready(function(){
                         )
                         circle()
                     }
-                
+
                     animate() {
                         // this.x += 1 // x값을 1씩 증가
                         // this.y += 1 // y값을 1씩 증가
