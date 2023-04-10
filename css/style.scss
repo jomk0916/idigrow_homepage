@@ -589,8 +589,8 @@ input {outline-offset:-1px;}
           .contact_container h1{
             font-size: clamp(1rem,0.9375vw,1.8rem);
             /* font-size: 18px; */
-            font-weight: 600;
-            font-family: "SUIT-Bold";
+            // font-weight: bold;
+            font-family: "SUIT-ExtraBold";
           }
           address{
             font-size: clamp(1rem,0.9375vw,1.8rem);
@@ -769,7 +769,7 @@ input {outline-offset:-1px;}
             /* font-size: 40px; */
             font-size: clamp(1rem,2.08333vw,4rem);
             font-weight: bold;
-            font-family: "SUIT-Heavy";
+            font-family: "SUIT-ExtraBold";
           }
           .career_container p{
             /* font-size: 18px;line-height: 30px; */
@@ -781,7 +781,9 @@ input {outline-offset:-1px;}
             margin-top: clamp(1rem,1.30208333vw,2.5rem);
             width: clamp(1rem,21.3541667vw,41rem);
           }
-          .job_btn{
+          .job_btn{margin-top: 20px;}
+          .job_btn a{
+            padding: 5px;
             /* width: 230px;height: 50px;
             font-size: 18px;line-height: 50px; */
             width: clamp(1rem,11.9791667vw,23rem);
@@ -798,9 +800,9 @@ input {outline-offset:-1px;}
             cursor: pointer;
           }
           .big_logo{
-            /* width: 789px;height: 212px; */
-            width: clamp(1rem,41.09375vw,78.9rem);
-            height: clamp(1rem,11.041667vw,21.2rem);
+            /* width: 552px;height: 148px; */
+            width: clamp(1rem,28.75vw,55.2rem);
+            height: clamp(1rem,13.703vw,14.8rem);
             background: url(../images/logo_large.png) no-repeat 0 0 / auto 100%;
             background-size: contain;
           }
