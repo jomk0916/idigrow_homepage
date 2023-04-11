@@ -32,7 +32,10 @@ $(document).ready(function(){
             $('#header').removeClass('logo_active');
         }
         if(i == 2){
-
+            $('.ani_box').addClass('on');
+            $('.circle1').addClass('on');
+            $('.circle2').addClass('on');
+            $('.move_circle').addClass('on');
         }
 
     });
@@ -79,8 +82,13 @@ $(document).ready(function(){
                 $('#modal .container ul li').eq(k).on({
                     click: function(){
                         $('#header').addClass('logo_active');
+                        $('.ani_box').addClass('on');
+                        $('.circle1').addClass('on');
+                        $('.circle2').addClass('on');
+                        $('.move_circle').addClass('on');
                     }
                 });
+                
             }
             else if( k==3 ){
                 $('#modal .container ul li').eq(k).on({
@@ -176,6 +184,10 @@ $(document).ready(function(){
             }
             else if (i == 2){
                 $('#header').addClass('logo_active');
+                $('.ani_box').addClass('on');
+                $('.circle1').addClass('on');
+                $('.circle2').addClass('on');
+                $('.move_circle').addClass('on');
             }
         }
 
