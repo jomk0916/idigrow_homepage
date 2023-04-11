@@ -188,8 +188,9 @@ input {outline-offset:-1px;}
       position:fixed;
       width: 100%;
       &.logo_active { // 헤더 흰색 전환
-        .container .left a .logo {
-          background: url(../images/logo_sub.png) no-repeat 0% 0%/contain;
+        .container .left a #idi_logo {
+          .st1 {fill:#fff;}
+          .st2 {fill:#fff;}
         }
         .container .right .ham .first_bar {
           background-color: #fff;
@@ -209,15 +210,179 @@ input {outline-offset:-1px;}
         .left {
           width: auto;
           a {
-            width: 100%;
-            .logo {
-              width: 160px;
-              background:url(../images/logo_main.png) no-repeat 0% 0%/contain;
-              height: 43px;
+            display: block;
+            width: 160px;
+            // height: 60px;
+            svg#idi_logo {
+              width: 100%;
+              $aniDu: 10s;
+              .st1{
+                width: 100%;
+                fill:#41AAD7;
+                transform-origin: 39% 57%;
+                &:nth-of-type(1){
+                  animation: right_small $aniDu ease-in infinite 5s;
+                }
+                &:nth-of-type(2){
+                  animation: right_small $aniDu ease-in infinite 5s;
+                }
+                &:nth-of-type(3){
+                  animation: right_small $aniDu ease-in infinite 5s;
+                }
+                &:nth-of-type(4){
+                  animation: left_small $aniDu ease-in infinite 5s;
+                }
+                &:nth-of-type(5){
+                  animation: left_small $aniDu ease-in infinite 5s;
+                }
+                &:nth-of-type(6){
+                  animation: left_small $aniDu ease-in infinite 5s;
+                }
+                &:nth-of-type(7){
+                  animation: left_small $aniDu ease-in infinite 5s;
+                }
+                &:nth-of-type(8){
+                  animation: left_small $aniDu ease-in infinite 5s;
+                }
+                &:nth-of-type(9){
+                  animation: left_small $aniDu ease-in infinite 5s;
+                }
+                &:nth-of-type(10){
+                  animation: left_small $aniDu ease-in infinite 5s;
+                }
+                &:nth-of-type(11){
+                  animation: left_small $aniDu ease-in infinite 5s;
+                }
+                &:nth-of-type(12){
+                  animation: left_small $aniDu ease-in infinite 5s;
+                }
+                &:nth-of-type(13){
+                  animation: left_small $aniDu ease-in infinite 5s;
+                }
+                &:nth-of-type(14){
+                  animation: left_small $aniDu ease-in infinite 5s;
+                }
+              }
 
+              .st2{fill:#E94C21;}
+
+              .cha {
+                // 160 40
+                .cha1 {
+                  transform-origin: 39% 57%;
+                  transform: rotate(0deg);
+                  animation:logoChaAni1 $aniDu infinite 5s;
+                }
+                .cha2 {
+                  transform-origin: 39% 57%;
+                  transform: scale(1);
+                  animation:logoChaAni2 $aniDu infinite 5s;
+                }
+                .cha3 {
+                  transform-origin: 39% 57%;
+                  transform: rotate(0deg);
+                  animation:logoChaAni1 $aniDu infinite 5s;
+                }
+              }
             }
           }
         }
+
+        @keyframes right_small {
+          0% {
+            transform: translateX(0px);
+          }
+          1% {
+            transform: translateX(0px) skew(0deg);
+          }
+          7% {
+            transform: translateX(0px) skew(10deg) scale(0.8);
+          }
+          12% {
+            transform: scale(0.1) skew(40deg) translateX(20px);
+          }
+          33% {
+            transform: scale(0.1) skew(40deg) translateX(20px);
+          }
+          34% {
+            transform: scale(1) skew(0deg) translateX(0px);
+            opacity:0;
+          }
+          45% {
+            transform: scale(1);
+            opacity:1;
+          }
+          100% {
+
+          }
+        }
+
+        @keyframes left_small {
+          0% {
+            transform: translateX(0px);
+          }
+          1% {
+            transform: translateX(0px) skew(0deg);
+          }
+          7% {
+            transform: translateX(0px) skew(-10deg) scale(0.8);
+          }
+          12% {
+            transform: scale(0.1) skew(-40deg) translateX(-20px);
+          }
+          33% {
+            transform: scale(0.1) skew(-40deg) translateX(-20px);
+          }
+          34% {
+            transform: scale(1) skew(0deg) translateX(0px);
+            opacity:0;
+          }
+          45% {
+            opacity:1;
+          }
+          100% {
+
+          }
+        }
+
+        @keyframes logoChaAni1 {
+          0% {
+
+          }
+          25% {
+            transform: rotate(360deg) scale(0.3);
+          }
+          50% {
+            transform: rotate(0deg) scale(1);
+          }
+          100% {
+            transform: rotate(0deg) scale(1);
+          }
+        }
+        @keyframes logoChaAni2 {
+          0% {
+
+          }
+          8% {
+            transform: scale(1);
+          }
+          10% {
+            transform: scale(0.8);
+          }
+          13% {
+            transform: scale(1.2);
+          }
+          15% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+
         .right {
           width: auto;
           .ham {
@@ -225,6 +390,7 @@ input {outline-offset:-1px;}
             display: block;
             width: 25px;
             height: 23px;
+            margin:20px 0 0 0;
             .first_bar {
               position: absolute;
               top: 0;
@@ -395,13 +561,13 @@ input {outline-offset:-1px;}
               color:#000;
               font-weight: 900;
               &:nth-child(1){
-                animation: textUp 3s 10s forwards;
+                animation: textUp 2s 9s forwards;
               }
               &:nth-child(2){
-                animation: textUp 3s 11s forwards;
+                animation: textUp 2s 9.5s forwards;
               }
               &:nth-child(3){
-                animation: textUp 3s 12s forwards;
+                animation: textUp 2s 10s forwards;
               }
             }
             p {
@@ -411,7 +577,7 @@ input {outline-offset:-1px;}
               font-size: clampSang(17);
               line-height: 1.5;
               font-weight: 600;
-              animation: textRight 3s 14s forwards
+              animation: textRight 2s 11.5s forwards
             }
           }
         }
