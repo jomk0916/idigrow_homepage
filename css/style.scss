@@ -588,15 +588,58 @@ input {outline-offset:-1px;}
         &.sec2_ani_start { // 애니메이션
           .gap {
             .main_text {
-              h1 {
-                animation:textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 7s forwards;
-              }
-              span {
-                animation:textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 8s forwards;
+              svg text {
+                // 디지털교과서부터
+                &:nth-of-type(1){
+                  animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 9s;
+                }
+                &:nth-of-type(2){
+                  animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 9.2s;
+                }
+                &:nth-of-type(3){
+                  animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 9.4s;
+                }
+                &:nth-of-type(4){
+                  animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 9.6s;
+                }
+                &:nth-of-type(5){
+                  animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 9.8s;
+                }
+                &:nth-of-type(6){
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 10s;
+                }
+                &:nth-of-type(7){
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 10.2s;
+                }
+                &:nth-of-type(8){
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 10.4s;
+                }
+                // AI교과서까지
+                &:nth-of-type(9){
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 11.5s;
+                }
+                &:nth-of-type(10){
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 11.7s;
+                }
+                &:nth-of-type(11){
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 11.9s;
+                }
+                &:nth-of-type(12){
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 12.1s;
+                }
+                &:nth-of-type(13){
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 12.3s;
+                }
+                &:nth-of-type(14){
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 12.5s;
+                }
+                &:nth-of-type(15){
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 12.7s;
+                }
               }
             }
             .sec_text {
-              animation:textUp_sec2 2s ease-in-out 5s forwards, sizeUp 1s ease-in-out 9s forwards;
+              animation:textUp_sec2 2s ease-in-out 5s forwards, sizeUp 1s ease-in-out 14s forwards;
             }
           }
           .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(1) {
@@ -628,23 +671,36 @@ input {outline-offset:-1px;}
               margin: 0 auto;
               .main_text {
                 display: flex;
-                h1 {   // 디지털교과서부터 AI교과서까지
-                  opacity: 0;
-                  font-size: clampSang(90);
-                  font-family: 'SUIT-ExtraBold';
-                  margin-bottom: 20px;
-                  color:#fff;
-                  text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5,1px 0px #3CB4E5, 0px -1px #3CB4E5;
-                  // animation:textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 7s forwards;
+                width: 100%;
+                svg {
+                  width: 100%;
+                  text {
+                    width: 100%;
+                    opacity: 0;
+                    font-family: 'SUIT-ExtraBold';
+                    font-size: 90px;
+                    fill:#fff;
+                    stroke:#3CB4E5;
+                    stroke-dasharray: 350px;
+                  }
                 }
-                span {
-                  opacity: 0;
-                  font-size: clampSang(90);
-                  font-family: 'SUIT-ExtraBold';
-                  text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5,1px 0px #3CB4E5, 0px -1px #3CB4E5;
-                  color:#fff;
-                  padding:0 0 0 25px;
-                  // animation:textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 8s forwards;
+              }
+              @keyframes sec2_stroke {
+                0% {
+                  stroke-dashoffset: 350px;
+                }
+                100% {
+                  opacity: 1;
+                  stroke-dashoffset: 0px;
+                }
+              }
+                  @keyframes sec2_fill {
+                0% {
+                  stroke:#3CB4E5;
+                }
+                100% {
+                  stroke: none;
+                  fill:#3CB4E5;
                 }
               }
               .sec_text {

@@ -646,14 +646,53 @@ input {
   position: relative;
   width: 100%;
 }
-#wrap #main #section2.sec2_ani_start .gap .main_text h1 {
-  animation: textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 7s forwards;
+#wrap #main #section2.sec2_ani_start .gap .main_text svg text:nth-of-type(1) {
+  animation: sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 9s;
 }
-#wrap #main #section2.sec2_ani_start .gap .main_text span {
-  animation: textUp 2s ease-in-out 5s forwards, sec2_h1 1s ease-in-out 8s forwards;
+#wrap #main #section2.sec2_ani_start .gap .main_text svg text:nth-of-type(2) {
+  animation: sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 9.2s;
+}
+#wrap #main #section2.sec2_ani_start .gap .main_text svg text:nth-of-type(3) {
+  animation: sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 9.4s;
+}
+#wrap #main #section2.sec2_ani_start .gap .main_text svg text:nth-of-type(4) {
+  animation: sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 9.6s;
+}
+#wrap #main #section2.sec2_ani_start .gap .main_text svg text:nth-of-type(5) {
+  animation: sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 9.8s;
+}
+#wrap #main #section2.sec2_ani_start .gap .main_text svg text:nth-of-type(6) {
+  animation: sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 10s;
+}
+#wrap #main #section2.sec2_ani_start .gap .main_text svg text:nth-of-type(7) {
+  animation: sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 10.2s;
+}
+#wrap #main #section2.sec2_ani_start .gap .main_text svg text:nth-of-type(8) {
+  animation: sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 10.4s;
+}
+#wrap #main #section2.sec2_ani_start .gap .main_text svg text:nth-of-type(9) {
+  animation: sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 11.5s;
+}
+#wrap #main #section2.sec2_ani_start .gap .main_text svg text:nth-of-type(10) {
+  animation: sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 11.7s;
+}
+#wrap #main #section2.sec2_ani_start .gap .main_text svg text:nth-of-type(11) {
+  animation: sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 11.9s;
+}
+#wrap #main #section2.sec2_ani_start .gap .main_text svg text:nth-of-type(12) {
+  animation: sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 12.1s;
+}
+#wrap #main #section2.sec2_ani_start .gap .main_text svg text:nth-of-type(13) {
+  animation: sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 12.3s;
+}
+#wrap #main #section2.sec2_ani_start .gap .main_text svg text:nth-of-type(14) {
+  animation: sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 12.5s;
+}
+#wrap #main #section2.sec2_ani_start .gap .main_text svg text:nth-of-type(15) {
+  animation: sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 12.7s;
 }
 #wrap #main #section2.sec2_ani_start .gap .sec_text {
-  animation: textUp_sec2 2s ease-in-out 5s forwards, sizeUp 1s ease-in-out 9s forwards;
+  animation: textUp_sec2 2s ease-in-out 5s forwards, sizeUp 1s ease-in-out 14s forwards;
 }
 #wrap #main #section2.sec2_ani_start .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(1) {
   animation: sec2Circle 3s ease-in-out forwards;
@@ -686,22 +725,37 @@ input {
 }
 #wrap #main #section2 .container .gap .sec2_textBox .main_text {
   display: flex;
+  width: 100%;
 }
-#wrap #main #section2 .container .gap .sec2_textBox .main_text h1 {
-  opacity: 0;
-  font-size: clamp(1rem, 6.603081438vw, 9rem);
-  font-family: "SUIT-ExtraBold";
-  margin-bottom: 20px;
-  color: #fff;
-  text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5, 1px 0px #3CB4E5, 0px -1px #3CB4E5;
+#wrap #main #section2 .container .gap .sec2_textBox .main_text svg {
+  width: 100%;
 }
-#wrap #main #section2 .container .gap .sec2_textBox .main_text span {
+#wrap #main #section2 .container .gap .sec2_textBox .main_text svg text {
+  width: 100%;
   opacity: 0;
-  font-size: clamp(1rem, 6.603081438vw, 9rem);
   font-family: "SUIT-ExtraBold";
-  text-shadow: -1px 0px #3CB4E5, 0px 1px #3CB4E5, 1px 0px #3CB4E5, 0px -1px #3CB4E5;
-  color: #fff;
-  padding: 0 0 0 25px;
+  font-size: 90px;
+  fill: #fff;
+  stroke: #3CB4E5;
+  stroke-dasharray: 350px;
+}
+@keyframes sec2_stroke {
+  0% {
+    stroke-dashoffset: 350px;
+  }
+  100% {
+    opacity: 1;
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes sec2_fill {
+  0% {
+    stroke: #3CB4E5;
+  }
+  100% {
+    stroke: none;
+    fill: #3CB4E5;
+  }
 }
 #wrap #main #section2 .container .gap .sec2_textBox .sec_text {
   opacity: 0;
