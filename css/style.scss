@@ -29,7 +29,6 @@
 
 // reset
 * {margin: 0;padding: 0;vertical-align:middle;font-size: 62.5%;box-sizing: border-box;font-size-adjust:100%;}
-html,body {width: 100%;height: 100%;}
 html,body {width: 100%;height: 100%;margin:0px;padding:0px;overflow: hidden;}
 // 풀페이지 스크롤 시 주석 풀 것
 html {overflow-y: scroll;/* scroll-behavior: smooth; */}
@@ -86,6 +85,9 @@ input {outline-offset:-1px;}
 // section{position: absolute;top: 0;left: 0;opacity: 0;}
 #main section{position: absolute;top: 0;left: 0;opacity: 0;}
 // 풀페이지 스크롤 시 주석 풀 것
+
+// 마우스 커서 변경
+html,body { cursor: url(../images/icon_idi_cursor.png), auto; }
 
 // 상호
 @function clampSang($pi){
