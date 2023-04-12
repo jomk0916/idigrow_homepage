@@ -594,13 +594,13 @@ input {outline-offset:-1px;}
           .circle3-3{width: clampMun(42);height: clampMun(42);}
           .circle3-4{width: clampMun(40);height: clampMun(40);}
           .circle3-5{width: clampMun(53);height: clampMun(53);}
-          
+
           .circle3-6{width: clampMun(45);height: clampMun(45);}
           .circle3-7{width: clampMun(45);height: clampMun(45);}
           .circle3-8{width: clampMun(30);height: clampMun(30);}
           .circle3-9{width: clampMun(50);height: clampMun(50);}
           .circle3-10{width: clampMun(20);height: clampMun(20);}
-          
+
           .circle3-11{width: clampMun(45);height: clampMun(45);}//주황색 11~14
           .circle3-12{width: clampMun(25);height: clampMun(25);}
           .circle3-13{width: clampMun(55);height: clampMun(55);}
@@ -889,6 +889,7 @@ input {outline-offset:-1px;}
               border: 1px solid #3CB4E5;
             }
           }
+          
           @keyframes half_swing { //몸통 흔들
             from{
               width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);
@@ -922,98 +923,99 @@ input {outline-offset:-1px;}
           }
 
           //move circle 모션
-          .move_circle.on > .circle3-1 {animation: circle1 2s 6s linear forwards, circle1-1 2s 9s forwards;}
-          .move_circle.on > .circle3-2 {animation: circle2 1.2s 6s ease forwards, circle2-1 2s 9s forwards;}
+          .move_circle.on > .circle3-1 {animation: circle1 2s 6s ease-in-out forwards, circle1-1 2s 9s forwards;}
+          .move_circle.on > .circle3-2 {animation: circle2 1.2s 6s ease-in-out forwards, circle2-1 2s 9s forwards;}
           .move_circle.on > .circle3-3 {animation: circle3 1s 6s ease-in-out forwards, circle3-1 2s 9s forwards;}
-          .move_circle.on > .circle3-4 {animation: circle4 2s 6s ease-out forwards, circle4-1 2s 9s forwards;}
-          .move_circle.on > .circle3-5 {animation: circle5 1s 6s ease forwards, circle5-1 2s 9s forwards;}
+          .move_circle.on > .circle3-4 {animation: circle4 2s 6s ease-in-out forwards, circle4-1 2s 9s forwards;}
+          .move_circle.on > .circle3-5 {animation: circle5 1s 6s ease-in-out forwards, circle5-1 2s 9s forwards;}
           .move_circle.on > .circle3-6 {animation: circle6 1.9s 6s ease-in-out forwards, circle6-1 2s 9s forwards;}
-          .move_circle.on > .circle3-7 {animation: circle7 2s 6s ease forwards, circle7-1 2s 9s forwards;}
-          .move_circle.on > .circle3-8 {animation: circle8 1.2s 6s ease-out forwards, circle8-1 2s 9s forwards;}
+          .move_circle.on > .circle3-7 {animation: circle7 2s 6s ease-in-out forwards, circle7-1 2s 9s forwards;}
+          .move_circle.on > .circle3-8 {animation: circle8 1.2s 6s ease-in-out forwards, circle8-1 2s 9s forwards;}
           .move_circle.on > .circle3-9 {animation: circle9 1.5s 6s ease-in-out forwards, circle9-1 2s 9s forwards;}
-          .move_circle.on > .circle3-10 {animation: circle10 2s 6s ease forwards, circle10-1 2s 9s forwards;}
-          .move_circle.on > .circle3-11 {animation: circle11 1.7s 6s ease forwards, circle11-1 2s 9s forwards;}
+          .move_circle.on > .circle3-10 {animation: circle10 2s 6s ease-in-out forwards, circle10-1 2s 9s forwards;}
+          .move_circle.on > .circle3-11 {animation: circle11 1.7s 6s ease-in-out forwards, circle11-1 2s 9s forwards;}
           .move_circle.on > .circle3-12 {animation: circle12 2s 6s ease-in-out forwards, circle12-1 2s 9s forwards;}
-          .move_circle.on > .circle3-13 {animation: circle13 1.6s 6s linear forwards, circle13-1 2s 9s forwards;}
-          .move_circle.on > .circle3-14 {animation: circle14 2s 6s ease forwards, circle14-1 2s 9s forwards;}
-          .move_circle.on > .circle3-15 {animation: circle15 1.4s 6s ease forwards, circle15-1 2s 9s forwards;}
+          .move_circle.on > .circle3-13 {animation: circle13 1.6s 6s ease-in-out forwards, circle13-1 2s 9s forwards;}
+          .move_circle.on > .circle3-14 {animation: circle14 2s 6s ease-in-out forwards, circle14-1 2s 9s forwards;}
+          .move_circle.on > .circle3-15 {animation: circle15 1.4s 6s ease-in-out forwards, circle15-1 2s 9s forwards;}
           .move_circle.on > .circle3-16 {animation: circle16 2s 6s ease-in-out forwards, circle16-1 2s 9s forwards;}
-          .move_circle.on > .circle3-17 {animation: circle17 1.3s 6s ease forwards, circle17-1 2s 9s forwards;}
-          .move_circle.on > .circle3-18 {animation: circle18 2s 6s ease-out forwards, circle18-1 2s 9s forwards;}
+          .move_circle.on > .circle3-17 {animation: circle17 1.3s 6s ease-in-out forwards, circle17-1 2s 9s forwards;}
+          .move_circle.on > .circle3-18 {animation: circle18 2s 6s ease-in-out forwards, circle18-1 2s 9s forwards;}
           .move_circle.on > .circle3-19 {animation: circle19 1.8s 6s ease-in-out forwards, circle19-1 2s 9s forwards;}
-          .move_circle.on > .circle3-20 {animation: circle20 2s 6s ease forwards, circle20-1 2s 9s forwards;}
-          .move_circle.on > .circle3-21 {animation: circle21 2s 6s ease-out forwards, circle21-1 2s 9s forwards;}
+          .move_circle.on > .circle3-20 {animation: circle20 2s 6s ease-in-out forwards, circle20-1 2s 9s forwards;}
+          .move_circle.on > .circle3-21 {animation: circle21 2s 6s ease-in-out forwards, circle21-1 2s 9s forwards;}
           .move_circle.on > .circle3-22 {animation: circle22 1.2s 6s ease-in-out forwards, circle22-1 2s 9s forwards;}
-          .move_circle.on > .circle3-23 {animation: circle23 2s 6s linear forwards, circle23-1 2s 9s forwards;}
-          .move_circle.on > .circle3-24 {animation: circle24 1s 6s ease-out forwards, circle24-1 2s 9s forwards;}
+          .move_circle.on > .circle3-23 {animation: circle23 2s 6s ease-in-out forwards, circle23-1 2s 9s forwards;}
+          .move_circle.on > .circle3-24 {animation: circle24 1s 6s ease-in-out forwards, circle24-1 2s 9s forwards;}
           .move_circle.on > .circle3-25 {animation: circle25 1.6s 6s ease-in-out forwards, circle25-1 2s 9s forwards;}
-          .move_circle.on > .circle3-26 {animation: circle26 1s 6s ease forwards, circle26-1 2s 9s forwards;}
-
+          .move_circle.on > .circle3-26 {animation: circle26 1s 6s ease-in-out forwards, circle26-1 2s 9s forwards;}
+          
+          
           //첫번째 원 움직임
 
-          @keyframes circle1 {from{margin-top: -280px;margin-left: -1070px;} to{margin-top: clampMun(257);margin-left: clampMun(1042);}}
-          @keyframes circle2 {from{margin-top: 1100px;margin-left: -880px;} to{margin-top: clampMun(310);margin-left: clampMun(862);}}
-          @keyframes circle3 {from{margin-top: 1100px;margin-left: 2000px;} to{margin-top: clampMun(350);margin-left: clampMun(979);}}
-          @keyframes circle4 {from{margin-top: -560px;margin-left: -1000px;} to{margin-top: clampMun(503);margin-left: clampMun(900);}}
-          @keyframes circle5 {from{margin-top: 1100px;margin-left: 1000px;} to{margin-top: clampMun(266);margin-left: clampMun(915);}}
+          @keyframes circle1  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1070px;} 60%{margin-top: clampMun(140);} 90%{margin-top: clampMun(240); margin-left: clampMun(1040);width: 50px;height: 50px;} to{width: clampMun(40);height: clampMun(40);border: 50%;background-color: #3CB4E5;border: 1px solid #3CB4E5;margin-top: clampMun(240); margin-left: clampMun(1040);border: transparent;}}
+          @keyframes circle2  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -880px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
+          @keyframes circle3  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
+          @keyframes circle4  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1000px;} 60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}}
+          @keyframes circle5  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 1000px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
+ 
+          @keyframes circle6  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1920px;} 60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}}
+          @keyframes circle7  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}}
+          @keyframes circle8  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1920px;} 60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
+          @keyframes circle9  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
+          @keyframes circle10 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
 
-          @keyframes circle6 {from{margin-top: 100px;margin-left: -1920px;} to{margin-top: clampMun(494);margin-left: clampMun(990);}}
-          @keyframes circle7 {from{margin-top: 100px;margin-left: 2000px;} to{margin-top: clampMun(547);margin-left: clampMun(920);}}
-          @keyframes circle8 {from{margin-top: -1080px;margin-left: -1920px;} to{margin-top: clampMun(317);margin-left: clampMun(1019);}}
-          @keyframes circle9 {from{margin-top: 1100px;margin-left: 2000px;} to{margin-top: clampMun(366);margin-left: clampMun(928);}}
-          @keyframes circle10 {from{margin-top: 50px;margin-left: 2000px;} to{margin-top: clampMun(436);margin-left: clampMun(981);}}
+          @keyframes circle11 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 1500px;}  60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}}
+          @keyframes circle12 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1920px;} 60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
+          @keyframes circle13 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 200px;}   60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
+          @keyframes circle14 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}}
+          @keyframes circle15 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1920px;} 60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}}
 
-          @keyframes circle11 {from{margin-top: 1100px;margin-left: 1500px;} to{margin-top: clampMun(534);margin-left: clampMun(873);}}
-          @keyframes circle12 {from{margin-top: 1080px;margin-left: -1920px;} to{margin-top: clampMun(352);margin-left: clampMun(1025);}}
-          @keyframes circle13 {from{margin-top: 1100px;margin-left: 200px;} to{margin-top: clampMun(362);margin-left: clampMun(865);}}
-          @keyframes circle14 {from{margin-top: 0px;margin-left: 2000px;} to{margin-top: clampMun(490);margin-left: clampMun(942);}}
-          @keyframes circle15 {from{margin-top: -100px;margin-left: -1920px;} to{margin-top: clampMun(538);margin-left: clampMun(967);}}
+          @keyframes circle16 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 920px;}   60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
+          @keyframes circle17 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 500px;}   60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
+          @keyframes circle18 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 1700px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
+          @keyframes circle19 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1920px;} 60%{margin-top: clampMun(140);} 90%{margin-top: clampMun(240); margin-left: clampMun(1040);width: 50px;height: 50px;} to{width: clampMun(40);height: clampMun(40);border: 50%;background-color: #3CB4E5;border: 1px solid #3CB4E5;margin-top: clampMun(240); margin-left: clampMun(1040);border: transparent;}}
+          @keyframes circle20 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);border: transparent;}}
 
-          @keyframes circle16 {from{margin-top: -1080px;margin-left: 920px;} to{margin-top: clampMun(410);margin-left: clampMun(900);}}
-          @keyframes circle17 {from{margin-top: 1100px;margin-left: 500px;} to{margin-top: clampMun(300);margin-left: clampMun(962);}}
-          @keyframes circle18 {from{margin-top: 1100px;margin-left: 1700px;} to{margin-top: clampMun(383);margin-left: clampMun(1011);}}
-          @keyframes circle19 {from{margin-top: -480px;margin-left: -1920px;} to{margin-top: clampMun(242);margin-left: clampMun(1048);}}
-          @keyframes circle20 {from{margin-top: 1100px;margin-left: 2000px;} to{margin-top: clampMun(520);margin-left: clampMun(851);}}
-
-          @keyframes circle21 {from{margin-top: 1100px;margin-left: 20px;} to{margin-top: clampMun(270);margin-left: clampMun(969);}}
-          @keyframes circle22 {from{margin-top: -1080px;margin-left: 1920px;} to{margin-top: clampMun(428);margin-left: clampMun(945);}}
-          @keyframes circle23 {from{margin-top: 100px;margin-left: 2000px;} to{margin-top: clampMun(325);margin-left: clampMun(914);}}
-          @keyframes circle24 {from{margin-top: -1080px;margin-left: -10px;} to{margin-top: clampMun(398);margin-left: clampMun(975);}}
-          @keyframes circle25 {from{margin-top: 1100px;margin-left: 2000px;} to{margin-top: clampMun(251);margin-left: clampMun(1060);}}
-          @keyframes circle26 {from{margin-top: -1080px;margin-left: -1920px;} to{margin-top: clampMun(464);margin-left: clampMun(1006);}}
+          @keyframes circle21 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 20px;}    60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;border: transparent;}}
+          @keyframes circle22 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 1920px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;border: transparent;}}
+          @keyframes circle23 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;border: transparent;}}
+          @keyframes circle24 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -10px;}   60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;border: transparent;}}
+          @keyframes circle25 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(140);} 90%{margin-top: clampMun(240); margin-left: clampMun(1040);width: 50px;height: 50px;} to{width: clampMun(40);height: clampMun(40);border: 50%;background-color: #3CB4E5;border: 1px solid #3CB4E5;margin-top: clampMun(240); margin-left: clampMun(1040);border: transparent;}}
+          @keyframes circle26 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1920px;} 60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);border: transparent;}}
 
           //두번째 원 움직임
 
-          @keyframes circle1-1{to{margin-top: clampMun(257);margin-left: clampMun(1042);} to{margin-top: clampMun(385);margin-left: clampMun(128);width: clampMun(90);height: clampMun(90);}}
-          @keyframes circle2-1{to{margin-top: clampMun(310);margin-left: clampMun(862);} to{margin-top: clampMun(210);margin-left: clampMun(207);width: clampMun(70);height: clampMun(70);}}
-          @keyframes circle3-1{to{margin-top: clampMun(350);margin-left: clampMun(979);} to{margin-top: clampMun(338);margin-left: clampMun(404);width: clampMun(24);height: clampMun(24);}}
-          @keyframes circle4-1{to{margin-top: clampMun(503);margin-left: clampMun(900);} to{margin-top: clampMun(188);margin-left: clampMun(441);width: clampMun(154);height: clampMun(154);}}
-          @keyframes circle5-1{to{margin-top: clampMun(266);margin-left: clampMun(915);} to{margin-top: clampMun(290);margin-left: clampMun(666);width: clampMun(92);height: clampMun(92);}}
+          @keyframes circle1-1{from{width: clampMun(40);height: clampMun(40);border: 50%;background-color: #3CB4E5;border: 1px solid #3CB4E5;margin-top: clampMun(240); margin-left: clampMun(1040);}  to{background-color:#3cb4e5;margin-top: clampMun(385);margin-left: clampMun(128);width: clampMun(90);height: clampMun(90);border:transparent;}}
+          @keyframes circle2-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}   to{background-color:#3cb4e5;margin-top: clampMun(210);margin-left: clampMun(207);width: clampMun(70);height: clampMun(70);border:transparent;}}
+          @keyframes circle3-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}   to{background-color:#3cb4e5;margin-top: clampMun(338);margin-left: clampMun(404);width: clampMun(24);height: clampMun(24);border:transparent;}}
+          @keyframes circle4-1{from{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}   to{background-color:#3cb4e5;margin-top: clampMun(188);margin-left: clampMun(441);width: clampMun(154);height: clampMun(154);border-radius:50%;border:transparent;}}
+          @keyframes circle5-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}   to{background-color:#3cb4e5;margin-top: clampMun(290);margin-left: clampMun(666);width: clampMun(92);height: clampMun(92);border:transparent;}}
 
-          @keyframes circle6-1{to{margin-top: clampMun(494);margin-left: clampMun(990);} to{margin-top: clampMun(209);margin-left: clampMun(744);width: clampMun(42);height: clampMun(42);}}
-          @keyframes circle7-1{to{margin-top: clampMun(547);margin-left: clampMun(920);} to{margin-top: clampMun(417);margin-left: clampMun(815);width: clampMun(50);height: clampMun(50);}}
-          @keyframes circle8-1{to{margin-top: clampMun(317);margin-left: clampMun(1019);} to{margin-top: clampMun(322);margin-left: clampMun(937);width: clampMun(66);height: clampMun(66);}}
-          @keyframes circle9-1{to{margin-top: clampMun(366);margin-left: clampMun(928);} to{margin-top: clampMun(241);margin-left: clampMun(1114);width: clampMun(182);height: clampMun(182);}}
-          @keyframes circle10-1{to{margin-top: clampMun(436);margin-left: clampMun(981);} to{margin-top: clampMun(600);margin-left: clampMun(1252);width: clampMun(34);height: clampMun(34);}}
+          @keyframes circle6-1{from{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}   to{background-color:#3cb4e5;margin-top: clampMun(209);margin-left: clampMun(744);width: clampMun(42);height: clampMun(42);border-radius:50%;border:transparent;}}
+          @keyframes circle7-1{from{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}   to{background-color:#3cb4e5;margin-top: clampMun(417);margin-left: clampMun(815);width: clampMun(50);height: clampMun(50);border-radius:50%;border:transparent;}}
+          @keyframes circle8-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}  to{background-color:#3cb4e5;margin-top: clampMun(322);margin-left: clampMun(937);width: clampMun(66);height: clampMun(66);border:transparent;}}
+          @keyframes circle9-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}   to{background-color:#3cb4e5;margin-top: clampMun(241);margin-left: clampMun(1114);width: clampMun(182);height: clampMun(182);border:transparent;}}
+          @keyframes circle10-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}  to{background-color:#3cb4e5;margin-top: clampMun(600);margin-left: clampMun(1252);width: clampMun(34);height: clampMun(34);border:transparent;}}
 
-          @keyframes circle11-1{to{margin-top: clampMun(534);margin-left: clampMun(873);} to{margin-top: clampMun(300);margin-left: clampMun(280);width: clampMun(24);height: clampMun(24);}}
-          @keyframes circle12-1{to{margin-top: clampMun(352);margin-left: clampMun(1025);} to{margin-top: clampMun(350);margin-left: clampMun(540);width: clampMun(18);height: clampMun(18);}}
-          @keyframes circle13-1{to{margin-top: clampMun(362);margin-left: clampMun(865);} to{margin-top: clampMun(318);margin-left: clampMun(1360);width: clampMun(46);height: clampMun(46);}}
-          @keyframes circle14-1{to{margin-top: clampMun(490);margin-left: clampMun(942);} to{margin-top: clampMun(544);margin-left: clampMun(1560);width: clampMun(34);height: clampMun(34);}}
-          @keyframes circle15-1{to{margin-top: clampMun(538);margin-left: clampMun(967);} to{margin-top: clampMun(242);margin-left: clampMun(628);width: clampMun(24);height: clampMun(24);}}
+          @keyframes circle11-1{from{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}  to{background-color:#ff7a00;margin-top: clampMun(300);margin-left: clampMun(280);width: clampMun(24);height: clampMun(24);border-radius:50%;border:transparent;}}
+          @keyframes circle12-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;} to{background-color:#ff7a00;margin-top: clampMun(350);margin-left: clampMun(540);width: clampMun(18);height: clampMun(18);border:transparent;}}
+          @keyframes circle13-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}  to{background-color:#ff7a00;margin-top: clampMun(318);margin-left: clampMun(1360);width: clampMun(46);height: clampMun(46);border:transparent;}}
+          @keyframes circle14-1{from{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}  to{background-color:#ff7a00;margin-top: clampMun(544);margin-left: clampMun(1560);width: clampMun(34);height: clampMun(34);border-radius:50%;border:transparent;}}
+          @keyframes circle15-1{from{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}  to{background-color:#ff4713;margin-top: clampMun(242);margin-left: clampMun(628);width: clampMun(24);height: clampMun(24);border-radius:50%;border:transparent;}}
 
-          @keyframes circle16-1{to{margin-top: clampMun(410);margin-left: clampMun(900);} to{margin-top: clampMun(378);margin-left: clampMun(1029);width: clampMun(12);height: clampMun(12);}}
-          @keyframes circle17-1{to{margin-top: clampMun(300);margin-left: clampMun(962);} to{margin-top: clampMun(484);margin-left: clampMun(1331);width: clampMun(16);height: clampMun(16);}}
-          @keyframes circle18-1{to{margin-top: clampMun(383);margin-left: clampMun(1011);} to{margin-top: clampMun(962);margin-left: clampMun(1749);width: clampMun(12);height: clampMun(12);}}
-          @keyframes circle19-1{to{margin-top: clampMun(242);margin-left: clampMun(1048);} to{margin-top: clampMun(776);margin-left: clampMun(1830);width: clampMun(50);height: clampMun(50);}}
-          @keyframes circle20-1{to{margin-top: clampMun(520);margin-left: clampMun(851);} to{margin-top: clampMun(388);margin-left: clampMun(611);width: clampMun(32);height: clampMun(32);}}
+          @keyframes circle16-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}  to{background-color:#ff4713;margin-top: clampMun(378);margin-left: clampMun(1029);width: clampMun(12);height: clampMun(12);border:transparent;}}
+          @keyframes circle17-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}  to{background-color:#ff4713;margin-top: clampMun(484);margin-left: clampMun(1331);width: clampMun(16);height: clampMun(16);border:transparent;}}
+          @keyframes circle18-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;} to{background-color:#ff4713;margin-top: clampMun(962);margin-left: clampMun(1749);width: clampMun(12);height: clampMun(12);border:transparent;}}
+          @keyframes circle19-1{from{width: clampMun(40);height: clampMun(40);border: 50%;background-color: #3CB4E5;border: 1px solid #3CB4E5;margin-top: clampMun(240); margin-left: clampMun(1040);} to{background-color:#ff4713;margin-top: clampMun(776);margin-left: clampMun(1830);width: clampMun(50);height: clampMun(50);border:transparent;}}
+          @keyframes circle20-1{from{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);border: transparent;}  to{background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(388);margin-left: clampMun(611);width: clampMun(32);height: clampMun(32);border-radius:50%;}}
 
-          @keyframes circle21-1{to{margin-top: clampMun(270);margin-left: clampMun(969);} to{margin-top: clampMun(436);margin-left: clampMun(929);width: clampMun(50);height: clampMun(50);}}
-          @keyframes circle22-1{to{margin-top: clampMun(428);margin-left: clampMun(945);} to{margin-top: clampMun(144);margin-left: clampMun(1358);width: clampMun(36);height: clampMun(36);}}
-          @keyframes circle23-1{to{margin-top: clampMun(325);margin-left: clampMun(914);} to{margin-top: clampMun(198);margin-left: clampMun(1447);width: clampMun(72);height: clampMun(72);}}
-          @keyframes circle24-1{to{margin-top: clampMun(398);margin-left: clampMun(975);} to{margin-top: clampMun(455);margin-left: clampMun(693);width: clampMun(76);height: clampMun(76);}}
-          @keyframes circle25-1{to{margin-top: clampMun(251);margin-left: clampMun(1060);} to{margin-top: clampMun(870);margin-left: clampMun(1231);width: clampMun(436);height: clampMun(436);}}
-          @keyframes circle26-1{to{margin-top: clampMun(464);margin-left: clampMun(1006);} to{margin-top: clampMun(779);margin-left: clampMun(1600);width: clampMun(114);height: clampMun(114);}}
+          @keyframes circle21-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;border: transparent;}  to{background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(436);margin-left: clampMun(929);width: clampMun(50);height: clampMun(50);}}
+          @keyframes circle22-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;border: transparent;}  to{background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(144);margin-left: clampMun(1358);width: clampMun(36);height: clampMun(36);}}
+          @keyframes circle23-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;border: transparent;}  to{background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(198);margin-left: clampMun(1447);width: clampMun(72);height: clampMun(72);}}
+          @keyframes circle24-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;border: transparent;}  to{background-color:#fff;border:1px solid #ff4713;margin-top: clampMun(455);margin-left: clampMun(693);width: clampMun(76);height: clampMun(76);}}
+          @keyframes circle25-1{from{width: clampMun(40);height: clampMun(40);border: 50%;background-color: #3CB4E5;border: 1px solid #3CB4E5;margin-top: clampMun(240); margin-left: clampMun(1040);border: transparent;} to{background-color:#fff;border:1px solid #ff4713;margin-top: clampMun(870);margin-left: clampMun(1231);width: clampMun(436);height: clampMun(436);}}
+          @keyframes circle26-1{from{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);border: transparent;} to{background-color:#fff;border:1px solid #ff4713;margin-top: clampMun(779);margin-left: clampMun(1600);width: clampMun(114);height: clampMun(114);border-radius:50%;}}
 
           
       }
