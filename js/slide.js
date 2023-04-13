@@ -3,6 +3,7 @@ $(document).ready(function(){
     // console.log(i);
     var value = 0;
 
+    // 우측 점 네비게이션
     $("#btn li").click(function(){
         i = $(this).index();
 
@@ -32,6 +33,9 @@ $(document).ready(function(){
             $('#header').removeClass('logo_active');
         }
         if(i == 2){
+            // 로고 화이트 변경
+            $('#header').addClass('logo_active');
+
             //3p 모션
             const canvas = document.querySelector('.sec3_ani') // canvas 불러와서 변수 지정
             canvas.width = 1920; // 가로크기 윈도우 가로에 맞게
@@ -293,7 +297,7 @@ $(document).ready(function(){
 
     });
 
-    // 네비게이션
+    // 햄버거 네비게이션
     function navi_start(){
         // console.log("네비 스타트");
         for(let k=0; k<4; k++){
