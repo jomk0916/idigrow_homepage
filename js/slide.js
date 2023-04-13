@@ -331,13 +331,13 @@ $(document).ready(function(){
                     }
                 });
             }
-            // else if( k==2 ){
-            //     $('#modal .container ul li').eq(k).on({
-            //         click: function(){
-            //             $('#header').addClass('logo_active');
-            //         }
-            //     });
-
+            else if( k==2 ){
+                $('#modal .container ul li').eq(k).on({
+                    click: function(){
+                        $('#header').addClass('logo_active');
+                    }
+                });
+            }
             //     //3p 모션
             //     const canvas = document.querySelector('.sec3_ani') // canvas 불러와서 변수 지정
             //     canvas.width = 1920; // 가로크기 윈도우 가로에 맞게

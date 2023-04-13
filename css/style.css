@@ -177,10 +177,6 @@ input {
   opacity: 0;
 }
 
-html, body {
-  cursor: url(../images/icon_idi_cursor.png), auto;
-}
-
 #wrap {
   width: 100%;
   position: relative;
@@ -203,7 +199,7 @@ html, body {
 }
 #wrap #modal .container ul {
   padding: 0 80px;
-  width: 1430px;
+  width: auto;
   height: 600px;
   font-size: clamp(9rem, 9.5377842993vw, 13rem);
   font-family: "SUIT-Variable";
@@ -219,6 +215,10 @@ html, body {
 }
 #wrap #modal .container ul li a:hover {
   color: #FF5C35;
+}
+#wrap #modal .container #modal_3d_model {
+  width: clamp(1rem, 51.3573000734vw, 70rem);
+  height: clamp(1rem, 51.3573000734vw, 70rem);
 }
 #wrap .bg {
   display: none;

@@ -87,7 +87,7 @@ input {outline-offset:-1px;}
 // 풀페이지 스크롤 시 주석 풀 것
 
 // 마우스 커서 변경
-html,body { cursor: url(../images/icon_idi_cursor.png), auto; }
+// html,body { cursor: url(../images/icon_idi_cursor.png), auto; }
 
 // 상호
 @function clampSang($pi){
@@ -118,7 +118,7 @@ html,body { cursor: url(../images/icon_idi_cursor.png), auto; }
         align-items: center;
         ul {
           padding:0 80px;
-          width: 1430px;
+          width: auto;
           height: 600px;
           font-size: clamp(9rem, 9.5377842993vw, 13rem);
           font-family: 'SUIT-Variable';
@@ -134,6 +134,11 @@ html,body { cursor: url(../images/icon_idi_cursor.png), auto; }
               }
             }
           }
+        }
+        #modal_3d_model {
+          width: clampSang(700);
+          height: clampSang(700);
+          // background-color: lightcoral;
         }
       }
     }

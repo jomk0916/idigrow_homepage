@@ -20,6 +20,7 @@
           <li><a href="#section3">Contact us</a></li>
           <li><a href="#section4">Carrers</a></li>
         </ul>
+        <canvas id="modal_3d_model" width="700" height="700"></canvas>
       </div>
     </div>
 
@@ -244,6 +245,63 @@
     </div>
     <a href="#section1" class="top_btn"><span class="arrow"></span></a>
   </div>
+
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+        "GLTFLoader" : "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+      }
+    }
+  </script>
+
+  <script type="module">
+    import {GLTFLoader} from 'GLTFLoader';
+    import * as THREE from 'three';
+
+    let scene = new THREE.Scene();
+    let renderer = new THREE.WebGLRenderer({
+      canvas : document.querySelector('#modal_3d_model'),
+      antialias : true,
+      alpha: true
+    });
+    renderer.outputEncoding = THREE.sRGBEncoding;
+
+    let camera = new THREE.PerspectiveCamera(30, 1);
+    camera.position.set(0,0,21);
+
+    let loader = new GLTFLoader();
+    loader.load('logo.glb', function(gltf){
+      gltf.scene.traverse(function (child) {
+       if (child.isMesh) {
+          // 로고 모델의 첫 번째 재질의 색상을 빨간색으로 변경합니다.
+          child.material.emissive.set(0xffffff);
+          child.material.opacity = 0.5;
+          child.material.transparent = true;
+        }
+      });
+      gltf.scene.traverse((child) => {
+        if (child instanceof THREE.Mesh) {
+          child.material.wireframe = true;
+        }
+      });
+
+      scene.add(gltf.scene);
+
+      // 로고 모델의 y 위치를 변경합니다.
+      gltf.scene.position.y = -2.5;
+
+      function animate(){
+        requestAnimationFrame(animate)
+        gltf.scene.rotation.y += 0.01;
+        renderer.render(scene, camera);
+      }
+      animate();
+    });
+  </script>
+
+
   <!-- 공용 js -->
   <script src="./js/common.js"></script>
   <script src="./js/slide.js"></script>
