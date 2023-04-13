@@ -625,7 +625,7 @@ input {outline-offset:-1px;}
           //모션 객체 끝
           
           .cnt_box{
-            animation: cnt_in 1s 14s forwards;
+            animation: cnt_in 1s 15s forwards;
             opacity: 0;
             margin: 0 auto;
             padding-top: clampMun(600);
@@ -785,7 +785,7 @@ input {outline-offset:-1px;}
 
           //박스 모션
           .ani_box.on{ // 상단 파란색 박스
-            animation: upcircle 3s forwards, water 3s 11.5s, upbox 2s 14s ease forwards;
+            animation: upcircle 3s forwards, water 3s 11.5s, upbox 2s 15s ease forwards;
           }
           @keyframes upcircle { //하단박스 -> 중앙원
             from {
@@ -838,7 +838,7 @@ input {outline-offset:-1px;}
 
           //circle 모션
           .circle1.on{ //캐릭터 꽁지머리
-            animation: sm_circle_dw 3s 3s ease forwards, water 3s 11.5s, sm_circle_out 1s 14s forwards;
+            animation: sm_circle_dw 3s 3s ease forwards, water 3s 11.5s, sm_circle_out 1s 15s forwards;
           }
 
           @keyframes sm_circle_dw { //꽁지 내려옴
@@ -873,7 +873,7 @@ input {outline-offset:-1px;}
             }
           }
           .circle2.on{ //캐릭터 몸통
-            animation: half_circle_dw 3s 3s  forwards, half_swing 3s 6s ease forwards, water 3s 11.5s, half_circle_out 1s 14s forwards;
+            animation: half_circle_dw 3s 3s  forwards, half_swing 3s 6s ease forwards, water 3s 11.5s, half_circle_out 1s 15s forwards;
             opacity: 0;
           }
           
@@ -932,32 +932,32 @@ input {outline-offset:-1px;}
           }
 
           //move circle 모션
-          .move_circle.on > .circle3-1 {animation: circle1 2s 9s ease-in-out forwards, circle1-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-2 {animation: circle2 1.2s 9s ease-in-out forwards, circle2-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-3 {animation: circle3 1s 9s ease-in-out forwards, circle3-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-4 {animation: circle4 2s 9s ease-in-out forwards, circle4-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-5 {animation: circle5 1s 9s ease-in-out forwards, circle5-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-6 {animation: circle6 1.9s 9s ease-in-out forwards, circle6-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-7 {animation: circle7 2s 9s ease-in-out forwards, circle7-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-8 {animation: circle8 1.2s 9s ease-in-out forwards, circle8-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-9 {animation: circle9 1.5s 9s ease-in-out forwards, circle9-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-10 {animation: circle10 2s 9s ease-in-out forwards, circle10-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-11 {animation: circle11 1.7s 9s ease-in-out forwards, circle11-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-12 {animation: circle12 2s 9s ease-in-out forwards, circle12-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-13 {animation: circle13 1.6s 9s ease-in-out forwards, circle13-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-14 {animation: circle14 2s 9s ease-in-out forwards, circle14-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-15 {animation: circle15 1.4s 9s ease-in-out forwards, circle15-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-16 {animation: circle16 2s 9s ease-in-out forwards, circle16-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-17 {animation: circle17 1.3s 9s ease-in-out forwards, circle17-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-18 {animation: circle18 2s 9s ease-in-out forwards, circle18-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-19 {animation: circle19 1.8s 9s ease-in-out forwards, circle19-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-20 {animation: circle20 2s 9s ease-in-out forwards, circle20-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-21 {animation: circle21 2s 9s ease-in-out forwards, circle21-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-22 {animation: circle22 1.2s 9s ease-in-out forwards, circle22-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-23 {animation: circle23 2s 9s ease-in-out forwards, circle23-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-24 {animation: circle24 1s 9s ease-in-out forwards, circle24-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-25 {animation: circle25 1.6s 9s ease-in-out forwards, circle25-1 2s 14s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-26 {animation: circle26 1s 9s ease-in-out forwards, circle26-1 2s 14s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-1 {animation: circle1 2s 9s ease-in-out forwards, circle1-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-2 {animation: circle2 1.2s 9s ease-in-out forwards, circle2-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-3 {animation: circle3 1s 9s ease-in-out forwards, circle3-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-4 {animation: circle4 2s 9s ease-in-out forwards, circle4-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-5 {animation: circle5 1s 9s ease-in-out forwards, circle5-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-6 {animation: circle6 1.9s 9s ease-in-out forwards, circle6-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-7 {animation: circle7 2s 9s ease-in-out forwards, circle7-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-8 {animation: circle8 1.2s 9s ease-in-out forwards, circle8-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-9 {animation: circle9 1.5s 9s ease-in-out forwards, circle9-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-10 {animation: circle10 2s 9s ease-in-out forwards, circle10-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-11 {animation: circle11 1.7s 9s ease-in-out forwards, circle11-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-12 {animation: circle12 2s 9s ease-in-out forwards, circle12-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-13 {animation: circle13 1.6s 9s ease-in-out forwards, circle13-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-14 {animation: circle14 2s 9s ease-in-out forwards, circle14-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-15 {animation: circle15 1.4s 9s ease-in-out forwards, circle15-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-16 {animation: circle16 2s 9s ease-in-out forwards, circle16-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-17 {animation: circle17 1.3s 9s ease-in-out forwards, circle17-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-18 {animation: circle18 2s 9s ease-in-out forwards, circle18-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-19 {animation: circle19 1.8s 9s ease-in-out forwards, circle19-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-20 {animation: circle20 2s 9s ease-in-out forwards, circle20-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-21 {animation: circle21 2s 9s ease-in-out forwards, circle21-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-22 {animation: circle22 1.2s 9s ease-in-out forwards, circle22-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-23 {animation: circle23 2s 9s ease-in-out forwards, circle23-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-24 {animation: circle24 1s 9s ease-in-out forwards, circle24-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-25 {animation: circle25 1.6s 9s ease-in-out forwards, circle25-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-26 {animation: circle26 1s 9s ease-in-out forwards, circle26-1 2s 15s forwards, water 3s 11.5s;}
           
           
           //첫번째 원 움직임
@@ -1027,15 +1027,18 @@ input {outline-offset:-1px;}
           @keyframes circle26-1{from{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);border: transparent;} to{background-color:#fff;border:1px solid #ff4713;margin-top: clampMun(779);margin-left: clampMun(1600);width: clampMun(114);height: clampMun(114);border-radius:50%;}}
 
           @keyframes water {
-            // 0%,20%,40%,50%,60%,70%,80%,90%,100%{transform: rotate(-20deg);}
-            0%{transform: scale3d(.5,.5,.5) rotate(-20deg);}
+            0%{transform: scale3d(1,1,1) rotate(-20deg);}
+            10%{transform:scale3d(.1,.1,.1) rotate(-20deg);}
             20%{transform:scale3d(1.3,1.3,1.3) rotate(-20deg);}
-            40%{transform:scale3d(.7,.7,.7) rotate(-20deg);}
-            50%{transform:scale3d(1.1,1.1,1.1) rotate(-20deg);}
-            60%{transform:scale3d(.9,.9,.9) rotate(-20deg);}
-            70%{transform:scale3d(1.08,1.08,1.08) rotate(-20deg);}
-            80%{transform:scale3d(.95,.95,.95) rotate(-20deg);}
-            90%{transform:scale3d(1.04,1.04,1.04) rotate(-20deg);}
+            30%{transform:scale3d(.5,.5,.5) rotate(-20deg);}
+            40%{transform:scale3d(1.2,1.2,1.2) rotate(-20deg);}
+            50%{transform:scale3d(.7,.7,.7) rotate(-20deg);}
+            60%{transform:scale3d(1.15,1.15,1.15) rotate(-20deg);}
+            70%{transform:scale3d(.8,.8,.8) rotate(-20deg);}
+            80%{transform:scale3d(1.1,1.1,1.1) rotate(-20deg);}
+            85%{transform:scale3d(.9,.9,.9) rotate(-20deg);}
+            90%{transform:scale3d(1.05,1.05,1.05) rotate(-20deg);}
+            95%{transform:scale3d(.95,.95,.95) rotate(-20deg);}
             100%{transform:scale3d(1,1,1) rotate(-20deg);}
           }
           
@@ -1049,6 +1052,259 @@ input {outline-offset:-1px;}
             color: #000;
             position: relative;
           }
+
+          //모션 시작
+
+          .po{position: absolute;}
+          .cir{border-radius: 50%;}
+          .blue{background-color: #3CB4E5;}
+          .red{background-color: #ff4713;}
+          .orange{background-color: #ff7a00;}
+          .wh_blue{background-color: #fff;border: 1px solid #3cb4e5;}
+          .wh_red{background-color: #fff;border: 1px solid #ff4713;}
+
+          //캐릭터 원
+          .circle3-1{margin-top: clampMun(385);margin-left: clampMun(128);width: clampMun(90);height: clampMun(90);}
+          .circle3-2{margin-top: clampMun(210);margin-left: clampMun(207);width: clampMun(70);height: clampMun(70);}
+          .circle3-3{margin-top: clampMun(338);margin-left: clampMun(404);width: clampMun(24);height: clampMun(24);}
+          .circle3-4{margin-top: clampMun(188);margin-left: clampMun(441);width: clampMun(154);height: clampMun(154);}
+          .circle3-5{margin-top: clampMun(290);margin-left: clampMun(666);width: clampMun(92);height: clampMun(92);}
+          .circle3-6{margin-top: clampMun(209);margin-left: clampMun(744);width: clampMun(42);height: clampMun(42);}
+          .circle3-7{margin-top: clampMun(417);margin-left: clampMun(815);width: clampMun(50);height: clampMun(50);}
+          .circle3-8{margin-top: clampMun(322);margin-left: clampMun(937);width: clampMun(66);height: clampMun(66);}
+          .circle3-9{margin-top: clampMun(241);margin-left: clampMun(1114);width: clampMun(182);height: clampMun(182);}
+          .circle3-10{margin-top: clampMun(600);margin-left: clampMun(1252);width: clampMun(34);height: clampMun(34);}
+
+          .circle3-11{margin-top: clampMun(300);margin-left: clampMun(280);width: clampMun(24);height: clampMun(24);}
+          .circle3-12{margin-top: clampMun(350);margin-left: clampMun(540);width: clampMun(18);height: clampMun(18);}//좌측 바닥
+          .circle3-13{margin-top: clampMun(318);margin-left: clampMun(1360);width: clampMun(46);height: clampMun(46);}
+          .circle3-14{margin-top: clampMun(544);margin-left: clampMun(1560);width: clampMun(34);height: clampMun(34);}//우측 바닥
+          .circle3-15{margin-top: clampMun(242);margin-left: clampMun(628);width: clampMun(24);height: clampMun(24);}
+          .circle3-16{margin-top: clampMun(378);margin-left: clampMun(1029);width: clampMun(12);height: clampMun(12);}
+          .circle3-17{margin-top: clampMun(484);margin-left: clampMun(1331);width: clampMun(16);height: clampMun(16);}
+          .circle3-18{margin-top: clampMun(962);margin-left: clampMun(1749);width: clampMun(12);height: clampMun(12);}
+          .circle3-19{margin-top: clampMun(776);margin-left: clampMun(1830);width: clampMun(50);height: clampMun(50);}
+          .circle3-20{margin-top: clampMun(388);margin-left: clampMun(611);width: clampMun(32);height: clampMun(32);}
+
+          .circle3-21{margin-top: clampMun(436);margin-left: clampMun(929);width: clampMun(50);height: clampMun(50);}
+          .circle3-22{margin-top: clampMun(144);margin-left: clampMun(1358);width: clampMun(36);height: clampMun(36);}
+          .circle3-23{margin-top: clampMun(198);margin-left: clampMun(1447);width: clampMun(72);height: clampMun(72);}
+          .circle3-24{margin-top: clampMun(455);margin-left: clampMun(693);width: clampMun(76);height: clampMun(76);}
+          .circle3-25{margin-top: clampMun(870);margin-left: clampMun(1231);width: clampMun(436);height: clampMun(436);}//캐릭터 머리
+          .circle3-26{margin-top: clampMun(779);margin-left: clampMun(1600);width: clampMun(114);height: clampMun(114);}//캐릭터 꽁지
+
+          //캐릭터 모션
+          .cha_body{animation: cha_body 3s forwards, front_body 3s 6.5s forwards, shake_body 1.5s 11s forwards,jump_body 2s 13s forwards;}
+          @keyframes cha_body {
+            from{}
+            to{
+              width: clampMun(100);height: clampMun(50);border-radius: 0 0 clampMun(50) clampMun(50);
+              transform: rotate(-20deg);background-color: #ff7a00;border: transparent;
+              margin-top: clampMun(130);margin-left: clampMun(910);
+            }
+          }
+          @keyframes front_body {
+            from{}
+            to{
+              width: clampMun(300);height: clampMun(150);border-radius: 0 0 clampMun(150) clampMun(150);
+              margin-top: clampMun(730);margin-left: clampMun(810);
+            }
+          }
+          @keyframes shake_body {
+            from{}
+            25%{transform: rotate(40deg);}
+            50%{transform: rotate(-10deg);}
+            75%{transform: rotate(30deg);}
+            to{transform: rotate(-20deg);}
+          }
+          @keyframes jump_body {
+            from{}
+            25%{margin-top: clampMun(630);}
+            50%{margin-top: clampMun(730);}
+            75%{margin-top: clampMun(630);}
+            to{margin-top: clampMun(730);}
+          }
+          .cha_head{animation: cha_head 3s forwards, front_head 3s 6.5s forwards;}
+          @keyframes cha_head {
+            from{}
+            to{
+              width: clampMun(100);height: clampMun(100);
+              background-color: #ff7a00;border: transparent;
+              margin-top: clampMun(15);margin-left: clampMun(910);
+            }
+          }
+          @keyframes front_head {
+            from{}
+            to{
+              width: clampMun(300);height: clampMun(300);
+              margin-top: clampMun(380);margin-left: clampMun(810);
+            }
+          }
+          .cha_hair{animation: cha_hair 3s forwards, front_hair 3s 6.5s forwards,shake_hair 1.5s 11s forwards,jump_hair 2s 13s forwards;}
+          @keyframes cha_hair {
+            from{}
+            to{
+              width: clampMun(20);height: clampMun(20);
+              background-color: #ff7a00;border: transparent;
+              margin-top: clampMun(5);margin-left: clampMun(1000);
+            }
+          }
+          @keyframes front_hair {
+            from{}
+            to{
+              width: clampMun(60);height: clampMun(60);
+              margin-top: clampMun(350);margin-left: clampMun(1100);
+            }
+          }
+          @keyframes shake_hair{
+            from{}
+            25%{margin-top: clampMun(330);margin-left: clampMun(1080);}
+            50%{margin-top: clampMun(350);margin-left: clampMun(1100);}
+            75%{margin-top: clampMun(330);margin-left: clampMun(1080);}
+            to{margin-top: clampMun(350);margin-left: clampMun(1100);}
+          }
+          @keyframes jump_hair{
+            from{}
+            25%{margin-top: clampMun(250);}
+            50%{margin-top: clampMun(375);}
+            75%{margin-top: clampMun(300);}
+            to{margin-top: clampMun(350);}
+          }
+          //양 옆 박스
+          .bottom_l{animation: bt_lx 3s forwards, bt_l 3s 3s forwards;}
+          @keyframes bt_lx {
+            from{}
+            to{
+              width: 0;height: 0;border-radius: 0;
+              margin-top: clampMun(200);margin-left: 0;
+              background-color: transparent;
+              border-top: clampMun(440)  solid #ff7a00;
+              border-left: clampMun(480)  solid #ff7a00;
+              border-bottom: clampMun(440) solid #ff7a00;
+              border-right: clampMun(480) solid #ff7a00;
+            }
+          }
+          @keyframes bt_l {
+            from{}
+            to{
+              width: 0;height: 0;border-radius: 0;
+              margin-top: clampMun(200);margin-left: 0;
+              background-color: transparent;
+              border-top: clampMun(440)  solid #ff7a00;
+              border-left: clampMun(400)  solid #ff7a00;
+              border-bottom: clampMun(440) solid transparent;
+              border-right: clampMun(400) solid transparent;
+            }
+          }
+          .bottom_r{animation: bt_rx 3s forwards, bt_r 3s 3s forwards;}
+          @keyframes bt_rx {
+            from{}
+            to{
+              width: 0;height: 0;border-radius: 0;
+              margin-top: clampMun(200);margin-left: clampMun(960);
+              background-color: transparent;
+              border-top: clampMun(440)  solid #ff7a00;
+              border-left: clampMun(480)  solid #ff7a00;
+              border-bottom: clampMun(440) solid #ff7a00;
+              border-right: clampMun(480) solid #ff7a00;
+            }
+          }
+          @keyframes bt_r {
+            from{}
+            to{
+              width: 0;height: 0;border-radius: 0;
+              margin-top: clampMun(200);margin-left: clampMun(1120);
+              background-color: transparent;
+              border-top: clampMun(440)  solid #ff7a00;
+              border-left: clampMun(400)  solid transparent;
+              border-bottom: clampMun(440) solid transparent;
+              border-right: clampMun(400) solid #ff7a00;
+            }
+          }
+          //상단 박스
+          .lt_box{margin-top: 0;margin-left: 0;width:clampMun(960);height: clampMun(200);animation: lt_cls 3s forwards, lt_box 3s 3s forwards;}
+          @keyframes lt_cls{
+            from{}
+            to{
+              background-color: #ff7a00;
+            }
+          }
+          @keyframes lt_box {
+            from{}
+            to{
+              width: clampMun(800);background-color: #ff7a00;
+            }
+          }
+          .rt_box{margin-top: 0;margin-left: clampMun(960);width:clampMun(960);height: clampMun(200);animation: rt_cls 3s forwards, rt_box 3s 3s forwards;}
+          @keyframes rt_cls{
+            from{}
+            to{
+              background-color: #ff7a00;
+            }
+          }
+          @keyframes rt_box {
+            from{}
+            to{
+              width: clampMun(800);background-color: #ff7a00;margin-left: clampMun(1120);
+            }
+          }
+          // 글자 모션
+          .op{opacity: 0;}
+          .txt_1{width: clampMun(20);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1209);border-radius: 10%;}
+          .txt_2{width: clampMun(79);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1248);border-radius:10% clampMun(40) clampMun(40) 10%}
+          .txt_3{width: clampMun(20);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1339);border-radius: 10%;}
+          .txt_4{width: clampMun(72);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1487);border-radius:10% clampMun(30) 10% 10%}
+          .txt_5{width: clampMun(86);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1567);border-radius: 50%;}
+          .txt_6{width: clampMun(97);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1661);border-radius:55% 3% 34% 35%}
+
+          .motxt_1{animation: txt1 1s 15s ease-out forwards;}
+          @keyframes txt1 {
+            0%{opacity:0;transform: translate3d(-300%,0,0) skewX(30deg);}
+            60%{opacity: 1;transform: skewX(-20deg)}
+            80%{transform: skewX(5deg);}
+            to{transform: translateZ(0);opacity: 1}
+          }
+          .motxt_2{animation: txt2 1s 14s ease-out forwards;}
+          @keyframes txt2 {
+            0%{opacity:0;transform: translate3d(-300%,0,0) skewX(30deg);}
+            60%{opacity: 1;transform: skewX(-20deg)}
+            80%{transform: skewX(5deg);}
+            to{transform: translateZ(0);opacity: 1}
+          }
+          .motxt_3{animation: txt3 1s 13s ease-out forwards;}
+          @keyframes txt3 {
+            0%{opacity:0;transform: translate3d(-300%,0,0) skewX(30deg);}
+            60%{opacity: 1;transform: skewX(-20deg)}
+            80%{transform: skewX(5deg);}
+            to{transform: translateZ(0);opacity: 1}
+          }
+          .motxt_4{animation: txt4 1s 12s ease-out forwards;}
+          @keyframes txt4 {
+            0%{opacity:0;transform: translate3d(-300%,0,0) skewX(30deg);}
+            60%{opacity: 1;transform: skewX(-20deg)}
+            80%{transform: skewX(5deg);}
+            to{transform: translateZ(0);opacity: 1}
+          }
+          .motxt_5{animation: txt5 .5s 11s ease-out forwards, txt5_1 1s 11.5s forwards;}
+          @keyframes txt5 {
+            0%{opacity: 0;transform: translate3d(0,-300%,0);margin-top: clampMun(637);}
+            to{opacity: 1;width: clampMun(45);height: clampMun(120);margin-left: clampMun(1580);margin-top: clampMun(592);}
+          }
+          @keyframes txt5_1 { //626
+            // 0%{width: clampMun(45);height: clampMun(120);margin-top: clampMun(592);margin-left: clampMun(1567);}
+            50%{width: clampMun(100);height: clampMun(60);margin-top: clampMun(652);}
+            80%{width: clampMun(70);height: clampMun(90);margin-top: clampMun(622);}
+            to{width: clampMun(86);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1567);}
+          }
+          .motxt_6{animation: txt6 1s 10s ease-out forwards;}
+          @keyframes txt6 {
+            0%{opacity:0;transform: translate3d(-300%,0,0) skewX(30deg);}
+            60%{opacity: 1;transform: skewX(-20deg)}
+            80%{transform: skewX(5deg);}
+            to{transform: translateZ(0);opacity: 1}
+          }
+          //모션 끝
+
           .top_view{
             /* width: 1419px;height: 227px; */
             // width: clamp(1rem,73.90625vw,141.9rem);
@@ -1061,6 +1317,8 @@ input {outline-offset:-1px;}
             right: 0;
           }
           .cnt_box{
+            // animation: cnt_in 1s 2s forwards;
+            opacity: 0;
             margin: 0 auto;
             /* width: 1600px;
             height: 1080px; */
@@ -1070,6 +1328,14 @@ input {outline-offset:-1px;}
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+          }
+          @keyframes cnt_in {
+            from{
+              opacity: 0;
+            }
+            to{
+              opacity: 1;
+            }
           }
           .logo_container{
             display: flex;
