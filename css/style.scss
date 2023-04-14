@@ -87,7 +87,7 @@ input {outline-offset:-1px;}
 // 풀페이지 스크롤 시 주석 풀 것
 
 // 마우스 커서 변경
-// html,body { cursor: url(../images/icon_idi_cursor.png), auto; }
+html,body { cursor: url(../images/icon_idi_cursor.png) 15 15, auto; }
 
 // 상호
 @function clampSang($pi){

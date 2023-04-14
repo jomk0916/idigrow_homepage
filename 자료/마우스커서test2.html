@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마우스커서테스트</title>
+  <style>
+
+    .circle1 {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #FF5C35;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+
+    .circle2 {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #FF5C35;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .circle3 {
+      width: 24px;
+      height: 12px;
+      border-radius: 12px 12px 0 0;
+      background-color: #FF5C35;
+      transform: rotate(0deg);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="circle1 circle"></div>
+  <div class="circle2 circle"></div>
+  <div class="circle3 circle"></div>
+
+  <script>
+    const coords = { x:0, y:0 };
+    const circles = document.querySelectorAll(".circle");
+    let requestId;
+
+    circles.forEach(function(circle){
+      circle.x = 0;
+      circle.y = 0;
+    });
+
+    window.addEventListener("mousemove", function(e){
+      coords.x = e.clientX;
+      coords.y = e.clientY;
+
+      if (!requestId) {
+        requestId = requestAnimationFrame(animateCircles);
+      }
+    })
+
+    function animateCircles(){
+
+      let x = coords.x;
+      let y = coords.y;
+
+      circles.forEach(function (circle, index){
+        circle.style.left = x - 12 + "px";
+        circle.style.top = y - 12 + "px";
+
+        circle.style.scale = 1;
+
+        circle.x = x;
+        circle.y = y;
+
+        const nextCircle = circles[index + 1] || circles[0]; // circle[0] ~ circle[7] // 좌측이 false면 우측 실행
+        x += (nextCircle.x - x) * 0.8;
+        y += (nextCircle.y - y) * 0.8;
+
+      });
+
+      requestId = null;
+      if (coords.x || coords.y) {
+        requestId = requestAnimationFrame(animateCircles);
+      }
+    }
+
+
+  </script>
+</body>
+</html>

@@ -275,7 +275,7 @@
     loader.load('logo.glb', function(gltf){
       gltf.scene.traverse(function (child) {
        if (child.isMesh) {
-          // 로고 모델의 첫 번째 재질의 색상을 빨간색으로 변경합니다.
+          // 로고 모델의 첫 번째 재질의 색상을 흰색으로 변경합니다.
           child.material.emissive.set(0xffffff);
           child.material.opacity = 0.5;
           child.material.transparent = true;
@@ -300,7 +300,6 @@
       animate();
     });
   </script>
-
 
   <!-- 공용 js -->
   <script src="./js/common.js"></script>
