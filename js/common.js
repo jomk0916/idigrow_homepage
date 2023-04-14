@@ -12,15 +12,53 @@
       const coords = { x:0, y:0 };
       const circles = document.querySelectorAll("#mouse_custom .circle");
       let requestId;
+      let stage = '';
 
       circles.forEach(function(circle){
         circle.x = 0;
         circle.y = 0;
       });
 
+
       window.addEventListener("mousemove", function(e){
         coords.x = e.clientX;
         coords.y = e.clientY;
+
+        // switch(e.target.getAttribute('data-cursor')) {
+        //   case 'ham':
+        //     if (stage === 'ham') return
+        //     console.log("ham");
+        //     $('#mouse_custom .circle1').css('opacity','0').css('transition','all 0.3s')
+        //     $('#mouse_custom .circle2').css('transform','scale(3)').css('transition','all 0.3s')
+        //     $('#mouse_custom .circle3').css('opacity','0').css('transition','all 0.3s')
+        //     stage = 'ham';
+        //     break
+
+        //   default:
+        //     if (stage === '') return
+        //     console.log("WWW");
+        //     $('#mouse_custom .circle1').css('opacity','1').css('transition','all 0.3s')
+        //     $('#mouse_custom .circle2').css('transform','scale(1)').css('transition','all 0.3s')
+        //     $('#mouse_custom .circle3').css('opacity','1').css('transition','all 0.3s')
+        //     stage = '';
+        // }
+
+
+        // if (e.target.getAttribute('data-cursor') === 'ham') {
+        //   if (stage === 'ham') return;
+        //     console.log("ham");
+        //     $('#mouse_custom .circle1').css('opacity','0').css('transition','all 0.3s')
+        //     $('#mouse_custom .circle2').css('transform','scale(3)').css('transition','all 0.3s')
+        //     $('#mouse_custom .circle3').css('opacity','0').css('transition','all 0.3s')
+        //     stage = 'ham';
+        // } else {
+        //   if (stage === '') return;
+        //   console.log("디폴트");
+        //   $('#mouse_custom .circle1').css('opacity','1').css('transition','all 0.3s')
+        //   $('#mouse_custom .circle2').css('transform','scale(1)').css('transition','all 0.3s')
+        //   $('#mouse_custom .circle3').css('opacity','1').css('transition','all 0.3s')
+        //   stage = '';
+        // }
 
         if (!requestId) {
           requestId = requestAnimationFrame(animateCircles);
@@ -28,7 +66,6 @@
       })
 
       function animateCircles(){
-
         let x = coords.x;
         let y = coords.y;
 
@@ -42,8 +79,8 @@
           circle.y = y;
 
           const nextCircle = circles[index + 1] || circles[0]; // circle[0] ~ circle[7] // 좌측이 false면 우측 실행
-          x += (nextCircle.x - x) * 0.8;
-          y += (nextCircle.y - y) * 0.8;
+          x += (nextCircle.x - x) * 0.7;
+          y += (nextCircle.y - y) * 0.7;
 
         });
 
