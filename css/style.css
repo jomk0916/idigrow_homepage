@@ -3116,7 +3116,7 @@ html, body {
     background-color: #ff4713;
   }
   to {
-    opacity: 0;
+    opacity: 1;
     margin-top: clamp(1rem, 2.8645833333vw, 5.5rem);
     margin-left: clamp(1rem, 11.9270833333vw, 22.9rem);
     width: clamp(1rem, 1.0416666667vw, 2rem);
