@@ -1,11 +1,57 @@
 ;(function($){
   const idgrow = {
     init:function(){
+      this.mouse_custom();
       this.header();
       this.section1();
       this.section2();
       this.section3();
       this.section4();
+    },
+    mouse_custom:function(){
+      const coords = { x:0, y:0 };
+      const circles = document.querySelectorAll("#mouse_custom .circle");
+      let requestId;
+
+      circles.forEach(function(circle){
+        circle.x = 0;
+        circle.y = 0;
+      });
+
+      window.addEventListener("mousemove", function(e){
+        coords.x = e.clientX;
+        coords.y = e.clientY;
+
+        if (!requestId) {
+          requestId = requestAnimationFrame(animateCircles);
+        }
+      })
+
+      function animateCircles(){
+
+        let x = coords.x;
+        let y = coords.y;
+
+        circles.forEach(function (circle, index){
+          circle.style.left = x - 12 + "px";
+          circle.style.top = y - 12 + "px";
+
+          circle.style.scale = 1;
+
+          circle.x = x;
+          circle.y = y;
+
+          const nextCircle = circles[index + 1] || circles[0]; // circle[0] ~ circle[7] // 좌측이 false면 우측 실행
+          x += (nextCircle.x - x) * 0.8;
+          y += (nextCircle.y - y) * 0.8;
+
+        });
+
+        requestId = null;
+        if (coords.x || coords.y) {
+          requestId = requestAnimationFrame(animateCircles);
+        }
+      }
     },
     header:function(){
       $('.ham').on({

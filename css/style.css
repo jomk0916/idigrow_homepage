@@ -178,7 +178,42 @@ input {
 }
 
 html, body {
-  cursor: url(../images/icon_idi_cursor.png) 15 15, auto;
+  cursor: none;
+}
+
+#mouse_custom {
+  position: relative;
+  z-index: 30;
+}
+#mouse_custom .circle1 {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #FF5C35;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: -10px 0 0px 15px;
+}
+#mouse_custom .circle2 {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #FF5C35;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#mouse_custom .circle3 {
+  width: 24px;
+  height: 12px;
+  border-radius: 12px 12px 0 0;
+  background-color: #FF5C35;
+  transform: rotate(140deg);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 28px 0 0 5px;
 }
 
 #wrap {
