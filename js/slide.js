@@ -260,6 +260,7 @@ $(document).ready(function(){
         $('.textBox').addClass('js_animation_re');
         $('.circle_all').removeClass('js_animation');
         $('.textBox').removeClass('js_animation');
+        $('.top_btn').removeClass('on');
     });
 
 });
