@@ -38,6 +38,8 @@ $(document).ready(function(){
             $('.circle2').addClass('on');
             $('.move_circle').addClass('on');
             $('.cnt3_box').addClass('on');
+            // 로고 화이트 변경
+            $('#header').addClass('logo_active');
         }
         if( i == 3){
             $('.cha_body').addClass('on');
@@ -54,8 +56,7 @@ $(document).ready(function(){
             $('.motxt_5').addClass('on');
             $('.motxt_6').addClass('on');
             $('.cnt_box').addClass('on');
-            // 로고 화이트 변경
-            $('#header').addClass('logo_active');
+
         }
 
     });
@@ -112,7 +113,7 @@ $(document).ready(function(){
                         $('.cnt3_box').addClass('on');
                     }
                 });
-                
+
             }
             else if( k==3 ){
                 $('#modal .container ul li').eq(k).on({
@@ -131,7 +132,7 @@ $(document).ready(function(){
                         $('.motxt_3').addClass('on');
                         $('.motxt_4').addClass('on');
                         $('.motxt_5').addClass('on');
-                        $('.motxt_6').addClass('on');  
+                        $('.motxt_6').addClass('on');
                         $('.cnt_box').addClass('on');
                     }
                 });
@@ -204,7 +205,7 @@ $(document).ready(function(){
                 $('.motxt_3').addClass('on');
                 $('.motxt_4').addClass('on');
                 $('.motxt_5').addClass('on');
-                $('.motxt_6').addClass('on');  
+                $('.motxt_6').addClass('on');
                 $('.cnt_box').addClass('on');
             }
 

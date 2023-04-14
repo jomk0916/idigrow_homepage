@@ -87,7 +87,50 @@ input {outline-offset:-1px;}
 // 풀페이지 스크롤 시 주석 풀 것
 
 // 마우스 커서 변경
-html,body { cursor: url(../images/icon_idi_cursor.png) 15 15, auto; }
+html,body {
+  // cursor: none;
+}
+
+#mouse_custom {
+  // position: relative;
+  // z-index: 30;
+  .circle1 {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #FF5C35;
+    border:1px solid #fff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin:25px 0 0px 35px;
+  }
+
+  .circle2 {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #FF5C35;
+    border:1px solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin:30px 0 0 20px;
+  }
+
+  .circle3 {
+    width: 24px;
+    height: 12px;
+    border-radius: 12px 12px 0 0;
+    background-color: #FF5C35;
+    border:1px solid #fff;
+    transform: rotate(140deg);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin:55px 0 0 25px;
+  }
+}
 
 // 상호
 @function clampSang($pi){
@@ -817,7 +860,7 @@ html,body { cursor: url(../images/icon_idi_cursor.png) 15 15, auto; }
           .orange{background-color: #ff7a00;}
           .wh_blue{background-color: #fff;border: 1px solid #3cb4e5;}
           .wh_red{background-color: #fff;border: 1px solid #ff4713;}
-          
+
           .circle3-1{width: clampMun(20);height: clampMun(20);}//파란색 1~10
           .circle3-2{width: clampMun(50);height: clampMun(50);}
           .circle3-3{width: clampMun(42);height: clampMun(42);}
@@ -852,7 +895,7 @@ html,body { cursor: url(../images/icon_idi_cursor.png) 15 15, auto; }
           .cir{margin-top: -200px;margin-left: -200px;}
 
           //모션 객체 끝
-          
+
           .cnt3_box.on{
             animation: cnt3_in 1s 15s forwards;
             opacity: 0;
@@ -1081,7 +1124,7 @@ html,body { cursor: url(../images/icon_idi_cursor.png) 15 15, auto; }
             60% {
               margin-top: clampMun(240);
             }
-            
+
             to {
               width: clampMun(40);height: clampMun(40);border: 50%;
               background-color: #fff;
@@ -1105,7 +1148,7 @@ html,body { cursor: url(../images/icon_idi_cursor.png) 15 15, auto; }
             animation: half_circle_dw 3s 3s  forwards, half_swing 3s 6s ease forwards, water 3s 11.5s, half_circle_out 1s 15s forwards;
             opacity: 0;
           }
-          
+
           @keyframes half_circle_dw { //몸통 내려옴
             from{
               width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);
@@ -1124,7 +1167,7 @@ html,body { cursor: url(../images/icon_idi_cursor.png) 15 15, auto; }
               border: 1px solid #3CB4E5;
             }
           }
-          
+
           @keyframes half_swing { //몸통 흔들
             from{
               width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);
@@ -1187,8 +1230,8 @@ html,body { cursor: url(../images/icon_idi_cursor.png) 15 15, auto; }
           .move_circle.on > .circle3-24 {animation: circle24 1s 9s ease-in-out forwards, circle24-1 2s 15s forwards, water 3s 11.5s;}
           .move_circle.on > .circle3-25 {animation: circle25 1.6s 9s ease-in-out forwards, circle25-1 2s 15s forwards, water 3s 11.5s;}
           .move_circle.on > .circle3-26 {animation: circle26 1s 9s ease-in-out forwards, circle26-1 2s 15s forwards, water 3s 11.5s;}
-          
-          
+
+
           //첫번째 원 움직임
 
           @keyframes circle1  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1070px;} 60%{margin-top: clampMun(140);} 90%{margin-top: clampMun(240); margin-left: clampMun(1040);width: 50px;height: 50px;} to{width: clampMun(40);height: clampMun(40);border: 50%;background-color: #3CB4E5;border: 1px solid #3CB4E5;margin-top: clampMun(240); margin-left: clampMun(1040);border: transparent;}}
@@ -1196,7 +1239,7 @@ html,body { cursor: url(../images/icon_idi_cursor.png) 15 15, auto; }
           @keyframes circle3  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
           @keyframes circle4  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1000px;} 60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}}
           @keyframes circle5  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 1000px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
- 
+
           @keyframes circle6  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1920px;} 60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}}
           @keyframes circle7  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}}
           @keyframes circle8  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1920px;} 60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
@@ -1270,7 +1313,7 @@ html,body { cursor: url(../images/icon_idi_cursor.png) 15 15, auto; }
             95%{transform:scale3d(.95,.95,.95) rotate(-20deg);}
             100%{transform:scale3d(1,1,1) rotate(-20deg);}
           }
-          
+
       }
       /* section4(인력 구인) */
       #section4{
@@ -1539,7 +1582,7 @@ html,body { cursor: url(../images/icon_idi_cursor.png) 15 15, auto; }
               width: clampMun(800);background-color: #ff7a00;
             }
           }
-          
+
           @keyframes lt_incir {
             from{}
             80%{
