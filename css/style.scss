@@ -1094,7 +1094,7 @@ input {outline-offset:-1px;}
           .circle3-26{margin-top: clampMun(779);margin-left: clampMun(1600);width: clampMun(114);height: clampMun(114);}//캐릭터 꽁지
 
           //캐릭터 모션
-          .cha_body{animation: cha_body 3s forwards, front_body 3s 6.5s forwards, shake_body 1.5s 11s forwards,jump_body 2s 13s forwards;}
+          .cha_body.on{animation: cha_body 1s forwards, front_body 3s 6.5s forwards, shake_body 1.5s 11s forwards, jump_body 2s 13s forwards, body_inlogo 3s 16s forwards;}
           @keyframes cha_body {
             from{}
             to{
@@ -1119,12 +1119,24 @@ input {outline-offset:-1px;}
           }
           @keyframes jump_body {
             from{}
-            25%{margin-top: clampMun(630);}
+            25%{margin-top: clampMun(690);}
             50%{margin-top: clampMun(730);}
-            75%{margin-top: clampMun(630);}
             to{margin-top: clampMun(730);}
           }
-          .cha_head{animation: cha_head 3s forwards, front_head 3s 6.5s forwards;}
+          @keyframes body_inlogo {
+            from{}
+            70%{
+              opacity: 1;
+              margin-top: clampMun(722);margin-left: clampMun(1386);
+              width: clampMun(78);height: clampMun(39);border-radius: 0 0 clampMun(39) clampMun(39);background-color: #ff4713;
+            }
+            to{
+              opacity: 0;
+              margin-top: clampMun(722);margin-left: clampMun(1386);
+              width: clampMun(78);height: clampMun(39);border-radius: 0 0 clampMun(39) clampMun(39);background-color: #ff4713;
+            }
+          }
+          .cha_head.on{animation: cha_head 1s forwards, front_head 3s 6.5s forwards, jump_head 2s 13.5s forwards, head_inlogo 3s 16s forwards;}
           @keyframes cha_head {
             from{}
             to{
@@ -1140,7 +1152,29 @@ input {outline-offset:-1px;}
               margin-top: clampMun(380);margin-left: clampMun(810);
             }
           }
-          .cha_hair{animation: cha_hair 3s forwards, front_hair 3s 6.5s forwards,shake_hair 1.5s 11s forwards,jump_hair 2s 13s forwards;}
+          @keyframes jump_head {
+            from{}
+            25%{margin-top: clampMun(250);}
+            50%{margin-top: clampMun(400);}
+            75%{margin-top: clampMun(300);}
+            to{
+              margin-top: clampMun(380);margin-left: clampMun(810);
+            }
+          }
+          @keyframes head_inlogo {
+            from{}
+            80%{
+              opacity: 1;
+              margin-top: clampMun(629);margin-left: clampMun(1379);
+              width: clampMun(80);height: clampMun(80);border-radius: 50%;background-color: #ff4713;
+            }
+            to{
+              opacity: 0;
+              margin-top: clampMun(629);margin-left: clampMun(1379);
+              width: clampMun(80);height: clampMun(80);border-radius: 50%;background-color: #ff4713;
+            }
+          }
+          .cha_hair.on{animation: cha_hair 1s forwards, front_hair 3s 6.5s forwards, shake_hair 1.5s 11s forwards, jump_hair 2s 14s forwards, hair_inlogo 3s 16s forwards;}
           @keyframes cha_hair {
             from{}
             to{
@@ -1166,12 +1200,25 @@ input {outline-offset:-1px;}
           @keyframes jump_hair{
             from{}
             25%{margin-top: clampMun(250);}
-            50%{margin-top: clampMun(375);}
+            50%{margin-top: clampMun(380);}
             75%{margin-top: clampMun(300);}
             to{margin-top: clampMun(350);}
           }
+          @keyframes hair_inlogo {
+            from{}
+            80%{
+              opacity: 1;
+              margin-top: clampMun(618);margin-left: clampMun(1451);
+              width: clampMun(20);height: clampMun(20);border-radius: 50%;background-color: #ff4713;
+            }
+            to{
+              opacity: 0;
+              margin-top: clampMun(618);margin-left: clampMun(1451);
+              width: clampMun(20);height: clampMun(20);border-radius: 50%;background-color: #ff4713;
+            }
+          }
           //양 옆 박스
-          .bottom_l{animation: bt_lx 3s forwards, bt_l 3s 3s forwards;}
+          .bottom_l.on{animation: bt_lx 3s forwards, bt_l 3s 3s forwards, up_l 2s 10s forwards;}
           @keyframes bt_lx {
             from{}
             to{
@@ -1196,7 +1243,21 @@ input {outline-offset:-1px;}
               border-right: clampMun(400) solid transparent;
             }
           }
-          .bottom_r{animation: bt_rx 3s forwards, bt_r 3s 3s forwards;}
+          @keyframes up_l {
+            from{}
+            50%{
+              opacity: 1;margin-top: clampMun(200);
+              border-top: clampMun(0)  solid #ff7a00;
+              border-left: clampMun(400)  solid #ff7a00;
+              border-bottom: clampMun(0) solid transparent;
+              border-right: clampMun(400) solid transparent;
+            }
+            99%{margin-top: 0;}
+            to{
+              border: transparent;
+            }
+          }
+          .bottom_r.on{animation: bt_rx 3s forwards, bt_r 3s 3s forwards, up_r 2s 10s forwards;}
           @keyframes bt_rx {
             from{}
             to{
@@ -1221,8 +1282,22 @@ input {outline-offset:-1px;}
               border-right: clampMun(400) solid #ff7a00;
             }
           }
+          @keyframes up_r {
+            from{}
+            50%{
+              opacity: 1;margin-top: clampMun(200);margin-left: clampMun(1120);
+              border-top: clampMun(0)  solid #ff7a00;
+              border-left: clampMun(400)  solid transparent;
+              border-bottom: clampMun(0) solid transparent;
+              border-right: clampMun(400) solid #ff7a00;
+            }
+            99%{margin-top: 0;margin-left: clampMun(2000);}
+            to{
+              border: transparent;
+            }
+          }
           //상단 박스
-          .lt_box{margin-top: 0;margin-left: 0;width:clampMun(960);height: clampMun(200);animation: lt_cls 3s forwards, lt_box 3s 3s forwards;}
+          .lt_box.on{margin-top: 0;margin-left: 0;width:clampMun(960);height: clampMun(200);animation: lt_cls 3s forwards, lt_box 3s 3s forwards, lt_incir 2s 12s forwards;}
           @keyframes lt_cls{
             from{}
             to{
@@ -1235,7 +1310,21 @@ input {outline-offset:-1px;}
               width: clampMun(800);background-color: #ff7a00;
             }
           }
-          .rt_box{margin-top: 0;margin-left: clampMun(960);width:clampMun(960);height: clampMun(200);animation: rt_cls 3s forwards, rt_box 3s 3s forwards;}
+          
+          @keyframes lt_incir {
+            from{}
+            80%{
+              opacity: 1;
+              margin-top: clampMun(55);margin-left: clampMun(229);
+              width: clampMun(20);height: clampMun(20);border-radius: 50%;background-color: #ff4713;
+            }
+            to{
+              opacity: 0;
+              margin-top: clampMun(55);margin-left: clampMun(229);
+              width: clampMun(20);height: clampMun(20);border-radius: 50%;background-color: #ff4713;
+            }
+          }
+          .rt_box.on{margin-top: 0;margin-left: clampMun(960);width:clampMun(960);height: clampMun(200);animation: rt_cls 3s forwards, rt_box 3s 3s forwards, rt_incir 2s 12s forwards,rt_cirdw 2s 16s forwards;}
           @keyframes rt_cls{
             from{}
             to{
@@ -1248,6 +1337,19 @@ input {outline-offset:-1px;}
               width: clampMun(800);background-color: #ff7a00;margin-left: clampMun(1120);
             }
           }
+          @keyframes rt_incir {
+            from{}
+            to{
+              margin-top: clamp(-106rem, -55.2083333333vw, -1rem);margin-left: clampMun(64);
+              width: clampMun(2600);height: clampMun(1300);border-radius: 0 0 clampMun(1300) clampMun(1300);background-color: #ff4713;
+            }
+          }
+          @keyframes rt_cirdw {
+            from{}
+            to{
+              margin-top: clamp(-95rem, -49.4791666667vw, -1rem);
+            }
+          }
           // 글자 모션
           .op{opacity: 0;}
           .txt_1{width: clampMun(20);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1209);border-radius: 10%;}
@@ -1257,35 +1359,35 @@ input {outline-offset:-1px;}
           .txt_5{width: clampMun(86);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1567);border-radius: 50%;}
           .txt_6{width: clampMun(97);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1661);border-radius:55% 3% 34% 35%}
 
-          .motxt_1{animation: txt1 1s 15s ease-out forwards;}
+          .motxt_1.on{animation: txt1 1s 15s ease-out forwards, txt_out .5s 18.5s forwards;}
           @keyframes txt1 {
             0%{opacity:0;transform: translate3d(-300%,0,0) skewX(30deg);}
             60%{opacity: 1;transform: skewX(-20deg)}
             80%{transform: skewX(5deg);}
             to{transform: translateZ(0);opacity: 1}
           }
-          .motxt_2{animation: txt2 1s 14s ease-out forwards;}
+          .motxt_2.on{animation: txt2 1s 14s ease-out forwards, txt_out .5s 18.5s forwards;}
           @keyframes txt2 {
             0%{opacity:0;transform: translate3d(-300%,0,0) skewX(30deg);}
             60%{opacity: 1;transform: skewX(-20deg)}
             80%{transform: skewX(5deg);}
             to{transform: translateZ(0);opacity: 1}
           }
-          .motxt_3{animation: txt3 1s 13s ease-out forwards;}
+          .motxt_3.on{animation: txt3 1s 13s ease-out forwards, txt_out .5s 18.5s forwards;}
           @keyframes txt3 {
             0%{opacity:0;transform: translate3d(-300%,0,0) skewX(30deg);}
             60%{opacity: 1;transform: skewX(-20deg)}
             80%{transform: skewX(5deg);}
             to{transform: translateZ(0);opacity: 1}
           }
-          .motxt_4{animation: txt4 1s 12s ease-out forwards;}
+          .motxt_4.on{animation: txt4 1s 12s ease-out forwards, txt_out .5s 18.5s forwards;}
           @keyframes txt4 {
             0%{opacity:0;transform: translate3d(-300%,0,0) skewX(30deg);}
             60%{opacity: 1;transform: skewX(-20deg)}
             80%{transform: skewX(5deg);}
             to{transform: translateZ(0);opacity: 1}
           }
-          .motxt_5{animation: txt5 .5s 11s ease-out forwards, txt5_1 1s 11.5s forwards;}
+          .motxt_5.on{animation: txt5 .5s 11s ease-out forwards, txt5_1 1s 11.5s forwards, txt_out .5s 18.5s forwards;}
           @keyframes txt5 {
             0%{opacity: 0;transform: translate3d(0,-300%,0);margin-top: clampMun(637);}
             to{opacity: 1;width: clampMun(45);height: clampMun(120);margin-left: clampMun(1580);margin-top: clampMun(592);}
@@ -1296,12 +1398,17 @@ input {outline-offset:-1px;}
             80%{width: clampMun(70);height: clampMun(90);margin-top: clampMun(622);}
             to{width: clampMun(86);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1567);}
           }
-          .motxt_6{animation: txt6 1s 10s ease-out forwards;}
+          .motxt_6.on{animation: txt6 1s 10s ease-out forwards, txt_out .5s 18.5s forwards;}
           @keyframes txt6 {
             0%{opacity:0;transform: translate3d(-300%,0,0) skewX(30deg);}
             60%{opacity: 1;transform: skewX(-20deg)}
             80%{transform: skewX(5deg);}
             to{transform: translateZ(0);opacity: 1}
+          }
+
+          @keyframes txt_out {
+            from{}
+            to{opacity: 0;}
           }
           //모션 끝
 
@@ -1316,8 +1423,8 @@ input {outline-offset:-1px;}
             position: absolute;
             right: 0;
           }
-          .cnt_box{
-            // animation: cnt_in 1s 2s forwards;
+          .cnt_box.on{
+            animation: cnt_in 1s 19s forwards;
             opacity: 0;
             margin: 0 auto;
             /* width: 1600px;

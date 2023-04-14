@@ -37,6 +37,22 @@ $(document).ready(function(){
             $('.circle2').addClass('on');
             $('.move_circle').addClass('on');
         }
+        if( i == 3){
+            $('.cha_body').addClass('on');
+            $('.cha_head').addClass('on');
+            $('.cha_hair').addClass('on');
+            $('.bottom_l').addClass('on');
+            $('.bottom_r').addClass('on');
+            $('.lt_box').addClass('on');
+            $('.rt_box').addClass('on');
+            $('.motxt_1').addClass('on');
+            $('.motxt_2').addClass('on');
+            $('.motxt_3').addClass('on');
+            $('.motxt_4').addClass('on');
+            $('.motxt_5').addClass('on');
+            $('.motxt_6').addClass('on');
+            $('.cnt_box').addClass('on');
+        }
 
     });
 
@@ -67,6 +83,7 @@ $(document).ready(function(){
                         $('.textBox').removeClass('js_animation');
 
                         $('#header').removeClass('logo_active');
+                        $('.top_btn').removeClass('on');
                     }
                 });
             }
@@ -75,6 +92,7 @@ $(document).ready(function(){
                     click: function(){
                         $('#section2').addClass('sec2_ani_start');
                         $('#header').removeClass('logo_active');
+                        $('.top_btn').removeClass('on');
                     }
                 });
             }
@@ -82,6 +100,7 @@ $(document).ready(function(){
                 $('#modal .container ul li').eq(k).on({
                     click: function(){
                         $('#header').addClass('logo_active');
+                        $('.top_btn').addClass('on');
                         $('.ani_box').addClass('on');
                         $('.circle1').addClass('on');
                         $('.circle2').addClass('on');
@@ -94,6 +113,21 @@ $(document).ready(function(){
                 $('#modal .container ul li').eq(k).on({
                     click: function(){
                         $('#header').removeClass('logo_active');
+                        $('.top_btn').addClass('on');
+                        $('.cha_body').addClass('on');
+                        $('.cha_head').addClass('on');
+                        $('.cha_hair').addClass('on');
+                        $('.bottom_l').addClass('on');
+                        $('.bottom_r').addClass('on');
+                        $('.lt_box').addClass('on');
+                        $('.rt_box').addClass('on');
+                        $('.motxt_1').addClass('on');
+                        $('.motxt_2').addClass('on');
+                        $('.motxt_3').addClass('on');
+                        $('.motxt_4').addClass('on');
+                        $('.motxt_5').addClass('on');
+                        $('.motxt_6').addClass('on');  
+                        $('.cnt_box').addClass('on');
                     }
                 });
             }
@@ -152,6 +186,20 @@ $(document).ready(function(){
             }
             if(i == 3){
                 $('#header').removeClass('logo_active');
+                $('.cha_body').addClass('on');
+                $('.cha_head').addClass('on');
+                $('.cha_hair').addClass('on');
+                $('.bottom_l').addClass('on');
+                $('.bottom_r').addClass('on');
+                $('.lt_box').addClass('on');
+                $('.rt_box').addClass('on');
+                $('.motxt_1').addClass('on');
+                $('.motxt_2').addClass('on');
+                $('.motxt_3').addClass('on');
+                $('.motxt_4').addClass('on');
+                $('.motxt_5').addClass('on');
+                $('.motxt_6').addClass('on');  
+                $('.cnt_box').addClass('on');
             }
 
         // 스크롤 올릴 때

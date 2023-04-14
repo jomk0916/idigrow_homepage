@@ -2588,8 +2588,8 @@ input {
   width: clamp(1rem, 5.9375vw, 11.4rem);
   height: clamp(1rem, 5.9375vw, 11.4rem);
 }
-#wrap #main #section4 .cha_body {
-  animation: cha_body 3s forwards, front_body 3s 6.5s forwards, shake_body 1.5s 11s forwards, jump_body 2s 13s forwards;
+#wrap #main #section4 .cha_body.on {
+  animation: cha_body 1s forwards, front_body 3s 6.5s forwards, shake_body 1.5s 11s forwards, jump_body 2s 13s forwards, body_inlogo 3s 16s forwards;
 }
 @keyframes cha_body {
   to {
@@ -2628,20 +2628,37 @@ input {
 }
 @keyframes jump_body {
   25% {
-    margin-top: clamp(1rem, 32.8125vw, 63rem);
+    margin-top: clamp(1rem, 35.9375vw, 69rem);
   }
   50% {
     margin-top: clamp(1rem, 38.0208333333vw, 73rem);
-  }
-  75% {
-    margin-top: clamp(1rem, 32.8125vw, 63rem);
   }
   to {
     margin-top: clamp(1rem, 38.0208333333vw, 73rem);
   }
 }
-#wrap #main #section4 .cha_head {
-  animation: cha_head 3s forwards, front_head 3s 6.5s forwards;
+@keyframes body_inlogo {
+  70% {
+    opacity: 1;
+    margin-top: clamp(1rem, 37.6041666667vw, 72.2rem);
+    margin-left: clamp(1rem, 72.1875vw, 138.6rem);
+    width: clamp(1rem, 4.0625vw, 7.8rem);
+    height: clamp(1rem, 2.03125vw, 3.9rem);
+    border-radius: 0 0 clamp(1rem, 2.03125vw, 3.9rem) clamp(1rem, 2.03125vw, 3.9rem);
+    background-color: #ff4713;
+  }
+  to {
+    opacity: 0;
+    margin-top: clamp(1rem, 37.6041666667vw, 72.2rem);
+    margin-left: clamp(1rem, 72.1875vw, 138.6rem);
+    width: clamp(1rem, 4.0625vw, 7.8rem);
+    height: clamp(1rem, 2.03125vw, 3.9rem);
+    border-radius: 0 0 clamp(1rem, 2.03125vw, 3.9rem) clamp(1rem, 2.03125vw, 3.9rem);
+    background-color: #ff4713;
+  }
+}
+#wrap #main #section4 .cha_head.on {
+  animation: cha_head 1s forwards, front_head 3s 6.5s forwards, jump_head 2s 13.5s forwards, head_inlogo 3s 16s forwards;
 }
 @keyframes cha_head {
   to {
@@ -2661,8 +2678,43 @@ input {
     margin-left: clamp(1rem, 42.1875vw, 81rem);
   }
 }
-#wrap #main #section4 .cha_hair {
-  animation: cha_hair 3s forwards, front_hair 3s 6.5s forwards, shake_hair 1.5s 11s forwards, jump_hair 2s 13s forwards;
+@keyframes jump_head {
+  25% {
+    margin-top: clamp(1rem, 13.0208333333vw, 25rem);
+  }
+  50% {
+    margin-top: clamp(1rem, 20.8333333333vw, 40rem);
+  }
+  75% {
+    margin-top: clamp(1rem, 15.625vw, 30rem);
+  }
+  to {
+    margin-top: clamp(1rem, 19.7916666667vw, 38rem);
+    margin-left: clamp(1rem, 42.1875vw, 81rem);
+  }
+}
+@keyframes head_inlogo {
+  80% {
+    opacity: 1;
+    margin-top: clamp(1rem, 32.7604166667vw, 62.9rem);
+    margin-left: clamp(1rem, 71.8229166667vw, 137.9rem);
+    width: clamp(1rem, 4.1666666667vw, 8rem);
+    height: clamp(1rem, 4.1666666667vw, 8rem);
+    border-radius: 50%;
+    background-color: #ff4713;
+  }
+  to {
+    opacity: 0;
+    margin-top: clamp(1rem, 32.7604166667vw, 62.9rem);
+    margin-left: clamp(1rem, 71.8229166667vw, 137.9rem);
+    width: clamp(1rem, 4.1666666667vw, 8rem);
+    height: clamp(1rem, 4.1666666667vw, 8rem);
+    border-radius: 50%;
+    background-color: #ff4713;
+  }
+}
+#wrap #main #section4 .cha_hair.on {
+  animation: cha_hair 1s forwards, front_hair 3s 6.5s forwards, shake_hair 1.5s 11s forwards, jump_hair 2s 14s forwards, hair_inlogo 3s 16s forwards;
 }
 @keyframes cha_hair {
   to {
@@ -2705,7 +2757,7 @@ input {
     margin-top: clamp(1rem, 13.0208333333vw, 25rem);
   }
   50% {
-    margin-top: clamp(1rem, 19.53125vw, 37.5rem);
+    margin-top: clamp(1rem, 19.7916666667vw, 38rem);
   }
   75% {
     margin-top: clamp(1rem, 15.625vw, 30rem);
@@ -2714,8 +2766,28 @@ input {
     margin-top: clamp(1rem, 18.2291666667vw, 35rem);
   }
 }
-#wrap #main #section4 .bottom_l {
-  animation: bt_lx 3s forwards, bt_l 3s 3s forwards;
+@keyframes hair_inlogo {
+  80% {
+    opacity: 1;
+    margin-top: clamp(1rem, 32.1875vw, 61.8rem);
+    margin-left: clamp(1rem, 75.5729166667vw, 145.1rem);
+    width: clamp(1rem, 1.0416666667vw, 2rem);
+    height: clamp(1rem, 1.0416666667vw, 2rem);
+    border-radius: 50%;
+    background-color: #ff4713;
+  }
+  to {
+    opacity: 0;
+    margin-top: clamp(1rem, 32.1875vw, 61.8rem);
+    margin-left: clamp(1rem, 75.5729166667vw, 145.1rem);
+    width: clamp(1rem, 1.0416666667vw, 2rem);
+    height: clamp(1rem, 1.0416666667vw, 2rem);
+    border-radius: 50%;
+    background-color: #ff4713;
+  }
+}
+#wrap #main #section4 .bottom_l.on {
+  animation: bt_lx 3s forwards, bt_l 3s 3s forwards, up_l 2s 10s forwards;
 }
 @keyframes bt_lx {
   to {
@@ -2745,8 +2817,24 @@ input {
     border-right: clamp(1rem, 20.8333333333vw, 40rem) solid transparent;
   }
 }
-#wrap #main #section4 .bottom_r {
-  animation: bt_rx 3s forwards, bt_r 3s 3s forwards;
+@keyframes up_l {
+  50% {
+    opacity: 1;
+    margin-top: clamp(1rem, 10.4166666667vw, 20rem);
+    border-top: clamp(1rem, 0vw, 0rem) solid #ff7a00;
+    border-left: clamp(1rem, 20.8333333333vw, 40rem) solid #ff7a00;
+    border-bottom: clamp(1rem, 0vw, 0rem) solid transparent;
+    border-right: clamp(1rem, 20.8333333333vw, 40rem) solid transparent;
+  }
+  99% {
+    margin-top: 0;
+  }
+  to {
+    border: transparent;
+  }
+}
+#wrap #main #section4 .bottom_r.on {
+  animation: bt_rx 3s forwards, bt_r 3s 3s forwards, up_r 2s 10s forwards;
 }
 @keyframes bt_rx {
   to {
@@ -2776,12 +2864,30 @@ input {
     border-right: clamp(1rem, 20.8333333333vw, 40rem) solid #ff7a00;
   }
 }
-#wrap #main #section4 .lt_box {
+@keyframes up_r {
+  50% {
+    opacity: 1;
+    margin-top: clamp(1rem, 10.4166666667vw, 20rem);
+    margin-left: clamp(1rem, 58.3333333333vw, 112rem);
+    border-top: clamp(1rem, 0vw, 0rem) solid #ff7a00;
+    border-left: clamp(1rem, 20.8333333333vw, 40rem) solid transparent;
+    border-bottom: clamp(1rem, 0vw, 0rem) solid transparent;
+    border-right: clamp(1rem, 20.8333333333vw, 40rem) solid #ff7a00;
+  }
+  99% {
+    margin-top: 0;
+    margin-left: clamp(1rem, 104.1666666667vw, 200rem);
+  }
+  to {
+    border: transparent;
+  }
+}
+#wrap #main #section4 .lt_box.on {
   margin-top: 0;
   margin-left: 0;
   width: clamp(1rem, 50vw, 96rem);
   height: clamp(1rem, 10.4166666667vw, 20rem);
-  animation: lt_cls 3s forwards, lt_box 3s 3s forwards;
+  animation: lt_cls 3s forwards, lt_box 3s 3s forwards, lt_incir 2s 12s forwards;
 }
 @keyframes lt_cls {
   to {
@@ -2794,12 +2900,32 @@ input {
     background-color: #ff7a00;
   }
 }
-#wrap #main #section4 .rt_box {
+@keyframes lt_incir {
+  80% {
+    opacity: 1;
+    margin-top: clamp(1rem, 2.8645833333vw, 5.5rem);
+    margin-left: clamp(1rem, 11.9270833333vw, 22.9rem);
+    width: clamp(1rem, 1.0416666667vw, 2rem);
+    height: clamp(1rem, 1.0416666667vw, 2rem);
+    border-radius: 50%;
+    background-color: #ff4713;
+  }
+  to {
+    opacity: 0;
+    margin-top: clamp(1rem, 2.8645833333vw, 5.5rem);
+    margin-left: clamp(1rem, 11.9270833333vw, 22.9rem);
+    width: clamp(1rem, 1.0416666667vw, 2rem);
+    height: clamp(1rem, 1.0416666667vw, 2rem);
+    border-radius: 50%;
+    background-color: #ff4713;
+  }
+}
+#wrap #main #section4 .rt_box.on {
   margin-top: 0;
   margin-left: clamp(1rem, 50vw, 96rem);
   width: clamp(1rem, 50vw, 96rem);
   height: clamp(1rem, 10.4166666667vw, 20rem);
-  animation: rt_cls 3s forwards, rt_box 3s 3s forwards;
+  animation: rt_cls 3s forwards, rt_box 3s 3s forwards, rt_incir 2s 12s forwards, rt_cirdw 2s 16s forwards;
 }
 @keyframes rt_cls {
   to {
@@ -2811,6 +2937,21 @@ input {
     width: clamp(1rem, 41.6666666667vw, 80rem);
     background-color: #ff7a00;
     margin-left: clamp(1rem, 58.3333333333vw, 112rem);
+  }
+}
+@keyframes rt_incir {
+  to {
+    margin-top: clamp(-106rem, -55.2083333333vw, -1rem);
+    margin-left: clamp(1rem, 3.3333333333vw, 6.4rem);
+    width: clamp(1rem, 135.4166666667vw, 260rem);
+    height: clamp(1rem, 67.7083333333vw, 130rem);
+    border-radius: 0 0 clamp(1rem, 67.7083333333vw, 130rem) clamp(1rem, 67.7083333333vw, 130rem);
+    background-color: #ff4713;
+  }
+}
+@keyframes rt_cirdw {
+  to {
+    margin-top: clamp(-95rem, -49.4791666667vw, -1rem);
   }
 }
 #wrap #main #section4 .op {
@@ -2858,8 +2999,8 @@ input {
   margin-left: clamp(1rem, 86.5104166667vw, 166.1rem);
   border-radius: 55% 3% 34% 35%;
 }
-#wrap #main #section4 .motxt_1 {
-  animation: txt1 1s 15s ease-out forwards;
+#wrap #main #section4 .motxt_1.on {
+  animation: txt1 1s 15s ease-out forwards, txt_out 0.5s 18.5s forwards;
 }
 @keyframes txt1 {
   0% {
@@ -2878,8 +3019,8 @@ input {
     opacity: 1;
   }
 }
-#wrap #main #section4 .motxt_2 {
-  animation: txt2 1s 14s ease-out forwards;
+#wrap #main #section4 .motxt_2.on {
+  animation: txt2 1s 14s ease-out forwards, txt_out 0.5s 18.5s forwards;
 }
 @keyframes txt2 {
   0% {
@@ -2898,8 +3039,8 @@ input {
     opacity: 1;
   }
 }
-#wrap #main #section4 .motxt_3 {
-  animation: txt3 1s 13s ease-out forwards;
+#wrap #main #section4 .motxt_3.on {
+  animation: txt3 1s 13s ease-out forwards, txt_out 0.5s 18.5s forwards;
 }
 @keyframes txt3 {
   0% {
@@ -2918,8 +3059,8 @@ input {
     opacity: 1;
   }
 }
-#wrap #main #section4 .motxt_4 {
-  animation: txt4 1s 12s ease-out forwards;
+#wrap #main #section4 .motxt_4.on {
+  animation: txt4 1s 12s ease-out forwards, txt_out 0.5s 18.5s forwards;
 }
 @keyframes txt4 {
   0% {
@@ -2938,8 +3079,8 @@ input {
     opacity: 1;
   }
 }
-#wrap #main #section4 .motxt_5 {
-  animation: txt5 0.5s 11s ease-out forwards, txt5_1 1s 11.5s forwards;
+#wrap #main #section4 .motxt_5.on {
+  animation: txt5 0.5s 11s ease-out forwards, txt5_1 1s 11.5s forwards, txt_out 0.5s 18.5s forwards;
 }
 @keyframes txt5 {
   0% {
@@ -2973,8 +3114,8 @@ input {
     margin-left: clamp(1rem, 81.6145833333vw, 156.7rem);
   }
 }
-#wrap #main #section4 .motxt_6 {
-  animation: txt6 1s 10s ease-out forwards;
+#wrap #main #section4 .motxt_6.on {
+  animation: txt6 1s 10s ease-out forwards, txt_out 0.5s 18.5s forwards;
 }
 @keyframes txt6 {
   0% {
@@ -2993,6 +3134,11 @@ input {
     opacity: 1;
   }
 }
+@keyframes txt_out {
+  to {
+    opacity: 0;
+  }
+}
 #wrap #main #section4 .top_view {
   /* width: 1419px;height: 227px; */
   width: clamp(1rem, 73.90625vw, 141.9rem);
@@ -3002,7 +3148,8 @@ input {
   position: absolute;
   right: 0;
 }
-#wrap #main #section4 .cnt_box {
+#wrap #main #section4 .cnt_box.on {
+  animation: cnt_in 1s 19s forwards;
   opacity: 0;
   margin: 0 auto;
   /* width: 1600px;
