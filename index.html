@@ -162,23 +162,26 @@
               <div class="po cir wh_red circle3-26"></div>
             </div>
           </div>
-          <div class="cnt_box">
+          <div class="cnt3_box">
             <div class="contact_container">
               <h1>(주)이디그로</h1>
               <address>서울시 성동구 연무장 5가길, 25 성수역 SK V1 Tower 1410호 02-6953-2385</address>
               <div class="contact_btn">
                 <p>CONTACT US</p>
                 <div class="contact_wrap">
-                  <div class="contact_wrapper">
+                  <form class="contact_wrapper" method="POST" data-email="jomk0916@gmail.com" action="https://script.google.com/macros/s/AKfycbxIredVLpf2cIFAVb9QYYvv9nXcLXNvT3-K_5bvxQNEavFFzi_Eg2Trg7Jdei-dGm-BIw/exec" target="iframe1">
                     <div class="input_box">
-                      <p><input placeholder="Name"></p>
-                      <p><input placeholder="Company"></p>
-                      <p><input placeholder="E-mail"></p>
-                      <p><input placeholder="HP"></p>
-                      <p><input placeholder="Content"></p>
+                      <p><input id="name" name="name" type="name" placeholder="Name"></p>
+                      <p><input id="company" name="company" type="company" placeholder="Company"></p>
+                      <p><input id="email" name="email" type="email" placeholder="E-mail"></p>
+                      <p><input id="tel" name="tel" type="tel" placeholder="HP"></p>
+                      <p><input id="content" name="content" type="content" placeholder="Content"></p>
                     </div>
-                    <div class="send_btn">CONTACT US</div>
-                  </div>
+                    <button class="send_btn" >
+                      CONTACT US
+                    </button>
+                  </form>
+                  <iframe id="iframe1" name="iframe1" style="display:none"></iframe>
                   <div class="close_btn"></div>
                 </div>
               </div>

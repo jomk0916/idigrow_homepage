@@ -769,11 +769,11 @@ input {
   margin-top: -200px;
   margin-left: -200px;
 }
-#wrap #main #section3 .cnt_box {
-  animation: cnt_in 1s 15s forwards;
+#wrap #main #section3 .cnt3_box.on {
+  animation: cnt3_in 1s 15s forwards;
   opacity: 0;
   margin: 0 auto;
-  padding-top: clamp(1rem, 31.25vw, 60rem);
+  padding-top: clamp(1rem, 22.9166666667vw, 44rem);
   width: clamp(1rem, 83.334%, 160rem);
   height: clamp(1rem, 45.8333vw, 88rem);
   /* height: 880px; */
@@ -783,7 +783,7 @@ input {
   position: relative;
   z-index: 10;
 }
-@keyframes cnt_in {
+@keyframes cnt3_in {
   from {
     opacity: 0;
   }
@@ -828,7 +828,7 @@ input {
 #wrap #main #section3 .contact_btn .contact_wrap {
   opacity: 0;
 }
-#wrap #main #section3 .contact_btn:hover {
+#wrap #main #section3 .contact_btn.on {
   /* width: 730px;height: 313px;
   border-radius: 25px;
   padding: 20px 30px; */
@@ -840,10 +840,10 @@ input {
   color: #fff;
   cursor: auto;
 }
-#wrap #main #section3 .contact_btn:hover > p {
+#wrap #main #section3 .contact_btn.on > p {
   display: none;
 }
-#wrap #main #section3 .contact_btn:hover .contact_wrap {
+#wrap #main #section3 .contact_btn.on .contact_wrap {
   opacity: 1;
   transition: all 0.3s;
   /* margin-top: -20px;

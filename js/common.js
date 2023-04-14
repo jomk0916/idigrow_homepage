@@ -56,7 +56,12 @@
       // $('#section2').addClass('sec2_ani_start');
     },
     section3:function(){
-      
+      $('.contact_btn>p').click(function(){
+        $('.contact_btn').addClass('on');
+      });
+      $('.close_btn').click(function(){
+        $('.contact_btn').removeClass('on');
+      });
     },
     section4:function(){
 

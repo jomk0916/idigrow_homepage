@@ -36,6 +36,7 @@ $(document).ready(function(){
             $('.circle1').addClass('on');
             $('.circle2').addClass('on');
             $('.move_circle').addClass('on');
+            $('.cnt3_box').addClass('on');
         }
         if( i == 3){
             $('.cha_body').addClass('on');
@@ -105,6 +106,7 @@ $(document).ready(function(){
                         $('.circle1').addClass('on');
                         $('.circle2').addClass('on');
                         $('.move_circle').addClass('on');
+                        $('.cnt3_box').addClass('on');
                     }
                 });
                 
@@ -183,6 +185,7 @@ $(document).ready(function(){
                 $('.circle1').addClass('on');
                 $('.circle2').addClass('on');
                 $('.move_circle').addClass('on');
+                $('.cnt3_box').addClass('on');
             }
             if(i == 3){
                 $('#header').removeClass('logo_active');
@@ -236,6 +239,7 @@ $(document).ready(function(){
                 $('.circle1').addClass('on');
                 $('.circle2').addClass('on');
                 $('.move_circle').addClass('on');
+                $('.cnt3_box').addClass('on');
             }
         }
 
