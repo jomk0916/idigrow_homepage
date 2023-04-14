@@ -979,7 +979,7 @@ html, body {
   opacity: 0;
   margin: 0 auto;
   padding-top: clamp(1rem, 22.9166666667vw, 44rem);
-  width: clamp(1rem, 83.334%, 160rem);
+  width: clamp(1rem, 83.434%, 160rem);
   height: clamp(1rem, 45.8333vw, 88rem);
   /* height: 880px; */
   display: flex;
@@ -2992,12 +2992,12 @@ html, body {
   }
 }
 #wrap #main #section4 .bottom_l.on {
-  animation: bt_lx 3s forwards, bt_l 3s 3s forwards, up_l 2s 10s forwards;
+  animation: bt_lx 3s forwards, bt_l 3s 3.4s forwards, up_l 2s 10s forwards;
 }
 @keyframes bt_lx {
   to {
-    width: 0;
-    height: 0;
+    width: 0px;
+    height: 0px;
     border-radius: 0;
     margin-top: clamp(1rem, 10.4166666667vw, 20rem);
     margin-left: 0;
@@ -3039,12 +3039,12 @@ html, body {
   }
 }
 #wrap #main #section4 .bottom_r.on {
-  animation: bt_rx 3s forwards, bt_r 3s 3s forwards, up_r 2s 10s forwards;
+  animation: bt_rx 3s forwards, bt_r 3s 3.4s forwards, up_r 2s 10s forwards;
 }
 @keyframes bt_rx {
   to {
-    width: 0;
-    height: 0;
+    width: 0px;
+    height: 0px;
     border-radius: 0;
     margin-top: clamp(1rem, 10.4166666667vw, 20rem);
     margin-left: clamp(1rem, 50vw, 96rem);
@@ -3092,7 +3092,7 @@ html, body {
   margin-left: 0;
   width: clamp(1rem, 50vw, 96rem);
   height: clamp(1rem, 10.4166666667vw, 20rem);
-  animation: lt_cls 3s forwards, lt_box 3s 3s forwards, lt_incir 2s 12s forwards;
+  animation: lt_cls 3s forwards, lt_box 3s 3.4s forwards, lt_incir 2s 12s forwards;
 }
 @keyframes lt_cls {
   to {
@@ -3108,19 +3108,19 @@ html, body {
 @keyframes lt_incir {
   80% {
     opacity: 1;
-    margin-top: clamp(1rem, 2.8645833333vw, 5.5rem);
-    margin-left: clamp(1rem, 11.9270833333vw, 22.9rem);
-    width: clamp(1rem, 1.0416666667vw, 2rem);
-    height: clamp(1rem, 1.0416666667vw, 2rem);
+    margin-top: clamp(1rem, 3.8541666667vw, 7.4rem);
+    margin-left: clamp(1rem, 11.9791666667vw, 23rem);
+    width: clamp(1rem, 0.5208333333vw, 1rem);
+    height: clamp(1rem, 0.5208333333vw, 1rem);
     border-radius: 50%;
     background-color: #ff4713;
   }
   to {
-    opacity: 1;
-    margin-top: clamp(1rem, 2.8645833333vw, 5.5rem);
-    margin-left: clamp(1rem, 11.9270833333vw, 22.9rem);
-    width: clamp(1rem, 1.0416666667vw, 2rem);
-    height: clamp(1rem, 1.0416666667vw, 2rem);
+    opacity: 0;
+    margin-top: clamp(1rem, 3.8541666667vw, 7.4rem);
+    margin-left: clamp(1rem, 11.9791666667vw, 23rem);
+    width: clamp(1rem, 0.5208333333vw, 1rem);
+    height: clamp(1rem, 0.5208333333vw, 1rem);
     border-radius: 50%;
     background-color: #ff4713;
   }
@@ -3130,7 +3130,7 @@ html, body {
   margin-left: clamp(1rem, 50vw, 96rem);
   width: clamp(1rem, 50vw, 96rem);
   height: clamp(1rem, 10.4166666667vw, 20rem);
-  animation: rt_cls 3s forwards, rt_box 3s 3s forwards, rt_incir 2s 12s forwards, rt_cirdw 2s 16s forwards;
+  animation: rt_cls 3s forwards, rt_box 3s 3.4s forwards, rt_incir 2s 12s forwards, rt_cirdw 2s 16s forwards;
 }
 @keyframes rt_cls {
   to {
@@ -3359,7 +3359,7 @@ html, body {
   margin: 0 auto;
   /* width: 1600px;
   height: 1080px; */
-  width: clamp(1rem, 83.333vw, 160rem);
+  width: clamp(1rem, 83.433vw, 160rem);
   height: clamp(1rem, 56.25vw, 108rem);
   display: flex;
   flex-direction: row;
