@@ -825,7 +825,7 @@ input {
 }
 #wrap #main #section2 .container .sec2_loader #circle_g_sec2 .sec2_circle {
   fill: #FF4713;
-  transform: translate(70%, 7%) rotate(-30deg);
+  transform: translate(0%, 0%) rotate(0deg);
   transform-origin: 0 0;
 }
 #wrap #main #section2 .container .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(1) {
