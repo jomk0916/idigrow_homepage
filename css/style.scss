@@ -1962,6 +1962,12 @@ input {outline-offset:-1px;}
 
   ///////////////// 반응형 ///////////////////////////
 
+  @media all and (max-width:1280px){
+    #mouse_custom {
+      display: none;
+    }
+  }
+
   @media all and (max-width:992px){
     // 2p
     #wrap #main #section2 .container .gap {

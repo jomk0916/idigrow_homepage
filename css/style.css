@@ -3619,6 +3619,11 @@ input {
     transform: translateY(0%) scale(0.8);
   }
 }
+@media all and (max-width: 1280px) {
+  #mouse_custom {
+    display: none;
+  }
+}
 @media all and (max-width: 992px) {
   #wrap #main #section2 .container .gap {
     top: 40%;
