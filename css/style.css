@@ -3635,6 +3635,20 @@ input {
   }
 }
 @media all and (max-width: 992px) {
+  #wrap #modal .container {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+  #wrap #modal .container ul {
+    padding: 50px 80px 0 0;
+    height: auto;
+    font-size: 13rem;
+  }
+  #wrap #modal .container #modal_3d_model {
+    width: 60rem;
+    height: 60rem;
+  }
   #wrap #header .container .left a {
     display: block;
     width: 90px;
@@ -3675,6 +3689,20 @@ input {
   }
 }
 @media all and (max-width: 576px) {
+  #wrap #modal .container {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+  #wrap #modal .container ul {
+    padding: 50px 80px 0 0;
+    height: auto;
+    font-size: 7rem;
+  }
+  #wrap #modal .container #modal_3d_model {
+    width: 40rem;
+    height: 40rem;
+  }
   #wrap #header .container .right .ham {
     width: 15px;
     height: 13px;

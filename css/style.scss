@@ -1974,8 +1974,25 @@ input {outline-offset:-1px;}
     }
   }
 
-  // 테블릿
+  /////////////////////////// 태블릿
   @media all and (max-width:992px){
+    // modal
+    #wrap #modal .container {
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+    }
+    #wrap #modal .container ul {
+      padding: 50px 80px 0 0;
+      height: auto;
+      font-size: 13rem;
+    }
+    #wrap #modal .container #modal_3d_model {
+      width: 60rem;
+      height: 60rem;
+    }
+
+
     // header
     #wrap #header .container .left a {
       display: block;
@@ -2027,13 +2044,30 @@ input {outline-offset:-1px;}
     }
   }
 
-  // 테블릿2
+  /////////////////////////// 태블릿2
   @media all and (max-width:768px){
 
   }
 
-  // 모바일
+  /////////////////////////// 모바일
   @media all and (max-width:576px){
+    // modal
+    #wrap #modal .container {
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+    }
+    #wrap #modal .container ul {
+      padding: 50px 80px 0 0;
+      height: auto;
+      font-size: 7rem;
+    }
+    #wrap #modal .container #modal_3d_model {
+      width: 40rem;
+      height: 40rem;
+    }
+
+
      // 헤더
     #wrap #header .container .right .ham {
       width: 15px;
