@@ -551,9 +551,7 @@ input {
 }
 #wrap #main #section1 .container .loader {
   width: 100%;
-  max-width: 1920px;
-  height: auto;
-  max-height: 1261px;
+  height: 100%;
 }
 #wrap #main #section1 .container .loader circle {
   fill: none;

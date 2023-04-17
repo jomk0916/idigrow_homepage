@@ -137,10 +137,10 @@
 
 
       setTimeout(function(){
-        console.log("5초뒤 실행");
+        // console.log("5초뒤 실행");
         $('.circle_g').addClass('goo');
         setTimeout(function(){
-          console.log("3초뒤 실행");
+          // console.log("3초뒤 실행");
           $('.circle_g').removeClass('goo');
         },2000);
 
