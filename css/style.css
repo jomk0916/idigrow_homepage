@@ -825,7 +825,7 @@ input {
 }
 #wrap #main #section2 .container .sec2_loader #circle_g_sec2 .sec2_circle {
   fill: #FF4713;
-  transform: translate(0%, 0%) rotate(0deg);
+  transform: translate(70%, 7%) rotate(-30deg);
   transform-origin: 0 0;
 }
 #wrap #main #section2 .container .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(1) {
@@ -3574,21 +3574,7 @@ input {
     opacity: 0.9;
   }
   100% {
-    transform: rotate(-0.2deg) translate(50%, 115%) scale(4);
-    fill: #3CB4E5;
-    opacity: 1;
-  }
-}
-@keyframes sec2Circle_m {
-  0% {
-    opacity: 0;
-  }
-  80% {
-    fill: #FF4713;
-    opacity: 0.9;
-  }
-  100% {
-    transform: rotate(-0.2deg) translate(50%, 180%) scaleX(4) scaleY(9);
+    transform: rotate(-0.2deg) translate(50%, 115%) scale(1);
     fill: #3CB4E5;
     opacity: 1;
   }
