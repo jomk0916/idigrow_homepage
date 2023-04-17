@@ -177,6 +177,10 @@ input {
   opacity: 0;
 }
 
+#mouse_custom {
+  position: relative;
+  z-index: 101;
+}
 #mouse_custom .circle1 {
   width: 7px;
   height: 7px;
@@ -3607,6 +3611,11 @@ input {
   100% {
     opacity: 1;
     transform: translateY(0%) scale(0.8);
+  }
+}
+@media all and (max-width: 1280px) {
+  #mouse_custom {
+    display: none;
   }
 }
 @media all and (max-width: 992px) {

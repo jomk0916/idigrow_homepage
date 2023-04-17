@@ -92,8 +92,8 @@ html,body {
 }
 
 #mouse_custom {
-  // position: relative;
-  // z-index: 30;
+  position: relative;
+  z-index: 101;
   .circle1 {
     width: 7px;
     height: 7px;
@@ -588,6 +588,7 @@ html,body {
                 // animation: circleScale 5s ease-in-out 1 both, circleScale2 3s ease-in-out 0s forwards;
               }
               .second_circle {
+
                 opacity: 0;
                 fill: #FF4713;
                 animation: circleSecond 3s 5s forwards, circleScale3 3s ease-in-out 8s forwards;
@@ -1958,6 +1959,12 @@ html,body {
 
 
   ///////////////// 반응형 ///////////////////////////
+
+  @media all and (max-width:1280px){
+    #mouse_custom {
+      display: none;
+    }
+  }
 
   @media all and (max-width:992px){
     // 2p
