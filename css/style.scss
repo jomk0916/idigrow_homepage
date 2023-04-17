@@ -510,11 +510,9 @@ input {outline-offset:-1px;}
           margin: 0 auto;
           .loader {
             width: 100%;
+            max-width: 1920px;
             height: 100%;
-            // width: 100%;
-            // max-width: 1920px;
-            // height: auto;
-            // max-height: 1261px;
+            max-height: 1261px;
             circle {
               fill: none;
               stroke-width: 0.5;
