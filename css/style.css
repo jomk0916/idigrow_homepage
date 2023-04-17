@@ -3617,6 +3617,9 @@ input {
   }
 }
 @media all and (max-width: 992px) {
+  #wrap #main #section1 .container {
+    height: 100vh;
+  }
   #wrap #main #section2 .container .gap {
     top: 40%;
     padding: 0 0 0 15px;

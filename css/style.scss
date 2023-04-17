@@ -1947,13 +1947,20 @@ input {outline-offset:-1px;}
 
   ///////////////// 반응형 ///////////////////////////
 
+  // 마우스 모션 삭제
   @media all and (max-width:1280px){
     #mouse_custom {
       display: none;
     }
   }
 
+  // 테블릿 sang
   @media all and (max-width:992px){
+    // 1p
+    #wrap #main #section1 .container {
+      height: 100vh;
+    }
+
     // 2p
     #wrap #main #section2 .container .gap {
       top: 40%;
@@ -1977,10 +1984,12 @@ input {outline-offset:-1px;}
     }
   }
 
+  // 중간
   @media all and (max-width:768px){
 
   }
 
+  // 모바일
   @media all and (max-width:576px){
      // 헤더
     #wrap #header .container .left a .logo {
