@@ -1791,27 +1791,30 @@ input {outline-offset:-1px;}
   }
 
   @keyframes circleScale {
+    0% {
+      transform: scale(0.05);
+    }
     15% {
-      transform: scale(1);
+      transform: scale(0.05);
       // fill:#FF4713;
       // transform: scale(24.5);
     }
     100% {
       fill:#FF4713;
-      transform: scale(24.5);
+      transform: scale(1);
     }
   }
 
   @keyframes circleScale2 {
     0% {
       fill:#FF4713;
-      transform: scale(24.5);
+      transform: scale(1);
       // fill:#FF4713;
       // transform: scale(24.5) translateX(0.7%);
     }
     100% {
       fill:#FF4713;
-      transform: scale(24.5) translateX(0.7%);
+      transform: scale(1) translateX(17%);
     }
   }
 
