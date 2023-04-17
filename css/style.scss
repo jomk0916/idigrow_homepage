@@ -1777,10 +1777,11 @@ input {outline-offset:-1px;}
 
   // animation
   @keyframes preloader {
-    // 0% {
+    0% {
+      transform: rotate(0deg);
     //   opacity: 0;
     // 	transform: scale(10);
-    // }
+    }
     50% {
       transform: rotate(360deg);
     }
