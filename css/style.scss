@@ -1823,6 +1823,26 @@ input {outline-offset:-1px;}
     }
   }
 
+  @keyframes circleScale2_m {
+    0% {
+      fill:#FF4713;
+      transform: scale(1);
+    }
+    100% {
+      fill:#FF4713;
+      transform: scale(1) translateX(25%);
+    }
+  }
+
+  @keyframes circleScale3_m {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(25%);
+    }
+  }
+
   @keyframes circleSecond {
     0% {
       transform: translate(-20%, 20%);
@@ -1945,7 +1965,7 @@ input {outline-offset:-1px;}
 
 
 
-  ///////////////// 반응형 ///////////////////////////
+  /////////////////////////////////// 반응형 ///////////////////////////////////////
 
   // 마우스 모션 삭제
   @media all and (max-width:1280px){
@@ -1954,16 +1974,39 @@ input {outline-offset:-1px;}
     }
   }
 
-  // 테블릿 sang
+  // 테블릿
   @media all and (max-width:992px){
+    // header
+    #wrap #header .container .left a {
+      display: block;
+      width: 90px;
+    }
+
     // 1p
     #wrap #main #section1 .container {
       height: 100vh;
     }
+    #wrap #main #section1 .container .textBox {
+      top: 40%;
+    }
+    #wrap #main #section1 .container .textBox p {
+      font-size: 1.8rem;
+    }
+
+    #wrap #main #section1 .container .loader .circle_g .main_circle {
+      animation: circleScale 5s ease-in-out 1 both, circleScale2_m 3s ease-in-out 8s forwards;
+    }
+    #wrap #main #section1 .container .loader .circle_g .second_circle {
+      animation: circleSecond 3s 5s forwards, circleScale3_m 3s ease-in-out 8s forwards;
+    }
+    #wrap #main #section1 .container .loader .halfCircle {
+      animation: circleThird 2s 6s forwards, circleScale3_m 3s ease-in-out 8s forwards;
+    }
+
 
     // 2p
     #wrap #main #section2 .container .gap {
-      top: 40%;
+      top: 50%;
       padding:0 0 0 15px;
     }
     #wrap #main #section2 .container .gap .sec2_textBox .main_text {
@@ -1984,7 +2027,7 @@ input {outline-offset:-1px;}
     }
   }
 
-  // 중간
+  // 테블릿2
   @media all and (max-width:768px){
 
   }
@@ -1992,10 +2035,6 @@ input {outline-offset:-1px;}
   // 모바일
   @media all and (max-width:576px){
      // 헤더
-    #wrap #header .container .left a .logo {
-      height: 25px;
-    }
-
     #wrap #header .container .right .ham {
       width: 15px;
       height: 13px;
@@ -2017,6 +2056,11 @@ input {outline-offset:-1px;}
       transform: translateY(-4.5px) rotate(45deg);
       border-radius: 5px;
       background-color: #fff;
+    }
+
+    // 1p
+    #wrap #main #section1 .container .textBox p {
+      font-size: 1.2rem;
     }
 
     // 2p
