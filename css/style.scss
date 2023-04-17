@@ -583,7 +583,9 @@ input {outline-offset:-1px;}
             }
 
             .circle_g {
-              filter:url('#goo');
+              &.goo {  // 필터 최적화
+                filter:url('#goo');
+              }
               .main_circle {
                 opacity: 1;
                 fill: #FF5C35;

@@ -132,6 +132,21 @@
         }
       })
 
+      // svg goo 필터 최적화
+
+
+
+      setTimeout(function(){
+        console.log("5초뒤 실행");
+        $('.circle_g').addClass('goo');
+        setTimeout(function(){
+          console.log("3초뒤 실행");
+          $('.circle_g').removeClass('goo');
+        },2000);
+
+      }, 5000);
+
+      // <g class="circle_g goo"></g>
 
     },
     section2:function(){

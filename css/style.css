@@ -636,7 +636,7 @@ input {
 #wrap #main #section1 .container .loader circle:nth-of-type(11) {
   animation-delay: -1.65s;
 }
-#wrap #main #section1 .container .loader .circle_g {
+#wrap #main #section1 .container .loader .circle_g.goo {
   filter: url("#goo");
 }
 #wrap #main #section1 .container .loader .circle_g .main_circle {
