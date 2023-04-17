@@ -177,43 +177,8 @@ input {
   opacity: 0;
 }
 
-#mouse_custom {
-  position: relative;
-  z-index: 101;
-}
-#mouse_custom .circle1 {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: #FF5C35;
-  border: 1px solid #fff;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  margin: 25px 0 0px 35px;
-}
-#mouse_custom .circle2 {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: #FF5C35;
-  border: 1px solid #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 30px 0 0 20px;
-}
-#mouse_custom .circle3 {
-  width: 24px;
-  height: 12px;
-  border-radius: 12px 12px 0 0;
-  background-color: #FF5C35;
-  border: 1px solid #fff;
-  transform: rotate(140deg);
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  margin: 55px 0 0 25px;
+html, body {
+  cursor: url(../images/icon_idi_cursor.png) 15 15, auto;
 }
 
 #wrap {
@@ -405,57 +370,63 @@ input {
 @keyframes right_small {
   0% {
     transform: translateX(0px);
+    opacity: 1;
   }
   1% {
     transform: translateX(0px) skew(0deg);
+    opacity: 1;
   }
   7% {
     transform: translateX(0px) skew(10deg) scale(0.8);
+    opacity: 1;
   }
   12% {
     transform: scale(0.1) skew(40deg) translateX(20px);
+    opacity: 0;
   }
-  33% {
-    transform: scale(0.1) skew(40deg) translateX(20px);
-  }
-  34% {
-    transform: scale(1) skew(0deg) translateX(0px);
+  30% {
+    transform: scale(0.8) skew(0deg) translateX(10px);
     opacity: 0;
   }
   45% {
-    transform: scale(1);
+    transform: scale(1) skew(0deg) translateX(0px);
     opacity: 1;
   }
 }
 @keyframes left_small {
   0% {
     transform: translateX(0px);
+    opacity: 1;
   }
   1% {
     transform: translateX(0px) skew(0deg);
+    opacity: 1;
   }
   7% {
     transform: translateX(0px) skew(-10deg) scale(0.8);
+    opacity: 1;
   }
   12% {
     transform: scale(0.1) skew(-40deg) translateX(-20px);
+    opacity: 0;
   }
-  33% {
-    transform: scale(0.1) skew(-40deg) translateX(-20px);
-  }
-  34% {
-    transform: scale(1) skew(0deg) translateX(0px);
+  30% {
+    transform: scale(0.8) skew(0deg) translateX(-10px);
     opacity: 0;
   }
   45% {
+    transform: scale(1) skew(0deg) translateX(0px);
     opacity: 1;
   }
 }
 @keyframes logoChaAni1 {
   25% {
-    transform: rotate(360deg) scale(0.3);
+    transform: rotate(0deg) scale(0.3);
   }
-  50% {
+  40% {
+    transform: rotate(0deg) scale(0.3);
+  }
+  60% {
     transform: rotate(0deg) scale(1);
   }
   100% {
@@ -470,7 +441,7 @@ input {
     transform: scale(0.8);
   }
   13% {
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
   15% {
     transform: scale(1);
@@ -3611,11 +3582,6 @@ input {
   100% {
     opacity: 1;
     transform: translateY(0%) scale(0.8);
-  }
-}
-@media all and (max-width: 1280px) {
-  #mouse_custom {
-    display: none;
   }
 }
 @media all and (max-width: 992px) {
