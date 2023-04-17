@@ -44,7 +44,7 @@ $(document).ready(function(){
         if( i == 3){
             $('.move4_circle').addClass('on');
             $('.cnt_box').addClass('on');
-
+            $('.bg_box').addClass('on');
         }
 
     });
@@ -110,6 +110,7 @@ $(document).ready(function(){
                         $('.top_btn').addClass('on');
                         $('.move4_circle').addClass('on');
                         $('.cnt_box').addClass('on');
+                        $('.bg_box').addClass('on');
                     }
                 });
             }

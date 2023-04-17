@@ -1265,7 +1265,7 @@ html,body {
           @keyframes cha_up3 {from{} to{margin-top: clampMun(850);}}
           @keyframes cha_up1-1 {from{} to{opacity: 0;margin-top: -800px;}}
           @keyframes cha_up2-1 {from{} to{opacity: 0;margin-top: -800px;}}
-          @keyframes cha_up3-1 {from{} to{margin-top: clamp(-40rem, -20.8333333333vw, -1rem);background-color: #FF4713;border: transparent;transform: scale(6.078);}}
+          @keyframes cha_up3-1 {from{} to{margin-left: clampMun(64);margin-top: clamp(-92rem, -47.9166666667vw, -1rem);background-color: #FF4713;border: transparent;width: clampMun(2650);height: clampMun(1325);border-radius: 0 0 clampMun(1325) clampMun(1325);transform: rotate(0deg);}}
           // 배경 주황색
           .bg_box.on{
             width: 100%;
@@ -1330,14 +1330,15 @@ html,body {
             /* margin-top: 300px; */
             margin-top: clamp(1rem,15.625vw,30rem);
           }
-          .career_container h1{
-            /* font-size: 40px; */
+          .cnt_box.on h1{
+            animation: txt_up1 1.5s 3s forwards;
             font-size: clamp(1rem,2.08333vw,4rem);
             font-weight: bold;
             font-family: "SUIT-ExtraBold";
           }
-          .career_container p{
-            /* font-size: 18px;line-height: 30px; */
+          @keyframes txt_up1 {from{opacity: 0;margin-left: clampMun(100);} to{opacity: 1;margin-left: 0;}}
+          .cnt_box.on p{
+            animation: txt_up2 1.5s 4s forwards;
             font-size: clamp(1rem,0.9375vw,1.8rem);
             line-height: clamp(1rem,1.5625vw,3rem);
             font-family: "SUIT-Regular";
@@ -1345,7 +1346,9 @@ html,body {
             width: 410px; */
             margin-top: clamp(1rem,1.30208333vw,2.5rem);
             width: clamp(1rem,21.3541667vw,41rem);
+            opacity: 0;
           }
+          @keyframes txt_up2 {from{opacity: 0;} to{opacity: 1;}}
           .job_btn{margin-top: 20px;}
           .job_btn a{
             padding: 5px;
@@ -1364,12 +1367,17 @@ html,body {
             margin-top: clamp(1rem,2.08333vw,4rem);
             cursor: pointer;
           }
-          .big_logo{
-            /* width: 552px;height: 148px; */
+          .cnt_box.on .big_logo{
+            animation: logo_ani 2s 4s forwards;
+            opacity: 0;
             width: clamp(1rem,28.75vw,55.2rem);
             height: clamp(1rem,13.703vw,14.8rem);
             background: url(../images/logo_large.png) no-repeat 0 0 / auto 100%;
             background-size: contain;
+          }
+          @keyframes logo_ani {
+            from{opacity: 0;margin-top: clampMun(200);}
+            to{opacity: 1;margin-top: 0;}
           }
       }
     }
