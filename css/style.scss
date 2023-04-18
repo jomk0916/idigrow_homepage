@@ -652,55 +652,55 @@ input {outline-offset:-1px;}
               svg text {
                 // 디지털교과서부터
                 &:nth-of-type(1){
-                  animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 9s;
+                  animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 13s;
                 }
                 &:nth-of-type(2){
-                  animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 9.2s;
+                  animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 13.1s;
                 }
                 &:nth-of-type(3){
-                  animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 9.4s;
+                  animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 13.2s;
                 }
                 &:nth-of-type(4){
-                  animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 9.6s;
+                  animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 13.3s;
                 }
                 &:nth-of-type(5){
-                  animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 9.8s;
+                  animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 13.4s;
                 }
                 &:nth-of-type(6){
-                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 10s;
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 13.5s;
                 }
                 &:nth-of-type(7){
-                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 10.2s;
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 13.6s;
                 }
                 &:nth-of-type(8){
-                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 10.4s;
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 13.7s;
                 }
                 // AI교과서까지
                 &:nth-of-type(9){
-                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 11.5s;
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 14.5s;
                 }
                 &:nth-of-type(10){
-                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 11.7s;
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 14.6s;
                 }
                 &:nth-of-type(11){
-                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 11.9s;
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 14.7s;
                 }
                 &:nth-of-type(12){
-                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 12.1s;
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 14.8s;
                 }
                 &:nth-of-type(13){
-                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 12.3s;
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 14.9s;
                 }
                 &:nth-of-type(14){
-                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 12.5s;
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 15.0s;
                 }
                 &:nth-of-type(15){
-                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 12.7s;
+                animation:sec2_stroke 7s forwards 5s, sec2_fill 2s forwards 15.1s;
                 }
               }
             }
             .sec_text {
-              animation:textUp_sec2 2s ease-in-out 5s forwards, sizeUp 1s ease-in-out 14s forwards;
+              animation:textUp_sec2 2s ease-in-out 5s forwards, sizeUp 1s ease-in-out 12s forwards;
             }
           }
           .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(1) {
@@ -743,25 +743,45 @@ input {outline-offset:-1px;}
                     fill:#fff;
                     stroke:#3CB4E5;
                     stroke-dasharray: 350px;
+                    stroke-width:1px;
                   }
                 }
               }
               @keyframes sec2_stroke {
                 0% {
-                  stroke-dashoffset: 350px;
+                  opacity: 0;
+                  // stroke-dashoffset: 350px;
+                  stroke-dashoffset: 20%;
+                  stroke-dasharray: 0 50%;
                 }
                 100% {
                   opacity: 1;
-                  stroke-dashoffset: 0px;
+                  // stroke-dashoffset: 0px;
+                  stroke-dashoffset: -20%;
+                  stroke-dasharray: 50% 0;
                 }
               }
-                  @keyframes sec2_fill {
+              @keyframes sec2_fill {
                 0% {
                   stroke:#3CB4E5;
                 }
                 100% {
                   stroke: none;
                   fill:#3CB4E5;
+                }
+              }
+              @keyframes sec2Circle {
+                0% {
+                  opacity: 0;
+                }
+                80% {
+                  fill: #FF4713;
+                  opacity: 0.9;
+                }
+                100% {
+                  transform: translate(50%, 115%) scale(4) rotate(-0.2deg);
+                  fill: #3CB4E5;
+                  opacity: 1;
                 }
               }
               .sec_text {
@@ -1909,21 +1929,6 @@ input {outline-offset:-1px;}
     }
   }
 
-  @keyframes sec2Circle {
-    0% {
-      opacity: 0;
-    }
-    80% {
-      fill: #FF4713;
-      opacity: 0.9;
-    }
-    100% {
-      transform: translate(50%, 115%) scale(4) rotate(-0.2deg);
-      fill: #3CB4E5;
-      opacity: 1;
-    }
-  }
-
   @keyframes wave {
     0% {
         background-position: left 0px bottom -80px;
@@ -1996,7 +2001,7 @@ input {outline-offset:-1px;}
     // header
     #wrap #header .container .left a {
       display: block;
-      width: 90px;
+      width: 150px;
     }
 
     // 1p
@@ -2068,7 +2073,11 @@ input {outline-offset:-1px;}
     }
 
 
-     // 헤더
+         // header
+    #wrap #header .container .left a {
+      display: block;
+      width: 90px;
+    }
     #wrap #header .container .right .ham {
       width: 15px;
       height: 13px;

@@ -3,6 +3,14 @@ $(document).ready(function(){
     // console.log(i);
     var value = 0;
 
+    // 2p 모션 최적화
+    function sec2_optimi(){
+        setTimeout(function(){
+            // console.log("최적화시작");
+            $('#circle_g_sec2 .sec2_circle').slice(1).css('display','none');
+        }, 5000);
+    }
+
     // 우측 점 네비게이션
     $("#btn li").click(function(){
         i = $(this).index();
@@ -175,6 +183,7 @@ $(document).ready(function(){
                 setTimeout(() => {
                     if($("#section2").hasClass("sec2_ani_start") === false) {
                         $('#section2').addClass('sec2_ani_start');
+                        sec2_optimi();
                     }
                 }, 1000);
                 // 헤더 흰색 로고 제거
