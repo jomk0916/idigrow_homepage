@@ -28,6 +28,8 @@ $(document).ready(function(){
 
         // 슬라이드 if 위치 따른 모션 넣어야 함.
         if(i == 0){
+            $('#section2').removeClass('sec2_ani_re');
+
             $('.circle_all').addClass('js_animation_re');
             $('.textBox').addClass('js_animation_re');
 
@@ -37,10 +39,20 @@ $(document).ready(function(){
             $('#header').removeClass('logo_active');
         }
         if( i == 1 ){
-            $('#section2').addClass('sec2_ani_start');
             $('#header').removeClass('logo_active');
+
+            setTimeout(() => {
+                if($("#section2").hasClass("sec2_ani_start") === false) {
+                    $('#section2').addClass('sec2_ani_start');
+                    sec2_optimi();
+                }
+                else {
+                    $('#section2').addClass('sec2_ani_re');
+                }
+            }, 0);
         }
         if(i == 2){
+            $('#section2').removeClass('sec2_ani_re');
             $('.ani_box').addClass('on');
             $('.circle1').addClass('on');
             $('.circle2').addClass('on');
@@ -50,6 +62,7 @@ $(document).ready(function(){
             $('#header').addClass('logo_active');
         }
         if( i == 3){
+            $('#section2').removeClass('sec2_ani_re');
             $('.cha_body').addClass('on');
             $('.cha_head').addClass('on');
             $('.cha_hair').addClass('on');
@@ -97,15 +110,23 @@ $(document).ready(function(){
 
                         $('#header').removeClass('logo_active');
                         $('.top_btn').removeClass('on');
+
+                        $('#section2').removeClass('sec2_ani_re');
                     }
                 });
             }
             else if( k==1){
                 $('#modal .container ul li').eq(k).on({
                     click: function(){
-                        $('#section2').addClass('sec2_ani_start');
                         $('#header').removeClass('logo_active');
                         $('.top_btn').removeClass('on');
+                        if($("#section2").hasClass("sec2_ani_start") === false) {
+                            $('#section2').addClass('sec2_ani_start');
+                            sec2_optimi();
+                        }
+                        else {
+                            $('#section2').addClass('sec2_ani_re');
+                        }
                     }
                 });
             }
@@ -119,6 +140,7 @@ $(document).ready(function(){
                         $('.circle2').addClass('on');
                         $('.move_circle').addClass('on');
                         $('.cnt3_box').addClass('on');
+                        $('#section2').removeClass('sec2_ani_re');
                     }
                 });
 
@@ -127,6 +149,7 @@ $(document).ready(function(){
                 $('#modal .container ul li').eq(k).on({
                     click: function(){
                         $('#header').removeClass('logo_active');
+                        $('#section2').removeClass('sec2_ani_re');
                         $('.top_btn').addClass('on');
                         $('.cha_body').addClass('on');
                         $('.cha_head').addClass('on');
@@ -186,7 +209,6 @@ $(document).ready(function(){
                         sec2_optimi();
                     }
                     else {
-                        console.log("모션 끝난 후");
                         $('#section2').addClass('sec2_ani_re');
                     }
                 }, 0);
