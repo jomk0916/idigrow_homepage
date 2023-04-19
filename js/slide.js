@@ -27,10 +27,48 @@ $(document).ready(function(){
             $('.textBox').removeClass('js_animation');
 
             $('#header').removeClass('logo_active');
+            //3p 모션 제거 시작
+            $('.ani_box').removeClass('on');
+            $('.circle1').removeClass('on');
+            $('.circle2').removeClass('on');
+            $('.move_circle').removeClass('on');
+            $('.cnt3_box').removeClass('on');
+            //3p 모션 제거 끝
+            //3p 올라갈때 모션 제거 시작
+            $('.move_circle').removeClass('up');
+            $('.ani_box').removeClass('up');
+            $('.circle1').removeClass('up');
+            $('.circle2').removeClass('up');
+            $('.cnt3_box').removeClass('up');
+            //3p 올라갈때 모션 제거 끝
+            //4p 모션 제거 시작
+            $('.move4_circle').removeClass('on');
+            $('.cnt_box').removeClass('on');
+            $('.bg_box').removeClass('on');
+            //4p 모션 제거 끝
         }
         if( i == 1 ){
             $('#section2').addClass('sec2_ani_start');
             $('#header').removeClass('logo_active');
+            //3p 모션 제거 시작
+            $('.ani_box').removeClass('on');
+            $('.circle1').removeClass('on');
+            $('.circle2').removeClass('on');
+            $('.move_circle').removeClass('on');
+            $('.cnt3_box').removeClass('on');
+            //3p 모션 제거 끝
+            //3p 올라갈때 모션 제거 시작
+            $('.move_circle').removeClass('up');
+            $('.ani_box').removeClass('up');
+            $('.circle1').removeClass('up');
+            $('.circle2').removeClass('up');
+            $('.cnt3_box').removeClass('up');
+            //3p 올라갈때 모션 제거 끝
+            //4p 모션 제거 시작
+            $('.move4_circle').removeClass('on');
+            $('.cnt_box').removeClass('on');
+            $('.bg_box').removeClass('on');
+            //4p 모션 제거 끝
         }
         if(i == 2){
             $('.ani_box').addClass('on');
@@ -40,11 +78,30 @@ $(document).ready(function(){
             $('.cnt3_box').addClass('on');
             // 로고 화이트 변경
             $('#header').addClass('logo_active');
+            //4p 모션 제거 시작
+            $('.move4_circle').removeClass('on');
+            $('.cnt_box').removeClass('on');
+            $('.bg_box').removeClass('on');
+            //4p 모션 제거 끝
         }
         if( i == 3){
             $('.move4_circle').addClass('on');
             $('.cnt_box').addClass('on');
             $('.bg_box').addClass('on');
+            //3p 모션 제거 시작
+            $('.ani_box').removeClass('on');
+            $('.circle1').removeClass('on');
+            $('.circle2').removeClass('on');
+            $('.move_circle').removeClass('on');
+            $('.cnt3_box').removeClass('on');
+            //3p 모션 제거 끝
+            //3p 올라갈때 모션 제거 시작
+            $('.move_circle').removeClass('up');
+            $('.ani_box').removeClass('up');
+            $('.circle1').removeClass('up');
+            $('.circle2').removeClass('up');
+            $('.cnt3_box').removeClass('up');
+            //3p 올라갈때 모션 제거 끝
         }
 
     });
@@ -77,6 +134,25 @@ $(document).ready(function(){
 
                         $('#header').removeClass('logo_active');
                         $('.top_btn').removeClass('on');
+                        //3p 모션 제거 시작
+                        $('.ani_box').removeClass('on');
+                        $('.circle1').removeClass('on');
+                        $('.circle2').removeClass('on');
+                        $('.move_circle').removeClass('on');
+                        $('.cnt3_box').removeClass('on');
+                        //3p 모션 제거 끝
+                        //3p 올라갈때 모션 제거 시작
+                        $('.move_circle').removeClass('up');
+                        $('.ani_box').removeClass('up');
+                        $('.circle1').removeClass('up');
+                        $('.circle2').removeClass('up');
+                        $('.cnt3_box').removeClass('up');
+                        //3p 올라갈때 모션 제거 끝
+                        //4p 모션 제거 시작
+                        $('.move4_circle').removeClass('on');
+                        $('.cnt_box').removeClass('on');
+                        $('.bg_box').removeClass('on');
+                        //4p 모션 제거 끝
                     }
                 });
             }
@@ -86,6 +162,25 @@ $(document).ready(function(){
                         $('#section2').addClass('sec2_ani_start');
                         $('#header').removeClass('logo_active');
                         $('.top_btn').removeClass('on');
+                        //3p 모션 제거 시작
+                        $('.ani_box').removeClass('on');
+                        $('.circle1').removeClass('on');
+                        $('.circle2').removeClass('on');
+                        $('.move_circle').removeClass('on');
+                        $('.cnt3_box').removeClass('on');
+                        //3p 모션 제거 끝
+                        //3p 올라갈때 모션 제거 시작
+                        $('.move_circle').removeClass('up');
+                        $('.ani_box').removeClass('up');
+                        $('.circle1').removeClass('up');
+                        $('.circle2').removeClass('up');
+                        $('.cnt3_box').removeClass('up');
+                        //3p 올라갈때 모션 제거 끝
+                        //4p 모션 제거 시작
+                        $('.move4_circle').removeClass('on');
+                        $('.cnt_box').removeClass('on');
+                        $('.bg_box').removeClass('on');
+                        //4p 모션 제거 끝
                     }
                 });
             }
@@ -99,6 +194,11 @@ $(document).ready(function(){
                         $('.circle2').addClass('on');
                         $('.move_circle').addClass('on');
                         $('.cnt3_box').addClass('on');
+                        //4p 모션 제거 시작
+                        $('.move4_circle').removeClass('on');
+                        $('.cnt_box').removeClass('on');
+                        $('.bg_box').removeClass('on');
+                        //4p 모션 제거 끝
                     }
                 });
 
@@ -111,6 +211,20 @@ $(document).ready(function(){
                         $('.move4_circle').addClass('on');
                         $('.cnt_box').addClass('on');
                         $('.bg_box').addClass('on');
+                        //3p 모션 제거 시작
+                        $('.ani_box').removeClass('on');
+                        $('.circle1').removeClass('on');
+                        $('.circle2').removeClass('on');
+                        $('.move_circle').removeClass('on');
+                        $('.cnt3_box').removeClass('on');
+                        //3p 모션 제거 끝
+                        //3p 올라갈때 모션 제거 시작
+                        $('.move_circle').removeClass('up');
+                        $('.ani_box').removeClass('up');
+                        $('.circle1').removeClass('up');
+                        $('.circle2').removeClass('up');
+                        $('.cnt3_box').removeClass('up');
+                        //3p 올라갈때 모션 제거 끝
                     }
                 });
             }
@@ -170,9 +284,26 @@ $(document).ready(function(){
             }
             if(i == 3){
                 $('#header').removeClass('logo_active');
+                //4p 모션 시작
                 $('.move4_circle').addClass('on');
                 $('.cnt_box').addClass('on');
                 $('.bg_box').addClass('on');
+                //4p 모션 끝
+
+                //3p 모션 제거 시작
+                $('.ani_box').removeClass('on');
+                $('.circle1').removeClass('on');
+                $('.circle2').removeClass('on');
+                $('.move_circle').removeClass('on');
+                $('.cnt3_box').removeClass('on');
+                //3p 모션 제거 끝
+                //3p 올라갈때 모션 제거 시작
+                $('.move_circle').removeClass('up');
+                $('.ani_box').removeClass('up');
+                $('.circle1').removeClass('up');
+                $('.circle2').removeClass('up');
+                $('.cnt3_box').removeClass('up');
+                //3p 올라갈때 모션 제거 끝
             }
 
         // 스크롤 올릴 때
@@ -202,14 +333,35 @@ $(document).ready(function(){
                 }
                 $('#header').removeClass('logo_active');
                 $('.top_btn').removeClass('on');
+                //3p 모션 제거 시작
+                $('.ani_box').removeClass('on');
+                $('.circle1').removeClass('on');
+                $('.circle2').removeClass('on');
+                $('.move_circle').removeClass('on');
+                $('.cnt3_box').removeClass('on');
+                //3p 모션 제거 끝
+                //3p 올라갈때 모션 제거 시작
+                $('.move_circle').removeClass('up');
+                $('.ani_box').removeClass('up');
+                $('.circle1').removeClass('up');
+                $('.circle2').removeClass('up');
+                $('.cnt3_box').removeClass('up');
+                //3p 올라갈때 모션 제거 끝
             }
             else if (i == 2){
                 $('#header').addClass('logo_active');
-                $('.ani_box').addClass('on');
-                $('.circle1').addClass('on');
-                $('.circle2').addClass('on');
-                $('.move_circle').addClass('on');
-                $('.cnt3_box').addClass('on');
+                //3p 올라갈때 모션 시작
+                $('.move_circle').addClass('up');
+                $('.ani_box').addClass('up');
+                $('.circle1').addClass('up');
+                $('.circle2').addClass('up');
+                $('.cnt3_box').addClass('up');
+                //3p 올라갈때 모션 끝
+                //4p 모션 제거 시작
+                $('.move4_circle').removeClass('on');
+                $('.cnt_box').removeClass('on');
+                $('.bg_box').removeClass('on');
+                //4p 모션 제거 끝
             }
         }
 

@@ -927,10 +927,32 @@ html,body {
               opacity: 1;
             }
           }
+          //3p 스크롤 위로 모션 시작
+          .cnt3_box.up{
+            animation: cnt3_up 1s 2s forwards;
+            opacity: 0;
+            margin: 0 auto;
+            padding-top: clampMun(440);
+            width: clamp(1rem,83.434%,160rem);
+            height: clamp(1rem,45.8333vw,88rem);
+            /* height: 880px; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+          }
+          @keyframes cnt3_up {
+            from{
+              opacity: 0;
+            }
+            to{
+              opacity: 1;
+            }
+          }
+          //3p 스크롤 위로 모션 끝
           .contact_container h1{
-            font-size: clamp(1rem,0.9375vw,1.8rem);
-            /* font-size: 18px; */
-            // font-weight: bold;
+            font-size: clampMun(22);
             font-family: "SUIT-ExtraBold";
           }
           address{
@@ -1085,7 +1107,7 @@ html,body {
 
           //circle 모션
           .circle1.on{ //캐릭터 꽁지머리
-            animation: hair_up 2s forwards, hair_bomb 1s 2s forwards;
+            animation: hair_up 1.3s 1s forwards, hair_bomb 1s 2s forwards;
           }
 
           @keyframes hair_up { 
@@ -1099,12 +1121,12 @@ html,body {
           }
           @keyframes hair_bomb {
             from {}
-            70%{width: clampMun(80);height: clampMun(80);margin-left: clampMun(1617);margin-top: clampMun(796);}
+            70%{width: clampMun(80);height: clampMun(80);margin-top: clampMun(796);}
             80%{background-color: #FF4713;border: transparent;}
             to{width: clampMun(114);height: clampMun(114);background-color: #fff;border: 1px solid #FF4713;}
           }
           .circle2.on{ //캐릭터 얼굴
-            animation: head_up 2s forwards, head_bomb 1s 2s forwards;
+            animation: head_up 1.3s 1s forwards, head_bomb 1s 2s forwards;
           }
 
           @keyframes head_up { 
@@ -1112,15 +1134,15 @@ html,body {
               background-color: #3CB4E5;
             }
             to{
-              margin-top: clampMun(870);
+              margin-left: clampMun(1294);margin-top: clampMun(870);
               background-color: #3CB4E5;
             }
           }
           @keyframes head_bomb {
             from{}
-            70%{width: clampMun(310);height: clampMun(310);margin-left: clampMun(1294);margin-top: clampMun(933);}
+            70%{width: clampMun(310);height: clampMun(310);margin-left: clampMun(1414);margin-top: clampMun(933);}
             80%{background-color: #FF4713;border: transparent;}
-            to{width: clampMun(436);height: clampMun(436);background-color: #fff;border: 1px solid #FF4713;}
+            to{width: clampMun(436);height: clampMun(436);margin-left: clampMun(1294);background-color: #fff;border: 1px solid #FF4713;}
           }
 
           //move circle 모션
@@ -1193,6 +1215,88 @@ html,body {
 
           @keyframes circle4_bomb{from{} to{margin-top: clampMun(188);margin-left: clampMun(441);width: clampMun(154);height: clampMun(154);background-color: #3CB4E5;opacity: 1;}}
           @keyframes circle9_bomb{from{} to{margin-top: clampMun(241);margin-left: clampMun(1114);width: clampMun(182);height: clampMun(182);background-color: #3CB4E5;opacity: 1;}}
+
+
+          // 3p 스크롤 올라갈 때 모션
+          .move_circle.up > .top_ani{
+            margin-left: clampMun(64);margin-top: clamp(-92rem, -47.9166666667vw, -1rem);background-color: #FF4713;border: transparent;
+            width: clampMun(2650);height: clampMun(1325);border-radius: 0 0 clampMun(1325) clampMun(1325);transform: rotate(0deg);
+            animation: sec3_top_dw 2s forwards;
+          }
+          @keyframes sec3_top_dw { 
+            from{}
+            50%{width: clampMun(1920);height: clampMun(200);border-radius: 0%;margin-left: 0;margin-top: 0;}
+            to{width: clampMun(1920);height: clampMun(200);border-radius: 0%;margin-left: 0;margin-top: 0;opacity: 0;}
+          }
+          .ani_box.up{
+            animation: sec3_up_top 1s forwards;
+          }
+          @keyframes sec3_up_top {
+            from{margin-top: -200px;}
+            to{margin-top: 0;}
+          }
+
+          //캐릭터 모션
+          .circle1.up{animation: hair_up 2s 1s forwards;}
+          @keyframes hair_up {
+            from{margin-left: clampMun(1617);margin-top: clampMun(1080);}
+            to{margin-left: clampMun(1617);margin-top: clampMun(796);width: clampMun(114);height: clampMun(114);background-color: #fff;border: 1px solid #FF4713;}
+        }
+          .circle2.up{animation: head_up 2s 1s forwards;}
+          @keyframes head_up {
+            from{margin-left: clampMun(1294);margin-top: clampMun(1220);}
+            to{margin-left: clampMun(1294);margin-top: clampMun(933);width: clampMun(436);height: clampMun(436);background-color: #fff;border: 1px solid #FF4713;}
+        }
+          //move circle 모션
+          .move_circle.up > .circle3-1 {animation: cir1_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-2 {animation: cir2_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-3 {animation: cir3_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-4 {animation: cir4_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-5 {animation: cir5_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-6 {animation: cir6_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-7 {animation: cir7_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-8 {animation: cir8_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-9 {animation: cir9_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-10 {animation: cir10_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-11 {animation: cir11_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-12 {animation: cir12_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-13 {animation: cir13_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-14 {animation: cir14_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-15 {animation: cir15_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-16 {animation: cir16_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-17 {animation: cir17_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-18 {animation: cir18_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-19 {animation: cir19_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-20 {animation: cir20_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-21 {animation: cir21_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-22 {animation: cir22_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-23 {animation: cir23_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-24 {animation: cir24_dw 2s 1s forwards;}
+
+          @keyframes cir1_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(385);margin-left: clampMun(128);width: clampMun(90);height: clampMun(90);border-radius:50%;}}
+          @keyframes cir2_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(180);margin-left: clampMun(207);width: clampMun(70);height: clampMun(70);border-radius:50%;}}
+          @keyframes cir3_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(388);margin-left: clampMun(404);width: clampMun(40);height: clampMun(40);border-radius:50%;}}
+          @keyframes cir4_dw {from{}to{margin-top: clampMun(188);margin-left: clampMun(441);width: clampMun(154);height: clampMun(154);background-color: #3CB4E5;opacity: 1;}}
+          @keyframes cir5_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(290);margin-left: clampMun(666);width: clampMun(92);height: clampMun(92);border-radius:50%;}}
+          @keyframes cir6_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(209);margin-left: clampMun(744);width: clampMun(42);height: clampMun(42);border-radius:50%;}}
+          @keyframes cir7_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(417);margin-left: clampMun(815);width: clampMun(50);height: clampMun(50);border-radius:50%;}}
+          @keyframes cir8_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(290);margin-left: clampMun(937);width: clampMun(66);height: clampMun(66);border-radius:50%;}}
+          @keyframes cir9_dw {from{}to{margin-top: clampMun(241);margin-left: clampMun(1114);width: clampMun(182);height: clampMun(182);background-color: #3CB4E5;opacity: 1;}}
+          @keyframes cir10_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(600);margin-left: clampMun(1252);width: clampMun(34);height: clampMun(34);border-radius:50%;}}
+          @keyframes cir11_dw {from{}to{opacity: 1;background-color:#ff7a00;margin-top: clampMun(300);margin-left: clampMun(280);width: clampMun(24);height: clampMun(24);border-radius:50%;}}
+          @keyframes cir12_dw {from{}to{opacity: 1;background-color:#ff7a00;margin-top: clampMun(380);margin-left: clampMun(540);width: clampMun(18);height: clampMun(18);}}
+          @keyframes cir13_dw {from{}to{opacity: 1;background-color:#ff7a00;margin-top: clampMun(318);margin-left: clampMun(1360);width: clampMun(46);height: clampMun(46);}}
+          @keyframes cir14_dw {from{}to{opacity: 1;background-color:#ff7a00;margin-top: clampMun(544);margin-left: clampMun(1560);width: clampMun(34);height: clampMun(34);border-radius:50%;}}
+          @keyframes cir15_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(242);margin-left: clampMun(628);width: clampMun(24);height: clampMun(24);border-radius:50%;}}
+          @keyframes cir16_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(378);margin-left: clampMun(1029);width: clampMun(12);height: clampMun(12);}}
+          @keyframes cir17_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(484);margin-left: clampMun(1331);width: clampMun(16);height: clampMun(16);}}
+          @keyframes cir18_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(962);margin-left: clampMun(1749);width: clampMun(12);height: clampMun(12);}}
+          @keyframes cir19_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(776);margin-left: clampMun(1830);width: clampMun(50);height: clampMun(50);}}
+          @keyframes cir20_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(388);margin-left: clampMun(611);width: clampMun(32);height: clampMun(32);border-radius:50%;}}
+          @keyframes cir21_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(436);margin-left: clampMun(929);width: clampMun(50);height: clampMun(50);}}
+          @keyframes cir22_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(144);margin-left: clampMun(1358);width: clampMun(36);height: clampMun(36);}}
+          @keyframes cir23_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(178);margin-left: clampMun(1447);width: clampMun(72);height: clampMun(72);}}
+          @keyframes cir24_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #ff4713;margin-top: clampMun(455);margin-left: clampMun(693);width: clampMun(76);height: clampMun(76);}}
 
       }
       /* section4(인력 구인) */
