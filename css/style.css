@@ -385,7 +385,7 @@ input {
   animation: left_small 10s ease-in infinite 5s;
 }
 #wrap #header .container .left a svg#idi_logo .st2 {
-  fill: #E94C21;
+  fill: #FF4713;
 }
 #wrap #header .container .left a svg#idi_logo .cha .cha1 {
   transform-origin: 39% 57%;
@@ -749,6 +749,17 @@ input {
 }
 #wrap #main #section2.sec2_ani_start .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(4) {
   animation: sec2Circle 3s ease-in-out 1.5s forwards;
+}
+#wrap #main #section2.sec2_ani_re .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(1) {
+  animation: sec2re 3s ease-in-out forwards;
+}
+@keyframes sec2re {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
 #wrap #main #section2 .container {
   width: 100%;

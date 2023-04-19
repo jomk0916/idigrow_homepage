@@ -317,7 +317,7 @@ input {outline-offset:-1px;}
                 }
               }
 
-              .st2{fill:#E94C21;}
+              .st2{fill:#FF4713;}
 
               .cha {
                 // 160 40
@@ -714,6 +714,19 @@ input {outline-offset:-1px;}
           }
           .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(4) {
             animation: sec2Circle 3s ease-in-out 1.5s forwards;
+          }
+        }
+        &.sec2_ani_re {
+          .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(1) {
+            animation: sec2re 3s ease-in-out forwards;
+          }
+        }
+        @keyframes sec2re {
+          0% {
+            transform: translateY(50%);
+          }
+          100% {
+            transform: translateY(0%);
           }
         }
         .container {
@@ -2043,9 +2056,6 @@ input {outline-offset:-1px;}
 
     #wrap #main #section2 .container .gap .sec2_textBox .sec_text {
       padding: 10px 0 0 0;
-      p {
-
-      }
     }
   }
 

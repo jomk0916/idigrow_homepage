@@ -186,12 +186,16 @@ $(document).ready(function(){
                         sec2_optimi();
                     }
                 }, 1000);
+
                 // 헤더 흰색 로고 제거
                 $('#header').removeClass('logo_active');
 
                 value = 1;
             }
             if(i == 2){
+                // 2p 끝
+
+                // 3p 시작
                 $('#header').addClass('logo_active');
                 $('.top_btn').addClass('on');
                 $('.ani_box').addClass('on');
@@ -220,6 +224,7 @@ $(document).ready(function(){
 
         // 스크롤 올릴 때
         }else{
+
             if(i == 0){
 
             }else{
