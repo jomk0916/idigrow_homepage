@@ -750,15 +750,46 @@ input {
 #wrap #main #section2.sec2_ani_start .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(4) {
   animation: sec2Circle 3s ease-in-out 1.5s forwards;
 }
-#wrap #main #section2.sec2_ani_re .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(1) {
-  animation: sec2re 3s ease-in-out forwards;
+#wrap #main #section2.sec2_ani_re .container .gap .sec2_textBox .main_text svg {
+  opacity: 0;
+  animation: sec2re_text 2s ease-in-out 2.5s forwards;
+}
+#wrap #main #section2.sec2_ani_re .container .gap .sec2_textBox .sec_text {
+  animation: sec2re_text_2 2s ease-in-out 3.5s forwards;
+}
+#wrap #main #section2.sec2_ani_re .container .sec2_loader #circle_g_sec2 .sec2_circle {
+  animation: sec2re 2s ease-in-out forwards;
 }
 @keyframes sec2re {
   0% {
+    opacity: 0;
+    transform: translate(50%, 115%) scale(0) rotate(-0.2deg);
+    fill: #3CB4E5;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(50%, 115%) scale(4) rotate(-0.2deg);
+    fill: #3CB4E5;
+  }
+}
+@keyframes sec2re_text {
+  0% {
+    opacity: 0;
     transform: translateY(50%);
   }
   100% {
-    transform: translateY(0%);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes sec2re_text_2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 #wrap #main #section2 .container {

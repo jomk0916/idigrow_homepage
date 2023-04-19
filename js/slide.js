@@ -166,7 +166,7 @@ $(document).ready(function(){
             $("#main section").eq(i).css({'opacity':'1','transition':'all 0.5s'});
 
             if(i == 0){
-
+                $('#section2').removeClass('sec2_ani_re');
             }
             if(i == 1){
                 // 1p 끝
@@ -185,7 +185,11 @@ $(document).ready(function(){
                         $('#section2').addClass('sec2_ani_start');
                         sec2_optimi();
                     }
-                }, 1000);
+                    else {
+                        console.log("모션 끝난 후");
+                        $('#section2').addClass('sec2_ani_re');
+                    }
+                }, 0);
 
                 // 헤더 흰색 로고 제거
                 $('#header').removeClass('logo_active');
@@ -194,7 +198,7 @@ $(document).ready(function(){
             }
             if(i == 2){
                 // 2p 끝
-
+                $('#section2').removeClass('sec2_ani_re');
                 // 3p 시작
                 $('#header').addClass('logo_active');
                 $('.top_btn').addClass('on');
@@ -205,6 +209,7 @@ $(document).ready(function(){
                 $('.cnt3_box').addClass('on');
             }
             if(i == 3){
+                $('#section2').removeClass('sec2_ani_re');
                 $('#header').removeClass('logo_active');
                 $('.cha_body').addClass('on');
                 $('.cha_head').addClass('on');
@@ -243,10 +248,14 @@ $(document).ready(function(){
                 $('.textBox').removeClass('js_animation');
 
                 $('#header').removeClass('logo_active');
+                $('#section2').removeClass('sec2_ani_re');
             }
             else if (i == 1){
                 if($("#section2").hasClass("sec2_ani_start") === false) {
                     $('#section2').addClass('sec2_ani_start');
+                }
+                else {
+                    $('#section2').addClass('sec2_ani_re');
                 }
                 $('#header').removeClass('logo_active');
                 $('.top_btn').removeClass('on');
