@@ -1535,7 +1535,7 @@ input {outline-offset:-1px;}
           @keyframes txt_up2 {from{opacity: 0;} to{opacity: 1;}}
           .job_btn{margin-top: 20px;}
           .job_btn a{
-            padding: 5px;
+            padding: 10px;
             /* width: 230px;height: 50px;
             font-size: 18px;line-height: 50px; */
             width: clamp(1rem,11.9791667vw,23rem);
@@ -1550,6 +1550,10 @@ input {outline-offset:-1px;}
             border-radius: clamp(1rem,1.30208333vw,2.5rem);
             margin-top: clamp(1rem,2.08333vw,4rem);
             cursor: pointer;
+            transition: all 0.5s;
+          }
+          .job_btn a:hover{
+            background-color: #000;color: #fff;
           }
           .cnt_box.on .big_logo{
             animation: logo_ani 2s 4s forwards;
