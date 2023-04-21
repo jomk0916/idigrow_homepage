@@ -927,10 +927,17 @@ input {outline-offset:-1px;}
       #section3 {
         .container{
             margin: 0 auto;
-            /* width: 1920px; */
+            height: 100%;
             width: 100vw;
             color: #000;
             position: relative;
+        }
+        .sec3_bg{
+          width: 100%;
+          height: clampMun(1080);
+          background-color: #f7f7f7;
+          position: absolute;
+          right: 0;top: 0;
         }
 
         //모션 객체 시작
@@ -940,17 +947,19 @@ input {outline-offset:-1px;}
               height: clamp(1rem,10.41667vw,20rem);
               background-color: #3CB4E5;
           }
-          .circle1{
-            width: clampMun(20);height: clampMun(20);border-radius: 50%;
-            background-color: #3CB4E5;
-            margin-top: -20px;
-            margin-left: calc(50% - clampMun(10));
+          .circle1{ // 캐릭터 꽁지
+            width: clampMun(114);height: clampMun(114);border-radius: 50%;
+            // background-color: #fff;
+            // border: 1px solid #ff4713;
+            margin-top: clampMun(650);
+            margin-left: clampMun(1600);
           }
-          .circle2{
-            width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);
-            background-color: #3CB4E5;
-            margin-top: clampMun(360);
-            margin-left: calc(50% - clampMun(100));
+          .circle2{ // 캐릭터 얼굴
+            width: clampMun(436);height: clampMun(436);border-radius: 50%;
+            // background-color: #fff;
+            // border: 1px solid #ff4713;
+            margin-top: clampMun(750);
+            margin-left: clampMun(1231)
           }
           .cir{border-radius: 50%;}
           .blue{background-color: #3CB4E5;}
@@ -993,9 +1002,8 @@ input {outline-offset:-1px;}
           .cir{margin-top: -200px;margin-left: -200px;}
 
           //모션 객체 끝
-
           .cnt3_box.on{
-            animation: cnt3_in 1s 15s forwards;
+            animation: cnt3_in 1s 4s forwards;
             opacity: 0;
             margin: 0 auto;
             padding-top: clampMun(440);
@@ -1016,10 +1024,32 @@ input {outline-offset:-1px;}
               opacity: 1;
             }
           }
+          //3p 스크롤 위로 모션 시작
+          .cnt3_box.up{
+            animation: cnt3_up 1s 2s forwards;
+            opacity: 0;
+            margin: 0 auto;
+            padding-top: clampMun(440);
+            width: clamp(1rem,83.434%,160rem);
+            height: clamp(1rem,45.8333vw,88rem);
+            /* height: 880px; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+          }
+          @keyframes cnt3_up {
+            from{
+              opacity: 0;
+            }
+            to{
+              opacity: 1;
+            }
+          }
+          //3p 스크롤 위로 모션 끝
           .contact_container h1{
-            font-size: clamp(1rem,0.9375vw,1.8rem);
-            /* font-size: 18px; */
-            // font-weight: bold;
+            font-size: clampMun(22);
             font-family: "SUIT-ExtraBold";
           }
           address{
@@ -1116,7 +1146,7 @@ input {outline-offset:-1px;}
             /* font-size: 14px; */
             font-size: clamp(0.5rem,0.7291667vw,1.4rem);
             color: #fff;
-            font-family: "SUIT-Light";
+            font-family: "SUIT-Bold";
             border: 0;
             background-color: #000;
             outline: none;
@@ -1155,262 +1185,215 @@ input {outline-offset:-1px;}
 
           //박스 모션
           .ani_box.on{ // 상단 파란색 박스
-            animation: upcircle 3s forwards, water 3s 11.5s, upbox 2s 15s ease forwards;
+            animation: upbox 2s forwards;
           }
-          @keyframes upcircle { //하단박스 -> 중앙원
+          @keyframes upbox { //하단박스 -> 상단박스
             from {
-              height: clampMun(450);
+              height: clampMun(1080);
               margin-top: clampMun(450);
-              transform: scale3d(.7,.7,.7);
             }
-            20%{transform: scale3d(1.2,1.2,1.2);}
-            30% {
-              margin-top: clampMun(450);
-              margin-left: calc(50vw - clampMun(100));
-              width: clampMun(200);height: clampMun(200);border-radius: 50%;
-            }
-            40%{transform: scale3d(.8,.8,.8);}
-            50%{transform: scale3d(1.15,1.15,1.15);}
-            60%{transform: scale3d(.85,.85,.85);}
-            70%{transform: scale3d(1.1,1.1,1.1);}
-            80%{transform: scale3d(.95,.95,.95);}
-            90%{transform: scale3d(1.05,1.05,1.05);}
-            to {
-              margin-left: calc(50vw - clampMun(100));
-              margin-top: clampMun(265);
-              width: clampMun(200);height: clampMun(200);border-radius: 50%;
-              background-color: #fff;
-              border: 1px solid #3CB4E5;
-              transform: scale3d(1,1,1);
-            }
-          }
-          @keyframes upbox { //중앙원 -> 상단박스
-            from {
-              margin-left: calc(50vw - clampMun(100));
-              margin-top: clampMun(265);
-              width: clampMun(200);height: clampMun(200);border-radius: 50%;
-              background-color: #3CB4E5;
-            }
-
-            60% {
-              margin-left: calc(50vw - clampMun(100));
+            50% {
+              height: clampMun(1080);
               margin-top: 0;
-              width: clampMun(200);height: clampMun(200);border-radius: 50%;
             }
             to{
-              width: 100%;
-              height: clamp(1rem,10.41667vw,20rem);
-              margin-top: 0;margin-left: 0;
-              border-radius: 0;
-              background-color: #3CB4E5;
+              height: clampMun(200);
+              margin-top: 0;
             }
           }
 
           //circle 모션
           .circle1.on{ //캐릭터 꽁지머리
-            animation: sm_circle_dw 3s 3s ease forwards, water 3s 11.5s, sm_circle_out 1s 15s forwards;
+            animation: hair_up 1.3s 1s forwards, hair_bomb 1s 2s forwards;
           }
 
-          @keyframes sm_circle_dw { //꽁지 내려옴
+          @keyframes hair_up { 
             from {
-              width: clampMun(20);height: clampMun(20);border-radius: 50%;
               background-color: #3CB4E5;
-              margin-top: -20px;
-              margin-left: calc(50% - clampMun(10));
-            }
-
-            60% {
-              margin-top: clampMun(240);
-            }
-
-            to {
-              width: clampMun(40);height: clampMun(40);border: 50%;
-              background-color: #fff;
-              border: 1px solid #3CB4E5;
-              margin-top: clampMun(240); margin-left: clampMun(1040);
-            }
-          }
-          @keyframes sm_circle_out {
-            from {
-              width: clampMun(40);height: clampMun(40);border: 50%;
-              background-color: #fff;
-              border: 1px solid #3CB4E5;
-              margin-top: clampMun(240); margin-left: clampMun(1040);
             }
             to {
-              margin-left: clampMun(1000);
-              opacity: 0;
+              margin-top: clampMun(650);
+              background-color: #3CB4E5;
             }
           }
-          .circle2.on{ //캐릭터 몸통
-            animation: half_circle_dw 3s 3s  forwards, half_swing 3s 6s ease forwards, water 3s 11.5s, half_circle_out 1s 15s forwards;
-            opacity: 0;
+          @keyframes hair_bomb {
+            from {}
+            70%{width: clampMun(80);height: clampMun(80);margin-top: clampMun(667);}
+            80%{background-color: #FF4713;border: transparent;}
+            to{width: clampMun(114);height: clampMun(114);background-color: #fff;border: 1px solid #FF4713;}
+          }
+          .circle2.on{ //캐릭터 얼굴
+            animation: head_up 1.3s 1s forwards, head_bomb 1s 2s forwards;
           }
 
-          @keyframes half_circle_dw { //몸통 내려옴
+          @keyframes head_up { 
             from{
-              width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);
               background-color: #3CB4E5;
-              margin-top: clampMun(360);
-              margin-left: calc(50% - clampMun(100));
-            }
-            50%{
-              transform: rotate(-20deg);
             }
             to{
-              opacity: 1;
-              margin-top: clampMun(490);
-              transform: rotate(-20deg);
-              background-color: #fff;
-              border: 1px solid #3CB4E5;
+              margin-left: clampMun(1294);margin-top: clampMun(750);
+              background-color: #3CB4E5;
             }
           }
-
-          @keyframes half_swing { //몸통 흔들
-            from{
-              width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);
-              background-color: #fff;
-              border: 1px solid #3CB4E5;
-              margin-top: clampMun(490);
-              margin-left: calc(50% - clampMun(100));
-              transform: rotate(-20deg);
-            }
-            20%{
-              margin-left: calc(50% - clampMun(80));
-              transform-origin: center bottom;
-              transform: rotate(40deg);
-            }
-            40%{transform: rotate(-30deg)}
-            60%{transform: rotate(30deg);}
-            80%{transform: rotate(-20deg);}
-            to{
-              transform: rotate(-20deg);
-              background-color: #fff;
-              border: 1px solid #3CB4E5;
-            }
-          }
-          @keyframes half_circle_out {
-            from {
-              transform: rotate(-20deg);
-              background-color: #fff;
-              border: 1px solid #3CB4E5;
-            }
-            to {
-              margin-top: clampMun(490);
-              opacity: 0;
-            }
+          @keyframes head_bomb {
+            from{}
+            70%{width: clampMun(310);height: clampMun(310);margin-left: clampMun(1414);margin-top: clampMun(813);}
+            80%{background-color: #FF4713;border: transparent;}
+            to{width: clampMun(436);height: clampMun(436);margin-left: clampMun(1294);background-color: #fff;border: 1px solid #FF4713;}
           }
 
           //move circle 모션
-          .move_circle.on > .circle3-1 {animation: circle1 2s 9s ease-in-out forwards, circle1-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-2 {animation: circle2 1.2s 9s ease-in-out forwards, circle2-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-3 {animation: circle3 1s 9s ease-in-out forwards, circle3-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-4 {animation: circle4 2s 9s ease-in-out forwards, circle4-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-5 {animation: circle5 1s 9s ease-in-out forwards, circle5-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-6 {animation: circle6 1.9s 9s ease-in-out forwards, circle6-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-7 {animation: circle7 2s 9s ease-in-out forwards, circle7-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-8 {animation: circle8 1.2s 9s ease-in-out forwards, circle8-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-9 {animation: circle9 1.5s 9s ease-in-out forwards, circle9-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-10 {animation: circle10 2s 9s ease-in-out forwards, circle10-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-11 {animation: circle11 1.7s 9s ease-in-out forwards, circle11-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-12 {animation: circle12 2s 9s ease-in-out forwards, circle12-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-13 {animation: circle13 1.6s 9s ease-in-out forwards, circle13-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-14 {animation: circle14 2s 9s ease-in-out forwards, circle14-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-15 {animation: circle15 1.4s 9s ease-in-out forwards, circle15-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-16 {animation: circle16 2s 9s ease-in-out forwards, circle16-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-17 {animation: circle17 1.3s 9s ease-in-out forwards, circle17-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-18 {animation: circle18 2s 9s ease-in-out forwards, circle18-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-19 {animation: circle19 1.8s 9s ease-in-out forwards, circle19-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-20 {animation: circle20 2s 9s ease-in-out forwards, circle20-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-21 {animation: circle21 2s 9s ease-in-out forwards, circle21-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-22 {animation: circle22 1.2s 9s ease-in-out forwards, circle22-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-23 {animation: circle23 2s 9s ease-in-out forwards, circle23-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-24 {animation: circle24 1s 9s ease-in-out forwards, circle24-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-25 {animation: circle25 1.6s 9s ease-in-out forwards, circle25-1 2s 15s forwards, water 3s 11.5s;}
-          .move_circle.on > .circle3-26 {animation: circle26 1s 9s ease-in-out forwards, circle26-1 2s 15s forwards, water 3s 11.5s;}
+          .move_circle.on > .circle3-1 {animation: cir_move_l 1s forwards, circle1 1s 4s forwards;} //1
+          .move_circle.on > .circle3-2 {animation: cir_move_l 1s forwards, circle2 1s 4s forwards;} //1
+          .move_circle.on > .circle3-3 {animation: cir_move_l 1s forwards, circle3 1s 4s forwards;} //1
+          .move_circle.on > .circle3-4 {animation: circle4 1s 2.8s forwards, circle4_bomb .5s 3.8s forwards;} // 큰원 1
+          .move_circle.on > .circle3-5 {animation: cir_move_l 1s forwards, circle5 1s 4s forwards;} //1
+          .move_circle.on > .circle3-6 {animation: cir_move_l 1s forwards, circle6 1s 4s forwards;} //1
+          .move_circle.on > .circle3-7 {animation: cir_move_l 1s forwards, circle7 1s 4s forwards;} //1
+          .move_circle.on > .circle3-8 {animation: cir_move_r 1s forwards, circle8 1s 4s forwards;} //
+          .move_circle.on > .circle3-9 {animation: circle9 1s 2.8s forwards, circle9_bomb .5s 3.8s forwards;} // 큰원 2
+          .move_circle.on > .circle3-10 {animation: cir_move_r 1s forwards, circle10 1s 4s forwards;} //
+          .move_circle.on > .circle3-11 {animation: cir_move_l 1s forwards, circle11 1s 4s forwards;} //1
+          .move_circle.on > .circle3-12 {animation: cir_move_l 1s forwards, circle12 1s 4s forwards;} //1
+          .move_circle.on > .circle3-13 {animation: cir_move_r 1s forwards, circle13 1s 4s forwards;} //
+          .move_circle.on > .circle3-14 {animation: cir_move_r 1s forwards, circle14 1s 4s forwards;} //
+          .move_circle.on > .circle3-15 {animation: cir_move_l 1s forwards, circle15 1s 4s forwards;} //1
+          .move_circle.on > .circle3-16 {animation: cir_move_r 1s forwards, circle16 1s 4s forwards;} //
+          .move_circle.on > .circle3-17 {animation: cir_move_r 1s forwards, circle17 1s 4s forwards;} //
+          .move_circle.on > .circle3-18 {animation: cir_move 1s forwards, circle18 1s 2.8s forwards;} //3
+          .move_circle.on > .circle3-19 {animation: cir_move 1s forwards, circle19 1s 2.8s forwards;} //3
+          .move_circle.on > .circle3-20 {animation: cir_move_l 1s forwards, circle20 1s 4s forwards;} //1
+          .move_circle.on > .circle3-21 {animation: cir_move_r 1s forwards, circle21 1s 4s forwards;} //
+          .move_circle.on > .circle3-22 {animation: cir_move_r 1s forwards, circle22 1s 4s forwards;} //
+          .move_circle.on > .circle3-23 {animation: cir_move_r 1s forwards, circle23 1s 4s forwards;} //
+          .move_circle.on > .circle3-24 {animation: cir_move_l 1s forwards, circle24 1s 4s forwards;} //1
+          // .move_circle.on > .circle3-25 {animation: cir_move_r 1s forwards, circle25 1s 4s forwards;} //
+          // .move_circle.on > .circle3-26 {animation: cir_move_r 1s forwards, circle26 1s 4s forwards;} //
 
 
           //첫번째 원 움직임
 
-          @keyframes circle1  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1070px;} 60%{margin-top: clampMun(140);} 90%{margin-top: clampMun(240); margin-left: clampMun(1040);width: 50px;height: 50px;} to{width: clampMun(40);height: clampMun(40);border: 50%;background-color: #3CB4E5;border: 1px solid #3CB4E5;margin-top: clampMun(240); margin-left: clampMun(1040);border: transparent;}}
-          @keyframes circle2  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -880px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
-          @keyframes circle3  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
-          @keyframes circle4  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1000px;} 60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}}
-          @keyframes circle5  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 1000px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
+          @keyframes cir_move_l {from{opacity: 0;}to{margin-top: clampMun(255);margin-left: clampMun(508);width: clampMun(20);height: clampMun(20);border-radius: 50%;opacity: 0;}}
+          @keyframes cir_move_r {from{opacity: 0;}to{margin-top: clampMun(322);margin-left: clampMun(1195);width: clampMun(20);height: clampMun(20);border-radius: 50%;opacity: 0;}}
+          @keyframes cir_move {from{opacity: 0;}to{margin-top: clampMun(707);margin-left: clampMun(1647);width: clampMun(20);height: clampMun(20);border-radius: 50%;opacity: 0;}}
 
-          @keyframes circle6  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1920px;} 60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}}
-          @keyframes circle7  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}}
-          @keyframes circle8  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1920px;} 60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
-          @keyframes circle9  {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
-          @keyframes circle10 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
+          @keyframes circle1  {from{opacity: 1;} to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(385);margin-left: clampMun(128);width: clampMun(90);height: clampMun(90);}}
+          @keyframes circle2  {from{opacity: 1;} to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(180);margin-left: clampMun(207);width: clampMun(70);height: clampMun(70);}}
+          @keyframes circle3  {from{opacity: 1;} to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(388);margin-left: clampMun(404);width: clampMun(40);height: clampMun(40);}}
+          @keyframes circle4  {from{width: clampMun(50);height: clampMun(50);background-color: #ff4713;margin-left: clampMun(1294);margin-top: clampMun(933);opacity: 0;} to{margin-top: clampMun(215);margin-left: clampMun(468);width: clampMun(100);height: clampMun(100);background-color: #ff4713;opacity: 1;}}
+          @keyframes circle5  {from{opacity: 1;} to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(290);margin-left: clampMun(666);width: clampMun(92);height: clampMun(92);}}
 
-          @keyframes circle11 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 1500px;}  60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}}
-          @keyframes circle12 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1920px;} 60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
-          @keyframes circle13 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 200px;}   60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
-          @keyframes circle14 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}}
-          @keyframes circle15 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1920px;} 60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}}
+          @keyframes circle6  {from{opacity: 1;} to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(209);margin-left: clampMun(744);width: clampMun(42);height: clampMun(42);border-radius:50%;}}
+          @keyframes circle7  {from{opacity: 1;} to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(417);margin-left: clampMun(815);width: clampMun(50);height: clampMun(50);border-radius:50%;}}
+          @keyframes circle8  {from{opacity: 1;} to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(290);margin-left: clampMun(937);width: clampMun(66);height: clampMun(66);}}
+          @keyframes circle9  {from{width: clampMun(50);height: clampMun(50);background-color: #ff4713;margin-left: clampMun(1294);margin-top: clampMun(933);opacity: 0;} to{margin-top: clampMun(282);margin-left: clampMun(1155);width: clampMun(100);height: clampMun(100);background-color: #ff4713;opacity: 1;}}
+          @keyframes circle10 {from{opacity: 1;} to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(600);margin-left: clampMun(1252);width: clampMun(34);height: clampMun(34);}}
 
-          @keyframes circle16 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 920px;}   60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
-          @keyframes circle17 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 500px;}   60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
-          @keyframes circle18 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 1700px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}}
-          @keyframes circle19 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1920px;} 60%{margin-top: clampMun(140);} 90%{margin-top: clampMun(240); margin-left: clampMun(1040);width: 50px;height: 50px;} to{width: clampMun(40);height: clampMun(40);border: 50%;background-color: #3CB4E5;border: 1px solid #3CB4E5;margin-top: clampMun(240); margin-left: clampMun(1040);border: transparent;}}
-          @keyframes circle20 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);border: transparent;}}
+          @keyframes circle11 {from{opacity: 1;} to{opacity: 1;background-color:#ff7a00;margin-top: clampMun(300);margin-left: clampMun(280);width: clampMun(24);height: clampMun(24);border-radius:50%;}}
+          @keyframes circle12 {from{opacity: 1;} to{opacity: 1;background-color:#ff7a00;margin-top: clampMun(380);margin-left: clampMun(540);width: clampMun(18);height: clampMun(18);}}
+          @keyframes circle13 {from{opacity: 1;} to{opacity: 1;background-color:#ff7a00;margin-top: clampMun(318);margin-left: clampMun(1360);width: clampMun(46);height: clampMun(46);}}
+          @keyframes circle14 {from{opacity: 1;} to{opacity: 1;background-color:#ff7a00;margin-top: clampMun(544);margin-left: clampMun(1560);width: clampMun(34);height: clampMun(34);border-radius:50%;}}
+          @keyframes circle15 {from{opacity: 1;} to{opacity: 1;background-color:#ff4713;margin-top: clampMun(242);margin-left: clampMun(628);width: clampMun(24);height: clampMun(24);border-radius:50%;}}
 
-          @keyframes circle21 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 20px;}    60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;border: transparent;}}
-          @keyframes circle22 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 1920px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;border: transparent;}}
-          @keyframes circle23 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;border: transparent;}}
-          @keyframes circle24 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -10px;}   60%{margin-top: clampMun(165);} 90%{margin-left: calc(50vw);margin-top: clampMun(365);width: 50px;height: 50px;}      to{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;border: transparent;}}
-          @keyframes circle25 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: 2000px;}  60%{margin-top: clampMun(140);} 90%{margin-top: clampMun(240); margin-left: clampMun(1040);width: 50px;height: 50px;} to{width: clampMun(40);height: clampMun(40);border: 50%;background-color: #3CB4E5;border: 1px solid #3CB4E5;margin-top: clampMun(240); margin-left: clampMun(1040);border: transparent;}}
-          @keyframes circle26 {from{width:clampMun(500);height:clampMun(500);margin-top: 1200px;margin-left: -1920px;} 60%{margin-top: clampMun(290);} 70%{margin-top: clampMun(490);margin-left: clampMun(860);width: 50px;height: 50px;}   to{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);border: transparent;}}
+          @keyframes circle16 {from{opacity: 1;} to{opacity: 1;background-color:#ff4713;margin-top: clampMun(378);margin-left: clampMun(1029);width: clampMun(12);height: clampMun(12);}}
+          @keyframes circle17 {from{opacity: 1;} to{opacity: 1;background-color:#ff4713;margin-top: clampMun(484);margin-left: clampMun(1331);width: clampMun(16);height: clampMun(16);}}
+          @keyframes circle18 {from{opacity: 1;} to{opacity: 1;background-color:#ff4713;margin-top: clampMun(862);margin-left: clampMun(1749);width: clampMun(12);height: clampMun(12);}}
+          @keyframes circle19 {from{opacity: 1;} to{opacity: 1;background-color:#ff4713;margin-top: clampMun(776);margin-left: clampMun(1830);width: clampMun(50);height: clampMun(50);}}
+          @keyframes circle20 {from{opacity: 1;} to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(388);margin-left: clampMun(611);width: clampMun(32);height: clampMun(32);border-radius:50%;}}
+
+          @keyframes circle21 {from{opacity: 1;} to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(436);margin-left: clampMun(929);width: clampMun(50);height: clampMun(50);}}
+          @keyframes circle22 {from{opacity: 1;} to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(144);margin-left: clampMun(1358);width: clampMun(36);height: clampMun(36);}}
+          @keyframes circle23 {from{opacity: 1;} to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(178);margin-left: clampMun(1447);width: clampMun(72);height: clampMun(72);}}
+          @keyframes circle24 {from{opacity: 1;} to{opacity: 1;background-color:#fff;border:1px solid #ff4713;margin-top: clampMun(455);margin-left: clampMun(693);width: clampMun(76);height: clampMun(76);}}
+          // @keyframes circle25 {from{opacity: 1;} to{opacity: 1;background-color:#fff;border:1px solid #ff4713;margin-top: clampMun(870);margin-left: clampMun(1231);width: clampMun(436);height: clampMun(436);}}
+          // @keyframes circle26 {from{opacity: 1;} to{opacity: 1;background-color:#fff;border:1px solid #ff4713;margin-top: clampMun(779);margin-left: clampMun(1600);width: clampMun(114);height: clampMun(114);border-radius:50%;}}
 
           //두번째 원 움직임
 
-          @keyframes circle1-1{from{width: clampMun(40);height: clampMun(40);border: 50%;background-color: #3CB4E5;border: 1px solid #3CB4E5;margin-top: clampMun(240); margin-left: clampMun(1040);}  to{background-color:#3cb4e5;margin-top: clampMun(385);margin-left: clampMun(128);width: clampMun(90);height: clampMun(90);border:transparent;}}
-          @keyframes circle2-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}   to{background-color:#3cb4e5;margin-top: clampMun(210);margin-left: clampMun(207);width: clampMun(70);height: clampMun(70);border:transparent;}}
-          @keyframes circle3-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}   to{background-color:#3cb4e5;margin-top: clampMun(338);margin-left: clampMun(404);width: clampMun(24);height: clampMun(24);border:transparent;}}
-          @keyframes circle4-1{from{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}   to{background-color:#3cb4e5;margin-top: clampMun(188);margin-left: clampMun(441);width: clampMun(154);height: clampMun(154);border-radius:50%;border:transparent;}}
-          @keyframes circle5-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}   to{background-color:#3cb4e5;margin-top: clampMun(290);margin-left: clampMun(666);width: clampMun(92);height: clampMun(92);border:transparent;}}
+          @keyframes circle4_bomb{from{} to{margin-top: clampMun(188);margin-left: clampMun(441);width: clampMun(154);height: clampMun(154);background-color: #3CB4E5;opacity: 1;}}
+          @keyframes circle9_bomb{from{} to{margin-top: clampMun(241);margin-left: clampMun(1114);width: clampMun(182);height: clampMun(182);background-color: #3CB4E5;opacity: 1;}}
 
-          @keyframes circle6-1{from{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}   to{background-color:#3cb4e5;margin-top: clampMun(209);margin-left: clampMun(744);width: clampMun(42);height: clampMun(42);border-radius:50%;border:transparent;}}
-          @keyframes circle7-1{from{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}   to{background-color:#3cb4e5;margin-top: clampMun(417);margin-left: clampMun(815);width: clampMun(50);height: clampMun(50);border-radius:50%;border:transparent;}}
-          @keyframes circle8-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}  to{background-color:#3cb4e5;margin-top: clampMun(322);margin-left: clampMun(937);width: clampMun(66);height: clampMun(66);border:transparent;}}
-          @keyframes circle9-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}   to{background-color:#3cb4e5;margin-top: clampMun(241);margin-left: clampMun(1114);width: clampMun(182);height: clampMun(182);border:transparent;}}
-          @keyframes circle10-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}  to{background-color:#3cb4e5;margin-top: clampMun(600);margin-left: clampMun(1252);width: clampMun(34);height: clampMun(34);border:transparent;}}
 
-          @keyframes circle11-1{from{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}  to{background-color:#ff7a00;margin-top: clampMun(300);margin-left: clampMun(280);width: clampMun(24);height: clampMun(24);border-radius:50%;border:transparent;}}
-          @keyframes circle12-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;} to{background-color:#ff7a00;margin-top: clampMun(350);margin-left: clampMun(540);width: clampMun(18);height: clampMun(18);border:transparent;}}
-          @keyframes circle13-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}  to{background-color:#ff7a00;margin-top: clampMun(318);margin-left: clampMun(1360);width: clampMun(46);height: clampMun(46);border:transparent;}}
-          @keyframes circle14-1{from{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}  to{background-color:#ff7a00;margin-top: clampMun(544);margin-left: clampMun(1560);width: clampMun(34);height: clampMun(34);border-radius:50%;border:transparent;}}
-          @keyframes circle15-1{from{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);}  to{background-color:#ff4713;margin-top: clampMun(242);margin-left: clampMun(628);width: clampMun(24);height: clampMun(24);border-radius:50%;border:transparent;}}
-
-          @keyframes circle16-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}  to{background-color:#ff4713;margin-top: clampMun(378);margin-left: clampMun(1029);width: clampMun(12);height: clampMun(12);border:transparent;}}
-          @keyframes circle17-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;}  to{background-color:#ff4713;margin-top: clampMun(484);margin-left: clampMun(1331);width: clampMun(16);height: clampMun(16);border:transparent;}}
-          @keyframes circle18-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;} to{background-color:#ff4713;margin-top: clampMun(962);margin-left: clampMun(1749);width: clampMun(12);height: clampMun(12);border:transparent;}}
-          @keyframes circle19-1{from{width: clampMun(40);height: clampMun(40);border: 50%;background-color: #3CB4E5;border: 1px solid #3CB4E5;margin-top: clampMun(240); margin-left: clampMun(1040);} to{background-color:#ff4713;margin-top: clampMun(776);margin-left: clampMun(1830);width: clampMun(50);height: clampMun(50);border:transparent;}}
-          @keyframes circle20-1{from{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);border: transparent;}  to{background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(388);margin-left: clampMun(611);width: clampMun(32);height: clampMun(32);border-radius:50%;}}
-
-          @keyframes circle21-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;border: transparent;}  to{background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(436);margin-left: clampMun(929);width: clampMun(50);height: clampMun(50);}}
-          @keyframes circle22-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;border: transparent;}  to{background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(144);margin-left: clampMun(1358);width: clampMun(36);height: clampMun(36);}}
-          @keyframes circle23-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;border: transparent;}  to{background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(198);margin-left: clampMun(1447);width: clampMun(72);height: clampMun(72);}}
-          @keyframes circle24-1{from{margin-left: calc(50vw - clampMun(100));margin-top: clampMun(265);width: clampMun(200);height: clampMun(200);border-radius: 50%;background-color: #3CB4E5;border: transparent;}  to{background-color:#fff;border:1px solid #ff4713;margin-top: clampMun(455);margin-left: clampMun(693);width: clampMun(76);height: clampMun(76);}}
-          @keyframes circle25-1{from{width: clampMun(40);height: clampMun(40);border: 50%;background-color: #3CB4E5;border: 1px solid #3CB4E5;margin-top: clampMun(240); margin-left: clampMun(1040);border: transparent;} to{background-color:#fff;border:1px solid #ff4713;margin-top: clampMun(870);margin-left: clampMun(1231);width: clampMun(436);height: clampMun(436);}}
-          @keyframes circle26-1{from{width: clampMun(200);height: clampMun(100);border-radius: 0 0 clampMun(100) clampMun(100);background-color: #3CB4E5;border: 1px solid #3CB4E5; margin-top: clampMun(490);margin-left: clampMun(860);transform: rotate(-20deg);border: transparent;} to{background-color:#fff;border:1px solid #ff4713;margin-top: clampMun(779);margin-left: clampMun(1600);width: clampMun(114);height: clampMun(114);border-radius:50%;}}
-
-          @keyframes water {
-            0%{transform: scale3d(1,1,1) rotate(-20deg);}
-            10%{transform:scale3d(.1,.1,.1) rotate(-20deg);}
-            20%{transform:scale3d(1.3,1.3,1.3) rotate(-20deg);}
-            30%{transform:scale3d(.5,.5,.5) rotate(-20deg);}
-            40%{transform:scale3d(1.2,1.2,1.2) rotate(-20deg);}
-            50%{transform:scale3d(.7,.7,.7) rotate(-20deg);}
-            60%{transform:scale3d(1.15,1.15,1.15) rotate(-20deg);}
-            70%{transform:scale3d(.8,.8,.8) rotate(-20deg);}
-            80%{transform:scale3d(1.1,1.1,1.1) rotate(-20deg);}
-            85%{transform:scale3d(.9,.9,.9) rotate(-20deg);}
-            90%{transform:scale3d(1.05,1.05,1.05) rotate(-20deg);}
-            95%{transform:scale3d(.95,.95,.95) rotate(-20deg);}
-            100%{transform:scale3d(1,1,1) rotate(-20deg);}
+          // 3p 스크롤 올라갈 때 모션
+          .move_circle.up > .top_ani{
+            margin-left: clampMun(64);margin-top: clamp(-92rem, -47.9166666667vw, -1rem);background-color: #FF4713;border: transparent;
+            width: clampMun(2650);height: clampMun(1325);border-radius: 0 0 clampMun(1325) clampMun(1325);transform: rotate(0deg);
+            animation: sec3_top_dw 2s forwards;
           }
+          @keyframes sec3_top_dw { 
+            from{}
+            50%{width: clampMun(1920);height: clampMun(200);border-radius: 0%;margin-left: 0;margin-top: 0;}
+            to{width: clampMun(1920);height: clampMun(200);border-radius: 0%;margin-left: 0;margin-top: 0;opacity: 0;}
+          }
+          .ani_box.up{
+            animation: sec3_up_top 1s forwards;
+          }
+          @keyframes sec3_up_top {
+            from{margin-top: -200px;}
+            to{margin-top: 0;}
+          }
+
+          //캐릭터 모션
+          .circle1.up{animation: hair_up 2s 1s forwards;}
+          @keyframes hair_up {
+            from{margin-left: clampMun(1617);margin-top: clampMun(1080);}
+            to{margin-left: clampMun(1617);margin-top: clampMun(650);width: clampMun(114);height: clampMun(114);background-color: #fff;border: 1px solid #FF4713;}
+        }
+          .circle2.up{animation: head_up 2s 1s forwards;}
+          @keyframes head_up {
+            from{margin-left: clampMun(1294);margin-top: clampMun(1220);}
+            to{margin-left: clampMun(1294);margin-top: clampMun(750);width: clampMun(436);height: clampMun(436);background-color: #fff;border: 1px solid #FF4713;}
+        }
+          //move circle 모션
+          .move_circle.up > .circle3-1 {animation: cir1_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-2 {animation: cir2_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-3 {animation: cir3_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-4 {animation: cir4_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-5 {animation: cir5_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-6 {animation: cir6_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-7 {animation: cir7_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-8 {animation: cir8_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-9 {animation: cir9_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-10 {animation: cir10_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-11 {animation: cir11_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-12 {animation: cir12_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-13 {animation: cir13_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-14 {animation: cir14_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-15 {animation: cir15_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-16 {animation: cir16_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-17 {animation: cir17_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-18 {animation: cir18_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-19 {animation: cir19_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-20 {animation: cir20_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-21 {animation: cir21_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-22 {animation: cir22_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-23 {animation: cir23_dw 2s 1s forwards;}
+          .move_circle.up > .circle3-24 {animation: cir24_dw 2s 1s forwards;}
+
+          @keyframes cir1_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(385);margin-left: clampMun(128);width: clampMun(90);height: clampMun(90);border-radius:50%;}}
+          @keyframes cir2_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(180);margin-left: clampMun(207);width: clampMun(70);height: clampMun(70);border-radius:50%;}}
+          @keyframes cir3_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(388);margin-left: clampMun(404);width: clampMun(40);height: clampMun(40);border-radius:50%;}}
+          @keyframes cir4_dw {from{}to{margin-top: clampMun(188);margin-left: clampMun(441);width: clampMun(154);height: clampMun(154);background-color: #3CB4E5;opacity: 1;}}
+          @keyframes cir5_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(290);margin-left: clampMun(666);width: clampMun(92);height: clampMun(92);border-radius:50%;}}
+          @keyframes cir6_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(209);margin-left: clampMun(744);width: clampMun(42);height: clampMun(42);border-radius:50%;}}
+          @keyframes cir7_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(417);margin-left: clampMun(815);width: clampMun(50);height: clampMun(50);border-radius:50%;}}
+          @keyframes cir8_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(290);margin-left: clampMun(937);width: clampMun(66);height: clampMun(66);border-radius:50%;}}
+          @keyframes cir9_dw {from{}to{margin-top: clampMun(241);margin-left: clampMun(1114);width: clampMun(182);height: clampMun(182);background-color: #3CB4E5;opacity: 1;}}
+          @keyframes cir10_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(600);margin-left: clampMun(1252);width: clampMun(34);height: clampMun(34);border-radius:50%;}}
+          @keyframes cir11_dw {from{}to{opacity: 1;background-color:#ff7a00;margin-top: clampMun(300);margin-left: clampMun(280);width: clampMun(24);height: clampMun(24);border-radius:50%;}}
+          @keyframes cir12_dw {from{}to{opacity: 1;background-color:#ff7a00;margin-top: clampMun(380);margin-left: clampMun(540);width: clampMun(18);height: clampMun(18);}}
+          @keyframes cir13_dw {from{}to{opacity: 1;background-color:#ff7a00;margin-top: clampMun(318);margin-left: clampMun(1360);width: clampMun(46);height: clampMun(46);}}
+          @keyframes cir14_dw {from{}to{opacity: 1;background-color:#ff7a00;margin-top: clampMun(544);margin-left: clampMun(1560);width: clampMun(34);height: clampMun(34);border-radius:50%;}}
+          @keyframes cir15_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(242);margin-left: clampMun(628);width: clampMun(24);height: clampMun(24);border-radius:50%;}}
+          @keyframes cir16_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(378);margin-left: clampMun(1029);width: clampMun(12);height: clampMun(12);}}
+          @keyframes cir17_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(484);margin-left: clampMun(1331);width: clampMun(16);height: clampMun(16);}}
+          @keyframes cir18_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(862);margin-left: clampMun(1749);width: clampMun(12);height: clampMun(12);}}
+          @keyframes cir19_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(776);margin-left: clampMun(1830);width: clampMun(50);height: clampMun(50);}}
+          @keyframes cir20_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(388);margin-left: clampMun(611);width: clampMun(32);height: clampMun(32);border-radius:50%;}}
+          @keyframes cir21_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(436);margin-left: clampMun(929);width: clampMun(50);height: clampMun(50);}}
+          @keyframes cir22_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(144);margin-left: clampMun(1358);width: clampMun(36);height: clampMun(36);}}
+          @keyframes cir23_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(178);margin-left: clampMun(1447);width: clampMun(72);height: clampMun(72);}}
+          @keyframes cir24_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #ff4713;margin-top: clampMun(455);margin-left: clampMun(693);width: clampMun(76);height: clampMun(76);}}
 
       }
       /* section4(인력 구인) */
@@ -1435,351 +1418,79 @@ input {outline-offset:-1px;}
 
           //캐릭터 원
           .circle3-1{margin-top: clampMun(385);margin-left: clampMun(128);width: clampMun(90);height: clampMun(90);}
-          .circle3-2{margin-top: clampMun(210);margin-left: clampMun(207);width: clampMun(70);height: clampMun(70);}
-          .circle3-3{margin-top: clampMun(338);margin-left: clampMun(404);width: clampMun(24);height: clampMun(24);}
+          .circle3-2{margin-top: clampMun(180);margin-left: clampMun(207);width: clampMun(70);height: clampMun(70);}
+          .circle3-3{margin-top: clampMun(388);margin-left: clampMun(404);width: clampMun(40);height: clampMun(40);}
           .circle3-4{margin-top: clampMun(188);margin-left: clampMun(441);width: clampMun(154);height: clampMun(154);}
           .circle3-5{margin-top: clampMun(290);margin-left: clampMun(666);width: clampMun(92);height: clampMun(92);}
           .circle3-6{margin-top: clampMun(209);margin-left: clampMun(744);width: clampMun(42);height: clampMun(42);}
           .circle3-7{margin-top: clampMun(417);margin-left: clampMun(815);width: clampMun(50);height: clampMun(50);}
-          .circle3-8{margin-top: clampMun(322);margin-left: clampMun(937);width: clampMun(66);height: clampMun(66);}
+          .circle3-8{margin-top: clampMun(290);margin-left: clampMun(937);width: clampMun(66);height: clampMun(66);}
           .circle3-9{margin-top: clampMun(241);margin-left: clampMun(1114);width: clampMun(182);height: clampMun(182);}
           .circle3-10{margin-top: clampMun(600);margin-left: clampMun(1252);width: clampMun(34);height: clampMun(34);}
 
           .circle3-11{margin-top: clampMun(300);margin-left: clampMun(280);width: clampMun(24);height: clampMun(24);}
-          .circle3-12{margin-top: clampMun(350);margin-left: clampMun(540);width: clampMun(18);height: clampMun(18);}//좌측 바닥
+          .circle3-12{margin-top: clampMun(380);margin-left: clampMun(540);width: clampMun(18);height: clampMun(18);}
           .circle3-13{margin-top: clampMun(318);margin-left: clampMun(1360);width: clampMun(46);height: clampMun(46);}
-          .circle3-14{margin-top: clampMun(544);margin-left: clampMun(1560);width: clampMun(34);height: clampMun(34);}//우측 바닥
+          .circle3-14{margin-top: clampMun(544);margin-left: clampMun(1560);width: clampMun(34);height: clampMun(34);}
           .circle3-15{margin-top: clampMun(242);margin-left: clampMun(628);width: clampMun(24);height: clampMun(24);}
           .circle3-16{margin-top: clampMun(378);margin-left: clampMun(1029);width: clampMun(12);height: clampMun(12);}
           .circle3-17{margin-top: clampMun(484);margin-left: clampMun(1331);width: clampMun(16);height: clampMun(16);}
-          .circle3-18{margin-top: clampMun(962);margin-left: clampMun(1749);width: clampMun(12);height: clampMun(12);}
+          .circle3-18{margin-top: clampMun(862);margin-left: clampMun(1749);width: clampMun(12);height: clampMun(12);}
           .circle3-19{margin-top: clampMun(776);margin-left: clampMun(1830);width: clampMun(50);height: clampMun(50);}
           .circle3-20{margin-top: clampMun(388);margin-left: clampMun(611);width: clampMun(32);height: clampMun(32);}
 
           .circle3-21{margin-top: clampMun(436);margin-left: clampMun(929);width: clampMun(50);height: clampMun(50);}
           .circle3-22{margin-top: clampMun(144);margin-left: clampMun(1358);width: clampMun(36);height: clampMun(36);}
-          .circle3-23{margin-top: clampMun(198);margin-left: clampMun(1447);width: clampMun(72);height: clampMun(72);}
+          .circle3-23{margin-top: clampMun(178);margin-left: clampMun(1447);width: clampMun(72);height: clampMun(72);}
           .circle3-24{margin-top: clampMun(455);margin-left: clampMun(693);width: clampMun(76);height: clampMun(76);}
-          .circle3-25{margin-top: clampMun(870);margin-left: clampMun(1231);width: clampMun(436);height: clampMun(436);}//캐릭터 머리
-          .circle3-26{margin-top: clampMun(779);margin-left: clampMun(1600);width: clampMun(114);height: clampMun(114);}//캐릭터 꽁지
+          .circle3-25{margin-top: clampMun(870);margin-left: clampMun(1231);width: clampMun(436);height: clampMun(436);border-radius: 50%;}//캐릭터 머리
+          .circle3-26{margin-top: clampMun(779);margin-left: clampMun(1600);width: clampMun(114);height: clampMun(114);border-radius: 50%;}//캐릭터 꽁지
+          .circle3-27{margin-top: clampMun(1370);margin-left: clampMun(1250);width: clampMun(436);height: clampMun(218);border-radius: 0 0 clampMun(218) clampMun(218);transform: rotate(-20deg);}//캐릭터 몸통
+          // .circle3-25{margin-top: clampMun(350);margin-left: clampMun(1230);width: clampMun(436);height: clampMun(436);border-radius: 50%;}//캐릭터 머리
+          // .circle3-26{margin-top: clampMun(260);margin-left: clampMun(1600);width: clampMun(114);height: clampMun(114);border-radius: 50%;}//캐릭터 꽁지
+          // .circle3-27{margin-top: clampMun(850);margin-left: clampMun(1250);width: clampMun(436);height: clampMun(218);border-radius: 0 0 clampMun(218) clampMun(218);transform: rotate(-20deg);}//캐릭터 몸통
 
-          //캐릭터 모션
-          .cha_body.on{animation: cha_body 1s forwards, front_body 3s 6.5s forwards, shake_body 1.5s 11s forwards, jump_body 2s 13s forwards, body_inlogo 3s 16s forwards;}
-          @keyframes cha_body {
-            from{}
-            to{
-              width: clampMun(100);height: clampMun(50);border-radius: 0 0 clampMun(50) clampMun(50);
-              transform: rotate(-20deg);background-color: #ff7a00;border: transparent;
-              margin-top: clampMun(130);margin-left: clampMun(910);
-            }
-          }
-          @keyframes front_body {
-            from{}
-            to{
-              width: clampMun(300);height: clampMun(150);border-radius: 0 0 clampMun(150) clampMun(150);
-              margin-top: clampMun(730);margin-left: clampMun(810);
-            }
-          }
-          @keyframes shake_body {
-            from{}
-            25%{transform: rotate(40deg);}
-            50%{transform: rotate(-10deg);}
-            75%{transform: rotate(30deg);}
-            to{transform: rotate(-20deg);}
-          }
-          @keyframes jump_body {
-            from{}
-            25%{margin-top: clampMun(690);}
-            50%{margin-top: clampMun(730);}
-            to{margin-top: clampMun(730);}
-          }
-          @keyframes body_inlogo {
-            from{}
-            70%{
-              opacity: 1;
-              margin-top: clampMun(722);margin-left: clampMun(1386);
-              width: clampMun(78);height: clampMun(39);border-radius: 0 0 clampMun(39) clampMun(39);background-color: #ff4713;
-            }
-            to{
-              opacity: 0;
-              margin-top: clampMun(722);margin-left: clampMun(1386);
-              width: clampMun(78);height: clampMun(39);border-radius: 0 0 clampMun(39) clampMun(39);background-color: #ff4713;
-            }
-          }
-          .cha_head.on{animation: cha_head 1s forwards, front_head 3s 6.5s forwards, jump_head 2s 13.5s forwards, head_inlogo 3s 16s forwards;}
-          @keyframes cha_head {
-            from{}
-            to{
-              width: clampMun(100);height: clampMun(100);
-              background-color: #ff7a00;border: transparent;
-              margin-top: clampMun(15);margin-left: clampMun(910);
-            }
-          }
-          @keyframes front_head {
-            from{}
-            to{
-              width: clampMun(300);height: clampMun(300);
-              margin-top: clampMun(380);margin-left: clampMun(810);
-            }
-          }
-          @keyframes jump_head {
-            from{}
-            25%{margin-top: clampMun(250);}
-            50%{margin-top: clampMun(400);}
-            75%{margin-top: clampMun(300);}
-            to{
-              margin-top: clampMun(380);margin-left: clampMun(810);
-            }
-          }
-          @keyframes head_inlogo {
-            from{}
-            80%{
-              opacity: 1;
-              margin-top: clampMun(629);margin-left: clampMun(1379);
-              width: clampMun(80);height: clampMun(80);border-radius: 50%;background-color: #ff4713;
-            }
-            to{
-              opacity: 0;
-              margin-top: clampMun(629);margin-left: clampMun(1379);
-              width: clampMun(80);height: clampMun(80);border-radius: 50%;background-color: #ff4713;
-            }
-          }
-          .cha_hair.on{animation: cha_hair 1s forwards, front_hair 3s 6.5s forwards, shake_hair 1.5s 11s forwards, jump_hair 2s 14s forwards, hair_inlogo 3s 16s forwards;}
-          @keyframes cha_hair {
-            from{}
-            to{
-              width: clampMun(20);height: clampMun(20);
-              background-color: #ff7a00;border: transparent;
-              margin-top: clampMun(5);margin-left: clampMun(1000);
-            }
-          }
-          @keyframes front_hair {
-            from{}
-            to{
-              width: clampMun(60);height: clampMun(60);
-              margin-top: clampMun(350);margin-left: clampMun(1100);
-            }
-          }
-          @keyframes shake_hair{
-            from{}
-            25%{margin-top: clampMun(330);margin-left: clampMun(1080);}
-            50%{margin-top: clampMun(350);margin-left: clampMun(1100);}
-            75%{margin-top: clampMun(330);margin-left: clampMun(1080);}
-            to{margin-top: clampMun(350);margin-left: clampMun(1100);}
-          }
-          @keyframes jump_hair{
-            from{}
-            25%{margin-top: clampMun(250);}
-            50%{margin-top: clampMun(380);}
-            75%{margin-top: clampMun(300);}
-            to{margin-top: clampMun(350);}
-          }
-          @keyframes hair_inlogo {
-            from{}
-            80%{
-              opacity: 1;
-              margin-top: clampMun(618);margin-left: clampMun(1451);
-              width: clampMun(20);height: clampMun(20);border-radius: 50%;background-color: #ff4713;
-            }
-            to{
-              opacity: 0;
-              margin-top: clampMun(618);margin-left: clampMun(1451);
-              width: clampMun(20);height: clampMun(20);border-radius: 50%;background-color: #ff4713;
-            }
-          }
-          //양 옆 박스
-          .bottom_l.on{animation: bt_lx 3s forwards, bt_l 3s 3.4s forwards, up_l 2s 10s forwards;}
-          @keyframes bt_lx {
-            from{}
-            to{
-              width: 0px;height: 0px;border-radius: 0;
-              margin-top: clampMun(200);margin-left: 0;
-              background-color: transparent;
-              border-top: clampMun(440)  solid #ff7a00;
-              border-left: clampMun(480)  solid #ff7a00;
-              border-bottom: clampMun(440) solid #ff7a00;
-              border-right: clampMun(480) solid #ff7a00;
-            }
-          }
-          @keyframes bt_l {
-            from{}
-            to{
-              width: 0;height: 0;border-radius: 0;
-              margin-top: clampMun(200);margin-left: 0;
-              background-color: transparent;
-              border-top: clampMun(440)  solid #ff7a00;
-              border-left: clampMun(400)  solid #ff7a00;
-              border-bottom: clampMun(440) solid transparent;
-              border-right: clampMun(400) solid transparent;
-            }
-          }
-          @keyframes up_l {
-            from{}
-            50%{
-              opacity: 1;margin-top: clampMun(200);
-              border-top: clampMun(0)  solid #ff7a00;
-              border-left: clampMun(400)  solid #ff7a00;
-              border-bottom: clampMun(0) solid transparent;
-              border-right: clampMun(400) solid transparent;
-            }
-            99%{margin-top: 0;}
-            to{
-              border: transparent;
-            }
-          }
-          .bottom_r.on{animation: bt_rx 3s forwards, bt_r 3s 3.4s forwards, up_r 2s 10s forwards;}
-          @keyframes bt_rx {
-            from{}
-            to{
-              width: 0px;height: 0px;border-radius: 0;
-              margin-top: clampMun(200);margin-left: clampMun(960);
-              background-color: transparent;
-              border-top: clampMun(440)  solid #ff7a00;
-              border-left: clampMun(480)  solid #ff7a00;
-              border-bottom: clampMun(440) solid #ff7a00;
-              border-right: clampMun(480) solid #ff7a00;
-            }
-          }
-          @keyframes bt_r {
-            from{}
-            to{
-              width: 0;height: 0;border-radius: 0;
-              margin-top: clampMun(200);margin-left: clampMun(1120);
-              background-color: transparent;
-              border-top: clampMun(440)  solid #ff7a00;
-              border-left: clampMun(400)  solid transparent;
-              border-bottom: clampMun(440) solid transparent;
-              border-right: clampMun(400) solid #ff7a00;
-            }
-          }
-          @keyframes up_r {
-            from{}
-            50%{
-              opacity: 1;margin-top: clampMun(200);margin-left: clampMun(1120);
-              border-top: clampMun(0)  solid #ff7a00;
-              border-left: clampMun(400)  solid transparent;
-              border-bottom: clampMun(0) solid transparent;
-              border-right: clampMun(400) solid #ff7a00;
-            }
-            99%{margin-top: 0;margin-left: clampMun(2000);}
-            to{
-              border: transparent;
-            }
-          }
-          //상단 박스
-          .lt_box.on{margin-top: 0;margin-left: 0;width:clampMun(960);height: clampMun(200);animation: lt_cls 3s forwards, lt_box 3s 3.4s forwards, lt_incir 2s 12s forwards;}
-          @keyframes lt_cls{
-            from{}
-            to{
-              background-color: #ff7a00;
-            }
-          }
-          @keyframes lt_box {
-            from{}
-            to{
-              width: clampMun(800);background-color: #ff7a00;
-            }
-          }
+          //원들 사라짐
+          .move4_circle.on > .cir{animation: cir_up 2s forwards;}
 
-          @keyframes lt_incir {
+          @keyframes cir_up  {
             from{}
-            80%{
-              opacity: 1;
-              margin-top: clampMun(74);margin-left: clampMun(230);
-              width: clampMun(10);height: clampMun(10);border-radius: 50%;background-color: #ff4713;
-            }
+            to{opacity: 0;margin-top: -300px;}
+          }
+          //캐릭터
+          .move4_circle.on > .circle3-25{animation: cha_up1 1s forwards, cha_up1-1 2s 1s forwards;}
+          .move4_circle.on > .circle3-26{animation: cha_up2 1s forwards, cha_up2-1 2s 1s forwards;}
+          .move4_circle.on > .circle3-27{animation: cha_up3 1s forwards, cha_up3-1 2s 1s forwards;}
+          @keyframes cha_up1 {from{} to{margin-top: clampMun(350);}}
+          @keyframes cha_up2 {from{} to{margin-top: clampMun(260);}}
+          @keyframes cha_up3 {from{} to{margin-top: clampMun(850);}}
+          @keyframes cha_up1-1 {from{} to{opacity: 0;margin-top: -800px;}}
+          @keyframes cha_up2-1 {from{} to{opacity: 0;margin-top: -800px;}}
+          @keyframes cha_up3-1 {from{} to{margin-left: clampMun(64);margin-top: clamp(-92rem, -47.9166666667vw, -1rem);background-color: #FF4713;border: transparent;width: clampMun(2650);height: clampMun(1325);border-radius: 0 0 clampMun(1325) clampMun(1325);transform: rotate(0deg);}}
+          // 배경 주황색
+          .bg_box.on{
+            width: 100%;
+            height: clamp(1rem,10.41667vw,20rem);
+            background-color: #3CB4E5;
+            animation: box_dw 1s forwards, box_up 2s 1s forwards;
+          }
+          @keyframes box_dw {
+            from{}
             to{
+              height: clampMun(1080);
+              background-color: #FF4713;
+            }
+          }
+          @keyframes box_up {
+            from{}
+            90%{background-color: #FF4713;}
+            to{
+              height: 0;
               opacity: 0;
-              margin-top: clampMun(74);margin-left: clampMun(230);
-              width: clampMun(10);height: clampMun(10);border-radius: 50%;background-color: #ff4713;
             }
           }
-          .rt_box.on{margin-top: 0;margin-left: clampMun(960);width:clampMun(960);height: clampMun(200);animation: rt_cls 3s forwards, rt_box 3s 3.4s forwards, rt_incir 2s 12s forwards,rt_cirdw 2s 16s forwards;}
-          @keyframes rt_cls{
-            from{}
-            to{
-              background-color: #ff7a00;
-            }
-          }
-          @keyframes rt_box {
-            from{}
-            to{
-              width: clampMun(800);background-color: #ff7a00;margin-left: clampMun(1120);
-            }
-          }
-          @keyframes rt_incir {
-            from{}
-            to{
-              margin-top: clamp(-106rem, -55.2083333333vw, -1rem);margin-left: clampMun(64);
-              width: clampMun(2600);height: clampMun(1300);border-radius: 0 0 clampMun(1300) clampMun(1300);background-color: #ff4713;
-            }
-          }
-          @keyframes rt_cirdw {
-            from{}
-            to{
-              margin-top: clamp(-95rem, -49.4791666667vw, -1rem);
-            }
-          }
-          // 글자 모션
-          .op{opacity: 0;}
-          .txt_1{width: clampMun(20);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1209);border-radius: 10%;}
-          .txt_2{width: clampMun(79);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1248);border-radius:10% clampMun(40) clampMun(40) 10%}
-          .txt_3{width: clampMun(20);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1339);border-radius: 10%;}
-          .txt_4{width: clampMun(72);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1487);border-radius:10% clampMun(30) 10% 10%}
-          .txt_5{width: clampMun(86);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1567);border-radius: 50%;}
-          .txt_6{width: clampMun(97);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1661);border-radius:55% 3% 34% 35%}
-
-          .motxt_1.on{animation: txt1 1s 15s ease-out forwards, txt_out .5s 18.5s forwards;}
-          @keyframes txt1 {
-            0%{opacity:0;transform: translate3d(-300%,0,0) skewX(30deg);}
-            60%{opacity: 1;transform: skewX(-20deg)}
-            80%{transform: skewX(5deg);}
-            to{transform: translateZ(0);opacity: 1}
-          }
-          .motxt_2.on{animation: txt2 1s 14s ease-out forwards, txt_out .5s 18.5s forwards;}
-          @keyframes txt2 {
-            0%{opacity:0;transform: translate3d(-300%,0,0) skewX(30deg);}
-            60%{opacity: 1;transform: skewX(-20deg)}
-            80%{transform: skewX(5deg);}
-            to{transform: translateZ(0);opacity: 1}
-          }
-          .motxt_3.on{animation: txt3 1s 13s ease-out forwards, txt_out .5s 18.5s forwards;}
-          @keyframes txt3 {
-            0%{opacity:0;transform: translate3d(-300%,0,0) skewX(30deg);}
-            60%{opacity: 1;transform: skewX(-20deg)}
-            80%{transform: skewX(5deg);}
-            to{transform: translateZ(0);opacity: 1}
-          }
-          .motxt_4.on{animation: txt4 1s 12s ease-out forwards, txt_out .5s 18.5s forwards;}
-          @keyframes txt4 {
-            0%{opacity:0;transform: translate3d(-300%,0,0) skewX(30deg);}
-            60%{opacity: 1;transform: skewX(-20deg)}
-            80%{transform: skewX(5deg);}
-            to{transform: translateZ(0);opacity: 1}
-          }
-          .motxt_5.on{animation: txt5 .5s 11s ease-out forwards, txt5_1 1s 11.5s forwards, txt_out .5s 18.5s forwards;}
-          @keyframes txt5 {
-            0%{opacity: 0;transform: translate3d(0,-300%,0);margin-top: clampMun(637);}
-            to{opacity: 1;width: clampMun(45);height: clampMun(120);margin-left: clampMun(1580);margin-top: clampMun(592);}
-          }
-          @keyframes txt5_1 { //626
-            // 0%{width: clampMun(45);height: clampMun(120);margin-top: clampMun(592);margin-left: clampMun(1567);}
-            50%{width: clampMun(100);height: clampMun(60);margin-top: clampMun(652);}
-            80%{width: clampMun(70);height: clampMun(90);margin-top: clampMun(622);}
-            to{width: clampMun(86);height: clampMun(86);margin-top: clampMun(626);margin-left: clampMun(1567);}
-          }
-          .motxt_6.on{animation: txt6 1s 10s ease-out forwards, txt_out .5s 18.5s forwards;}
-          @keyframes txt6 {
-            0%{opacity:0;transform: translate3d(-300%,0,0) skewX(30deg);}
-            60%{opacity: 1;transform: skewX(-20deg)}
-            80%{transform: skewX(5deg);}
-            to{transform: translateZ(0);opacity: 1}
-          }
-
-          @keyframes txt_out {
-            from{}
-            to{opacity: 0;}
-          }
+          
+          
           //모션 끝
 
           .top_view{
@@ -1794,7 +1505,7 @@ input {outline-offset:-1px;}
             right: 0;
           }
           .cnt_box.on{
-            animation: cnt_in 1s 19s forwards;
+            animation: cnt_in 1s 3s forwards;
             opacity: 0;
             margin: 0 auto;
             /* width: 1600px;
@@ -1820,14 +1531,15 @@ input {outline-offset:-1px;}
             /* margin-top: 300px; */
             margin-top: clamp(1rem,15.625vw,30rem);
           }
-          .career_container h1{
-            /* font-size: 40px; */
+          .cnt_box.on h1{
+            animation: txt_up1 1.5s 3s forwards;
             font-size: clamp(1rem,2.08333vw,4rem);
             font-weight: bold;
             font-family: "SUIT-ExtraBold";
           }
-          .career_container p{
-            /* font-size: 18px;line-height: 30px; */
+          @keyframes txt_up1 {from{opacity: 0;margin-left: clampMun(100);} to{opacity: 1;margin-left: 0;}}
+          .cnt_box.on p{
+            animation: txt_up2 1.5s 4s forwards;
             font-size: clamp(1rem,0.9375vw,1.8rem);
             line-height: clamp(1rem,1.5625vw,3rem);
             font-family: "SUIT-Regular";
@@ -1835,7 +1547,9 @@ input {outline-offset:-1px;}
             width: 410px; */
             margin-top: clamp(1rem,1.30208333vw,2.5rem);
             width: clamp(1rem,21.3541667vw,41rem);
+            opacity: 0;
           }
+          @keyframes txt_up2 {from{opacity: 0;} to{opacity: 1;}}
           .job_btn{margin-top: 20px;}
           .job_btn a{
             padding: 5px;
@@ -1854,12 +1568,17 @@ input {outline-offset:-1px;}
             margin-top: clamp(1rem,2.08333vw,4rem);
             cursor: pointer;
           }
-          .big_logo{
-            /* width: 552px;height: 148px; */
+          .cnt_box.on .big_logo{
+            animation: logo_ani 2s 4s forwards;
+            opacity: 0;
             width: clamp(1rem,28.75vw,55.2rem);
             height: clamp(1rem,13.703vw,14.8rem);
             background: url(../images/logo_large.png) no-repeat 0 0 / auto 100%;
             background-size: contain;
+          }
+          @keyframes logo_ani {
+            from{opacity: 0;margin-top: clampMun(200);}
+            to{opacity: 1;margin-top: 0;}
           }
       }
     }
