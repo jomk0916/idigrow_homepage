@@ -854,14 +854,14 @@ html,body {
             width: clampMun(114);height: clampMun(114);border-radius: 50%;
             // background-color: #fff;
             // border: 1px solid #ff4713;
-            margin-top: 1300px;
+            margin-top: clampMun(650);
             margin-left: clampMun(1600);
           }
           .circle2{ // 캐릭터 얼굴
             width: clampMun(436);height: clampMun(436);border-radius: 50%;
             // background-color: #fff;
             // border: 1px solid #ff4713;
-            margin-top: 1620px;
+            margin-top: clampMun(750);
             margin-left: clampMun(1231)
           }
           .cir{border-radius: 50%;}
@@ -1115,13 +1115,13 @@ html,body {
               background-color: #3CB4E5;
             }
             to {
-              margin-top: clampMun(779);
+              margin-top: clampMun(650);
               background-color: #3CB4E5;
             }
           }
           @keyframes hair_bomb {
             from {}
-            70%{width: clampMun(80);height: clampMun(80);margin-top: clampMun(796);}
+            70%{width: clampMun(80);height: clampMun(80);margin-top: clampMun(667);}
             80%{background-color: #FF4713;border: transparent;}
             to{width: clampMun(114);height: clampMun(114);background-color: #fff;border: 1px solid #FF4713;}
           }
@@ -1134,13 +1134,13 @@ html,body {
               background-color: #3CB4E5;
             }
             to{
-              margin-left: clampMun(1294);margin-top: clampMun(870);
+              margin-left: clampMun(1294);margin-top: clampMun(750);
               background-color: #3CB4E5;
             }
           }
           @keyframes head_bomb {
             from{}
-            70%{width: clampMun(310);height: clampMun(310);margin-left: clampMun(1414);margin-top: clampMun(933);}
+            70%{width: clampMun(310);height: clampMun(310);margin-left: clampMun(1414);margin-top: clampMun(813);}
             80%{background-color: #FF4713;border: transparent;}
             to{width: clampMun(436);height: clampMun(436);margin-left: clampMun(1294);background-color: #fff;border: 1px solid #FF4713;}
           }
@@ -1178,7 +1178,7 @@ html,body {
 
           @keyframes cir_move_l {from{opacity: 0;}to{margin-top: clampMun(255);margin-left: clampMun(508);width: clampMun(20);height: clampMun(20);border-radius: 50%;opacity: 0;}}
           @keyframes cir_move_r {from{opacity: 0;}to{margin-top: clampMun(322);margin-left: clampMun(1195);width: clampMun(20);height: clampMun(20);border-radius: 50%;opacity: 0;}}
-          @keyframes cir_move {from{opacity: 0;}to{margin-top: clampMun(826);margin-left: clampMun(1647);width: clampMun(20);height: clampMun(20);border-radius: 50%;opacity: 0;}}
+          @keyframes cir_move {from{opacity: 0;}to{margin-top: clampMun(707);margin-left: clampMun(1647);width: clampMun(20);height: clampMun(20);border-radius: 50%;opacity: 0;}}
 
           @keyframes circle1  {from{opacity: 1;} to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(385);margin-left: clampMun(128);width: clampMun(90);height: clampMun(90);}}
           @keyframes circle2  {from{opacity: 1;} to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(180);margin-left: clampMun(207);width: clampMun(70);height: clampMun(70);}}
@@ -1200,7 +1200,7 @@ html,body {
 
           @keyframes circle16 {from{opacity: 1;} to{opacity: 1;background-color:#ff4713;margin-top: clampMun(378);margin-left: clampMun(1029);width: clampMun(12);height: clampMun(12);}}
           @keyframes circle17 {from{opacity: 1;} to{opacity: 1;background-color:#ff4713;margin-top: clampMun(484);margin-left: clampMun(1331);width: clampMun(16);height: clampMun(16);}}
-          @keyframes circle18 {from{opacity: 1;} to{opacity: 1;background-color:#ff4713;margin-top: clampMun(962);margin-left: clampMun(1749);width: clampMun(12);height: clampMun(12);}}
+          @keyframes circle18 {from{opacity: 1;} to{opacity: 1;background-color:#ff4713;margin-top: clampMun(862);margin-left: clampMun(1749);width: clampMun(12);height: clampMun(12);}}
           @keyframes circle19 {from{opacity: 1;} to{opacity: 1;background-color:#ff4713;margin-top: clampMun(776);margin-left: clampMun(1830);width: clampMun(50);height: clampMun(50);}}
           @keyframes circle20 {from{opacity: 1;} to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(388);margin-left: clampMun(611);width: clampMun(32);height: clampMun(32);border-radius:50%;}}
 
@@ -1240,12 +1240,12 @@ html,body {
           .circle1.up{animation: hair_up 2s 1s forwards;}
           @keyframes hair_up {
             from{margin-left: clampMun(1617);margin-top: clampMun(1080);}
-            to{margin-left: clampMun(1617);margin-top: clampMun(796);width: clampMun(114);height: clampMun(114);background-color: #fff;border: 1px solid #FF4713;}
+            to{margin-left: clampMun(1617);margin-top: clampMun(650);width: clampMun(114);height: clampMun(114);background-color: #fff;border: 1px solid #FF4713;}
         }
           .circle2.up{animation: head_up 2s 1s forwards;}
           @keyframes head_up {
             from{margin-left: clampMun(1294);margin-top: clampMun(1220);}
-            to{margin-left: clampMun(1294);margin-top: clampMun(933);width: clampMun(436);height: clampMun(436);background-color: #fff;border: 1px solid #FF4713;}
+            to{margin-left: clampMun(1294);margin-top: clampMun(750);width: clampMun(436);height: clampMun(436);background-color: #fff;border: 1px solid #FF4713;}
         }
           //move circle 모션
           .move_circle.up > .circle3-1 {animation: cir1_dw 2s 1s forwards;}
@@ -1290,7 +1290,7 @@ html,body {
           @keyframes cir15_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(242);margin-left: clampMun(628);width: clampMun(24);height: clampMun(24);border-radius:50%;}}
           @keyframes cir16_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(378);margin-left: clampMun(1029);width: clampMun(12);height: clampMun(12);}}
           @keyframes cir17_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(484);margin-left: clampMun(1331);width: clampMun(16);height: clampMun(16);}}
-          @keyframes cir18_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(962);margin-left: clampMun(1749);width: clampMun(12);height: clampMun(12);}}
+          @keyframes cir18_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(862);margin-left: clampMun(1749);width: clampMun(12);height: clampMun(12);}}
           @keyframes cir19_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(776);margin-left: clampMun(1830);width: clampMun(50);height: clampMun(50);}}
           @keyframes cir20_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(388);margin-left: clampMun(611);width: clampMun(32);height: clampMun(32);border-radius:50%;}}
           @keyframes cir21_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(436);margin-left: clampMun(929);width: clampMun(50);height: clampMun(50);}}
@@ -1338,7 +1338,7 @@ html,body {
           .circle3-15{margin-top: clampMun(242);margin-left: clampMun(628);width: clampMun(24);height: clampMun(24);}
           .circle3-16{margin-top: clampMun(378);margin-left: clampMun(1029);width: clampMun(12);height: clampMun(12);}
           .circle3-17{margin-top: clampMun(484);margin-left: clampMun(1331);width: clampMun(16);height: clampMun(16);}
-          .circle3-18{margin-top: clampMun(962);margin-left: clampMun(1749);width: clampMun(12);height: clampMun(12);}
+          .circle3-18{margin-top: clampMun(862);margin-left: clampMun(1749);width: clampMun(12);height: clampMun(12);}
           .circle3-19{margin-top: clampMun(776);margin-left: clampMun(1830);width: clampMun(50);height: clampMun(50);}
           .circle3-20{margin-top: clampMun(388);margin-left: clampMun(611);width: clampMun(32);height: clampMun(32);}
 
