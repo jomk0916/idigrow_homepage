@@ -825,6 +825,7 @@ input {
   stroke: #3CB4E5;
   stroke-dasharray: 350px;
   stroke-width: 1px;
+  y: 84%;
 }
 @keyframes sec2_stroke {
   0% {
@@ -3782,22 +3783,7 @@ input {
     top: 35%;
     padding: 0 0 0 15px;
   }
-  #wrap #main #section2 .container .gap .sec2_textBox .main_text {
-    display: block;
-    margin-bottom: 70px;
-  }
-  #wrap #main #section2 .container .gap .sec2_textBox .main_text h1 {
-    margin-bottom: 15px;
-    font-size: 35px;
-  }
-  #wrap #main #section2 .container .gap .sec2_textBox .main_text span {
-    font-size: 35px;
-    padding: 0 0 0 0;
-  }
-  #wrap #main #section2 .container .gap .sec2_textBox .sec_text {
-    padding: 10px 0 0 0;
-  }
-  #wrap #main #section2 .container .gap .sec2_textBox .sec_text p {
-    font-size: 10px;
+  #wrap #main #section2 .container .gap .sec2_textBox .main_text svg:nth-child(1) {
+    fill: red;
   }
 }
