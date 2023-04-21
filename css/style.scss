@@ -806,23 +806,6 @@ input {outline-offset:-1px;}
                     stroke-dasharray: 350px;
                     stroke-width:1px;
                   }
-
-                  // x="-3" y="84%"
-                  // x="75" y="84%"
-                  // x="155" y="84%"
-                  // x="232" y="84%"
-                  // x="310" y="84%"
-                  // x="390" y="84%"
-                  // x="470" y="84%"
-                  // x="548" y="84%"
-                  // x="658" y="84%"
-                  // x="735" y="84%"
-                  // x="760" y="84%"
-                  // x="838" y="84%"
-                  // x="917" y="84%"
-                  // x="995" y="84%"
-                  // x="1072" y="84%"
-
                 }
               }
               @keyframes sec2_stroke {
@@ -1207,7 +1190,7 @@ input {outline-offset:-1px;}
             animation: hair_up 1.3s 1s forwards, hair_bomb 1s 2s forwards;
           }
 
-          @keyframes hair_up { 
+          @keyframes hair_up {
             from {
               background-color: #3CB4E5;
             }
@@ -1226,7 +1209,7 @@ input {outline-offset:-1px;}
             animation: head_up 1.3s 1s forwards, head_bomb 1s 2s forwards;
           }
 
-          @keyframes head_up { 
+          @keyframes head_up {
             from{
               background-color: #3CB4E5;
             }
@@ -1320,7 +1303,7 @@ input {outline-offset:-1px;}
             width: clampMun(2650);height: clampMun(1325);border-radius: 0 0 clampMun(1325) clampMun(1325);transform: rotate(0deg);
             animation: sec3_top_dw 2s forwards;
           }
-          @keyframes sec3_top_dw { 
+          @keyframes sec3_top_dw {
             from{}
             50%{width: clampMun(1920);height: clampMun(200);border-radius: 0%;margin-left: 0;margin-top: 0;}
             to{width: clampMun(1920);height: clampMun(200);border-radius: 0%;margin-left: 0;margin-top: 0;opacity: 0;}
@@ -1489,8 +1472,8 @@ input {outline-offset:-1px;}
               opacity: 0;
             }
           }
-          
-          
+
+
           //모션 끝
 
           .top_view{
@@ -1901,16 +1884,22 @@ input {outline-offset:-1px;}
 
     // 2p
     #wrap #main #section2 .container .gap {
-      top: 35%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      height: 100%;
       padding:0 0 0 15px;
-    }
-    #wrap #main #section2 .container .gap .sec2_textBox .main_text svg {
-      &:nth-child(1){
-        fill:red;
+      .sec2_textBox {
+        height: auto;
+        margin-bottom: 50px;
       }
     }
-    #wrap #main #section2 .container .gap .sec2_textBox .sec_text {
 
+
+    #wrap #main #section2 .container .gap .sec2_textBox .main_text svg text {
+      font-size: 150px;
     }
 
   }

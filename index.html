@@ -140,21 +140,22 @@
             <div class="sec2_textBox">
               <div class="main_text">
                 <svg width="1435" height="110" viewBox="0 0 1435 110">
-                    <text x="-3" y="84%">디</text>
-                    <text x="75" y="84%">지</text>
-                    <text x="155" y="84%">털</text>
-                    <text x="232" y="84%">교</text>
-                    <text x="310" y="84%">과</text>
-                    <text x="390" y="84%">서</text>
-                    <text x="470" y="84%">부</text>
-                    <text x="548" y="84%">터</text>
-                    <text x="658" y="84%">A</text>
-                    <text x="735" y="84%">I</text>
-                    <text x="760" y="84%">교</text>
-                    <text x="838" y="84%">과</text>
-                    <text x="917" y="84%">서</text>
-                    <text x="995" y="84%">까</text>
-                    <text x="1072" y="84%">지</text>
+                    <text id="text1" x="-3"  y="84%">디</text>
+                    <text id="text2" x="75"  y="84%">지</text>
+                    <text id="text3" x="155" y="84%">털</text>
+                    <text id="text4" x="232" y="84%">교</text>
+                    <text id="text5" x="310" y="84%">과</text>
+                    <text id="text6" x="390" y="84%">서</text>
+                    <text id="text7" x="470" y="84%">부</text>
+                    <text id="text8" x="548" y="84%">터</text>
+
+                    <text id="text9"  x="658"  y="84%">A</text>
+                    <text id="text10" x="735"  y="84%">I</text>
+                    <text id="text11" x="760"  y="84%">교</text>
+                    <text id="text12" x="838"  y="84%">과</text>
+                    <text id="text13" x="917"  y="84%">서</text>
+                    <text id="text14" x="995"  y="84%">까</text>
+                    <text id="text15" x="1072" y="84%">지</text>
                 </svg>
               </div>
               <div class="sec_text">
@@ -333,6 +334,10 @@
       alpha: true
     });
     renderer.outputEncoding = THREE.sRGBEncoding;
+
+    // 버전 확인
+    const glVersion = renderer.getContext().getParameter(renderer.getContext().VERSION);
+    // console.log(glVersion);
 
     let camera = new THREE.PerspectiveCamera(30, 1);
     camera.position.set(0,0,21);
