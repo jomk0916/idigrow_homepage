@@ -140,7 +140,11 @@ input {
 #btn .quick .on {
   background: #000;
 }
+#btn .top_btn {
+  display: none;
+}
 #btn .top_btn.on {
+  display: block;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -271,30 +275,6 @@ input {
   background-size: cover;
   opacity: 0.5;
   transform: translate(-50%, 0%);
-}
-#wrap .testbtn {
-  display: none;
-  z-index: 4;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  background-color: lightcoral;
-  border: 0;
-  font-size: 20px;
-  color: #fff;
-}
-#wrap .endbtn {
-  display: none;
-  z-index: 4;
-  position: absolute;
-  top: 0;
-  left: 100px;
-  padding: 20px;
-  background-color: lightcoral;
-  border: 0;
-  font-size: 20px;
-  color: #fff;
 }
 #wrap .js_animation {
   animation: oneEnd 2s ease-in-out forwards;
@@ -687,7 +667,6 @@ input {
   animation: textRight 2s 11.5s forwards;
 }
 #wrap #main #section2 {
-  position: relative;
   width: 100%;
 }
 #wrap #main #section2.sec2_ani_start .gap .main_text svg text:nth-of-type(1) {
@@ -2783,17 +2762,23 @@ input {
     animation: circleThird 2s 6s forwards, circleScale3_m 3s ease-in-out 8s forwards;
   }
   #wrap #main #section2 .container .gap {
-    top: 50%;
-    padding: 0 0 0 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
+  }
+  #wrap #main #section2 .container .gap .sec2_textBox {
+    height: auto;
+    margin-bottom: 50px;
+  }
+  #wrap #main #section2 .container .gap .sec2_textBox .main_text svg text {
+    font-size: 100px;
   }
   #wrap #main #section2 .container .gap .sec2_textBox .main_text {
     margin-bottom: 20px;
-  }
-  #wrap #main #section2 .container .gap .sec2_textBox .main_text h1 {
-    margin-bottom: 15px;
-  }
-  #wrap #main #section2 .container .gap .sec2_textBox .main_text span {
-    padding: 0 0 0 0;
   }
   #wrap #main #section2 .container .gap .sec2_textBox .sec_text {
     padding: 10px 0 0 0;

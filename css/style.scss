@@ -53,18 +53,24 @@ input {outline-offset:-1px;}
 	.quick li {width:12px;height:12px;margin-bottom:10px; border-radius:50%;border:1px solid #000;cursor:pointer;}
 	.quick .on {background:#000;}
 
-    .top_btn.on{
-      width: 60px;height: 60px;
-      border-radius: 50%;
-      position: fixed;
-      left: 50%;
-      margin-left: -30px;
-      bottom: 10%;
-      background: #FFFFFF;
-      box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.25);
-      z-index: 100;
-      cursor: pointer;
+    .top_btn {
+      display: none;
+      &.on{
+        display: block;
+        width: 60px;height: 60px;
+        border-radius: 50%;
+        position: fixed;
+        left: 50%;
+        margin-left: -30px;
+        bottom: 10%;
+        background: #FFFFFF;
+        box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.25);
+        z-index: 100;
+        cursor: pointer;
+      }
     }
+
+
     .arrow{
       content: '';
       width: 18px;
@@ -203,30 +209,6 @@ input {outline-offset:-1px;}
       background-size: cover;
       opacity: 0.5;
       transform: translate(-50%, 0%);
-    }
-    .testbtn {
-      display: none;
-      z-index: 4;
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding:20px;
-      background-color: lightcoral;
-      border: 0;
-      font-size: 20px;
-      color:#fff;
-    }
-    .endbtn {
-      display: none;
-      z-index: 4;
-      position: absolute;
-      top: 0;
-      left: 100px;
-      padding:20px;
-      background-color: lightcoral;
-      border: 0;
-      font-size: 20px;
-      color:#fff;
     }
 
     .js_animation { // 위로 사라진다
@@ -644,7 +626,6 @@ input {outline-offset:-1px;}
         }
       }
       #section2 {
-        position: relative;
         width: 100%;
         &.sec2_ani_start { // 애니메이션
           .gap {
@@ -1811,17 +1792,25 @@ input {outline-offset:-1px;}
 
     // 2p
     #wrap #main #section2 .container .gap {
-      top: 50%;
-      padding:0 0 0 15px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding:0 50px;
+      .sec2_textBox {
+        height: auto;
+        margin-bottom: 50px;
+      }
     }
+
+    #wrap #main #section2 .container .gap .sec2_textBox .main_text svg text {
+      font-size: 100px;
+    }
+
     #wrap #main #section2 .container .gap .sec2_textBox .main_text {
       margin-bottom: 20px;
-      h1 {
-        margin-bottom: 15px;
-      }
-      span {
-        padding: 0 0 0 0;
-      }
     }
 
     #wrap #main #section2 .container .gap .sec2_textBox .sec_text {
