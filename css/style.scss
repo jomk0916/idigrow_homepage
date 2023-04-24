@@ -772,6 +772,7 @@ input {outline-offset:-1px;}
             .sec2_textBox {
               max-width: 1435px;
               margin: 0 auto;
+              padding:0 50px;
               .main_text {
                 display: flex;
                 width: 100%;
@@ -1891,10 +1892,13 @@ input {outline-offset:-1px;}
     }
 
 
-    #wrap #main #section2 .container .gap .sec2_textBox .main_text svg text {
-      font-size: 150px;
+    #wrap #main #section2 .container .gap .sec2_textBox {
+      padding: 0 10px;
+      .main_text svg text {
+        font-size: 150px;
+        padding: 10px 0 0 0;
+      }
     }
-
   }
 
 

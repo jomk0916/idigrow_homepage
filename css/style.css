@@ -787,6 +787,7 @@ input {
 #wrap #main #section2 .container .gap .sec2_textBox {
   max-width: 1435px;
   margin: 0 auto;
+  padding: 0 50px;
 }
 #wrap #main #section2 .container .gap .sec2_textBox .main_text {
   display: flex;
@@ -2841,7 +2842,11 @@ input {
     height: auto;
     margin-bottom: 50px;
   }
+  #wrap #main #section2 .container .gap .sec2_textBox {
+    padding: 0 10px;
+  }
   #wrap #main #section2 .container .gap .sec2_textBox .main_text svg text {
     font-size: 150px;
+    padding: 10px 0 0 0;
   }
 }
