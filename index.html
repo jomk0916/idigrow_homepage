@@ -371,7 +371,7 @@
         renderer.render(scene, camera);
       }
 
-      if(matchMedia("screen and (max-width: 576px)").matches){
+      if(matchMedia("screen and (max-width: 992px)").matches){
         //화면 크기가 576px이하일때
         let camera = new THREE.PerspectiveCamera(25, 1); // 확대, ?
         camera.position.set(0,0,21);  // x, y, 확대?
