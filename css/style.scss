@@ -101,8 +101,8 @@ input {outline-offset:-1px;}
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background-color: #FF5C35;
-    border:1px solid #fff;
+    background-color: #FF4713;
+    // border:1px solid #fff;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -113,8 +113,8 @@ input {outline-offset:-1px;}
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: #FF5C35;
-    border:1px solid #fff;
+    background-color: #FF4713;
+    // border:1px solid #fff;
     position: absolute;
     top: 0;
     left: 0;
@@ -125,8 +125,8 @@ input {outline-offset:-1px;}
     width: 24px;
     height: 12px;
     border-radius: 12px 12px 0 0;
-    background-color: #FF5C35;
-    border:1px solid #fff;
+    background-color: #FF4713;
+    // border:1px solid #fff;
     transform: rotate(160deg);
     position: absolute;
     top: 0px;
@@ -175,9 +175,14 @@ input {outline-offset:-1px;}
           font-size: clamp(9rem, 9.5377842993vw, 13rem);
           font-family: 'SUIT-Variable';
           font-weight: 1000;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
           li {
             width: 100%;
             line-height: 1.3;
+            display: flex;
+            margin-bottom: 40px;
             a {
               color:#fff;
               transition: all 0.5s;

@@ -1,4 +1,6 @@
+
 $(document).ready(function(){
+
     var i = $("#btn li.on").index(); //0
     // console.log(i);
     var value = 0;
@@ -276,6 +278,13 @@ $(document).ready(function(){
     }
 
     navi_start();
+
+    // 모바일 슬라이드 테스트
+    $('#section1').on({
+        touchstart : function(){
+            console.log("터치 스타트");
+        }
+    })
 
 
     $(window).on("wheel",function(e){

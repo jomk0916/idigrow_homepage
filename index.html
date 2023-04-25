@@ -79,7 +79,7 @@
 
     <!-- 메인 -->
     <main id="main">
-      <section id="section1">
+      <section id="section1" data-logo="0">
         <div class="container">
           <svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 20 1100 1261">
             <g class="circle_all">
@@ -131,7 +131,7 @@
 
         </div>
       </section>
-      <section id="section2" class="">
+      <section id="section2" class="" data-logo="0">
         <div class="bg2"></div>
         <div class="container">
           <div class="gap">
@@ -177,7 +177,7 @@
           </svg>
         </div>
       </section>
-      <section id="section3">
+      <section id="section3" data-logo="1">
         <div class="container">
           <div class="sec3_bg"></div>
           <div class="sec3_motion">
@@ -241,7 +241,7 @@
           </div>
         </div>
       </section>
-      <section id="section4">
+      <section id="section4" data-logo="0">
         <div class="container">
           <div class="po bg_box"></div>
           <div class="po move4_circle">
@@ -311,6 +311,10 @@
     <div class="top_btn"><span class="arrow"></span></div>
   </div>
 
+  <script>
+
+
+  </script>
 
   <script type="importmap">
     {
@@ -337,8 +341,8 @@
     const glVersion = renderer.getContext().getParameter(renderer.getContext().VERSION);
     // console.log(glVersion);
 
-    let camera = new THREE.PerspectiveCamera(30, 1);
-    camera.position.set(0,0,21);
+    let camera = new THREE.PerspectiveCamera(30, 1); // 확대, ?
+    camera.position.set(0,0,21);  // x, y, 확대?
 
     let loader = new GLTFLoader();
     loader.load('logo.glb', function(gltf){
@@ -352,21 +356,30 @@
       });
       gltf.scene.traverse((child) => {
         if (child instanceof THREE.Mesh) {
-          child.material.wireframe = true;
+          child.material.wireframe = true; // 와이어프레임
         }
       });
 
       scene.add(gltf.scene);
 
       // 로고 모델의 y 위치를 변경
-      gltf.scene.position.y = -2.5;
+      gltf.scene.position.y = -3;
 
       function animate(){
         requestAnimationFrame(animate)
         gltf.scene.rotation.y += 0.01;
         renderer.render(scene, camera);
       }
-      animate();
+
+      if(matchMedia("screen and (max-width: 576px)").matches){
+        //화면 크기가 576px이하일때
+        gltf.scene.rotation.y = 0.1;
+        renderer.render(scene, camera);
+      }
+      else {
+        animate();
+      }
+
     });
   </script>
 

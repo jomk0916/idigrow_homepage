@@ -1,3 +1,4 @@
+
 ;(function($){
   const idgrow = {
     init:function(){
@@ -96,6 +97,22 @@
           e.preventDefault();
           $(this).toggleClass('active');
           $('body').toggleClass('scrollLock');
+
+          if( $('section').data('logo') == '1' ){
+            console.log("3페이지");
+          }
+
+          if( $('#header').hasClass('logo_active') == true ){
+            $('#header').removeClass('logo_active');
+          }
+          else {
+            $('#header').addClass('logo_active');
+          }
+
+
+
+          // console.log(i);
+          // $('#header').toggleClass('logo_active');
           $('#modal').toggle(300);
         }
       });
