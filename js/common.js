@@ -109,8 +109,6 @@
             $('#header').addClass('logo_active');
           }
 
-
-
           // console.log(i);
           // $('#header').toggleClass('logo_active');
           $('#modal').toggle(300);

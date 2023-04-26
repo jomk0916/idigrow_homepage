@@ -1,5 +1,25 @@
 
+// 효과음 관련
+function playSound(sound) {
+    sound.currentTime = 0
+    sound.play()
+}
+
+function stopSound(sound) {
+    sound.pause()
+}
+
 $(document).ready(function(){
+    // 효과음 관련
+    setTimeout(()=>{
+        const Sound0101 = new Audio('./media/sound01_01.mp3');
+        playSound(Sound0101);
+    }, 600)
+    setTimeout(()=>{
+        const Sound0102 = new Audio('./media/sound01_02.mp3');
+        playSound(Sound0102);
+    }, 4700)
+
 
     var i = $("#btn li.on").index(); //0
     // console.log(i);
@@ -305,6 +325,7 @@ $(document).ready(function(){
                 $('#section2').removeClass('sec2_ani_re');
             }
             if(i == 1){
+
                 // 1p 끝
                 $('.circle_all').addClass('js_animation');
                 $('.textBox').addClass('js_animation');
