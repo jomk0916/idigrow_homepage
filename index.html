@@ -183,17 +183,25 @@
           <div class="sec3_motion">
             <div class="po circle1"></div>
             <div class="po circle2"></div>
-            <div class="po ani_box"></div>
-            <div class="po move_circle">
+            <div class="po circle3"></div>
+            <g class="po move_circle ani_g">
+              <div class="po ani_box"></div>
               <div class="po cir blue circle3-1"></div>
-              <div class="po cir blue circle3-2"></div>
-              <div class="po cir blue circle3-3"></div>
               <div class="po cir blue circle3-4"></div>
               <div class="po cir blue circle3-5"></div>
+              <div class="po cir blue circle3-9"></div>
+            </g>
+            
+            <div class="po move_circle">
+              <!-- <div class="po cir blue circle3-1"></div> -->
+              <div class="po cir blue circle3-2"></div>
+              <div class="po cir blue circle3-3"></div>
+              <!-- <div class="po cir blue circle3-4"></div> -->
+              <!-- <div class="po cir blue circle3-5"></div> -->
               <div class="po cir blue circle3-6"></div>
               <div class="po cir blue circle3-7"></div>
               <div class="po cir blue circle3-8"></div>
-              <div class="po cir blue circle3-9"></div>
+              <!-- <div class="po cir blue circle3-9"></div> -->
               <div class="po cir blue circle3-10"></div>
               <div class="po cir orange circle3-11"></div>
               <div class="po cir orange circle3-12"></div>
@@ -209,11 +217,19 @@
               <div class="po cir wh_blue circle3-22"></div>
               <div class="po cir wh_blue circle3-23"></div>
               <div class="po cir wh_red circle3-24"></div>
-              <div class="po cir wh_red circle3-25"></div>
-              <div class="po cir wh_red circle3-26"></div>
-              <div class="po top_ani circle3-27"></div>
             </div>
           </div>
+
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+              </filter>
+            </defs>
+          </svg>
+
           <div class="cnt3_box">
             <div class="contact_container">
               <h1>(주)이디그로</h1>
@@ -243,9 +259,9 @@
       </section>
       <section id="section4" data-logo="0">
         <div class="container">
-          <div class="po bg_box"></div>
+          <!-- <div class="po bg_box"></div> -->
           <div class="po move4_circle">
-            <div class="po cir blue circle3-1"></div>
+            <!-- <div class="po cir blue circle3-1"></div>
             <div class="po cir blue circle3-2"></div>
             <div class="po cir blue circle3-3"></div>
             <div class="po cir blue circle3-4"></div>
@@ -268,7 +284,7 @@
             <div class="po cir wh_blue circle3-21"></div>
             <div class="po cir wh_blue circle3-22"></div>
             <div class="po cir wh_blue circle3-23"></div>
-            <div class="po cir wh_red circle3-24"></div>
+            <div class="po cir wh_red circle3-24"></div> -->
             <div class="po sec4_cha wh_red circle3-25"></div>
             <div class="po sec4_cha wh_red circle3-26"></div>
             <div class="po sec4_cha wh_red circle3-27"></div>

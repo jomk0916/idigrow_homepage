@@ -63,6 +63,7 @@ $(document).ready(function(){
             $('.ani_box').removeClass('on');
             $('.circle1').removeClass('on');
             $('.circle2').removeClass('on');
+            $('.circle3').removeClass('on');
             $('.move_circle').removeClass('on');
             $('.cnt3_box').removeClass('on');
             //3p 모션 제거 끝
@@ -71,6 +72,7 @@ $(document).ready(function(){
             $('.ani_box').removeClass('up');
             $('.circle1').removeClass('up');
             $('.circle2').removeClass('up');
+            $('.circle3').removeClass('up');
             $('.cnt3_box').removeClass('up');
             //3p 올라갈때 모션 제거 끝
             //4p 모션 제거 시작
@@ -85,6 +87,7 @@ $(document).ready(function(){
             $('.ani_box').removeClass('on');
             $('.circle1').removeClass('on');
             $('.circle2').removeClass('on');
+            $('.circle3').removeClass('on');
             $('.move_circle').removeClass('on');
             $('.cnt3_box').removeClass('on');
             //3p 모션 제거 끝
@@ -93,6 +96,7 @@ $(document).ready(function(){
             $('.ani_box').removeClass('up');
             $('.circle1').removeClass('up');
             $('.circle2').removeClass('up');
+            $('.circle3').removeClass('up');
             $('.cnt3_box').removeClass('up');
             //3p 올라갈때 모션 제거 끝
             //4p 모션 제거 시작
@@ -116,6 +120,7 @@ $(document).ready(function(){
             $('.ani_box').addClass('on');
             $('.circle1').addClass('on');
             $('.circle2').addClass('on');
+            $('.circle3').addClass('on');
             $('.move_circle').addClass('on');
             $('.cnt3_box').addClass('on');
             // 로고 화이트 변경
@@ -148,6 +153,7 @@ $(document).ready(function(){
             $('.ani_box').removeClass('on');
             $('.circle1').removeClass('on');
             $('.circle2').removeClass('on');
+            $('.circle3').removeClass('on');
             $('.move_circle').removeClass('on');
             $('.cnt3_box').removeClass('on');
             //3p 모션 제거 끝
@@ -156,6 +162,7 @@ $(document).ready(function(){
             $('.ani_box').removeClass('up');
             $('.circle1').removeClass('up');
             $('.circle2').removeClass('up');
+            $('.circle3').removeClass('up');
             $('.cnt3_box').removeClass('up');
             //3p 올라갈때 모션 제거 끝
         }
@@ -194,6 +201,7 @@ $(document).ready(function(){
                         $('.ani_box').removeClass('on');
                         $('.circle1').removeClass('on');
                         $('.circle2').removeClass('on');
+                        $('.circle3').removeClass('on');
                         $('.move_circle').removeClass('on');
                         $('.cnt3_box').removeClass('on');
                         //3p 모션 제거 끝
@@ -202,6 +210,7 @@ $(document).ready(function(){
                         $('.ani_box').removeClass('up');
                         $('.circle1').removeClass('up');
                         $('.circle2').removeClass('up');
+                        $('.circle3').removeClass('up');
                         $('.cnt3_box').removeClass('up');
                         //3p 올라갈때 모션 제거 끝
                         //4p 모션 제거 시작
@@ -223,6 +232,7 @@ $(document).ready(function(){
                         $('.ani_box').removeClass('on');
                         $('.circle1').removeClass('on');
                         $('.circle2').removeClass('on');
+                        $('.circle3').removeClass('on');
                         $('.move_circle').removeClass('on');
                         $('.cnt3_box').removeClass('on');
                         //3p 모션 제거 끝
@@ -231,6 +241,7 @@ $(document).ready(function(){
                         $('.ani_box').removeClass('up');
                         $('.circle1').removeClass('up');
                         $('.circle2').removeClass('up');
+                        $('.circle3').removeClass('up');
                         $('.cnt3_box').removeClass('up');
                         //3p 올라갈때 모션 제거 끝
                         //4p 모션 제거 시작
@@ -256,6 +267,7 @@ $(document).ready(function(){
                         $('.ani_box').addClass('on');
                         $('.circle1').addClass('on');
                         $('.circle2').addClass('on');
+                        $('.circle3').addClass('on');
                         $('.move_circle').addClass('on');
                         $('.cnt3_box').addClass('on');
                         //4p 모션 제거 시작
@@ -281,6 +293,7 @@ $(document).ready(function(){
                         $('.ani_box').removeClass('on');
                         $('.circle1').removeClass('on');
                         $('.circle2').removeClass('on');
+                        $('.circle3').removeClass('on');
                         $('.move_circle').removeClass('on');
                         $('.cnt3_box').removeClass('on');
                         //3p 모션 제거 끝
@@ -289,6 +302,7 @@ $(document).ready(function(){
                         $('.ani_box').removeClass('up');
                         $('.circle1').removeClass('up');
                         $('.circle2').removeClass('up');
+                        $('.circle3').removeClass('up');
                         $('.cnt3_box').removeClass('up');
                         //3p 올라갈때 모션 제거 끝
                     }
@@ -361,6 +375,7 @@ $(document).ready(function(){
                 $('.ani_box').addClass('on');
                 $('.circle1').addClass('on');
                 $('.circle2').addClass('on');
+                $('.circle3').addClass('on');
                 $('.move_circle').addClass('on');
                 $('.cnt3_box').addClass('on');
             }
@@ -377,6 +392,7 @@ $(document).ready(function(){
                 $('.ani_box').removeClass('on');
                 $('.circle1').removeClass('on');
                 $('.circle2').removeClass('on');
+                $('.circle3').removeClass('on');
                 $('.move_circle').removeClass('on');
                 $('.cnt3_box').removeClass('on');
                 //3p 모션 제거 끝
@@ -385,6 +401,7 @@ $(document).ready(function(){
                 $('.ani_box').removeClass('up');
                 $('.circle1').removeClass('up');
                 $('.circle2').removeClass('up');
+                $('.circle3').removeClass('up');
                 $('.cnt3_box').removeClass('up');
                 //3p 올라갈때 모션 제거 끝
             }
@@ -425,6 +442,7 @@ $(document).ready(function(){
                 $('.ani_box').removeClass('on');
                 $('.circle1').removeClass('on');
                 $('.circle2').removeClass('on');
+                $('.circle3').removeClass('on');
                 $('.move_circle').removeClass('on');
                 $('.cnt3_box').removeClass('on');
                 //3p 모션 제거 끝
@@ -433,6 +451,7 @@ $(document).ready(function(){
                 $('.ani_box').removeClass('up');
                 $('.circle1').removeClass('up');
                 $('.circle2').removeClass('up');
+                $('.circle3').removeClass('up');
                 $('.cnt3_box').removeClass('up');
                 //3p 올라갈때 모션 제거 끝
             }
@@ -443,6 +462,7 @@ $(document).ready(function(){
                 $('.ani_box').addClass('up');
                 $('.circle1').addClass('up');
                 $('.circle2').addClass('up');
+                $('.circle3').addClass('up');
                 $('.cnt3_box').addClass('up');
                 //3p 올라갈때 모션 끝
                 //4p 모션 제거 시작
