@@ -85,38 +85,90 @@ strong, b, i, em, span, a {
   clear: both;
 }
 
-#skip {
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-#skip li {
-  width: 100%;
-}
-
-#skip li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 0;
-  font-size: 0;
-  color: #fff;
-  background: #000;
-}
-
-#skip li a:focus {
-  height: 50px;
-  font-size: 20px;
-}
-
 input {
   outline-offset: -1px;
 }
 
+.cover_bg {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cover_bg .start_btn {
+  z-index: 2;
+  margin: 100px 0 0 0;
+  width: clamp(1rem, 18.3418928833vw, 25rem);
+  height: clamp(1rem, 18.3418928833vw, 25rem);
+  border-radius: 50%;
+  background-color: #FF4713;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(1rem, 2.201027146vw, 3rem);
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #c4350e inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #c4350e, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+}
+.cover_bg .start_btn:hover {
+  margin-bottom: -10px;
+  box-shadow: 0px 0px 0px 0px #c4350e;
+}
+.cover_bg .wave-wrap {
+  z-index: 1;
+  margin: 100px 0 0 0;
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cover_bg .wave-wrap .wave {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  transform-origin: center center;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0, 0.2, 0.8, 1);
+  animation-iteration-count: infinite;
+  box-shadow: inset 6px 6px 15px #fff, 6px 6px 15px #fff, inset -6px -6px 15px #000, -6px -6px 15px #000;
+  filter: blur(15px);
+}
+.cover_bg .wave-wrap .wave:nth-last-of-type(1) {
+  animation-delay: 0s;
+}
+.cover_bg .wave-wrap .wave:nth-last-of-type(2) {
+  animation-delay: -1s;
+}
+.cover_bg .wave-wrap .wave:nth-last-of-type(3) {
+  animation-delay: -2s;
+}
+
+@keyframes cover_wave {
+  0% {
+    transform: scale(0.01);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+#btn {
+  position: relative;
+  z-index: 2;
+}
 #btn ul, #btn li {
   margin: 0;
   padding: 0;
@@ -127,7 +179,7 @@ input {
   right: 30px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 100;
+  z-index: 90;
 }
 #btn .quick li {
   width: 12px;
@@ -154,7 +206,7 @@ input {
   bottom: 10%;
   background: #FFFFFF;
   box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.25);
-  z-index: 100;
+  z-index: 90;
   cursor: pointer;
 }
 #btn .arrow {
@@ -182,6 +234,7 @@ input {
 }
 
 #mouse_custom {
+  display: none;
   position: relative;
   z-index: 101;
 }
@@ -525,6 +578,35 @@ input {
   width: 100%;
   opacity: 1;
 }
+#wrap #main #section1.sec1_ani_start .container .loader circle {
+  animation-name: preloader;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  transform-origin: 555px 555px;
+  will-change: transform;
+  animation-fill-mode: forwards;
+}
+#wrap #main #section1.sec1_ani_start .container .loader .circle_g .main_circle {
+  animation: circleScale 5s ease-in-out 1 both, circleScale2 3s ease-in-out 8s forwards;
+}
+#wrap #main #section1.sec1_ani_start .container .loader .circle_g .second_circle {
+  animation: circleSecond 3s 5s forwards, circleScale3 3s ease-in-out 8s forwards;
+}
+#wrap #main #section1.sec1_ani_start .container .loader .halfCircle {
+  animation: circleThird 2s 6s forwards, circleScale3 3s ease-in-out 8s forwards;
+}
+#wrap #main #section1.sec1_ani_start .textBox h1:nth-child(1) {
+  animation: textUp 2s 9s forwards;
+}
+#wrap #main #section1.sec1_ani_start .textBox h1:nth-child(2) {
+  animation: textUp 2s 9.5s forwards;
+}
+#wrap #main #section1.sec1_ani_start .textBox h1:nth-child(3) {
+  animation: textUp 2s 10s forwards;
+}
+#wrap #main #section1.sec1_ani_start .textBox p {
+  animation: textRight 2s 11.5s forwards;
+}
 #wrap #main #section1 .container {
   width: 100%;
   max-width: 1920px;
@@ -540,12 +622,6 @@ input {
 #wrap #main #section1 .container .loader circle {
   fill: none;
   stroke-width: 0.5;
-  animation-name: preloader;
-  animation-duration: 6s;
-  animation-timing-function: ease-in-out;
-  transform-origin: 555px 555px;
-  will-change: transform;
-  animation-fill-mode: forwards;
 }
 #wrap #main #section1 .container .loader circle:nth-of-type(1) {
   stroke-dasharray: 5px;
@@ -624,17 +700,15 @@ input {
 #wrap #main #section1 .container .loader .circle_g .main_circle {
   opacity: 1;
   fill: #FF5C35;
-  animation: circleScale 5s ease-in-out 1 both, circleScale2 3s ease-in-out 8s forwards;
+  transform: scale(0.001);
 }
 #wrap #main #section1 .container .loader .circle_g .second_circle {
   opacity: 0;
   fill: #FF4713;
-  animation: circleSecond 3s 5s forwards, circleScale3 3s ease-in-out 8s forwards;
 }
 #wrap #main #section1 .container .loader .halfCircle {
   opacity: 0;
   fill: #FF4713;
-  animation: circleThird 2s 6s forwards, circleScale3 3s ease-in-out 8s forwards;
 }
 #wrap #main #section1 .container .textBox {
   position: absolute;
@@ -650,15 +724,6 @@ input {
   color: #000;
   font-weight: 900;
 }
-#wrap #main #section1 .container .textBox h1:nth-child(1) {
-  animation: textUp 2s 9s forwards;
-}
-#wrap #main #section1 .container .textBox h1:nth-child(2) {
-  animation: textUp 2s 9.5s forwards;
-}
-#wrap #main #section1 .container .textBox h1:nth-child(3) {
-  animation: textUp 2s 10s forwards;
-}
 #wrap #main #section1 .container .textBox p {
   opacity: 0;
   padding-top: 15px;
@@ -666,7 +731,6 @@ input {
   font-size: clamp(1rem, 1.2472487161vw, 1.7rem);
   line-height: 1.5;
   font-weight: 600;
-  animation: textRight 2s 11.5s forwards;
 }
 #wrap #main #section2 {
   width: 100%;
@@ -2477,13 +2541,13 @@ input {
   #wrap #main #section1 .container .textBox p {
     font-size: 1.8rem;
   }
-  #wrap #main #section1 .container .loader .circle_g .main_circle {
+  #section1.sec1_ani_start .container .loader .circle_g .main_circle {
     animation: circleScale 5s ease-in-out 1 both, circleScale2_m 3s ease-in-out 8s forwards;
   }
-  #wrap #main #section1 .container .loader .circle_g .second_circle {
+  #section1.sec1_ani_start .container .loader .circle_g .second_circle {
     animation: circleSecond 3s 5s forwards, circleScale3_m 3s ease-in-out 8s forwards;
   }
-  #wrap #main #section1 .container .loader .halfCircle {
+  #section1.sec1_ani_start .container .loader .halfCircle {
     animation: circleThird 2s 6s forwards, circleScale3_m 3s ease-in-out 8s forwards;
   }
   #wrap #main #section2 .container .gap {

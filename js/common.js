@@ -1,3 +1,4 @@
+let startValue = 0; // 표지 클릭 판단 변수
 
 ;(function($){
   const idgrow = {
@@ -125,6 +126,44 @@
 
     },
     section1:function(){
+
+      // 효과음 관련
+      function playSound(sound) {
+        sound.currentTime = 0;
+        sound.play();
+      }
+
+      $('.start_btn').on({
+        click: function(){
+          if( $('#section1').hasClass('sec1_ani_start') == false ){
+            $('#mouse_custom').css('display','block');
+            // 모션 스타트
+            $('#section1').addClass('sec1_ani_start');
+            $('.cover_bg').fadeOut();
+            startValue = 1;
+
+            // svg goo 필터 최적화
+            setTimeout(function(){
+              $('.circle_g').addClass('goo');
+              setTimeout(function(){
+                $('.circle_g').removeClass('goo');
+              },2000);
+            }, 5000);
+
+            // 효과음 관련
+            setTimeout(()=>{
+              const Sound0101 = new Audio('./media/sound01_01.mp3');
+              playSound(Sound0101);
+            }, 600)
+            setTimeout(()=>{
+              const Sound0102 = new Audio('./media/sound01_02.mp3');
+              playSound(Sound0102);
+            }, 4700)
+
+          }
+        }
+      });
+
       $('.testbtn').on({
         click:function(e){
           e.preventDefault();
@@ -147,15 +186,7 @@
         }
       })
 
-      // svg goo 필터 최적화
-      setTimeout(function(){
-        // console.log("5초뒤 실행");
-        $('.circle_g').addClass('goo');
-        setTimeout(function(){
-          // console.log("3초뒤 실행");
-          $('.circle_g').removeClass('goo');
-        },2000);
-      }, 5000);
+
 
 
 

@@ -1,26 +1,5 @@
 
-// 효과음 관련
-function playSound(sound) {
-    sound.currentTime = 0
-    sound.play()
-}
-
-function stopSound(sound) {
-    sound.pause()
-}
-
 $(document).ready(function(){
-    // 효과음 관련
-    setTimeout(()=>{
-        const Sound0101 = new Audio('./media/sound01_01.mp3');
-        playSound(Sound0101);
-    }, 600)
-    setTimeout(()=>{
-        const Sound0102 = new Audio('./media/sound01_02.mp3');
-        playSound(Sound0102);
-    }, 4700)
-
-
     var i = $("#btn li.on").index(); //0
     // console.log(i);
     var value = 0;
@@ -322,47 +301,47 @@ $(document).ready(function(){
 
 
     $(window).on("wheel",function(e){
+        if( startValue == 1 ){ // 표지 lock
+            // 스크롤 내릴 때
+            if(e.originalEvent.deltaY > 0){
+                if(i == 3){
 
-        // 스크롤 내릴 때
-        if(e.originalEvent.deltaY > 0){
-            if(i == 3){
+                }else{
+                    i++;
+                }
+                $("#btn li").removeClass("on");
+                $("#btn li").eq(i).addClass("on");
+                $("#main section").css({'opacity':'0','transition':'all 0.5s'});
+                $("#main section").eq(i).css({'opacity':'1','transition':'all 0.5s'});
 
-            }else{
-                i++;
-            }
-            $("#btn li").removeClass("on");
-            $("#btn li").eq(i).addClass("on");
-            $("#main section").css({'opacity':'0','transition':'all 0.5s'});
-            $("#main section").eq(i).css({'opacity':'1','transition':'all 0.5s'});
+                if(i == 0){
+                    $('#section2').removeClass('sec2_ani_re');
+                }
+                if(i == 1){
 
-            if(i == 0){
-                $('#section2').removeClass('sec2_ani_re');
-            }
-            if(i == 1){
+                    // 1p 끝
+                    $('.circle_all').addClass('js_animation');
+                    $('.textBox').addClass('js_animation');
 
-                // 1p 끝
-                $('.circle_all').addClass('js_animation');
-                $('.textBox').addClass('js_animation');
+                    $('.circle_all').removeClass('js_animation_re');
+                    $('.textBox').removeClass('js_animation_re');
 
-                $('.circle_all').removeClass('js_animation_re');
-                $('.textBox').removeClass('js_animation_re');
+                    $("#main section").css({'opacity':'0','transition':'all 0.5s','transition-delay':'0s'});
+                    $("#main section").eq(i).css({'opacity':'1','transition':'all 0.5s','transition-delay':'0s'});
 
-                $("#main section").css({'opacity':'0','transition':'all 0.5s','transition-delay':'0s'});
-                $("#main section").eq(i).css({'opacity':'1','transition':'all 0.5s','transition-delay':'0s'});
+                    // 2p 시작
+                    setTimeout(() => {
+                        if($("#section2").hasClass("sec2_ani_start") === false) {
+                            $('#section2').addClass('sec2_ani_start');
+                            sec2_optimi();
+                        }
+                        else {
+                            $('#section2').addClass('sec2_ani_re');
+                        }
+                    }, 0);
 
-                // 2p 시작
-                setTimeout(() => {
-                    if($("#section2").hasClass("sec2_ani_start") === false) {
-                        $('#section2').addClass('sec2_ani_start');
-                        sec2_optimi();
-                    }
-                    else {
-                        $('#section2').addClass('sec2_ani_re');
-                    }
-                }, 0);
-
-                // 헤더 흰색 로고 제거
-                $('#header').removeClass('logo_active');
+                    // 헤더 흰색 로고 제거
+                    $('#header').removeClass('logo_active');
 
                 value = 1;
             }
@@ -375,7 +354,6 @@ $(document).ready(function(){
                 $('.ani_box').addClass('on');
                 $('.circle1').addClass('on');
                 $('.circle2').addClass('on');
-                $('.circle3').addClass('on');
                 $('.move_circle').addClass('on');
                 $('.cnt3_box').addClass('on');
             }
@@ -392,7 +370,6 @@ $(document).ready(function(){
                 $('.ani_box').removeClass('on');
                 $('.circle1').removeClass('on');
                 $('.circle2').removeClass('on');
-                $('.circle3').removeClass('on');
                 $('.move_circle').removeClass('on');
                 $('.cnt3_box').removeClass('on');
                 //3p 모션 제거 끝
@@ -401,30 +378,29 @@ $(document).ready(function(){
                 $('.ani_box').removeClass('up');
                 $('.circle1').removeClass('up');
                 $('.circle2').removeClass('up');
-                $('.circle3').removeClass('up');
                 $('.cnt3_box').removeClass('up');
                 //3p 올라갈때 모션 제거 끝
             }
 
-        // 스크롤 올릴 때
-        }else{
-
-            if(i == 0){
-
+            // 스크롤 올릴 때
             }else{
-                i--;
-            }
-            $("#btn li").removeClass("on");
-            $("#btn li").eq(i).addClass("on");
-            $("#main section").css('opacity','0');
-            $("#main section").eq(i).css('opacity','1');
 
-            if(i == 0 && value == 1){
-                $('.circle_all').addClass('js_animation_re');
-                $('.textBox').addClass('js_animation_re');
+                if(i == 0){
 
-                $('.circle_all').removeClass('js_animation');
-                $('.textBox').removeClass('js_animation');
+                }else{
+                    i--;
+                }
+                $("#btn li").removeClass("on");
+                $("#btn li").eq(i).addClass("on");
+                $("#main section").css('opacity','0');
+                $("#main section").eq(i).css('opacity','1');
+
+                if(i == 0 && value == 1){
+                    $('.circle_all').addClass('js_animation_re');
+                    $('.textBox').addClass('js_animation_re');
+
+                    $('.circle_all').removeClass('js_animation');
+                    $('.textBox').removeClass('js_animation');
 
                 $('#header').removeClass('logo_active');
                 $('#section2').removeClass('sec2_ani_re');
@@ -442,7 +418,6 @@ $(document).ready(function(){
                 $('.ani_box').removeClass('on');
                 $('.circle1').removeClass('on');
                 $('.circle2').removeClass('on');
-                $('.circle3').removeClass('on');
                 $('.move_circle').removeClass('on');
                 $('.cnt3_box').removeClass('on');
                 //3p 모션 제거 끝
@@ -451,7 +426,6 @@ $(document).ready(function(){
                 $('.ani_box').removeClass('up');
                 $('.circle1').removeClass('up');
                 $('.circle2').removeClass('up');
-                $('.circle3').removeClass('up');
                 $('.cnt3_box').removeClass('up');
                 //3p 올라갈때 모션 제거 끝
             }
@@ -462,7 +436,6 @@ $(document).ready(function(){
                 $('.ani_box').addClass('up');
                 $('.circle1').addClass('up');
                 $('.circle2').addClass('up');
-                $('.circle3').addClass('up');
                 $('.cnt3_box').addClass('up');
                 //3p 올라갈때 모션 끝
                 //4p 모션 제거 시작
@@ -474,7 +447,7 @@ $(document).ready(function(){
         }
 
         navi_start();
-
+        }
     });
     $(".top_btn").click(function(){
         i = $(".btn li.on").index() + 1;
