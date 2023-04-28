@@ -304,6 +304,7 @@ $(document).ready(function(){
         if( startValue == 1 ){ // 표지 lock
             // 스크롤 내릴 때
             if(e.originalEvent.deltaY > 0){
+                playSound(next);
                 if(i == 3){
 
                 }else{
@@ -324,7 +325,6 @@ $(document).ready(function(){
                     stopSound(Sound0101);
                     stopSound(Sound0102);
 
-
                     // 1p 끝
                     $('.circle_all').addClass('js_animation');
                     $('.textBox').addClass('js_animation');
@@ -340,11 +340,24 @@ $(document).ready(function(){
                         if($("#section2").hasClass("sec2_ani_start") === false) {
                             $('#section2').addClass('sec2_ani_start');
                             sec2_optimi();
+                            // 효과음
+                            setTimeout(()=>{
+                                playSound(Sound0201);
+                                setTimeout(()=>{
+                                    playSound(Sound0202);
+                                    setTimeout(()=>{
+                                        playSound(Sound0203);
+                                    }, 7000)
+                                }, 6000)
+                            }, 0)
+
                         }
                         else {
                             $('#section2').addClass('sec2_ani_re');
                         }
                     }, 0);
+
+
 
                     // 헤더 흰색 로고 제거
                     $('#header').removeClass('logo_active');
@@ -393,7 +406,7 @@ $(document).ready(function(){
 
             // 스크롤 올릴 때
             }else{
-
+                playSound(next);
                 if(i == 0){
 
                 }else{
