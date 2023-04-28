@@ -1,5 +1,15 @@
 let startValue = 0; // 표지 클릭 판단 변수
 
+// 효과음 관련
+function playSound(sound) {
+  sound.currentTime = 0;
+  sound.play();
+}
+function stopSound(sound) {
+  sound.currentTime = 0;
+  sound.pause();
+}
+
 ;(function($){
   const idgrow = {
     init:function(){
@@ -20,7 +30,6 @@ let startValue = 0; // 표지 클릭 판단 변수
         circle.x = 0;
         circle.y = 0;
       });
-
 
       window.addEventListener("mousemove", function(e){
         coords.x = e.clientX;
@@ -126,15 +135,11 @@ let startValue = 0; // 표지 클릭 판단 변수
 
     },
     section1:function(){
-
-      // 효과음 관련
-      function playSound(sound) {
-        sound.currentTime = 0;
-        sound.play();
-      }
-
       $('.start_btn').on({
         click: function(){
+          const click = new Audio('./media/click.mp3');
+          playSound(click);
+
           if( $('#section1').hasClass('sec1_ani_start') == false ){
             $('#mouse_custom').css('display','block');
             // 모션 스타트
