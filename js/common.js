@@ -1,4 +1,5 @@
 let startValue = 0; // 표지 클릭 판단 변수
+let startId = ''; // 표지 셋타임아웃 변수
 
 // 효과음 관련
 function playSound(sound) {
@@ -9,6 +10,10 @@ function stopSound(sound) {
   sound.currentTime = 0;
   sound.pause();
 }
+
+const click = new Audio('./media/click.mp3');
+const Sound0101 = new Audio('./media/sound01_01.mp3');
+const Sound0102 = new Audio('./media/sound01_02.mp3');
 
 ;(function($){
   const idgrow = {
@@ -137,7 +142,6 @@ function stopSound(sound) {
     section1:function(){
       $('.start_btn').on({
         click: function(){
-          const click = new Audio('./media/click.mp3');
           playSound(click);
 
           if( $('#section1').hasClass('sec1_ani_start') == false ){
@@ -156,15 +160,12 @@ function stopSound(sound) {
             }, 5000);
 
             // 효과음 관련
-            setTimeout(()=>{
-              const Sound0101 = new Audio('./media/sound01_01.mp3');
+            startId = setTimeout(()=>{
               playSound(Sound0101);
+              setTimeout(()=>{
+                playSound(Sound0102);
+              }, 4700)
             }, 600)
-            setTimeout(()=>{
-              const Sound0102 = new Audio('./media/sound01_02.mp3');
-              playSound(Sound0102);
-            }, 4700)
-
           }
         }
       });

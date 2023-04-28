@@ -318,6 +318,12 @@ $(document).ready(function(){
                     $('#section2').removeClass('sec2_ani_re');
                 }
                 if(i == 1){
+                    // 1p 효과음 정지
+                    clearTimeout(startId);
+                    stopSound(click);
+                    stopSound(Sound0101);
+                    stopSound(Sound0102);
+
 
                     // 1p 끝
                     $('.circle_all').addClass('js_animation');
