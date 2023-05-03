@@ -163,10 +163,10 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
               },2000);
             }, 5000);
 
-            // 효과음 관련
+            // 1p 효과음 관련
             startId = setTimeout(()=>{
               playSound(Sound0101);
-              setTimeout(()=>{
+              startId = setTimeout(()=>{
                 playSound(Sound0102);
               }, 4700)
             }, 600)
