@@ -87,7 +87,7 @@
 
     <!-- 메인 -->
     <main id="main">
-      <section id="section1" data-logo="첫번째">
+      <section id="section1">
         <div class="container">
           <svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 20 1100 1261">
             <g class="circle_all">
@@ -139,7 +139,7 @@
 
         </div>
       </section>
-      <section id="section2" data-logo="두번째">
+      <section id="section2">
         <div class="bg2"></div>
         <div class="container">
           <div class="gap">
@@ -185,7 +185,7 @@
           </svg>
         </div>
       </section>
-      <section id="section3" data-logo="세번째">
+      <section id="section3">
         <div class="container">
           <div class="sec3_bg"></div>
           <div class="sec3_motion">
@@ -265,7 +265,7 @@
           </div>
         </div>
       </section>
-      <section id="section4" data-logo="네번째">
+      <section id="section4">
         <div class="container">
           <!-- <div class="po bg_box"></div> -->
           <div class="po move4_circle">
@@ -369,7 +369,7 @@
     camera.position.set(0,0,21);  // x, y, 확대?
 
     let loader = new GLTFLoader();
-    loader.load('logo.glb', function(gltf){
+    loader.load('./images/logo.glb', function(gltf){
       gltf.scene.traverse(function (child) {
        if (child.isMesh) {
           // 로고 모델의 첫 번째 재질의 색상을 흰색으로 변경
