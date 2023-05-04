@@ -40,6 +40,12 @@
   $c : ($px * 1/10)+rem;
   @return clamp($a, $b, $c);
 }
+@function clampMunMb($pb){
+  $a : 1rem;
+  $b : (($pb * 100) / 576)+vw; //  (‘px수치’ * 100) / ‘viewport width(변동)’
+  $c : ($pb * 1/10)+rem;
+  @return clamp($a, $b, $c);
+}
 
 // 색상 변수
 $메인색상 : #FF4713; // 주황색
@@ -1554,6 +1560,129 @@ input {outline-offset:-1px;}
           // @keyframes cir23_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(178);margin-left: clampMun(1447);width: clampMun(72);height: clampMun(72);}}
           // @keyframes cir24_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #ff4713;margin-top: clampMun(455);margin-left: clampMun(693);width: clampMun(76);height: clampMun(76);}}
 
+          // 모바일 버전
+          @media all and (max-width: 576px){
+
+            .cnt3_box.on{padding-top: clampMunMb(330);}
+            .cnt3_box.up{padding-top: clampMunMb(330);}
+            .contact_container h1{font-size: clampMunMb(20);}
+            .contact_container address{font-size: clampMunMb(15);margin-top: clampMunMb(20);}
+            .contact_btn{
+              width: clampMunMb(200);height: clampMunMb(50);border-radius: clampMunMb(50);line-height: clampMunMb(50);
+              margin-top: clampMunMb(30);
+            }
+            .contact_btn p{font-size: clampMunMb(20);}
+
+            .contact_btn.on{width: clampMunMb(430);height: clampMunMb(350);border-radius: clampMunMb(20);padding: clampMunMb(10);}
+            .contact_wrap{margin-top: -10px;margin-left: -10px;width: clampMunMb(470);height: clampMunMb(350);}
+            .contact_wrapper{width: clampMunMb(430);height: clampMunMb(350);padding: clampMunMb(20) clampMunMb(10);}
+            .input_box{margin-top: clampMunMb(20);}
+            input[placeholder]{width: clampMunMb(200);height: clampMunMb(50);font-size: clampMunMb(20);margin-bottom: clampMunMb(20);}
+            .input_box p:nth-child(2) input, .input_box p:nth-child(4) input{margin-left: 0;}
+            .input_box p:last-child input{width: clampMunMb(410);}
+            .send_btn{width: clampMunMb(300);height: clampMunMb(50);border-radius: clampMunMb(50);font-size: clampMunMb(20);line-height: clampMunMb(50);margin-top: clampMunMb(30);}
+            .close_btn{width: clampMunMb(30);height: clampMunMb(30);margin-left: clampMunMb(10);}
+
+            .container{height: 100vh;}
+            .sec3_bg{height: 100%;}
+            .circle2{
+              width: clampMunMb(200);
+              height: clampMunMb(200);
+              margin-left: clampMunMb(200);
+              margin-top: clampMunMb(270);
+            }
+            //스크롤 내릴때 시작
+            //---꽁지--
+            @keyframes hair_dw {
+              from {
+                margin-top: 0;margin-left: clampMunMb(520);
+                width: clampMunMb(40);height: clampMunMb(40);
+                background-color: #FF4713;
+              }
+              to {
+                margin-top: clampMunMb(230);margin-left: clampMunMb(520);
+                width: clampMunMb(40);height: clampMunMb(40);
+                background-color: #FF4713;
+              }
+            }
+            @keyframes hair_bomb {
+              from {}
+              to{width: clampMunMb(50);height: clampMunMb(50);background-color: #fff;border: 1px solid #FF4713;}
+              to{}
+            }
+            @keyframes hair_ct {
+              from{}
+              // to{margin-top: clampMunMb(300);margin-left: clampMun(1400);}
+              to{}
+            }
+            //---머리--
+            @keyframes head_dw {
+              from{
+                margin-left: clampMunMb(438);margin-top: 0;
+                width: clampMunMb(40);height: clampMunMb(40);
+                background-color: #FF4713;
+              }
+              to{
+                margin-left: clampMunMb(438);margin-top: clampMunMb(270);
+                width: clampMunMb(40);height: clampMunMb(40);
+                background-color: #FF4713;
+              }
+            }
+            @keyframes head_bomb {
+              from{}
+              to{width: clampMunMb(200);height: clampMunMb(200);margin-left: clampMunMb(350);background-color: #fff;border: 1px solid #FF4713;}
+              to{}
+            }
+            @keyframes head_ct {
+              from{}
+              // to{margin-top: clampMunMb(390);margin-left: clampMunMb(1070);}
+              to{}
+            }
+            //---몸통--
+            .circle3.on{animation: body_ct 2s 3s forwards;}
+            @keyframes body_ct {
+              from{
+                width: clampMunMb(100);height: clampMunMb(50);border-radius: 0 0 clampMunMb(100) clampMunMb(100);
+                margin-top: clampMunMb(400);margin-left: clampMunMb(410);
+                background-color: #fff;border: 1px solid #FF4713;
+                opacity: 0;
+              }
+              to{
+                width: clampMunMb(200);height: clampMunMb(100);border-radius: 0 0 clampMunMb(200) clampMunMb(200);
+                margin-top: clampMunMb(490);margin-left: clampMunMb(370);background-color: #fff;border: 1px solid #FF4713;
+              }
+            }
+            //스크롤 내릴때 끝
+
+            //스크롤 올릴때 시작
+            //---꽁지--
+            @keyframes hair_up_dw{
+              0%{margin-top: -800px;}
+              100%{
+                margin-top: clampMunMb(230);margin-left: clampMunMb(520);width: clampMunMb(50);height: clampMunMb(50);background-color: #fff;border: 1px solid #FF4713;
+              }
+            }
+            @keyframes head_up_dw{
+              0%{margin-top: -800px;}
+              100%{width: clampMunMb(200);height: clampMunMb(200);margin-left: clampMunMb(350);background-color: #fff;border: 1px solid #FF4713;}
+            }
+            @keyframes body_up_dw{
+              0%{margin-left: clampMun(64);margin-top: clamp(-92rem, -47.9166666667vw, -1rem);background-color: #FF4713;border: transparent;width: clampMun(2650);height: clampMun(1325);border-radius: 0 0 clampMun(1325) clampMun(1325);transform: rotate(0deg);}
+              100%{
+                width: clampMunMb(200);height: clampMunMb(100);border-radius: 0 0 clampMunMb(200) clampMunMb(200);
+                margin-top: clampMunMb(490);margin-left: clampMunMb(370);background-color: #fff;border: 1px solid #FF4713;
+              }
+            }
+
+            .ani_box{width: 100vw;height: clampMunMb(90);}
+            @keyframes upbox{
+              0%{opacity: 1;height: 50vh;margin-top: 50vh;}
+              50%{opacity: 1;height: 100vh;margin-top: 0;}
+              100%{opacity: 1;height: clampMunMb(90);margin-top: 0;}
+            }
+
+            .cir{display: none;}
+          }
       }
 
       /* section4(인력 구인) */
@@ -1746,33 +1875,34 @@ input {outline-offset:-1px;}
           }
 
           // 모바일 버전
-          @media all and (max-width: 768px){
+          @media all and (max-width: 576px){
             .cnt_box.on{
               display: flex;flex-direction: column;
               align-items: center;justify-content: center;
               height: 100vh;
             }
             .cnt_box.on .logo_container{
-              margin-top: clampMun(500);
+              display: none;
             }
             .cnt_box.on .career_container {
               display: flex;flex-direction: column;
               align-items: center;
+              text-align: center;
             }
             .cnt_box.on h1{
               width: 100%;
-              font-size: clampMun(90);
+              font-size: clampMunMb(20);
               margin-top: clampMun(200);
             }
             .cnt_box.on p{
               margin: 0 auto;margin-top: clampMun(50);
-              font-size: clampMun(60);
+              font-size: clampMunMb(15);
               width: 90%;text-align: center;
               line-height: clampMun(70);
             }
             .job_btn{margin-top: clampMun(100);}
             .job_btn a{
-              font-size: clampMun(50);
+              font-size: clampMunMb(20);
             }
             .cnt_box.on .big_logo{
               width: clampMun(1000);
@@ -1796,6 +1926,32 @@ input {outline-offset:-1px;}
                 opacity: 0;
               }
             }
+            //---꽁지--
+            @keyframes cha_up1 {
+              from {opacity: 1;width: clampMunMb(50);height: clampMunMb(50);margin-top: clampMunMb(230);margin-left: clampMunMb(520);}
+              to{opacity: 1;width: clampMunMb(50);height: clampMunMb(50);margin-top: clampMunMb(230);margin-left: clampMunMb(520);}
+            }
+            //---머리--
+            @keyframes cha_up2 {
+              from{opacity: 1;width: clampMunMb(200);height: clampMunMb(200);margin-top: clampMunMb(270);margin-left: clampMunMb(350);}
+              to{opacity: 1;width: clampMunMb(200);height: clampMunMb(200);margin-top: clampMunMb(270);margin-left: clampMunMb(350);}
+            }
+            //---몸통--
+            @keyframes cha_up3 {
+              from{
+                opacity: 1;
+                width: clampMunMb(200);height: clampMunMb(100);border-radius: 0 0 clampMunMb(200) clampMunMb(200);
+                margin-top: clampMunMb(490);margin-left: clampMunMb(370);
+              }
+              to{
+                opacity: 1;
+                width: clampMunMb(200);height: clampMunMb(100);border-radius: 0 0 clampMunMb(200) clampMunMb(200);
+                margin-top: clampMunMb(490);margin-left: clampMunMb(370);
+              }
+            }
+            @keyframes cha_up1-1 {from{opacity: 1;} to{opacity: 0;margin-top: -800px;}}
+            @keyframes cha_up2-1 {from{opacity: 1;} to{opacity: 0;margin-top: -800px;}}
+            @keyframes cha_up3-1 {from{opacity: 1;} to{opacity: 1; margin-left: clampMun(64);margin-top: clamp(-92rem, -47.9166666667vw, -1rem);background-color: #FF4713;border: transparent;width: clampMun(2650);height: clampMun(1325);border-radius: 0 0 clampMun(1325) clampMun(1325);transform: rotate(0deg);}}
           }
       }
     }
