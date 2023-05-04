@@ -82,19 +82,14 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
           $(this).toggleClass('active');
           $('body').toggleClass('scrollLock');
 
-          if( $('section').data('logo') == '1' ){
-            console.log("3페이지");
-          }
-
+          // 헤더 로고 관련
           if( $('#header').hasClass('logo_active') == true ){
             $('#header').removeClass('logo_active');
           }
           else {
             $('#header').addClass('logo_active');
           }
-
-          // console.log(i);
-          // $('#header').toggleClass('logo_active');
+          
           $('#modal').toggle(300);
         }
       });

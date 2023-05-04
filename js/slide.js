@@ -3,19 +3,18 @@ let sec2_soundEffect = '';
 
 $(document).ready(function(){
     var i = $("#btn li.on").index(); //0
-    // console.log(i);
     var value = 0;
 
     // 2p 모션 최적화
     function sec2_optimi(){
         setTimeout(function(){
-            // console.log("최적화시작");
             $('#circle_g_sec2 .sec2_circle').slice(1).css('display','none');
         }, 5000);
     }
 
     // 우측 점 네비게이션
     $("#btn li").click(function(){
+        playSound(next);
         i = $(this).index();
 
         $("#btn li").removeClass("on");
@@ -43,6 +42,7 @@ $(document).ready(function(){
             $('.textBox').removeClass('js_animation');
 
             $('#header').removeClass('logo_active');
+            $('#header').removeClass('logo_active_3p');
             //3p 모션 제거 시작
             $('.ani_box').removeClass('on');
             $('.circle1').removeClass('on');
@@ -81,6 +81,7 @@ $(document).ready(function(){
             }
 
             $('#header').removeClass('logo_active');
+            $('#header').removeClass('logo_active_3p');
             //3p 모션 제거 시작
             $('.ani_box').removeClass('on');
             $('.circle1').removeClass('on');
@@ -113,6 +114,7 @@ $(document).ready(function(){
             $('.cnt3_box').addClass('on');
             // 로고 화이트 변경
             $('#header').addClass('logo_active');
+            $('#header').addClass('logo_active_3p');
             //4p 모션 제거 시작
             $('.move4_circle').removeClass('on');
             $('.cnt_box').removeClass('on');
@@ -120,6 +122,8 @@ $(document).ready(function(){
             //4p 모션 제거 끝
         }
         if( i == 3){
+            $('#header').removeClass('logo_active');
+            $('#header').removeClass('logo_active_3p');
             $('.move4_circle').addClass('on');
             $('#section2').removeClass('sec2_ani_re');
             $('.cha_body').addClass('on');
@@ -163,6 +167,7 @@ $(document).ready(function(){
         for(let k=0; k<4; k++){
             $('#modal .container ul li').eq(k).on({
                 click: function(e){
+                    playSound(next);
                     e.preventDefault();
                     i = k;
                     value = 1;
@@ -185,6 +190,7 @@ $(document).ready(function(){
                         $('.textBox').removeClass('js_animation');
 
                         $('#header').removeClass('logo_active');
+                        $('#header').removeClass('logo_active_3p');
                         $('.top_btn').removeClass('on');
 
                         // 2p 효과음 정지
@@ -235,6 +241,7 @@ $(document).ready(function(){
 
 
                         $('#header').removeClass('logo_active');
+                        $('#header').removeClass('logo_active_3p');
                         $('.top_btn').removeClass('on');
                         //3p 모션 제거 시작
                         $('.ani_box').removeClass('on');
@@ -257,8 +264,6 @@ $(document).ready(function(){
                         $('.cnt_box').removeClass('on');
                         $('.bg_box').removeClass('on');
                         //4p 모션 제거 끝
-
-
                     }
                 });
             }
@@ -266,6 +271,7 @@ $(document).ready(function(){
                 $('#modal .container ul li').eq(k).on({
                     click: function(){
                         $('#header').addClass('logo_active');
+                        $('#header').addClass('logo_active_3p');
                         $('.top_btn').addClass('on');
                         $('.ani_box').addClass('on');
                         $('.circle1').addClass('on');
@@ -287,6 +293,7 @@ $(document).ready(function(){
                 $('#modal .container ul li').eq(k).on({
                     click: function(){
                         $('#header').removeClass('logo_active');
+                        $('#header').removeClass('logo_active_3p');
                         $('#section2').removeClass('sec2_ani_re');
                         $('.top_btn').addClass('on');
                         $('.move4_circle').addClass('on');
@@ -313,6 +320,8 @@ $(document).ready(function(){
             }
         }
     }
+
+    navi_start();
 
     // 효과음 관련 펑션
     // 효과음 시작
@@ -355,8 +364,6 @@ $(document).ready(function(){
         stopSound(Sound0203);
     }
 
-    navi_start();
-
     // 모바일 슬라이드 테스트
     $('#section1').on({
         touchstart : function(){
@@ -364,11 +371,11 @@ $(document).ready(function(){
         }
     })
 
-
+    
     $(window).on("wheel",function(e){
         if( startValue == 1 ){ // 표지 lock
             ///////////////////////////// 스크롤 내릴 때 /////////////////////////////
-            if(e.originalEvent.deltaY > 0){
+            if(e.originalEvent.deltaY > 0){                
                 playSound(next);
                 if(i == 3){
 
@@ -421,7 +428,8 @@ $(document).ready(function(){
                 sec2_soundEffect_stop();
 
                 // 3p 시작
-                $('#header').addClass('logo_active');
+                $('#header').addClass('logo_active_3p');
+
                 $('.top_btn').addClass('on');
                 $('.ani_box').addClass('on');
                 $('.circle1').addClass('on');
@@ -433,6 +441,7 @@ $(document).ready(function(){
             if(i == 3){
                 $('#section2').removeClass('sec2_ani_re');
                 $('#header').removeClass('logo_active');
+                $('#header').removeClass('logo_active_3p');
                 //4p 모션 시작
                 $('.move4_circle').addClass('on');
                 $('.cnt_box').addClass('on');
@@ -491,6 +500,7 @@ $(document).ready(function(){
                     else {
                         $('#section2').addClass('sec2_ani_re');
                     }
+                    $('#header').removeClass('logo_active_3p');
                     $('#header').removeClass('logo_active');
                     $('.top_btn').removeClass('on');
                     //3p 모션 제거 시작
@@ -511,7 +521,7 @@ $(document).ready(function(){
                     //3p 올라갈때 모션 제거 끝
                 }
                 else if (i == 2){
-                    $('#header').addClass('logo_active');
+                    $('#header').addClass('logo_active_3p');
                     //3p 올라갈때 모션 시작
                     $('.move_circle').addClass('up');
                     $('.ani_box').addClass('up');

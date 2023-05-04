@@ -354,6 +354,18 @@ input {
 #wrap #header.logo_active .container .right .ham .second_bar {
   background-color: #fff;
 }
+#wrap #header.logo_active_3p .container .left a #idi_logo .st1 {
+  fill: #fff;
+}
+#wrap #header.logo_active_3p .container .left a #idi_logo .st2 {
+  fill: #fff;
+}
+#wrap #header.logo_active_3p .container .right .ham .first_bar {
+  background-color: #fff;
+}
+#wrap #header.logo_active_3p .container .right .ham .second_bar {
+  background-color: #fff;
+}
 #wrap #header .container {
   width: 100%;
   max-width: 1620px;

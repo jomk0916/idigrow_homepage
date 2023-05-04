@@ -334,6 +334,19 @@ input {outline-offset:-1px;}
           background-color: #fff;
         }
       }
+      &.logo_active_3p { // 헤더 흰색 전환
+        .container .left a #idi_logo {
+          .st1 {fill:#fff;}
+          .st2 {fill:#fff;}
+        }
+        .container .right .ham .first_bar {
+          background-color: #fff;
+        }
+        .container .right .ham .second_bar {
+          background-color: #fff;
+        }
+      }
+
 
       .container {
         width: 100%;
