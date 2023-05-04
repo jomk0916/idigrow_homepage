@@ -327,7 +327,6 @@ $(document).ready(function(){
 
     function sec2_soundEffect_start(){
         sec2_soundEffect = setTimeout(() => {
-            console.log("효과음 시작");
             sec2_optimi();
             // 효과음
             sec2_soundEffect = setTimeout(()=>{

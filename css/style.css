@@ -2508,12 +2508,10 @@ input {
     transform: translateY(0%) scale(0.8);
   }
 }
-@media all and (max-width: 1280px) {
-  #mouse_custom {
-    display: none;
-  }
-}
 @media all and (max-width: 992px) {
+  .cover_bg .start_btn {
+    margin: 0px 0 0 0;
+  }
   #wrap #modal .container {
     display: flex;
     flex-flow: column;

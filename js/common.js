@@ -44,41 +44,6 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
         coords.x = e.clientX;
         coords.y = e.clientY;
 
-        // switch(e.target.getAttribute('data-cursor')) {
-        //   case 'ham':
-        //     if (stage === 'ham') return
-        //     console.log("ham");
-        //     $('#mouse_custom .circle1').css('opacity','0').css('transition','all 0.3s')
-        //     $('#mouse_custom .circle2').css('transform','scale(3)').css('transition','all 0.3s')
-        //     $('#mouse_custom .circle3').css('opacity','0').css('transition','all 0.3s')
-        //     stage = 'ham';
-        //     break
-
-        //   default:
-        //     if (stage === '') return
-        //     console.log("WWW");
-        //     $('#mouse_custom .circle1').css('opacity','1').css('transition','all 0.3s')
-        //     $('#mouse_custom .circle2').css('transform','scale(1)').css('transition','all 0.3s')
-        //     $('#mouse_custom .circle3').css('opacity','1').css('transition','all 0.3s')
-        //     stage = '';
-        // }
-
-
-        // if (e.target.getAttribute('data-cursor') === 'ham') {
-        //   if (stage === 'ham') return;
-        //     console.log("ham");
-        //     $('#mouse_custom .circle1').css('opacity','0').css('transition','all 0.3s')
-        //     $('#mouse_custom .circle2').css('transform','scale(3)').css('transition','all 0.3s')
-        //     $('#mouse_custom .circle3').css('opacity','0').css('transition','all 0.3s')
-        //     stage = 'ham';
-        // } else {
-        //   if (stage === '') return;
-        //   console.log("디폴트");
-        //   $('#mouse_custom .circle1').css('opacity','1').css('transition','all 0.3s')
-        //   $('#mouse_custom .circle2').css('transform','scale(1)').css('transition','all 0.3s')
-        //   $('#mouse_custom .circle3').css('opacity','1').css('transition','all 0.3s')
-        //   stage = '';
-        // }
 
         if (!requestId) {
           requestId = requestAnimationFrame(animateCircles);
@@ -149,7 +114,13 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
           playSound(click);
 
           if( $('#section1').hasClass('sec1_ani_start') == false ){
-            $('#mouse_custom').css('display','block');
+            if(matchMedia("screen and (max-width: 1200px)").matches){
+              $('#mouse_custom').css('display','none');
+            }
+            else {
+              $('#mouse_custom').css('display','block');
+            }
+
             // 모션 스타트
             $('#section1').addClass('sec1_ani_start');
             $('.cover_bg').fadeOut();

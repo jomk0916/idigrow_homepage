@@ -1309,7 +1309,7 @@ input {outline-offset:-1px;}
             animation: hair_dw 1.3s 1s forwards, hair_bomb 1s 2s forwards, hair_ct 2s 6s forwards;
           }
 
-          @keyframes hair_dw { 
+          @keyframes hair_dw {
             from {
               margin-top: 0;
               width: clampMun(40);height: clampMun(40);
@@ -1335,7 +1335,7 @@ input {outline-offset:-1px;}
             animation: head_dw 1.3s 1s forwards, head_bomb 1s 2s forwards, head_ct 2s 6s forwards;
           }
 
-          @keyframes head_dw { 
+          @keyframes head_dw {
             from{
               margin-left: clampMun(1500);margin-top: 0;
               width: clampMun(40);height: clampMun(40);
@@ -1426,16 +1426,16 @@ input {outline-offset:-1px;}
 
           //두번째 원 움직임
 
-          @keyframes circle1_dw{from{}to{opacity: 0;}} 
-          @keyframes circle2_dw{from{}to{opacity: 0;}} 
-          @keyframes circle3_dw{from{}to{opacity: 0;}} 
-          @keyframes circle4_dw{from{}to{opacity: 0;}} 
-          @keyframes circle5_dw{from{}to{opacity: 0;}} 
+          @keyframes circle1_dw{from{}to{opacity: 0;}}
+          @keyframes circle2_dw{from{}to{opacity: 0;}}
+          @keyframes circle3_dw{from{}to{opacity: 0;}}
+          @keyframes circle4_dw{from{}to{opacity: 0;}}
+          @keyframes circle5_dw{from{}to{opacity: 0;}}
 
-          @keyframes circle6_dw{from{}to{opacity: 0;}} 
-          @keyframes circle7_dw{from{}to{opacity: 0;}} 
-          @keyframes circle8_dw{from{}to{opacity: 0;}} 
-          @keyframes circle9_dw{from{}to{opacity: 0;}} 
+          @keyframes circle6_dw{from{}to{opacity: 0;}}
+          @keyframes circle7_dw{from{}to{opacity: 0;}}
+          @keyframes circle8_dw{from{}to{opacity: 0;}}
+          @keyframes circle9_dw{from{}to{opacity: 0;}}
           @keyframes circle10_dw{from{}to{opacity: 0;}}
 
           @keyframes circle11_dw{from{}to{opacity: 0;}}
@@ -1461,7 +1461,7 @@ input {outline-offset:-1px;}
           //   width: clampMun(2650);height: clampMun(1325);border-radius: 0 0 clampMun(1325) clampMun(1325);transform: rotate(0deg);
           //   animation: sec3_top_dw 2s forwards;
           // }
-          // @keyframes sec3_top_dw { 
+          // @keyframes sec3_top_dw {
           //   from{}
           //   50%{width: clampMun(1920);height: clampMun(200);border-radius: 0%;margin-left: 0;margin-top: 0;}
           //   to{width: clampMun(1920);height: clampMun(200);border-radius: 0%;margin-left: 0;margin-top: 0;opacity: 0;}
@@ -1636,8 +1636,8 @@ input {outline-offset:-1px;}
           //     opacity: 0;
           //   }
           // }
-          
-          
+
+
           //모션 끝
 
           .top_view{
@@ -1731,7 +1731,7 @@ input {outline-offset:-1px;}
             from{opacity: 0;margin-top: clampMun(200);}
             to{opacity: 1;margin-top: 0;}
           }
-          
+
           // 모바일 버전
           @media all and (max-width: 768px){
             .cnt_box.on{
@@ -1972,15 +1972,14 @@ input {outline-offset:-1px;}
 
   /////////////////////////////////// 반응형 ///////////////////////////////////////
 
-  // 마우스 모션 삭제
-  @media all and (max-width:1280px){
-    #mouse_custom {
-      display: none;
-    }
-  }
-
   /////////////////////////// 태블릿
   @media all and (max-width:992px){
+    // cover_bg
+    .cover_bg .start_btn {
+      margin:0px 0 0 0;
+    }
+
+
     // modal
     #wrap #modal .container {
       display: flex;
