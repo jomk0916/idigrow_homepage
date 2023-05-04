@@ -158,6 +158,10 @@ $(document).ready(function(){
     });
 
     // 햄버거 네비게이션
+    $('.ham').click(function(){
+        console.log("test");
+        $('.top_btn').removeClass("on");
+    });
     function navi_start(){
         // console.log("네비 스타트");
         for(let k=0; k<4; k++){
