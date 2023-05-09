@@ -163,7 +163,6 @@ $(document).ready(function(){
 
     // 햄버거 네비게이션
     $('.ham').click(function(){
-        console.log("test");
         $('.top_btn').removeClass("on");
     });
     function navi_start(){
@@ -339,19 +338,19 @@ $(document).ready(function(){
     }
 
     function sec2_soundEffect_start(){
-        sec2_soundEffect = setTimeout(() => {
-            sec2_optimi();
-            // 효과음
-            sec2_soundEffect = setTimeout(()=>{
-                playSound(Sound0201);
-                sec2_soundEffect = setTimeout(()=>{
-                    playSound(Sound0202);
-                    sec2_soundEffect = setTimeout(()=>{
-                        playSound(Sound0203);
-                    }, 7000)
-                }, 6000)
-            }, 0)
-        }, 0);
+        // sec2_soundEffect = setTimeout(() => {
+        //     sec2_optimi();
+        //     // 효과음
+        //     sec2_soundEffect = setTimeout(()=>{
+        //         playSound(Sound0201);
+        //         sec2_soundEffect = setTimeout(()=>{
+        //             playSound(Sound0202);
+        //             sec2_soundEffect = setTimeout(()=>{
+        //                 playSound(Sound0203);
+        //             }, 7000)
+        //         }, 6000)
+        //     }, 0)
+        // }, 0);
     }
 
     // 효과음 정지

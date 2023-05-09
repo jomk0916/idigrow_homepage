@@ -89,7 +89,7 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
           else {
             $('#header').addClass('logo_active');
           }
-          
+
           $('#modal').toggle(300);
         }
       });
@@ -116,6 +116,8 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
               $('#mouse_custom').css('display','block');
             }
 
+        
+
             // 모션 스타트
             $('#section1').addClass('sec1_ani_start');
             $('.cover_bg').fadeOut();
@@ -134,7 +136,7 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
               playSound(Sound0101);
               startId = setTimeout(()=>{
                 playSound(Sound0102);
-              }, 4700)
+              }, 5450)
             }, 600)
           }
         }

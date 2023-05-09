@@ -19,7 +19,9 @@
 
   <!-- 표지 -->
   <div class="cover_bg">
-    <div class="start_btn">IDIGROW</div>
+    <div class="start_btn">
+      <canvas id="modal_3d_model_o" width="230" height="230"></canvas>
+    </div>
   </div>
 
   <div id="wrap">
@@ -359,7 +361,15 @@
       antialias : true,
       alpha: true
     });
+
+    let renderer2 = new THREE.WebGLRenderer({
+      canvas : document.querySelector('#modal_3d_model_o'),
+      antialias : true,
+      alpha: true
+    });
+
     renderer.outputEncoding = THREE.sRGBEncoding;
+    renderer2.outputEncoding = THREE.sRGBEncoding;
 
     // 버전 확인
     const glVersion = renderer.getContext().getParameter(renderer.getContext().VERSION);
@@ -393,6 +403,7 @@
         requestAnimationFrame(animate)
         gltf.scene.rotation.y += 0.01;
         renderer.render(scene, camera);
+        renderer2.render(scene, camera);
       }
 
       if(matchMedia("screen and (max-width: 992px)").matches){
@@ -401,6 +412,7 @@
         camera.position.set(0,0,21);  // x, y, 확대?
         gltf.scene.rotation.y = 0.1;
         renderer.render(scene, camera);
+        renderer2.render(scene, camera);
       }
       else {
         animate();
