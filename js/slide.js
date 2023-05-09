@@ -370,7 +370,7 @@ $(document).ready(function(){
     // 모바일 슬라이드 테스트
     $('#section1').on({
         touchstart : function(){
-            console.log("터치 스타트");
+            // console.log("터치 스타트");
         }
     })
 
@@ -544,7 +544,9 @@ $(document).ready(function(){
         navi_start();
         }
     });
-    $(".top_btn").click(function(){
+    $(".top_btn, #header .left a").click(function(e){
+        e.preventDefault();
+        playSound(next);
         i = $(".btn li.on").index() + 1;
         $("#btn li").removeClass("on");
         $("#btn li").eq(0).addClass("on");
