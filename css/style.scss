@@ -1020,15 +1020,11 @@ input {outline-offset:-1px;}
           }
           .circle1{ // 캐릭터 꽁지
             width: clampMun(114);height: clampMun(114);border-radius: 50%;
-            // background-color: #fff;
-            // border: 1px solid #ff4713;
             margin-top: clampMun(650);
             margin-left: clampMun(1600);
           }
           .circle2{ // 캐릭터 얼굴
             width: clampMun(436);height: clampMun(436);border-radius: 50%;
-            // background-color: #fff;
-            // border: 1px solid #ff4713;
             margin-top: clampMun(750);
             margin-left: clampMun(1231)
           }
@@ -1085,7 +1081,6 @@ input {outline-offset:-1px;}
             padding-top: clampMun(100);
             width: clamp(1rem,83.434%,160rem);
             height: clamp(1rem,45.8333vw,88rem);
-            /* height: 880px; */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -1108,7 +1103,6 @@ input {outline-offset:-1px;}
             padding-top: clampMun(100);
             width: clamp(1rem,83.434%,160rem);
             height: clamp(1rem,45.8333vw,88rem);
-            /* height: 880px; */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -1130,40 +1124,29 @@ input {outline-offset:-1px;}
           }
           address{
             font-size: clamp(1rem,0.9375vw,1.8rem);
-            /* font-size: 18px; */
-            /* margin-top: 40px; */
             margin-top: clamp(1rem,2.08333vw,4rem);
             font-family: "SUIT-Regular";
           }
           .contact_btn{
-            /* width: 166px;
-            height: 50px; */
             width: clamp(1rem,8.6458334vw,16.6rem);
             height: clamp(1rem,2.6041667vw,5rem);
             background-color: #000;
             color: #fff;
             text-align: center;
-            /* line-height: 50px; */
-            line-height: clamp(1rem,2.6041667vw,5rem);;
-            /* border-radius: 80px; */
+            line-height: clamp(1rem,2.6041667vw,5rem);
             border-radius: clamp(1rem,4.1667vw,8rem);
             cursor: pointer;
             transition: all .3s;
-            /* margin-top: 50px; */
             margin-top: clamp(1rem,2.6041776vw,5rem);
           }
           .contact_btn p{
-            /* font-size: 16px; */
             font-size: clamp(5px,0.8333vw,1.6rem);
             font-family: "SUIT-Bold";
           }
           .contact_btn .contact_wrap{opacity: 0;}
 
-          /* contact버튼 마우스 호버 - 추후 클릭으로 변경 예정*/
+          /* contact버튼 마우스 클릭*/
           .contact_btn.on{
-            /* width: 730px;height: 313px;
-            border-radius: 25px;
-            padding: 20px 30px; */
             width: clamp(1rem,38.0208333vw,73rem);
             height: clamp(1rem,16.30208333vw,31.3rem);
             border-radius: clamp(1rem,1.30208333vw,2.5rem);
@@ -1176,24 +1159,18 @@ input {outline-offset:-1px;}
           .contact_btn.on .contact_wrap{
             opacity: 1;
             transition: all .3s;
-            /* margin-top: -20px;
-            margin-left: -30px; */
             margin-top: clamp(-2rem,-1.041667vw,-1rem);
             margin-left: clamp(-3rem,-1.5625vw,-1rem);
           }
 
           /* 회사 정보 및 연결 정보 기입 창 */
           .contact_wrap{
-            /* width: 790px;height: 313px; */
             width: clamp(1rem,41.1458333vw,79rem);
             height: clamp(1rem,16.30208333vw,31.3rem);
             display: flex;
             opacity: 0;
           }
           .contact_wrapper{
-            /* width: 730px;height: 313px;
-            border-radius: 25px;
-            padding: 20px 30px; */
             width: clamp(1rem,38.0208333vw,73rem);
             height: clamp(1rem,16.30208333vw,31.3rem);
             border-radius: clamp(1rem,1.30208333vw,2.5rem);
@@ -1207,19 +1184,15 @@ input {outline-offset:-1px;}
             flex-wrap: wrap;
           }
           .input_box p:last-child input{
-            /* width: 670px; */
             width: clamp(1rem,34.8958333vw,67rem);
           }
           .input_box p:nth-child(2) input,
           .input_box p:nth-child(4) input{
-            /* margin-left: 30px; */
             margin-left: clamp(1rem,1.5625vw,3rem)
           }
           input[placeholder] {
-            /* width: 320px;height: 50px; */
             width: clamp(1rem,16.667vw,32rem);
             height: clamp(1rem,2.6041667vw,5rem);
-            /* font-size: 14px; */
             font-size: clamp(0.5rem,0.7291667vw,1.4rem);
             color: #fff;
             font-family: "SUIT-Bold";
@@ -1227,30 +1200,23 @@ input {outline-offset:-1px;}
             background-color: #000;
             outline: none;
             border-bottom: 1px solid #d9d9d9;
-            /* margin-bottom: 20px; */
             margin-bottom: clamp(1rem,1.041667vw,2rem);
           }
           .send_btn{
-            /* width: 670px;height: 50px; */
             width: clamp(1rem,34.8958333vw,67rem);
             height: clamp(1rem,2.6041667vw,5rem);
             background-color: #fff;
             color: #000;
-            /* font-size: 14px; */
             font-size: clamp(1rem,0.7291667vw,1.4rem);
             font-family: "SUIT-Bold";
             text-align: center;
-            /* line-height: 50px; */
             line-height: clamp(1rem,2.6041667vw,5rem);
-            /* border-radius: 25px; */
             border-radius: clamp(1rem,1.30208333vw,2.5rem);
             cursor: pointer;
           }
           .close_btn{
-            /* width: 50px;height: 50px; */
             width: clamp(1rem,2.6041667vw,5rem);
             height: clamp(1rem,2.6041667vw,5rem);
-            /* margin-left: 10px; */
             margin-left: clamp(1rem,0.5208333vw,1rem);
             background: url(../images/close_btn.png) no-repeat 0 0 / auto 100%;
             background-size: contain;
@@ -1283,7 +1249,7 @@ input {outline-offset:-1px;}
 
           //circle 모션
           .circle1.on{ //캐릭터 꽁지머리
-            animation: hair_dw 1.3s 1s forwards, hair_bomb 1s 2s forwards, hair_ct 2s 6s forwards;
+            animation: hair_dw 1.3s 1s forwards, hair_bomb 1s 2s forwards, hair_ct 2s 4.5s forwards;
           }
 
           @keyframes hair_dw {
@@ -1300,16 +1266,19 @@ input {outline-offset:-1px;}
           }
           @keyframes hair_bomb {
             from {}
-            to{width: clampMun(114);height: clampMun(114);background-color: #fff;border: 1px solid #FF4713;}
+            to{
+              width: clampMun(50);height: clampMun(50);background-color: #fff;border: 1px solid #FF4713;
+            }
           }
           @keyframes hair_ct {
             from{}
             to{
+              width: clampMun(114);height: clampMun(114);
               margin-top: clampMun(300);margin-left: clampMun(1400);
             }
           }
           .circle2.on{ //캐릭터 얼굴
-            animation: head_dw 1.3s 1s forwards, head_bomb 1s 2s forwards, head_ct 2s 6s forwards;
+            animation: head_dw 1.3s 1s forwards, head_bomb 1s 2s forwards, head_ct 2s 4.5s forwards;
           }
 
           @keyframes head_dw {
@@ -1326,21 +1295,44 @@ input {outline-offset:-1px;}
           }
           @keyframes head_bomb {
             from{}
-            to{width: clampMun(436);height: clampMun(436);margin-left: clampMun(1294);background-color: #fff;border: 1px solid #FF4713;}
+            to{
+              margin-top: clampMun(680);margin-left: clampMun(1430);
+              width: clampMun(200);height: clampMun(200);background-color: #fff;border: 1px solid #FF4713;
+            }
           }
           @keyframes head_ct {
             from{}
             to{
-              // width: clampMun(500);height: clampMun(500);
+              width: clampMun(436);height: clampMun(436);
               margin-top: clampMun(390);margin-left: clampMun(1070);
             }
           }
           .circle3.on{ //캐릭터 몸통
-            animation: body_ct 2s 6s forwards;
+            animation: body_bomb 1s 3s forwards, body_ct 2s 4.5s forwards;
+          }
+          @keyframes body_bomb {
+            from{
+              margin-top: clampMun(780);margin-left: clampMun(1430);
+              width: clampMun(200);height: clampMun(100);
+              border-radius: 0 0 clampMun(100) clampMun(100);
+              background-color: #fff;border: 1px solid #FF4713;
+              opacity: 0;
+            }
+            to{
+              margin-top: clampMun(900);margin-left: clampMun(1450);
+              width: clampMun(200);height: clampMun(100);
+              border-radius: 0 0 clampMun(100) clampMun(100);transform: rotate(-20deg);
+              background-color: #fff;border: 1px solid #FF4713;
+              opacity: 1;
+            }
           }
           @keyframes body_ct {
             from{background-color: #fff;border: 1px solid #FF4713;}
-            to{margin-top: clampMun(870);margin-left: clampMun(1120);background-color: #fff;border: 1px solid #FF4713;}
+            to{
+              margin-top: clampMun(870);margin-left: clampMun(1120);background-color: #fff;border: 1px solid #FF4713;
+              width: clampMun(436);height: clampMun(218);
+              border-radius: 0 0 clampMun(218) clampMun(218);transform: rotate(-20deg);
+            }
           }
 
           //move circle 모션
@@ -1433,16 +1425,7 @@ input {outline-offset:-1px;}
           @keyframes circle24_dw{from{}to{opacity: 0;}}
 
           // 3p 스크롤 올라갈 때 모션
-          // .move_circle.up > .top_ani{
-          //   margin-left: clampMun(64);margin-top: clamp(-92rem, -47.9166666667vw, -1rem);background-color: #FF4713;border: transparent;
-          //   width: clampMun(2650);height: clampMun(1325);border-radius: 0 0 clampMun(1325) clampMun(1325);transform: rotate(0deg);
-          //   animation: sec3_top_dw 2s forwards;
-          // }
-          // @keyframes sec3_top_dw {
-          //   from{}
-          //   50%{width: clampMun(1920);height: clampMun(200);border-radius: 0%;margin-left: 0;margin-top: 0;}
-          //   to{width: clampMun(1920);height: clampMun(200);border-radius: 0%;margin-left: 0;margin-top: 0;opacity: 0;}
-          // }
+
           .ani_box.up{
             animation: sec3_up_top 1s 1s forwards;
           }
@@ -1467,60 +1450,11 @@ input {outline-offset:-1px;}
             from{margin-left: clampMun(64);margin-top: clamp(-92rem, -47.9166666667vw, -1rem);background-color: #FF4713;border: transparent;width: clampMun(2650);height: clampMun(1325);border-radius: 0 0 clampMun(1325) clampMun(1325);transform: rotate(0deg);}
             to{margin-top: clampMun(870);margin-left: clampMun(1120);background-color: #fff;border: 1px solid #FF4713;}
           }
-          //move circle 모션
-          // .move_circle.up > .circle3-1 {animation: cir1_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-2 {animation: cir2_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-3 {animation: cir3_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-4 {animation: cir4_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-5 {animation: cir5_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-6 {animation: cir6_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-7 {animation: cir7_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-8 {animation: cir8_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-9 {animation: cir9_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-10 {animation: cir10_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-11 {animation: cir11_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-12 {animation: cir12_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-13 {animation: cir13_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-14 {animation: cir14_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-15 {animation: cir15_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-16 {animation: cir16_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-17 {animation: cir17_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-18 {animation: cir18_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-19 {animation: cir19_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-20 {animation: cir20_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-21 {animation: cir21_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-22 {animation: cir22_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-23 {animation: cir23_dw 2s 1s forwards;}
-          // .move_circle.up > .circle3-24 {animation: cir24_dw 2s 1s forwards;}
-
-          // @keyframes cir1_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(385);margin-left: clampMun(128);width: clampMun(90);height: clampMun(90);border-radius:50%;}}
-          // @keyframes cir2_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(180);margin-left: clampMun(207);width: clampMun(70);height: clampMun(70);border-radius:50%;}}
-          // @keyframes cir3_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(388);margin-left: clampMun(404);width: clampMun(40);height: clampMun(40);border-radius:50%;}}
-          // @keyframes cir4_dw {from{}to{margin-top: clampMun(188);margin-left: clampMun(441);width: clampMun(154);height: clampMun(154);background-color: #3CB4E5;opacity: 1;}}
-          // @keyframes cir5_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(290);margin-left: clampMun(666);width: clampMun(92);height: clampMun(92);border-radius:50%;}}
-          // @keyframes cir6_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(209);margin-left: clampMun(744);width: clampMun(42);height: clampMun(42);border-radius:50%;}}
-          // @keyframes cir7_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(417);margin-left: clampMun(815);width: clampMun(50);height: clampMun(50);border-radius:50%;}}
-          // @keyframes cir8_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(290);margin-left: clampMun(937);width: clampMun(66);height: clampMun(66);border-radius:50%;}}
-          // @keyframes cir9_dw {from{}to{margin-top: clampMun(241);margin-left: clampMun(1114);width: clampMun(182);height: clampMun(182);background-color: #3CB4E5;opacity: 1;}}
-          // @keyframes cir10_dw {from{}to{opacity: 1;background-color:#3cb4e5;margin-top: clampMun(600);margin-left: clampMun(1252);width: clampMun(34);height: clampMun(34);border-radius:50%;}}
-          // @keyframes cir11_dw {from{}to{opacity: 1;background-color:#ff7a00;margin-top: clampMun(300);margin-left: clampMun(280);width: clampMun(24);height: clampMun(24);border-radius:50%;}}
-          // @keyframes cir12_dw {from{}to{opacity: 1;background-color:#ff7a00;margin-top: clampMun(380);margin-left: clampMun(540);width: clampMun(18);height: clampMun(18);}}
-          // @keyframes cir13_dw {from{}to{opacity: 1;background-color:#ff7a00;margin-top: clampMun(318);margin-left: clampMun(1360);width: clampMun(46);height: clampMun(46);}}
-          // @keyframes cir14_dw {from{}to{opacity: 1;background-color:#ff7a00;margin-top: clampMun(544);margin-left: clampMun(1560);width: clampMun(34);height: clampMun(34);border-radius:50%;}}
-          // @keyframes cir15_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(242);margin-left: clampMun(628);width: clampMun(24);height: clampMun(24);border-radius:50%;}}
-          // @keyframes cir16_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(378);margin-left: clampMun(1029);width: clampMun(12);height: clampMun(12);}}
-          // @keyframes cir17_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(484);margin-left: clampMun(1331);width: clampMun(16);height: clampMun(16);}}
-          // @keyframes cir18_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(862);margin-left: clampMun(1749);width: clampMun(12);height: clampMun(12);}}
-          // @keyframes cir19_dw {from{}to{opacity: 1;background-color:#ff4713;margin-top: clampMun(776);margin-left: clampMun(1830);width: clampMun(50);height: clampMun(50);}}
-          // @keyframes cir20_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(388);margin-left: clampMun(611);width: clampMun(32);height: clampMun(32);border-radius:50%;}}
-          // @keyframes cir21_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(436);margin-left: clampMun(929);width: clampMun(50);height: clampMun(50);}}
-          // @keyframes cir22_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(144);margin-left: clampMun(1358);width: clampMun(36);height: clampMun(36);}}
-          // @keyframes cir23_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #3cb4e5;margin-top: clampMun(178);margin-left: clampMun(1447);width: clampMun(72);height: clampMun(72);}}
-          // @keyframes cir24_dw {from{}to{opacity: 1;background-color:#fff;border:1px solid #ff4713;margin-top: clampMun(455);margin-left: clampMun(693);width: clampMun(76);height: clampMun(76);}}
 
           // 모바일 버전
           @media all and (max-width: 576px){
 
+            .ani_g{filter: none;}
             .cnt3_box.on{padding-top: clampMunMb(330);}
             .cnt3_box.up{padding-top: clampMunMb(330);}
             .contact_container h1{font-size: clampMunMb(20);}
@@ -1570,7 +1504,6 @@ input {outline-offset:-1px;}
             }
             @keyframes hair_ct {
               from{}
-              // to{margin-top: clampMunMb(300);margin-left: clampMun(1400);}
               to{}
             }
             //---머리--
@@ -1593,7 +1526,6 @@ input {outline-offset:-1px;}
             }
             @keyframes head_ct {
               from{}
-              // to{margin-top: clampMunMb(390);margin-left: clampMunMb(1070);}
               to{}
             }
             //---몸통--
@@ -1639,7 +1571,7 @@ input {outline-offset:-1px;}
               100%{opacity: 1;height: clampMunMb(90);margin-top: 0;}
             }
 
-            .cir{display: none;}
+            // .cir{display: none;}
           }
       }
 
@@ -1647,7 +1579,6 @@ input {outline-offset:-1px;}
       #section4{
         .container{
             margin: 0 auto;
-            /* width: 1920px; */
             width: 100vw;
             color: #000;
             position: relative;
@@ -1664,38 +1595,9 @@ input {outline-offset:-1px;}
           .wh_red{background-color: #fff;border: 1px solid #ff4713;}
 
           //캐릭터 원
-          // .circle3-1{margin-top: clampMun(385);margin-left: clampMun(128);width: clampMun(90);height: clampMun(90);}
-          // .circle3-2{margin-top: clampMun(180);margin-left: clampMun(207);width: clampMun(70);height: clampMun(70);}
-          // .circle3-3{margin-top: clampMun(388);margin-left: clampMun(404);width: clampMun(40);height: clampMun(40);}
-          // .circle3-4{margin-top: clampMun(188);margin-left: clampMun(441);width: clampMun(154);height: clampMun(154);}
-          // .circle3-5{margin-top: clampMun(290);margin-left: clampMun(666);width: clampMun(92);height: clampMun(92);}
-          // .circle3-6{margin-top: clampMun(209);margin-left: clampMun(744);width: clampMun(42);height: clampMun(42);}
-          // .circle3-7{margin-top: clampMun(417);margin-left: clampMun(815);width: clampMun(50);height: clampMun(50);}
-          // .circle3-8{margin-top: clampMun(290);margin-left: clampMun(937);width: clampMun(66);height: clampMun(66);}
-          // .circle3-9{margin-top: clampMun(241);margin-left: clampMun(1114);width: clampMun(182);height: clampMun(182);}
-          // .circle3-10{margin-top: clampMun(600);margin-left: clampMun(1252);width: clampMun(34);height: clampMun(34);}
-
-          // .circle3-11{margin-top: clampMun(300);margin-left: clampMun(280);width: clampMun(24);height: clampMun(24);}
-          // .circle3-12{margin-top: clampMun(380);margin-left: clampMun(540);width: clampMun(18);height: clampMun(18);}
-          // .circle3-13{margin-top: clampMun(318);margin-left: clampMun(1360);width: clampMun(46);height: clampMun(46);}
-          // .circle3-14{margin-top: clampMun(544);margin-left: clampMun(1560);width: clampMun(34);height: clampMun(34);}
-          // .circle3-15{margin-top: clampMun(242);margin-left: clampMun(628);width: clampMun(24);height: clampMun(24);}
-          // .circle3-16{margin-top: clampMun(378);margin-left: clampMun(1029);width: clampMun(12);height: clampMun(12);}
-          // .circle3-17{margin-top: clampMun(484);margin-left: clampMun(1331);width: clampMun(16);height: clampMun(16);}
-          // .circle3-18{margin-top: clampMun(862);margin-left: clampMun(1749);width: clampMun(12);height: clampMun(12);}
-          // .circle3-19{margin-top: clampMun(776);margin-left: clampMun(1830);width: clampMun(50);height: clampMun(50);}
-          // .circle3-20{margin-top: clampMun(388);margin-left: clampMun(611);width: clampMun(32);height: clampMun(32);}
-
-          // .circle3-21{margin-top: clampMun(436);margin-left: clampMun(929);width: clampMun(50);height: clampMun(50);}
-          // .circle3-22{margin-top: clampMun(144);margin-left: clampMun(1358);width: clampMun(36);height: clampMun(36);}
-          // .circle3-23{margin-top: clampMun(178);margin-left: clampMun(1447);width: clampMun(72);height: clampMun(72);}
-          // .circle3-24{margin-top: clampMun(455);margin-left: clampMun(693);width: clampMun(76);height: clampMun(76);}
           .circle3-25{opacity: 0; width: clampMun(436);height: clampMun(436);margin-left: clampMun(1070);margin-top: clampMun(390);background-color: #fff;border: 1px solid #FF4713;border-radius: 50%;}//캐릭터 머리
           .circle3-26{opacity: 0; width: clampMun(114);height: clampMun(114);margin-left: clampMun(1400);margin-top: clampMun(300);background-color: #fff;border: 1px solid #FF4713;border-radius: 50%;}//캐릭터 꽁지
           .circle3-27{opacity: 0; width: clampMun(436);height: clampMun(218);margin-left: clampMun(1120);margin-top: clampMun(870);background-color: #fff;border: 1px solid #FF4713;border-radius: 0 0 clampMun(218) clampMun(218);transform: rotate(-20deg);}//캐릭터 몸통
-          // .circle3-25{margin-top: clampMun(350);margin-left: clampMun(1230);width: clampMun(436);height: clampMun(436);border-radius: 50%;}//캐릭터 머리
-          // .circle3-26{margin-top: clampMun(260);margin-left: clampMun(1600);width: clampMun(114);height: clampMun(114);border-radius: 50%;}//캐릭터 꽁지
-          // .circle3-27{margin-top: clampMun(850);margin-left: clampMun(1250);width: clampMun(436);height: clampMun(218);border-radius: 0 0 clampMun(218) clampMun(218);transform: rotate(-20deg);}//캐릭터 몸통
 
           //원들 사라짐
           .move4_circle.on > .cir{animation: cir_up 2s forwards;}
@@ -1714,36 +1616,10 @@ input {outline-offset:-1px;}
           @keyframes cha_up1-1 {from{opacity: 1;} to{opacity: 0;margin-top: -800px;}}
           @keyframes cha_up2-1 {from{opacity: 1;} to{opacity: 0;margin-top: -800px;}}
           @keyframes cha_up3-1 {from{opacity: 1;} to{opacity: 1; margin-left: clampMun(64);margin-top: clamp(-92rem, -47.9166666667vw, -1rem);background-color: #FF4713;border: transparent;width: clampMun(2650);height: clampMun(1325);border-radius: 0 0 clampMun(1325) clampMun(1325);transform: rotate(0deg);}}
-          // 배경 주황색
-          // .bg_box.on{
-          //   width: 100%;
-          //   height: clamp(1rem,10.41667vw,20rem);
-          //   background-color: #3CB4E5;
-          //   animation: box_dw 1s forwards, box_up 2s 1s forwards;
-          // }
-          // @keyframes box_dw {
-          //   from{}
-          //   to{
-          //     height: clampMun(1080);
-          //     background-color: #FF4713;
-          //   }
-          // }
-          // @keyframes box_up {
-          //   from{}
-          //   90%{background-color: #FF4713;}
-          //   to{
-          //     height: 0;
-          //     opacity: 0;
-          //   }
-          // }
-
-
+          
           //모션 끝
 
           .top_view{
-            /* width: 1419px;height: 227px; */
-            // width: clamp(1rem,73.90625vw,141.9rem);
-            // height: clamp(1rem,11.82291667vw,22.7rem);
             width: clampMun(1419);
             height: clampMun(227);
             background: url(../images/s4_top.png) no-repeat 0 0 / auto 100%;
@@ -1751,12 +1627,11 @@ input {outline-offset:-1px;}
             position: absolute;
             right: 0;
           }
+          .cnt_box{opacity: 0;}
           .cnt_box.on{
             animation: cnt_in 1s 3s forwards;
             opacity: 0;
             margin: 0 auto;
-            /* width: 1600px;
-            height: 1080px; */
             width: clamp(1rem,83.433vw,160rem);
             height: clamp(1rem,56.25vw,108rem);
             display: flex;
@@ -1775,7 +1650,6 @@ input {outline-offset:-1px;}
           .logo_container{
             display: flex;
             flex-direction: column;
-            /* margin-top: 300px; */
             margin-top: clamp(1rem,15.625vw,30rem);
           }
           .cnt_box.on h1{
@@ -1790,8 +1664,6 @@ input {outline-offset:-1px;}
             font-size: clamp(1rem,0.9375vw,1.8rem);
             line-height: clamp(1rem,1.5625vw,3rem);
             font-family: "SUIT-Regular";
-            /* margin-top: 25px;
-            width: 410px; */
             margin-top: clamp(1rem,1.30208333vw,2.5rem);
             width: clamp(1rem,21.3541667vw,41rem);
             opacity: 0;
@@ -1800,8 +1672,6 @@ input {outline-offset:-1px;}
           .job_btn{margin-top: 20px;}
           .job_btn a{
             padding: 10px;
-            /* width: 230px;height: 50px;
-            font-size: 18px;line-height: 50px; */
             width: clamp(1rem,11.9791667vw,23rem);
             height: (1rem,2.6041667vw,5rem);
             font-size: clamp(0.5rem,0.9375vw,1.8rem);
@@ -1809,8 +1679,6 @@ input {outline-offset:-1px;}
             font-family: "SUIT-Bold";
             text-align: center;
             border: 1px solid #000;
-            /* border-radius: 25px;
-            margin-top: 40px; */
             border-radius: clamp(1rem,1.30208333vw,2.5rem);
             margin-top: clamp(1rem,2.08333vw,4rem);
             cursor: pointer;
@@ -1822,8 +1690,9 @@ input {outline-offset:-1px;}
           .cnt_box.on .big_logo{
             animation: logo_ani 2s 4s forwards;
             opacity: 0;
-            width: clamp(1rem,28.75vw,55.2rem);
-            height: clamp(1rem,13.703vw,14.8rem);
+            width: clampMun(552);
+            height: clampMun(148);
+            scale: .8;
             background: url(../images/logo_large.png) no-repeat 0 0 / auto 100%;
             background-size: contain;
           }

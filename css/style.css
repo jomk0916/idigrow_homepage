@@ -938,7 +938,7 @@ input {
   opacity: 0.5;
 }
 #wrap #main #section3 {
-  /* contact버튼 마우스 호버 - 추후 클릭으로 변경 예정*/
+  /* contact버튼 마우스 클릭*/
   /* 회사 정보 및 연결 정보 기입 창 */
   /* section3_animation */
 }
@@ -1126,7 +1126,6 @@ input {
   padding-top: clamp(1rem, 5.2083333333vw, 10rem);
   width: clamp(1rem, 83.434%, 160rem);
   height: clamp(1rem, 45.8333vw, 88rem);
-  /* height: 880px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1148,7 +1147,6 @@ input {
   padding-top: clamp(1rem, 5.2083333333vw, 10rem);
   width: clamp(1rem, 83.434%, 160rem);
   height: clamp(1rem, 45.8333vw, 88rem);
-  /* height: 880px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1169,30 +1167,22 @@ input {
 }
 #wrap #main #section3 address {
   font-size: clamp(1rem, 0.9375vw, 1.8rem);
-  /* font-size: 18px; */
-  /* margin-top: 40px; */
   margin-top: clamp(1rem, 2.08333vw, 4rem);
   font-family: "SUIT-Regular";
 }
 #wrap #main #section3 .contact_btn {
-  /* width: 166px;
-  height: 50px; */
   width: clamp(1rem, 8.6458334vw, 16.6rem);
   height: clamp(1rem, 2.6041667vw, 5rem);
   background-color: #000;
   color: #fff;
   text-align: center;
-  /* line-height: 50px; */
   line-height: clamp(1rem, 2.6041667vw, 5rem);
-  /* border-radius: 80px; */
   border-radius: clamp(1rem, 4.1667vw, 8rem);
   cursor: pointer;
   transition: all 0.3s;
-  /* margin-top: 50px; */
   margin-top: clamp(1rem, 2.6041776vw, 5rem);
 }
 #wrap #main #section3 .contact_btn p {
-  /* font-size: 16px; */
   font-size: clamp(5px, 0.8333vw, 1.6rem);
   font-family: "SUIT-Bold";
 }
@@ -1200,9 +1190,6 @@ input {
   opacity: 0;
 }
 #wrap #main #section3 .contact_btn.on {
-  /* width: 730px;height: 313px;
-  border-radius: 25px;
-  padding: 20px 30px; */
   width: clamp(1rem, 38.0208333vw, 73rem);
   height: clamp(1rem, 16.30208333vw, 31.3rem);
   border-radius: clamp(1rem, 1.30208333vw, 2.5rem);
@@ -1217,22 +1204,16 @@ input {
 #wrap #main #section3 .contact_btn.on .contact_wrap {
   opacity: 1;
   transition: all 0.3s;
-  /* margin-top: -20px;
-  margin-left: -30px; */
   margin-top: clamp(-2rem, -1.041667vw, -1rem);
   margin-left: clamp(-3rem, -1.5625vw, -1rem);
 }
 #wrap #main #section3 .contact_wrap {
-  /* width: 790px;height: 313px; */
   width: clamp(1rem, 41.1458333vw, 79rem);
   height: clamp(1rem, 16.30208333vw, 31.3rem);
   display: flex;
   opacity: 0;
 }
 #wrap #main #section3 .contact_wrapper {
-  /* width: 730px;height: 313px;
-  border-radius: 25px;
-  padding: 20px 30px; */
   width: clamp(1rem, 38.0208333vw, 73rem);
   height: clamp(1rem, 16.30208333vw, 31.3rem);
   border-radius: clamp(1rem, 1.30208333vw, 2.5rem);
@@ -1246,19 +1227,15 @@ input {
   flex-wrap: wrap;
 }
 #wrap #main #section3 .input_box p:last-child input {
-  /* width: 670px; */
   width: clamp(1rem, 34.8958333vw, 67rem);
 }
 #wrap #main #section3 .input_box p:nth-child(2) input,
 #wrap #main #section3 .input_box p:nth-child(4) input {
-  /* margin-left: 30px; */
   margin-left: clamp(1rem, 1.5625vw, 3rem);
 }
 #wrap #main #section3 input[placeholder] {
-  /* width: 320px;height: 50px; */
   width: clamp(1rem, 16.667vw, 32rem);
   height: clamp(1rem, 2.6041667vw, 5rem);
-  /* font-size: 14px; */
   font-size: clamp(0.5rem, 0.7291667vw, 1.4rem);
   color: #fff;
   font-family: "SUIT-Bold";
@@ -1266,30 +1243,23 @@ input {
   background-color: #000;
   outline: none;
   border-bottom: 1px solid #d9d9d9;
-  /* margin-bottom: 20px; */
   margin-bottom: clamp(1rem, 1.041667vw, 2rem);
 }
 #wrap #main #section3 .send_btn {
-  /* width: 670px;height: 50px; */
   width: clamp(1rem, 34.8958333vw, 67rem);
   height: clamp(1rem, 2.6041667vw, 5rem);
   background-color: #fff;
   color: #000;
-  /* font-size: 14px; */
   font-size: clamp(1rem, 0.7291667vw, 1.4rem);
   font-family: "SUIT-Bold";
   text-align: center;
-  /* line-height: 50px; */
   line-height: clamp(1rem, 2.6041667vw, 5rem);
-  /* border-radius: 25px; */
   border-radius: clamp(1rem, 1.30208333vw, 2.5rem);
   cursor: pointer;
 }
 #wrap #main #section3 .close_btn {
-  /* width: 50px;height: 50px; */
   width: clamp(1rem, 2.6041667vw, 5rem);
   height: clamp(1rem, 2.6041667vw, 5rem);
-  /* margin-left: 10px; */
   margin-left: clamp(1rem, 0.5208333vw, 1rem);
   background: url(../images/close_btn.png) no-repeat 0 0/auto 100%;
   background-size: contain;
@@ -1316,7 +1286,7 @@ input {
   }
 }
 #wrap #main #section3 .circle1.on {
-  animation: hair_dw 1.3s 1s forwards, hair_bomb 1s 2s forwards, hair_ct 2s 6s forwards;
+  animation: hair_dw 1.3s 1s forwards, hair_bomb 1s 2s forwards, hair_ct 2s 4.5s forwards;
 }
 @keyframes hair_dw {
   from {
@@ -1334,20 +1304,22 @@ input {
 }
 @keyframes hair_bomb {
   to {
-    width: clamp(1rem, 5.9375vw, 11.4rem);
-    height: clamp(1rem, 5.9375vw, 11.4rem);
+    width: clamp(1rem, 2.6041666667vw, 5rem);
+    height: clamp(1rem, 2.6041666667vw, 5rem);
     background-color: #fff;
     border: 1px solid #FF4713;
   }
 }
 @keyframes hair_ct {
   to {
+    width: clamp(1rem, 5.9375vw, 11.4rem);
+    height: clamp(1rem, 5.9375vw, 11.4rem);
     margin-top: clamp(1rem, 15.625vw, 30rem);
     margin-left: clamp(1rem, 72.9166666667vw, 140rem);
   }
 }
 #wrap #main #section3 .circle2.on {
-  animation: head_dw 1.3s 1s forwards, head_bomb 1s 2s forwards, head_ct 2s 6s forwards;
+  animation: head_dw 1.3s 1s forwards, head_bomb 1s 2s forwards, head_ct 2s 4.5s forwards;
 }
 @keyframes head_dw {
   from {
@@ -1367,21 +1339,47 @@ input {
 }
 @keyframes head_bomb {
   to {
-    width: clamp(1rem, 22.7083333333vw, 43.6rem);
-    height: clamp(1rem, 22.7083333333vw, 43.6rem);
-    margin-left: clamp(1rem, 67.3958333333vw, 129.4rem);
+    margin-top: clamp(1rem, 35.4166666667vw, 68rem);
+    margin-left: clamp(1rem, 74.4791666667vw, 143rem);
+    width: clamp(1rem, 10.4166666667vw, 20rem);
+    height: clamp(1rem, 10.4166666667vw, 20rem);
     background-color: #fff;
     border: 1px solid #FF4713;
   }
 }
 @keyframes head_ct {
   to {
+    width: clamp(1rem, 22.7083333333vw, 43.6rem);
+    height: clamp(1rem, 22.7083333333vw, 43.6rem);
     margin-top: clamp(1rem, 20.3125vw, 39rem);
     margin-left: clamp(1rem, 55.7291666667vw, 107rem);
   }
 }
 #wrap #main #section3 .circle3.on {
-  animation: body_ct 2s 6s forwards;
+  animation: body_bomb 1s 3s forwards, body_ct 2s 4.5s forwards;
+}
+@keyframes body_bomb {
+  from {
+    margin-top: clamp(1rem, 40.625vw, 78rem);
+    margin-left: clamp(1rem, 74.4791666667vw, 143rem);
+    width: clamp(1rem, 10.4166666667vw, 20rem);
+    height: clamp(1rem, 5.2083333333vw, 10rem);
+    border-radius: 0 0 clamp(1rem, 5.2083333333vw, 10rem) clamp(1rem, 5.2083333333vw, 10rem);
+    background-color: #fff;
+    border: 1px solid #FF4713;
+    opacity: 0;
+  }
+  to {
+    margin-top: clamp(1rem, 46.875vw, 90rem);
+    margin-left: clamp(1rem, 75.5208333333vw, 145rem);
+    width: clamp(1rem, 10.4166666667vw, 20rem);
+    height: clamp(1rem, 5.2083333333vw, 10rem);
+    border-radius: 0 0 clamp(1rem, 5.2083333333vw, 10rem) clamp(1rem, 5.2083333333vw, 10rem);
+    transform: rotate(-20deg);
+    background-color: #fff;
+    border: 1px solid #FF4713;
+    opacity: 1;
+  }
 }
 @keyframes body_ct {
   from {
@@ -1393,6 +1391,10 @@ input {
     margin-left: clamp(1rem, 58.3333333333vw, 112rem);
     background-color: #fff;
     border: 1px solid #FF4713;
+    width: clamp(1rem, 22.7083333333vw, 43.6rem);
+    height: clamp(1rem, 11.3541666667vw, 21.8rem);
+    border-radius: 0 0 clamp(1rem, 11.3541666667vw, 21.8rem) clamp(1rem, 11.3541666667vw, 21.8rem);
+    transform: rotate(-20deg);
   }
 }
 #wrap #main #section3 .move_circle.on > .circle3-1 {
@@ -2027,6 +2029,9 @@ input {
   }
 }
 @media all and (max-width: 576px) {
+  #wrap #main #section3 .ani_g {
+    filter: none;
+  }
   #wrap #main #section3 .cnt3_box.on {
     padding-top: clamp(1rem, 57.2916666667vw, 33rem);
   }
@@ -2249,13 +2254,9 @@ input {
       margin-top: 0;
     }
   }
-  #wrap #main #section3 .cir {
-    display: none;
-  }
 }
 #wrap #main #section4 .container {
   margin: 0 auto;
-  /* width: 1920px; */
   width: 100vw;
   color: #000;
   position: relative;
@@ -2394,7 +2395,6 @@ input {
   }
 }
 #wrap #main #section4 .top_view {
-  /* width: 1419px;height: 227px; */
   width: clamp(1rem, 73.90625vw, 141.9rem);
   height: clamp(1rem, 11.8229166667vw, 22.7rem);
   background: url(../images/s4_top.png) no-repeat 0 0/auto 100%;
@@ -2402,12 +2402,13 @@ input {
   position: absolute;
   right: 0;
 }
+#wrap #main #section4 .cnt_box {
+  opacity: 0;
+}
 #wrap #main #section4 .cnt_box.on {
   animation: cnt_in 1s 3s forwards;
   opacity: 0;
   margin: 0 auto;
-  /* width: 1600px;
-  height: 1080px; */
   width: clamp(1rem, 83.433vw, 160rem);
   height: clamp(1rem, 56.25vw, 108rem);
   display: flex;
@@ -2426,7 +2427,6 @@ input {
 #wrap #main #section4 .logo_container {
   display: flex;
   flex-direction: column;
-  /* margin-top: 300px; */
   margin-top: clamp(1rem, 15.625vw, 30rem);
 }
 #wrap #main #section4 .cnt_box.on h1 {
@@ -2450,8 +2450,6 @@ input {
   font-size: clamp(1rem, 0.9375vw, 1.8rem);
   line-height: clamp(1rem, 1.5625vw, 3rem);
   font-family: "SUIT-Regular";
-  /* margin-top: 25px;
-  width: 410px; */
   margin-top: clamp(1rem, 1.30208333vw, 2.5rem);
   width: clamp(1rem, 21.3541667vw, 41rem);
   opacity: 0;
@@ -2469,8 +2467,6 @@ input {
 }
 #wrap #main #section4 .job_btn a {
   padding: 10px;
-  /* width: 230px;height: 50px;
-  font-size: 18px;line-height: 50px; */
   width: clamp(1rem, 11.9791667vw, 23rem);
   height: 1rem, 2.6041667vw, 5rem;
   font-size: clamp(0.5rem, 0.9375vw, 1.8rem);
@@ -2478,8 +2474,6 @@ input {
   font-family: "SUIT-Bold";
   text-align: center;
   border: 1px solid #000;
-  /* border-radius: 25px;
-  margin-top: 40px; */
   border-radius: clamp(1rem, 1.30208333vw, 2.5rem);
   margin-top: clamp(1rem, 2.08333vw, 4rem);
   cursor: pointer;
@@ -2493,7 +2487,8 @@ input {
   animation: logo_ani 2s 4s forwards;
   opacity: 0;
   width: clamp(1rem, 28.75vw, 55.2rem);
-  height: clamp(1rem, 13.703vw, 14.8rem);
+  height: clamp(1rem, 7.7083333333vw, 14.8rem);
+  scale: 0.8;
   background: url(../images/logo_large.png) no-repeat 0 0/auto 100%;
   background-size: contain;
 }
