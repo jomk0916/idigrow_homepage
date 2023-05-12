@@ -22,12 +22,22 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
 ;(function($){
   const idgrow = {
     init:function(){
+      this.cover_bg();
       this.mouse_custom();
       this.header();
       this.section1();
       this.section2();
       this.section3();
       this.section4();
+    },
+    cover_bg:function(){
+      $('.start_btn').hover(function(){
+        $('.loader').addClass('coverBg_start');
+        $('.loader').removeClass('coverBg_end');
+      }, function(){
+        $('.loader').removeClass('coverBg_start');
+        $('.loader').addClass('coverBg_end');
+      });
     },
     mouse_custom:function(){
       const coords = { x:0, y:0 };
@@ -115,9 +125,7 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
             else {
               $('#mouse_custom').css('display','block');
             }
-
-        
-
+      
             // 모션 스타트
             $('#section1').addClass('sec1_ani_start');
             $('.cover_bg').fadeOut();

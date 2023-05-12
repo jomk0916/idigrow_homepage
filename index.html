@@ -20,8 +20,15 @@
   <!-- 표지 -->
   <div class="cover_bg">
     <div class="start_btn">
-      <canvas id="modal_3d_model_o" width="230" height="230"></canvas>
+      <canvas id="modal_3d_model_o" width="500" height="500"></canvas>
     </div>
+    <svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200">
+      <circle cx="555" cy="555" r="555"/>
+      <circle cx="555" cy="555" r="462.5"/>
+      <circle cx="555" cy="555" r="385.5"/>
+      <circle cx="555" cy="555" r="321"/>
+      <circle cx="555" cy="555" r="267.5"/>
+    </svg>
   </div>
 
   <div id="wrap">
@@ -39,7 +46,7 @@
       </div>
     </div>
 
-    <div class="bg"></div>
+    <!-- <div class="bg"></div> -->
     <!-- 헤더 -->
     <header id="header" class="">
       <div class="container">
@@ -368,7 +375,7 @@
       scene.add(gltf.scene);
 
       // 로고 모델의 y 위치를 변경
-      gltf.scene.position.y = -3;
+      gltf.scene.position.y = -3.4;
 
       function animate(){
         requestAnimationFrame(animate)
