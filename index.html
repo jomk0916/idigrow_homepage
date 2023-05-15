@@ -356,6 +356,9 @@
     let camera = new THREE.PerspectiveCamera(30, 1); // 확대, ?
     camera.position.set(0,0,21);  // x, y, 확대?
 
+    let camera2 = new THREE.PerspectiveCamera(30, 1); // 확대, ?
+    camera2.position.set(0,0.4,21);  // x, y, 확대?
+
     let loader = new GLTFLoader();
     loader.load('./images/logo.glb', function(gltf){
       gltf.scene.traverse(function (child) {
@@ -381,7 +384,7 @@
         requestAnimationFrame(animate)
         gltf.scene.rotation.y += 0.01;
         renderer.render(scene, camera);
-        renderer2.render(scene, camera);
+        renderer2.render(scene, camera2);
       }
 
       if(matchMedia("screen and (max-width: 992px)").matches){

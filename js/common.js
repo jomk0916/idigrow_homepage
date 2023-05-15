@@ -144,7 +144,7 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
               playSound(Sound0101);
               startId = setTimeout(()=>{
                 playSound(Sound0102);
-              }, 5450)
+              }, 6100)
             }, 600)
           }
         }
