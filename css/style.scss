@@ -76,7 +76,8 @@ input {outline-offset:-1px;}
   max-width: 1920px;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(39, 48, 56, 1); // #273038
+  // background-color: rgba(45, 45, 45, 1); // #2d2d2d
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,6 +113,7 @@ input {outline-offset:-1px;}
       position: absolute;
       top: 0%;
       left: 0%;
+      fill: none;
       &.coverBg_start {
         circle {
           animation: coverBg 1.5s ease-in-out forwards;
@@ -286,7 +288,8 @@ input {outline-offset:-1px;}
         position: absolute;
         top: 0;
         left: 0;
-        background-color: rgba(0,0,0,0.9);
+        background-color: rgba(39, 48, 56, 1); // #273038
+        // background-color: rgba(45, 45, 45, 1); // #2d2d2d
         display: flex;
         justify-content: center;
         align-items: center;
