@@ -19,16 +19,18 @@
 
   <!-- 표지 -->
   <div class="cover_bg">
-    <div class="start_btn">
-      <canvas id="modal_3d_model_o" width="500" height="500"></canvas>
+    <div class="gap">
+      <div class="start_btn">
+        <canvas id="modal_3d_model_o" width="500" height="500"></canvas>
+      </div>
+      <svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="-5 0 1120 1110">
+        <circle cx="555" cy="555" r="555"/>
+        <circle cx="555" cy="555" r="462.5"/>
+        <circle cx="555" cy="555" r="385.5"/>
+        <circle cx="555" cy="555" r="321"/>
+        <circle cx="555" cy="555" r="267.5"/>
+      </svg>
     </div>
-    <svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200">
-      <circle cx="555" cy="555" r="555"/>
-      <circle cx="555" cy="555" r="462.5"/>
-      <circle cx="555" cy="555" r="385.5"/>
-      <circle cx="555" cy="555" r="321"/>
-      <circle cx="555" cy="555" r="267.5"/>
-    </svg>
   </div>
 
   <div id="wrap">
@@ -356,8 +358,8 @@
     let camera = new THREE.PerspectiveCamera(30, 1); // 확대, ?
     camera.position.set(0,0,21);  // x, y, 확대?
 
-    let camera2 = new THREE.PerspectiveCamera(30, 1); // 확대, ?
-    camera2.position.set(0,0.4,21);  // x, y, 확대?
+    let camera2 = new THREE.PerspectiveCamera(30, 1); // 확대, ? [ 표지 원 ]
+    camera2.position.set(0,0.1,21);  // x, y, 확대?
 
     let loader = new GLTFLoader();
     loader.load('./images/logo.glb', function(gltf){
@@ -388,9 +390,9 @@
       }
 
       if(matchMedia("screen and (max-width: 992px)").matches){
-        //화면 크기가 576px이하일때
-        let camera = new THREE.PerspectiveCamera(25, 1); // 확대, ?
-        camera.position.set(0,0,21);  // x, y, 확대?
+        //화면 크기가 992px이하일때
+        let camera = new THREE.PerspectiveCamera(35, 1); // 확대, ?
+        camera.position.set(0,-0.2,21);  // x, y, 확대?
         gltf.scene.rotation.y = 0.1;
         renderer.render(scene, camera);
         renderer2.render(scene, camera);

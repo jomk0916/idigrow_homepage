@@ -102,9 +102,17 @@ input {
   justify-content: center;
   align-items: center;
 }
-.cover_bg .start_btn {
-  z-index: 2;
+.cover_bg .gap {
+  position: relative;
+  width: 800px;
+  height: 800px;
   margin: 100px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cover_bg .gap .start_btn {
+  z-index: 2;
   width: 350px;
   height: 350px;
   display: flex;
@@ -115,58 +123,60 @@ input {
   color: #fff;
   cursor: pointer;
 }
-.cover_bg .start_btn canvas {
+.cover_bg .gap .start_btn canvas {
   width: 100%;
 }
-.cover_bg svg {
+.cover_bg .gap svg {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 14.5%;
-  left: 29.5%;
+  top: 0%;
+  left: 0%;
 }
-.cover_bg svg.coverBg_start circle {
+.cover_bg .gap svg.coverBg_start circle {
   animation: coverBg 1.5s ease-in-out forwards;
 }
-.cover_bg svg.coverBg_end circle {
+.cover_bg .gap svg.coverBg_end circle {
   animation: coverBg_end 1.5s ease-in-out forwards;
 }
-.cover_bg svg circle {
+.cover_bg .gap svg circle {
   stroke: rgba(255, 255, 255, 0.5);
   transform-origin: 555px 555px;
   transform: scale(0.05);
   will-change: transform;
 }
-.cover_bg svg circle:nth-of-type(1) {
+.cover_bg .gap svg circle:nth-of-type(1) {
   stroke-dasharray: 5px;
   opacity: 0.2;
 }
-.cover_bg svg circle:nth-of-type(2) {
+.cover_bg .gap svg circle:nth-of-type(2) {
   stroke-dasharray: 5px;
   opacity: 0.4;
 }
-.cover_bg svg circle:nth-of-type(3) {
+.cover_bg .gap svg circle:nth-of-type(3) {
   stroke-dasharray: 5px;
   opacity: 0.6;
 }
-.cover_bg svg circle:nth-of-type(4) {
+.cover_bg .gap svg circle:nth-of-type(4) {
   stroke-dasharray: 5px;
   opacity: 0.9;
 }
-.cover_bg svg circle:nth-of-type(5) {
+.cover_bg .gap svg circle:nth-of-type(5) {
   stroke-width: 0.8px;
 }
-.cover_bg svg circle:nth-of-type(1) {
+.cover_bg .gap svg circle:nth-of-type(1) {
   animation-delay: -0.15s;
 }
-.cover_bg svg circle:nth-of-type(2) {
+.cover_bg .gap svg circle:nth-of-type(2) {
   animation-delay: -0.3s;
 }
-.cover_bg svg circle:nth-of-type(3) {
+.cover_bg .gap svg circle:nth-of-type(3) {
   animation-delay: -0.45s;
 }
-.cover_bg svg circle:nth-of-type(4) {
+.cover_bg .gap svg circle:nth-of-type(4) {
   animation-delay: -0.6s;
 }
-.cover_bg svg circle:nth-of-type(5) {
+.cover_bg .gap svg circle:nth-of-type(5) {
   animation-delay: -0.75s;
 }
 
@@ -2836,11 +2846,14 @@ input {
   }
 }
 @media all and (max-width: 992px) {
-  .cover_bg .start_btn {
-    margin: 0px 0 0 0;
+  .cover_bg .gap {
+    margin: 0 0 0 0;
   }
-  .cover_bg svg {
-    background-color: lightcoral;
+  .cover_bg .gap .start_btn {
+    width: 500px;
+    height: 500px;
+  }
+  .cover_bg .gap svg {
     display: none;
   }
   #wrap #modal .container {
@@ -2903,9 +2916,12 @@ input {
   }
 }
 @media all and (max-width: 576px) {
-  .cover_bg .start_btn {
-    width: 180px;
-    height: 180px;
+  .cover_bg .gap {
+    margin: 0 0 0 0;
+  }
+  .cover_bg .gap .start_btn {
+    width: 280px;
+    height: 280px;
   }
   #wrap #modal .container {
     display: flex;
