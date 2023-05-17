@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>말풍선그리기</title>
+</head>
+<style>
+  #wrap {
+    position: relative;
+    margin: 100px 0 0 100px;
+    width: 1000px;
+    height: 500px;
+  }
+
+  #wrap img {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+
+  #wrap .ballon {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+  }
+
+  #wrap .ballon .box {
+    opacity: 1;
+    width: 100%;
+    height: 20px;
+    background-color: #f54401;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #wrap .ballon .box h3 {
+    font-size: 10px;
+    color:#fff;
+  }
+
+  #wrap .ballon .tale {
+    opacity: 1;
+    margin:0 auto;
+    width: 0px;
+    height: 0px;
+    border-bottom: 10px solid #f54401;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+  }
+</style>
+<body>
+
+  <div id="wrap">
+    <img src="./말풍선.png" alt="">
+    <div class="ballon">
+      <div class="tale"></div>
+      <div class="box">
+        <h3>CLICK</h3>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

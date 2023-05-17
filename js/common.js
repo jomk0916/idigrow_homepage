@@ -30,15 +30,66 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
       this.section3();
       this.section4();
     },
+
+    
     cover_bg:function(){
       $('.start_btn').hover(function(){
         $('.loader').addClass('coverBg_start');
         $('.loader').removeClass('coverBg_end');
+        $('#cover_mouse_custom').fadeIn(500);
       }, function(){
         $('.loader').removeClass('coverBg_start');
         $('.loader').addClass('coverBg_end');
+        $('#cover_mouse_custom').fadeOut(200);
       });
+
+      // 표지 마우스 포인터 관련
+      const coords = { x:0, y:0 };
+      const balloons = document.querySelectorAll("#cover_mouse_custom .balloon");
+      let requestId;
+
+      balloons.forEach(function(balloon){
+        balloon.x = 0;
+        balloon.y = 0;
+      });
+
+      window.addEventListener("mousemove", function(e){
+        coords.x = e.clientX;
+        coords.y = e.clientY;
+
+        if (!requestId) {
+          requestId = requestAnimationFrame(animateCircles);
+        }
+      })
+
+      function animateCircles(){
+        let x = coords.x;
+        let y = coords.y;
+
+        balloons.forEach(function (balloon, index){
+          balloon.style.left = x - 20 + "px";
+          balloon.style.top = y + 30 + "px";
+
+          balloon.style.scale = 1;
+
+          balloon.x = x;
+          balloon.y = y;
+
+          const nextCircle = balloons[index + 1] || balloons[0]; // circle[0] ~ circle[7] // 좌측이 false면 우측 실행
+          x += (nextCircle.x - x) * 0.1;
+          y += (nextCircle.y - y) * 0.1;
+
+        });
+
+        requestId = null;
+        if (coords.x || coords.y) {
+          requestId = requestAnimationFrame(animateCircles);
+        }
+      }
     },
+
+
+
     mouse_custom:function(){
       const coords = { x:0, y:0 };
       const circles = document.querySelectorAll("#mouse_custom .circle");
@@ -137,15 +188,15 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
               setTimeout(function(){
                 $('.circle_g').removeClass('goo');
               },2000);
-            }, 5000);
+            }, 2500);
 
             // 1p 효과음 관련
             startId = setTimeout(()=>{
               playSound(Sound0101);
               startId = setTimeout(()=>{
                 playSound(Sound0102);
-              }, 6100)
-            }, 600)
+              }, 3800)
+            }, 300)
           }
         }
       });

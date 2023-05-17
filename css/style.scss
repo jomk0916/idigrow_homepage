@@ -81,7 +81,62 @@ input {outline-offset:-1px;}
   display: flex;
   justify-content: center;
   align-items: center;
+  #cover_mouse_custom {
+    z-index: 2;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .balloon {
+      position: relative;
+      width: 50px;
+      height: 30px;
+      // background-color: lightblue;
+      animation: balloon_ani 2s ease-in-out infinite;
+      .box {
+        opacity: 1;
+        width: 100%;
+        height: 20px;
+        background-color: #f54401;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .box h3 {
+        font-family: 'SUIT-Variable';
+        font-size: 10px;
+        font-weight: 600;
+        color:#fff;
+      }
+    
+      .tale {
+        opacity: 1;
+        margin:0 auto;
+        width: 0px;
+        height: 0px;
+        border-bottom: 10px solid #f54401;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+      }
+    }
+  }
+
+  @keyframes balloon_ani {
+    0% {
+      transform: translateY(0%);
+    }
+    50% {
+      transform: translateY(30%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
   .gap {
+    z-index: 1;
     position: relative;
     width: 800px;
     height: 800px;
@@ -595,10 +650,10 @@ input {outline-offset:-1px;}
             &.active {
               &:hover {
                 .first_bar {
-                  background-color: #3CB4E5;
+                  background-color: #fff;
                 }
                 .second_bar {
-                  background-color: #3CB4E5;
+                  background-color: #fff;
                 }
               }
               .first_bar {
@@ -628,7 +683,7 @@ input {outline-offset:-1px;}
           .container .loader {
             circle {
               animation-name: preloader;
-              animation-duration: 6s;
+              animation-duration: 4s; // 5
               animation-timing-function: ease-in-out;
               transform-origin: 555px 555px; // 기준점
               will-change: transform;
@@ -636,30 +691,30 @@ input {outline-offset:-1px;}
             }
             .circle_g {
               .main_circle {
-                animation: circleScale 5s ease-in-out 1 both, circleScale2 1s ease-in-out 8s forwards;
+                animation: circleScale 3s ease-in-out 1 both, circleScale2 1s ease-in-out 5s forwards; // 4
               }
               .second_circle {
-                animation: circleSecond 3s 5s forwards, circleScale3 1s ease-in-out 8s forwards;
+                animation: circleSecond 2s 3s forwards, circleScale3 1s ease-in-out 5s forwards;
               }
             }
             .halfCircle {
-              animation: circleThird 2s 6s forwards, circleScale3 1s ease-in-out 8s forwards;
+              animation: circleThird 2s 3s forwards, circleScale3 1s ease-in-out 5s forwards;
             }
           }
           .textBox {
             h1 {
               &:nth-child(1){
-                animation: textUp 1s 8.5s forwards;
+                animation: textUp 1s 5.5s forwards;
               }
               &:nth-child(2){
-                animation: textUp 1s 8.7s forwards;
+                animation: textUp 1s 5.7s forwards;
               }
               &:nth-child(3){
-                animation: textUp 1s 8.9s forwards;
+                animation: textUp 1s 5.9s forwards;
               }
             }
             p {
-              animation: textRight 1s 9.1s forwards
+              animation: textRight 1s 6.1s forwards
             }
           }
         }
@@ -800,71 +855,72 @@ input {outline-offset:-1px;}
           .gap {
             .main_text {
               svg text {
-                $sec2Dur : 2s;
+                $sec2Dur : 1.5s;
+                $sec2Delay : 2.5s;
                 // 디지털교과서부터
                 &:nth-of-type(1){
-                  animation:sec2_stroke $sec2Dur forwards 3s, sec2_fill 2s forwards 5s;
+                  animation:sec2_stroke $sec2Dur forwards $sec2Delay, sec2_fill 2s forwards 4s;
                 }
                 &:nth-of-type(2){
-                  animation:sec2_stroke $sec2Dur forwards 3s, sec2_fill 2s forwards 5.05s;
+                  animation:sec2_stroke $sec2Dur forwards $sec2Delay, sec2_fill 2s forwards 4.05s;
                 }
                 &:nth-of-type(3){
-                  animation:sec2_stroke $sec2Dur forwards 3s, sec2_fill 2s forwards 5.1s;
+                  animation:sec2_stroke $sec2Dur forwards $sec2Delay, sec2_fill 2s forwards 4.1s;
                 }
                 &:nth-of-type(4){
-                  animation:sec2_stroke $sec2Dur forwards 3s, sec2_fill 2s forwards 5.15s;
+                  animation:sec2_stroke $sec2Dur forwards $sec2Delay, sec2_fill 2s forwards 4.15s;
                 }
                 &:nth-of-type(5){
-                  animation:sec2_stroke $sec2Dur forwards 3s, sec2_fill 2s forwards 5.2s;
+                  animation:sec2_stroke $sec2Dur forwards $sec2Delay, sec2_fill 2s forwards 4.2s;
                 }
                 &:nth-of-type(6){
-                animation:sec2_stroke $sec2Dur forwards 3s, sec2_fill 2s forwards 5.25s;
+                animation:sec2_stroke $sec2Dur forwards $sec2Delay, sec2_fill 2s forwards 4.25s;
                 }
                 &:nth-of-type(7){
-                animation:sec2_stroke $sec2Dur forwards 3s, sec2_fill 2s forwards 5.3s;
+                animation:sec2_stroke $sec2Dur forwards $sec2Delay, sec2_fill 2s forwards 4.3s;
                 }
                 &:nth-of-type(8){
-                animation:sec2_stroke $sec2Dur forwards 3s, sec2_fill 2s forwards 5.35s;
+                animation:sec2_stroke $sec2Dur forwards $sec2Delay, sec2_fill 2s forwards 4.35s;
                 }
                 // AI교과서까지
                 &:nth-of-type(9){
-                animation:sec2_stroke $sec2Dur forwards 3s, sec2_fill 2s forwards 6s;
+                animation:sec2_stroke $sec2Dur forwards $sec2Delay, sec2_fill 2s forwards 5s;
                 }
                 &:nth-of-type(10){
-                animation:sec2_stroke $sec2Dur forwards 3s, sec2_fill 2s forwards 6.05s;
+                animation:sec2_stroke $sec2Dur forwards $sec2Delay, sec2_fill 2s forwards 5.05s;
                 }
                 &:nth-of-type(11){
-                animation:sec2_stroke $sec2Dur forwards 3s, sec2_fill 2s forwards 6.1s;
+                animation:sec2_stroke $sec2Dur forwards $sec2Delay, sec2_fill 2s forwards 5.1s;
                 }
                 &:nth-of-type(12){
-                animation:sec2_stroke $sec2Dur forwards 3s, sec2_fill 2s forwards 6.15s;
+                animation:sec2_stroke $sec2Dur forwards $sec2Delay, sec2_fill 2s forwards 5.15s;
                 }
                 &:nth-of-type(13){
-                animation:sec2_stroke $sec2Dur forwards 3s, sec2_fill 2s forwards 6.2s;
+                animation:sec2_stroke $sec2Dur forwards $sec2Delay, sec2_fill 2s forwards 5.2s;
                 }
                 &:nth-of-type(14){
-                animation:sec2_stroke $sec2Dur forwards 3s, sec2_fill 2s forwards 6.25s;
+                animation:sec2_stroke $sec2Dur forwards $sec2Delay, sec2_fill 2s forwards 5.25s;
                 }
                 &:nth-of-type(15){
-                animation:sec2_stroke $sec2Dur forwards 3s, sec2_fill 2s forwards 6.3s;
+                animation:sec2_stroke $sec2Dur forwards $sec2Delay, sec2_fill 2s forwards 5.3s;
                 }
               }
             }
             .sec_text {
-              animation:textUp_sec2 1s ease-in-out 7s forwards, sizeUp 1s ease-in-out 8s forwards;
+              animation:textUp_sec2 1s ease-in-out 6s forwards, sizeUp 1s ease-in-out 7s forwards;
             }
           }
           .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(1) {
             animation: sec2Circle 2s ease-in-out forwards;
           }
           .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(2) {
-            animation: sec2Circle 2s ease-in-out 0.4s forwards;
+            animation: sec2Circle 2s ease-in-out 0.3s forwards;
           }
           .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(3) {
-            animation: sec2Circle 2s ease-in-out 0.8s forwards;
+            animation: sec2Circle 2s ease-in-out 0.6s forwards;
           }
           .sec2_loader #circle_g_sec2 .sec2_circle:nth-child(4) {
-            animation: sec2Circle 2s ease-in-out 1.2s forwards;
+            animation: sec2Circle 2s ease-in-out 0.9s forwards;
           }
         }
 
