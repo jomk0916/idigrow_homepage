@@ -377,7 +377,7 @@ $(document).ready(function(){
         //     dist = currentY - startY;
         if( startValue == 1 ){ // 표지 lock
             ///////////////////////////// 스크롤 내릴 때 /////////////////////////////
-            if (e.type === "wheel" && dist < 0) {   
+            if (e.type === "wheel" || e.type === "touchend") {   
                 playSound(next);
                 if(i == 3){
 
