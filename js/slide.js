@@ -367,17 +367,20 @@ $(document).ready(function(){
         stopSound(Sound0203);
     }
 
-    // $(window).on("touchstart",function(e){
-    //     if (isScrolling) return;
-    //     startY = e.originalEvent.changedTouches[0].clientY;
-    // });
+    $(window).on("touchstart",function(e){
+        startY = e.originalEvent.changedTouches[0].clientY;
+    });
+    $(window).on("touchmove",function(e){
+        const currentY = e.originalEvent.changedTouches[0].clientY;
+        dist = currentY - startY;
+    });
 
     $(window).on("wheel touchend",function(e){
-        // const currentY = e.originalEvent.changedTouches[0].clientY;
+        // const currentY = e.originalEvent.changedTouches[0].clientY;/
         //     dist = currentY - startY;
         if( startValue == 1 ){ // 표지 lock
             ///////////////////////////// 스크롤 내릴 때 /////////////////////////////
-            if (e.type === "wheel" || e.type === "touchend") {   
+            if (e.type === "wheel" && e.originalEvent.deltaY > 0 || e.type === "touchend" && dist < 0) {   
                 playSound(next);
                 if(i == 3){
 
