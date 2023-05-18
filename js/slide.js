@@ -367,18 +367,12 @@ $(document).ready(function(){
         stopSound(Sound0203);
     }
 
-    // 모바일 슬라이드 테스트
-    $('#section1').on({
-        touchstart : function(){
-            // console.log("터치 스타트");
-        }
-    })
-
     
-    $(window).on("wheel",function(e){
+
+    $(window).on("wheel touchmove",function(e){
         if( startValue == 1 ){ // 표지 lock
             ///////////////////////////// 스크롤 내릴 때 /////////////////////////////
-            if(e.originalEvent.deltaY > 0){                
+            if(e.originalEvent.deltaY > 0){      
                 playSound(next);
                 if(i == 3){
 
@@ -470,7 +464,8 @@ $(document).ready(function(){
             }
 
             ///////////////////////////// 스크롤 올릴 때 /////////////////////////////
-            }else{
+            }else{    
+                console.log('deltaY');      
                 playSound(next);
                 if(i == 0){
 
