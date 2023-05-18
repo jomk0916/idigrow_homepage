@@ -155,7 +155,7 @@ input {
   z-index: 1;
   position: relative;
   width: 800px;
-  height: 800px;
+  height: 100%;
   margin: 100px 0 0 0;
   display: flex;
   justify-content: center;

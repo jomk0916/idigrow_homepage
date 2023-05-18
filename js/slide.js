@@ -367,20 +367,25 @@ $(document).ready(function(){
         stopSound(Sound0203);
     }
 
+    let dist = 0;
+    let startY;
+
     $(window).on("touchstart",function(e){
         startY = e.originalEvent.changedTouches[0].clientY;
     });
     $(window).on("touchmove",function(e){
         const currentY = e.originalEvent.changedTouches[0].clientY;
-        dist = currentY - startY;
+        dist = currentY - startY;        
     });
 
     $(window).on("wheel touchend",function(e){
+        // console.log(dist);
         // const currentY = e.originalEvent.changedTouches[0].clientY;/
         //     dist = currentY - startY;
         if( startValue == 1 ){ // 표지 lock
             ///////////////////////////// 스크롤 내릴 때 /////////////////////////////
             if (e.type === "wheel" && e.originalEvent.deltaY > 0 || e.type === "touchend" && dist < 0) {   
+                console.log("이전페이지");
                 playSound(next);
                 if(i == 3){
 
@@ -472,8 +477,8 @@ $(document).ready(function(){
             }
 
             ///////////////////////////// 스크롤 올릴 때 /////////////////////////////
-            }else if (e.type === "wheel" || e.type === "touchend") {                
-                console.log('deltaY');      
+            }else if (e.type === "wheel" || e.type === "touchend" && dist > 0) {                
+                console.log('다음페이지');      
                 playSound(next);
                 if(i == 0){
 
@@ -543,7 +548,7 @@ $(document).ready(function(){
                     //4p 모션 제거 끝
                 }
         }
-
+        dist = 0; // 값 초기화
         navi_start();
         }
     });
