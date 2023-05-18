@@ -2113,7 +2113,7 @@ input {outline-offset:-1px;}
       justify-content: space-between;
     }
     #wrap #modal .container ul {
-      padding: 50px 80px 0 0;
+      padding: 130px 0px 0 0;
       height: auto;
       font-size: 13rem;
     }
@@ -2138,6 +2138,9 @@ input {outline-offset:-1px;}
     }
     #wrap #main #section1 .container .textBox p {
       font-size: 1.8rem;
+    }
+    #wrap #main #section1 .container .loader circle {
+      stroke-width: 2;
     }
 
     #section1 {
@@ -2164,17 +2167,23 @@ input {outline-offset:-1px;}
       height: 100%;
       padding:0 50px;
       .sec2_textBox {
-        height: auto;
+        // height: auto;
         margin-bottom: 50px;
       }
     }
 
-    #wrap #main #section2 .container .gap .sec2_textBox .main_text svg text {
-      font-size: 100px;
+    #wrap #main #section2 .container .gap .sec2_textBox {
+      margin:0 0 130px 0;
+      .main_text svg {
+        height: 250px;
+        text {
+          font-size: 150px;
+        }
+      }
     }
-
+    
     #wrap #main #section2 .container .gap .sec2_textBox .main_text {
-      margin-bottom: 20px;
+      margin-bottom: 0px;
     }
 
     #wrap #main #section2 .container .gap .sec2_textBox .sec_text {
@@ -2198,15 +2207,16 @@ input {outline-offset:-1px;}
     }
 
     // modal
-    #wrap #modal .container {
+    #wrap #modal .container {      
       display: flex;
       flex-flow: column;
-      justify-content: space-between;
+      justify-content: space-between;      
     }
     #wrap #modal .container ul {
-      padding: 50px 80px 0 0;
+      padding: 80px 0px 0 0;
       height: auto;
       font-size: 7rem;
+      // background-color: lightcoral;
     }
     #wrap #modal .container #modal_3d_model {
       width: 30rem;
@@ -2243,8 +2253,13 @@ input {outline-offset:-1px;}
     }
 
     // 1p
-    #wrap #main #section1 .container .textBox p {
-      font-size: 1.2rem;
+    #wrap #main #section1 .container {
+      .textBox p {
+        font-size: 1.2rem;
+      }
+      .loader circle {
+        stroke-width: 2;
+      }
     }
 
     // 2p
@@ -2265,9 +2280,12 @@ input {outline-offset:-1px;}
 
     #wrap #main #section2 .container .gap .sec2_textBox {
       padding: 0 10px;
-      .main_text svg text {
-        font-size: 150px;
-        padding: 10px 0 0 0;
+      .main_text svg {
+        height: 110px;
+        text {
+          font-size: 150px;
+          padding: 10px 0 0 0;
+        }
       }
     }
   }

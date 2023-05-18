@@ -2913,7 +2913,7 @@ input {
     justify-content: space-between;
   }
   #wrap #modal .container ul {
-    padding: 50px 80px 0 0;
+    padding: 130px 0px 0 0;
     height: auto;
     font-size: 13rem;
   }
@@ -2934,6 +2934,9 @@ input {
   #wrap #main #section1 .container .textBox p {
     font-size: 1.8rem;
   }
+  #wrap #main #section1 .container .loader circle {
+    stroke-width: 2;
+  }
   #section1.sec1_ani_start .container .loader .circle_g .main_circle {
     animation: circleScale 5s ease-in-out 1 both, circleScale2_m 3s ease-in-out 8s forwards;
   }
@@ -2953,14 +2956,19 @@ input {
     padding: 0 50px;
   }
   #wrap #main #section2 .container .gap .sec2_textBox {
-    height: auto;
     margin-bottom: 50px;
   }
+  #wrap #main #section2 .container .gap .sec2_textBox {
+    margin: 0 0 130px 0;
+  }
+  #wrap #main #section2 .container .gap .sec2_textBox .main_text svg {
+    height: 250px;
+  }
   #wrap #main #section2 .container .gap .sec2_textBox .main_text svg text {
-    font-size: 100px;
+    font-size: 150px;
   }
   #wrap #main #section2 .container .gap .sec2_textBox .main_text {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
   #wrap #main #section2 .container .gap .sec2_textBox .sec_text {
     padding: 10px 0 0 0;
@@ -2980,7 +2988,7 @@ input {
     justify-content: space-between;
   }
   #wrap #modal .container ul {
-    padding: 50px 80px 0 0;
+    padding: 80px 0px 0 0;
     height: auto;
     font-size: 7rem;
   }
@@ -3017,6 +3025,9 @@ input {
   #wrap #main #section1 .container .textBox p {
     font-size: 1.2rem;
   }
+  #wrap #main #section1 .container .loader circle {
+    stroke-width: 2;
+  }
   #wrap #main #section2 .container .gap {
     position: absolute;
     top: 0;
@@ -3032,6 +3043,9 @@ input {
   }
   #wrap #main #section2 .container .gap .sec2_textBox {
     padding: 0 10px;
+  }
+  #wrap #main #section2 .container .gap .sec2_textBox .main_text svg {
+    height: 110px;
   }
   #wrap #main #section2 .container .gap .sec2_textBox .main_text svg text {
     font-size: 150px;

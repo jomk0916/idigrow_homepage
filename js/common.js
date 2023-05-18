@@ -231,7 +231,27 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
     section2:function(){
 
       if(matchMedia("screen and (max-width: 576px)").matches){
-        //화면 크기가 576px이하일때
+        // 모바일
+        let attrX = 0;
+        let attrX_2 = 0;
+        for(let i = 1; i < 16; i++ ){
+          if( i < 9 ){
+            $(`#text${i}`).attr({ x: attrX, y : "0%" });
+            attrX += 150;
+          }
+          else {
+            $(`#text${i}`).attr({ x: attrX_2, y : "150%" });
+            if( i == 10 ){
+              attrX_2 += 70;
+            }
+            else {
+              attrX_2 += 150;
+            }
+          }
+        }
+      }
+      else if(matchMedia("screen and (max-width: 1000px)").matches){
+        // 테블릿
         let attrX = 0;
         let attrX_2 = 0;
         for(let i = 1; i < 16; i++ ){
