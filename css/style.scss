@@ -1577,8 +1577,8 @@ input {outline-offset:-1px;}
           @media all and (max-width: 576px){
 
             .ani_g{filter: none;}
-            .cnt3_box.on{padding-top: clampMunMb(330);}
-            .cnt3_box.up{padding-top: clampMunMb(330);}
+            .cnt3_box.on{padding-top: clampMunMb(400);}
+            .cnt3_box.up{padding-top: clampMunMb(400);}
             .contact_container h1{font-size: clampMunMb(20);}
             .contact_container address{font-size: clampMunMb(15);margin-top: clampMunMb(20);}
             .contact_btn{
@@ -1626,7 +1626,7 @@ input {outline-offset:-1px;}
             }
             @keyframes hair_ct {
               from{}
-              to{}
+              to{margin-left: clampMunMb(420);}
             }
             //---머리--
             @keyframes head_dw {
@@ -1644,15 +1644,14 @@ input {outline-offset:-1px;}
             @keyframes head_bomb {
               from{}
               to{width: clampMunMb(200);height: clampMunMb(200);margin-left: clampMunMb(350);background-color: #fff;border: 1px solid #FF4713;}
-              to{}
             }
             @keyframes head_ct {
               from{}
-              to{}
+              to{margin-left: clampMunMb(250);}
             }
             //---몸통--
-            .circle3.on{animation: body_ct 2s 3s forwards;}
-            @keyframes body_ct {
+            .circle3.on{animation: body_bomb 1s 2s forwards, body_ct 2s 4.5s forwards;}
+            @keyframes body_bomb {
               from{
                 width: clampMunMb(100);height: clampMunMb(50);border-radius: 0 0 clampMunMb(100) clampMunMb(100);
                 margin-top: clampMunMb(400);margin-left: clampMunMb(410);
@@ -1664,6 +1663,10 @@ input {outline-offset:-1px;}
                 margin-top: clampMunMb(490);margin-left: clampMunMb(370);background-color: #fff;border: 1px solid #FF4713;
               }
             }
+            @keyframes body_ct {
+              from{}
+              to{margin-left: clampMunMb(270);}
+            }
             //스크롤 내릴때 끝
 
             //스크롤 올릴때 시작
@@ -1671,18 +1674,18 @@ input {outline-offset:-1px;}
             @keyframes hair_up_dw{
               0%{margin-top: -800px;}
               100%{
-                margin-top: clampMunMb(230);margin-left: clampMunMb(520);width: clampMunMb(50);height: clampMunMb(50);background-color: #fff;border: 1px solid #FF4713;
+                margin-top: clampMunMb(230);margin-left: clampMunMb(420);width: clampMunMb(50);height: clampMunMb(50);background-color: #fff;border: 1px solid #FF4713;
               }
             }
             @keyframes head_up_dw{
               0%{margin-top: -800px;}
-              100%{width: clampMunMb(200);height: clampMunMb(200);margin-left: clampMunMb(350);background-color: #fff;border: 1px solid #FF4713;}
+              100%{width: clampMunMb(200);height: clampMunMb(200);margin-left: clampMunMb(250);background-color: #fff;border: 1px solid #FF4713;}
             }
             @keyframes body_up_dw{
               0%{margin-left: clampMun(64);margin-top: clamp(-92rem, -47.9166666667vw, -1rem);background-color: #FF4713;border: transparent;width: clampMun(2650);height: clampMun(1325);border-radius: 0 0 clampMun(1325) clampMun(1325);transform: rotate(0deg);}
               100%{
                 width: clampMunMb(200);height: clampMunMb(100);border-radius: 0 0 clampMunMb(200) clampMunMb(200);
-                margin-top: clampMunMb(490);margin-left: clampMunMb(370);background-color: #fff;border: 1px solid #FF4713;
+                margin-top: clampMunMb(490);margin-left: clampMunMb(270);background-color: #fff;border: 1px solid #FF4713;
               }
             }
 
@@ -1840,16 +1843,16 @@ input {outline-offset:-1px;}
             }
             .cnt_box.on h1{
               width: 100%;
-              font-size: clampMunMb(20);
+              font-size: clampMunMb(25);
               margin-top: clampMun(200);
             }
             .cnt_box.on p{
-              margin: 0 auto;margin-top: clampMun(50);
-              font-size: clampMunMb(15);
-              width: 90%;text-align: center;
-              line-height: clampMun(70);
+              margin: 0 auto;margin-top: clampMun(100);
+              font-size: clampMunMb(23);
+              width: 70%;text-align: center;
+              line-height: clampMun(100);
             }
-            .job_btn{margin-top: clampMun(100);}
+            .job_btn{margin-top: clampMun(200);}
             .job_btn a{
               font-size: clampMunMb(20);
             }
@@ -1877,25 +1880,25 @@ input {outline-offset:-1px;}
             }
             //---꽁지--
             @keyframes cha_up1 {
-              from {opacity: 1;width: clampMunMb(50);height: clampMunMb(50);margin-top: clampMunMb(230);margin-left: clampMunMb(520);}
-              to{opacity: 1;width: clampMunMb(50);height: clampMunMb(50);margin-top: clampMunMb(230);margin-left: clampMunMb(520);}
+              from {opacity: 1;width: clampMunMb(50);height: clampMunMb(50);margin-top: clampMunMb(230);margin-left: clampMunMb(420);}
+              to{opacity: 1;width: clampMunMb(50);height: clampMunMb(50);margin-top: clampMunMb(230);margin-left: clampMunMb(420);}
             }
             //---머리--
             @keyframes cha_up2 {
-              from{opacity: 1;width: clampMunMb(200);height: clampMunMb(200);margin-top: clampMunMb(270);margin-left: clampMunMb(350);}
-              to{opacity: 1;width: clampMunMb(200);height: clampMunMb(200);margin-top: clampMunMb(270);margin-left: clampMunMb(350);}
+              from{opacity: 1;width: clampMunMb(200);height: clampMunMb(200);margin-top: clampMunMb(270);margin-left: clampMunMb(250);}
+              to{opacity: 1;width: clampMunMb(200);height: clampMunMb(200);margin-top: clampMunMb(270);margin-left: clampMunMb(250);}
             }
             //---몸통--
             @keyframes cha_up3 {
               from{
                 opacity: 1;
                 width: clampMunMb(200);height: clampMunMb(100);border-radius: 0 0 clampMunMb(200) clampMunMb(200);
-                margin-top: clampMunMb(490);margin-left: clampMunMb(370);
+                margin-top: clampMunMb(490);margin-left: clampMunMb(270);
               }
               to{
                 opacity: 1;
                 width: clampMunMb(200);height: clampMunMb(100);border-radius: 0 0 clampMunMb(200) clampMunMb(200);
-                margin-top: clampMunMb(490);margin-left: clampMunMb(370);
+                margin-top: clampMunMb(490);margin-left: clampMunMb(270);
               }
             }
             @keyframes cha_up1-1 {from{opacity: 1;} to{opacity: 0;margin-top: -800px;}}
@@ -2287,6 +2290,17 @@ input {outline-offset:-1px;}
           padding: 10px 0 0 0;
         }
       }
+    }
+
+    //btn
+    #btn .top_btn.on {
+      width: 30px;
+      height: 30px;
+      margin-left: -15px;
+    }
+    #btn .arrow {
+      width: 9px;
+      height: 9px;
     }
   }
 

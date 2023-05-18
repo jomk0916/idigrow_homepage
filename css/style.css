@@ -2134,10 +2134,10 @@ input {
     filter: none;
   }
   #wrap #main #section3 .cnt3_box.on {
-    padding-top: clamp(1rem, 57.2916666667vw, 33rem);
+    padding-top: clamp(1rem, 69.4444444444vw, 40rem);
   }
   #wrap #main #section3 .cnt3_box.up {
-    padding-top: clamp(1rem, 57.2916666667vw, 33rem);
+    padding-top: clamp(1rem, 69.4444444444vw, 40rem);
   }
   #wrap #main #section3 .contact_container h1 {
     font-size: clamp(1rem, 3.4722222222vw, 2rem);
@@ -2237,7 +2237,11 @@ input {
       border: 1px solid #FF4713;
     }
   }
-  @keyframes hair_ct {}
+  @keyframes hair_ct {
+    to {
+      margin-left: clamp(1rem, 72.9166666667vw, 42rem);
+    }
+  }
   @keyframes head_dw {
     from {
       margin-left: clamp(1rem, 76.0416666667vw, 43.8rem);
@@ -2263,11 +2267,15 @@ input {
       border: 1px solid #FF4713;
     }
   }
-  @keyframes head_ct {}
-  #wrap #main #section3 .circle3.on {
-    animation: body_ct 2s 3s forwards;
+  @keyframes head_ct {
+    to {
+      margin-left: clamp(1rem, 43.4027777778vw, 25rem);
+    }
   }
-  @keyframes body_ct {
+  #wrap #main #section3 .circle3.on {
+    animation: body_bomb 1s 2s forwards, body_ct 2s 4.5s forwards;
+  }
+  @keyframes body_bomb {
     from {
       width: clamp(1rem, 17.3611111111vw, 10rem);
       height: clamp(1rem, 8.6805555556vw, 5rem);
@@ -2288,13 +2296,18 @@ input {
       border: 1px solid #FF4713;
     }
   }
+  @keyframes body_ct {
+    to {
+      margin-left: clamp(1rem, 46.875vw, 27rem);
+    }
+  }
   @keyframes hair_up_dw {
     0% {
       margin-top: -800px;
     }
     100% {
       margin-top: clamp(1rem, 39.9305555556vw, 23rem);
-      margin-left: clamp(1rem, 90.2777777778vw, 52rem);
+      margin-left: clamp(1rem, 72.9166666667vw, 42rem);
       width: clamp(1rem, 8.6805555556vw, 5rem);
       height: clamp(1rem, 8.6805555556vw, 5rem);
       background-color: #fff;
@@ -2308,7 +2321,7 @@ input {
     100% {
       width: clamp(1rem, 34.7222222222vw, 20rem);
       height: clamp(1rem, 34.7222222222vw, 20rem);
-      margin-left: clamp(1rem, 60.7638888889vw, 35rem);
+      margin-left: clamp(1rem, 43.4027777778vw, 25rem);
       background-color: #fff;
       border: 1px solid #FF4713;
     }
@@ -2329,7 +2342,7 @@ input {
       height: clamp(1rem, 17.3611111111vw, 10rem);
       border-radius: 0 0 clamp(1rem, 34.7222222222vw, 20rem) clamp(1rem, 34.7222222222vw, 20rem);
       margin-top: clamp(1rem, 85.0694444444vw, 49rem);
-      margin-left: clamp(1rem, 64.2361111111vw, 37rem);
+      margin-left: clamp(1rem, 46.875vw, 27rem);
       background-color: #fff;
       border: 1px solid #FF4713;
     }
@@ -2622,19 +2635,19 @@ input {
   }
   #wrap #main #section4 .cnt_box.on h1 {
     width: 100%;
-    font-size: clamp(1rem, 3.4722222222vw, 2rem);
+    font-size: clamp(1rem, 4.3402777778vw, 2.5rem);
     margin-top: clamp(1rem, 10.4166666667vw, 20rem);
   }
   #wrap #main #section4 .cnt_box.on p {
     margin: 0 auto;
-    margin-top: clamp(1rem, 2.6041666667vw, 5rem);
-    font-size: clamp(1rem, 2.6041666667vw, 1.5rem);
-    width: 90%;
+    margin-top: clamp(1rem, 5.2083333333vw, 10rem);
+    font-size: clamp(1rem, 3.9930555556vw, 2.3rem);
+    width: 70%;
     text-align: center;
-    line-height: clamp(1rem, 3.6458333333vw, 7rem);
+    line-height: clamp(1rem, 5.2083333333vw, 10rem);
   }
   #wrap #main #section4 .job_btn {
-    margin-top: clamp(1rem, 5.2083333333vw, 10rem);
+    margin-top: clamp(1rem, 10.4166666667vw, 20rem);
   }
   #wrap #main #section4 .job_btn a {
     font-size: clamp(1rem, 3.4722222222vw, 2rem);
@@ -2666,14 +2679,14 @@ input {
       width: clamp(1rem, 8.6805555556vw, 5rem);
       height: clamp(1rem, 8.6805555556vw, 5rem);
       margin-top: clamp(1rem, 39.9305555556vw, 23rem);
-      margin-left: clamp(1rem, 90.2777777778vw, 52rem);
+      margin-left: clamp(1rem, 72.9166666667vw, 42rem);
     }
     to {
       opacity: 1;
       width: clamp(1rem, 8.6805555556vw, 5rem);
       height: clamp(1rem, 8.6805555556vw, 5rem);
       margin-top: clamp(1rem, 39.9305555556vw, 23rem);
-      margin-left: clamp(1rem, 90.2777777778vw, 52rem);
+      margin-left: clamp(1rem, 72.9166666667vw, 42rem);
     }
   }
   @keyframes cha_up2 {
@@ -2682,14 +2695,14 @@ input {
       width: clamp(1rem, 34.7222222222vw, 20rem);
       height: clamp(1rem, 34.7222222222vw, 20rem);
       margin-top: clamp(1rem, 46.875vw, 27rem);
-      margin-left: clamp(1rem, 60.7638888889vw, 35rem);
+      margin-left: clamp(1rem, 43.4027777778vw, 25rem);
     }
     to {
       opacity: 1;
       width: clamp(1rem, 34.7222222222vw, 20rem);
       height: clamp(1rem, 34.7222222222vw, 20rem);
       margin-top: clamp(1rem, 46.875vw, 27rem);
-      margin-left: clamp(1rem, 60.7638888889vw, 35rem);
+      margin-left: clamp(1rem, 43.4027777778vw, 25rem);
     }
   }
   @keyframes cha_up3 {
@@ -2699,7 +2712,7 @@ input {
       height: clamp(1rem, 17.3611111111vw, 10rem);
       border-radius: 0 0 clamp(1rem, 34.7222222222vw, 20rem) clamp(1rem, 34.7222222222vw, 20rem);
       margin-top: clamp(1rem, 85.0694444444vw, 49rem);
-      margin-left: clamp(1rem, 64.2361111111vw, 37rem);
+      margin-left: clamp(1rem, 46.875vw, 27rem);
     }
     to {
       opacity: 1;
@@ -2707,7 +2720,7 @@ input {
       height: clamp(1rem, 17.3611111111vw, 10rem);
       border-radius: 0 0 clamp(1rem, 34.7222222222vw, 20rem) clamp(1rem, 34.7222222222vw, 20rem);
       margin-top: clamp(1rem, 85.0694444444vw, 49rem);
-      margin-left: clamp(1rem, 64.2361111111vw, 37rem);
+      margin-left: clamp(1rem, 46.875vw, 27rem);
     }
   }
   @keyframes cha_up1-1 {
@@ -3050,5 +3063,14 @@ input {
   #wrap #main #section2 .container .gap .sec2_textBox .main_text svg text {
     font-size: 150px;
     padding: 10px 0 0 0;
+  }
+  #btn .top_btn.on {
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+  }
+  #btn .arrow {
+    width: 9px;
+    height: 9px;
   }
 }
