@@ -977,9 +977,12 @@ input {
 }
 @keyframes sec2Circle {
   0% {
+    transform: translate(70%, 7%) scale(1) rotate(-30deg);
+    fill: #FF4713;
     opacity: 0;
   }
   80% {
+    transform: translate(50%, 115%) scale(4) rotate(-0.2deg);
     fill: #FF4713;
     opacity: 0.9;
   }
@@ -995,11 +998,11 @@ input {
   transform: scale(0.8);
   transform-origin: 0 0;
   padding: 50px 0 0 0;
+  color: #fff;
 }
 #wrap #main #section2 .container .gap .sec2_textBox .sec_text p {
   font-family: "SUIT-SemiBold";
   font-size: clamp(1rem, 2.201027146vw, 3rem);
-  color: #fff;
   line-height: 1.7;
 }
 #wrap #main #section2 .container .sec2_loader {
@@ -2786,11 +2789,11 @@ input {
 @keyframes circleScale2 {
   0% {
     fill: #FF4713;
-    transform: scale(1);
+    transform: translateX(0%) scale(1);
   }
   100% {
     fill: #FF4713;
-    transform: scale(1) translateX(17%);
+    transform: translateX(17%) scale(1);
   }
 }
 @keyframes circleScale3 {
@@ -2808,7 +2811,7 @@ input {
   }
   100% {
     fill: #FF4713;
-    transform: scale(1) translateX(25%);
+    transform: translateX(25%) scale(1);
   }
 }
 @keyframes circleScale3_m {
@@ -2891,14 +2894,6 @@ input {
     text-shadow: none;
   }
 }
-@keyframes sizeUp {
-  0% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 @keyframes textUp_sec2 {
   0% {
     opacity: 0;
@@ -2907,6 +2902,16 @@ input {
   100% {
     opacity: 1;
     transform: translateY(0%) scale(0.8);
+  }
+}
+@keyframes sizeUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%) scale(1);
   }
 }
 @media all and (max-width: 992px) {
@@ -2949,15 +2954,6 @@ input {
   }
   #wrap #main #section1 .container .loader circle {
     stroke-width: 2;
-  }
-  #section1.sec1_ani_start .container .loader .circle_g .main_circle {
-    animation: circleScale 5s ease-in-out 1 both, circleScale2_m 3s ease-in-out 8s forwards;
-  }
-  #section1.sec1_ani_start .container .loader .circle_g .second_circle {
-    animation: circleSecond 3s 5s forwards, circleScale3_m 3s ease-in-out 8s forwards;
-  }
-  #section1.sec1_ani_start .container .loader .halfCircle {
-    animation: circleThird 2s 6s forwards, circleScale3_m 3s ease-in-out 8s forwards;
   }
   #wrap #main #section2 .container .gap {
     position: absolute;

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>3D 모델 예제</title>
+</head>
+<body>
+  <canvas id="modal_3d_model"></canvas>
+  <canvas id="modal_3d_model_o"></canvas>
+
+  <script src="https://unpkg.com/three/build/three.js"></script>
+  <script src="https://unpkg.com/three/examples/js/loaders/GLTFLoader.js"></script>
+
+  <script>
+    const scene = new THREE.Scene();
+
+    const renderer = new THREE.WebGLRenderer({
+      canvas: document.querySelector('#modal_3d_model'),
+      antialias: true,
+      alpha: true
+    });
+
+    const renderer2 = new THREE.WebGLRenderer({
+      canvas: document.querySelector('#modal_3d_model_o'),
+      antialias: true,
+      alpha: true
+    });
+
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    renderer2.outputEncoding = THREE.sRGBEncoding;
+
+    const camera = new THREE.PerspectiveCamera(30, 1);
+    camera.position.set(0, 0, 21);
+
+    const camera2 = new THREE.PerspectiveCamera(30, 1);
+    camera2.position.set(0, 0.1, 21);
+
+    const loader = new THREE.GLTFLoader();
+    loader.load('./images/logo.glb', function (gltf) {
+      gltf.scene.traverse(function (child) {
+        if (child.isMesh) {
+          child.material.emissive.set(0xffffff);
+          child.material.opacity = 0.5;
+          child.material.transparent = true;
+        }
+      });
+      gltf.scene.traverse((child) => {
+        if (child instanceof THREE.Mesh) {
+          child.material.wireframe = true;
+        }
+      });
+
+      scene.add(gltf.scene);
+
+      gltf.scene.position.y = -3.4;
+
+      function animate() {
+        requestAnimationFrame(animate);
+        gltf.scene.rotation.y += 0.01;
+        renderer.render(scene, camera);
+        renderer2.render(scene, camera2);
+      }
+
+      animate();
+    });
+  </script>
+</body>
+</html>
