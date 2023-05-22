@@ -237,6 +237,46 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
     },
     section2:function(){
 
+      function landscape(){ // 세로모드
+        let attrX = 0;
+        let attrX_2 = 0;
+        for(let i = 1; i < 16; i++ ){
+          if( i < 9 ){
+            $(`#text${i}`).attr({ x: attrX, y : "40%" });
+            attrX += 75;
+          }
+          else {
+            $(`#text${i}`).attr({ x: 638 + attrX_2, y : "40%" });
+            if( i == 10 ){
+              attrX_2 += 30;
+            }
+            else {
+              attrX_2 += 70;
+            }
+          }
+        }
+      }
+
+      function portrait(){ // 가로모드
+        let attrX = 0;
+        let attrX_2 = 0;
+        for(let i = 1; i < 16; i++ ){
+          if( i < 9 ){
+            $(`#text${i}`).attr({ x: attrX, y : "0%" });
+            attrX += 150;
+          }
+          else {
+            $(`#text${i}`).attr({ x: attrX_2, y : "150%" });
+            if( i == 10 ){
+              attrX_2 += 70;
+            }
+            else {
+              attrX_2 += 150;
+            }
+          }
+        }
+      }
+
       if(matchMedia("screen and (max-width: 576px)").matches){
         // 모바일
         let attrX = 0;
@@ -278,6 +318,26 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
         }
       }
 
+      if (window.matchMedia('(orientation: landscape)').matches && matchMedia("screen and (max-width: 1199px)").matches) {
+        // console.log("최초실행");
+        landscape();        
+      }
+
+   
+
+      window.addEventListener('resize', function () {        
+        if (window.matchMedia('(orientation: landscape)').matches && matchMedia("screen and (max-width: 1199px)").matches) {
+          // 테블릿 가로모드
+          // console.log("가로 모드");
+          landscape();          
+        }
+        else {
+          // console.log("세로 모드");
+          portrait();    
+        }
+      });
+
+     
     },
     section3:function(){
       $('.contact_btn>p').click(function(){

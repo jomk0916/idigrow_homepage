@@ -3234,12 +3234,12 @@ input {
   #wrap #modal .container {
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   #wrap #modal .container ul {
     padding: 130px 0px 0 0;
     height: auto;
-    font-size: 13rem;
+    font-size: 10rem;
   }
   #wrap #modal .container #modal_3d_model {
     width: 60rem;
@@ -3374,5 +3374,14 @@ input {
   #btn .arrow {
     width: 9px;
     height: 9px;
+  }
+}
+@media screen and (max-width: 1199px) and (orientation: landscape) {
+  /* 타블렛 가로 */
+  #wrap #main #section1 .container .textBox {
+    top: 18%;
+  }
+  #section1 .container .loader {
+    transform: translateY(-10%);
   }
 }
