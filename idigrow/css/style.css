@@ -2745,7 +2745,7 @@ input {
 #wrap #main #section4 .top_view {
   width: clamp(1rem, 73.90625vw, 141.9rem);
   height: clamp(1rem, 11.8229166667vw, 22.7rem);
-  background: url(../../images/s4_top.png) no-repeat 0 0/auto 100%;
+  background: url(../images/s4_top.png) no-repeat 0 0/auto 100%;
   background-size: contain;
   position: absolute;
   right: 0;
@@ -2837,7 +2837,7 @@ input {
   width: clamp(1rem, 28.75vw, 55.2rem);
   height: clamp(1rem, 7.7083333333vw, 14.8rem);
   scale: 0.8;
-  background: url(../../images/logo_large.png) no-repeat 0 0/auto 100%;
+  background: url(../images/logo_large.png) no-repeat 0 0/auto 100%;
   background-size: contain;
 }
 @keyframes logo_ani {
