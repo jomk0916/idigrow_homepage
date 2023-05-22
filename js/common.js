@@ -35,7 +35,6 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
     cover_bg:function(){
 
       if(matchMedia("screen and (min-width: 992px)").matches){
-        // console.log("WWW");
         $('.cover_bg .loader').css('display','block');
         $('.start_btn').hover(function(){
           $('.loader').addClass('coverBg_start');

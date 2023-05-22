@@ -166,7 +166,6 @@ $(document).ready(function(){
         $('.top_btn').removeClass("on");
     });
     function navi_start(){
-        // console.log("네비 스타트");
         for(let k=0; k<4; k++){
             $('#modal .container ul li').eq(k).on({
                 click: function(e){
@@ -379,13 +378,11 @@ $(document).ready(function(){
     });
 
     $(window).on("wheel touchend",function(e){
-        // console.log(dist);
         // const currentY = e.originalEvent.changedTouches[0].clientY;/
         //     dist = currentY - startY;
         if( startValue == 1 ){ // 표지 lock
             ///////////////////////////// 스크롤 내릴 때 /////////////////////////////
             if (e.type === "wheel" && e.originalEvent.deltaY > 0 || e.type === "touchend" && dist < 0) {   
-                console.log("이전페이지");
                 playSound(next);
                 if(i == 3){
 
@@ -478,7 +475,6 @@ $(document).ready(function(){
 
             ///////////////////////////// 스크롤 올릴 때 /////////////////////////////
             }else if (e.type === "wheel" || e.type === "touchend" && dist > 0) {                
-                console.log('다음페이지');      
                 playSound(next);
                 if(i == 0){
 
