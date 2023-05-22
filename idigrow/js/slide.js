@@ -564,6 +564,8 @@ $(document).ready(function(){
         $('.circle_all').removeClass('js_animation');
         $('.textBox').removeClass('js_animation');
         $('.top_btn').removeClass('on');
+
+        $('#header').removeClass('logo_active_3p');
     });
 
 });
