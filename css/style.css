@@ -2220,14 +2220,14 @@ input {
   @keyframes hair_dw {
     from {
       margin-top: 0;
-      margin-left: clamp(1rem, 90.2777777778vw, 52rem);
+      margin-left: clamp(1rem, 93.75vw, 54rem);
       width: clamp(1rem, 6.9444444444vw, 4rem);
       height: clamp(1rem, 6.9444444444vw, 4rem);
       background-color: #FF4713;
     }
     to {
       margin-top: clamp(1rem, 39.9305555556vw, 23rem);
-      margin-left: clamp(1rem, 90.2777777778vw, 52rem);
+      margin-left: clamp(1rem, 93.75vw, 54rem);
       width: clamp(1rem, 6.9444444444vw, 4rem);
       height: clamp(1rem, 6.9444444444vw, 4rem);
       background-color: #FF4713;
@@ -2235,8 +2235,8 @@ input {
   }
   @keyframes hair_bomb {
     to {
-      width: clamp(1rem, 8.6805555556vw, 5rem);
-      height: clamp(1rem, 8.6805555556vw, 5rem);
+      width: clamp(1rem, 10.4166666667vw, 6rem);
+      height: clamp(1rem, 10.4166666667vw, 6rem);
       background-color: #fff;
       border: 1px solid #FF4713;
     }
@@ -2264,8 +2264,8 @@ input {
   }
   @keyframes head_bomb {
     to {
-      width: clamp(1rem, 34.7222222222vw, 20rem);
-      height: clamp(1rem, 34.7222222222vw, 20rem);
+      width: clamp(1rem, 46.875vw, 27rem);
+      height: clamp(1rem, 46.875vw, 27rem);
       margin-left: clamp(1rem, 60.7638888889vw, 35rem);
       background-color: #fff;
       border: 1px solid #FF4713;
@@ -2273,7 +2273,7 @@ input {
   }
   @keyframes head_ct {
     to {
-      margin-left: clamp(1rem, 43.4027777778vw, 25rem);
+      margin-left: clamp(1rem, 34.7222222222vw, 20rem);
     }
   }
   #wrap #main #section3 .circle3.on {
@@ -2291,10 +2291,10 @@ input {
       opacity: 0;
     }
     to {
-      width: clamp(1rem, 34.7222222222vw, 20rem);
-      height: clamp(1rem, 17.3611111111vw, 10rem);
-      border-radius: 0 0 clamp(1rem, 34.7222222222vw, 20rem) clamp(1rem, 34.7222222222vw, 20rem);
-      margin-top: clamp(1rem, 85.0694444444vw, 49rem);
+      width: clamp(1rem, 46.875vw, 27rem);
+      height: clamp(1rem, 23.4375vw, 13.5rem);
+      border-radius: 0 0 clamp(1rem, 46.875vw, 27rem) clamp(1rem, 46.875vw, 27rem);
+      margin-top: clamp(1rem, 98.9583333333vw, 57rem);
       margin-left: clamp(1rem, 64.2361111111vw, 37rem);
       background-color: #fff;
       border: 1px solid #FF4713;
@@ -2302,7 +2302,7 @@ input {
   }
   @keyframes body_ct {
     to {
-      margin-left: clamp(1rem, 46.875vw, 27rem);
+      margin-left: clamp(1rem, 38.1944444444vw, 22rem);
     }
   }
   @keyframes hair_up_dw {
@@ -2312,8 +2312,8 @@ input {
     100% {
       margin-top: clamp(1rem, 39.9305555556vw, 23rem);
       margin-left: clamp(1rem, 72.9166666667vw, 42rem);
-      width: clamp(1rem, 8.6805555556vw, 5rem);
-      height: clamp(1rem, 8.6805555556vw, 5rem);
+      width: clamp(1rem, 10.4166666667vw, 6rem);
+      height: clamp(1rem, 10.4166666667vw, 6rem);
       background-color: #fff;
       border: 1px solid #FF4713;
     }
@@ -2323,9 +2323,10 @@ input {
       margin-top: -800px;
     }
     100% {
-      width: clamp(1rem, 34.7222222222vw, 20rem);
-      height: clamp(1rem, 34.7222222222vw, 20rem);
-      margin-left: clamp(1rem, 43.4027777778vw, 25rem);
+      margin-top: clamp(1rem, 46.875vw, 27rem);
+      margin-left: clamp(1rem, 34.7222222222vw, 20rem);
+      width: clamp(1rem, 46.875vw, 27rem);
+      height: clamp(1rem, 46.875vw, 27rem);
       background-color: #fff;
       border: 1px solid #FF4713;
     }
@@ -2342,11 +2343,11 @@ input {
       transform: rotate(0deg);
     }
     100% {
-      width: clamp(1rem, 34.7222222222vw, 20rem);
-      height: clamp(1rem, 17.3611111111vw, 10rem);
-      border-radius: 0 0 clamp(1rem, 34.7222222222vw, 20rem) clamp(1rem, 34.7222222222vw, 20rem);
-      margin-top: clamp(1rem, 85.0694444444vw, 49rem);
-      margin-left: clamp(1rem, 46.875vw, 27rem);
+      margin-top: clamp(1rem, 98.9583333333vw, 57rem);
+      margin-left: clamp(1rem, 38.1944444444vw, 22rem);
+      width: clamp(1rem, 46.875vw, 27rem);
+      height: clamp(1rem, 23.4375vw, 13.5rem);
+      border-radius: 0 0 clamp(1rem, 46.875vw, 27rem) clamp(1rem, 46.875vw, 27rem);
       background-color: #fff;
       border: 1px solid #FF4713;
     }
@@ -2672,13 +2673,13 @@ input {
   }
 }
 #wrap #main #section4 .move4_circle.on > .circle3-25 {
-  animation: cha_up1 1s forwards, cha_up1-1 2s 1s forwards;
+  animation: cha_up1 0.1s forwards, cha_up1-1 2s 0.1s forwards;
 }
 #wrap #main #section4 .move4_circle.on > .circle3-26 {
-  animation: cha_up2 1s forwards, cha_up2-1 2s 1s forwards;
+  animation: cha_up2 0.1s forwards, cha_up2-1 2s 0.1s forwards;
 }
 #wrap #main #section4 .move4_circle.on > .circle3-27 {
-  animation: cha_up3 1s forwards, cha_up3-1 2s 1s forwards;
+  animation: cha_up3 0.1s forwards, cha_up3-1 2s 0.1s forwards;
 }
 @keyframes cha_up1 {
   from {
@@ -2869,18 +2870,17 @@ input {
   #wrap #main #section4 .cnt_box.on h1 {
     width: 100%;
     font-size: clamp(1rem, 4.3402777778vw, 2.5rem);
-    margin-top: clamp(1rem, 10.4166666667vw, 20rem);
   }
   #wrap #main #section4 .cnt_box.on p {
     margin: 0 auto;
-    margin-top: clamp(1rem, 5.2083333333vw, 10rem);
+    margin-top: clamp(1rem, 7.8125vw, 15rem);
     font-size: clamp(1rem, 3.9930555556vw, 2.3rem);
     width: 70%;
     text-align: center;
-    line-height: clamp(1rem, 5.2083333333vw, 10rem);
+    line-height: clamp(1rem, 6.7708333333vw, 13rem);
   }
   #wrap #main #section4 .job_btn {
-    margin-top: clamp(1rem, 10.4166666667vw, 20rem);
+    margin-top: clamp(1rem, 13.0208333333vw, 25rem);
   }
   #wrap #main #section4 .job_btn a {
     font-size: clamp(1rem, 3.4722222222vw, 2rem);
@@ -2909,51 +2909,51 @@ input {
   @keyframes cha_up1 {
     from {
       opacity: 1;
-      width: clamp(1rem, 8.6805555556vw, 5rem);
-      height: clamp(1rem, 8.6805555556vw, 5rem);
       margin-top: clamp(1rem, 39.9305555556vw, 23rem);
       margin-left: clamp(1rem, 72.9166666667vw, 42rem);
+      width: clamp(1rem, 10.4166666667vw, 6rem);
+      height: clamp(1rem, 10.4166666667vw, 6rem);
     }
     to {
       opacity: 1;
-      width: clamp(1rem, 8.6805555556vw, 5rem);
-      height: clamp(1rem, 8.6805555556vw, 5rem);
       margin-top: clamp(1rem, 39.9305555556vw, 23rem);
       margin-left: clamp(1rem, 72.9166666667vw, 42rem);
+      width: clamp(1rem, 10.4166666667vw, 6rem);
+      height: clamp(1rem, 10.4166666667vw, 6rem);
     }
   }
   @keyframes cha_up2 {
     from {
       opacity: 1;
-      width: clamp(1rem, 34.7222222222vw, 20rem);
-      height: clamp(1rem, 34.7222222222vw, 20rem);
       margin-top: clamp(1rem, 46.875vw, 27rem);
-      margin-left: clamp(1rem, 43.4027777778vw, 25rem);
+      margin-left: clamp(1rem, 34.7222222222vw, 20rem);
+      width: clamp(1rem, 46.875vw, 27rem);
+      height: clamp(1rem, 46.875vw, 27rem);
     }
     to {
       opacity: 1;
-      width: clamp(1rem, 34.7222222222vw, 20rem);
-      height: clamp(1rem, 34.7222222222vw, 20rem);
       margin-top: clamp(1rem, 46.875vw, 27rem);
-      margin-left: clamp(1rem, 43.4027777778vw, 25rem);
+      margin-left: clamp(1rem, 34.7222222222vw, 20rem);
+      width: clamp(1rem, 46.875vw, 27rem);
+      height: clamp(1rem, 46.875vw, 27rem);
     }
   }
   @keyframes cha_up3 {
     from {
       opacity: 1;
-      width: clamp(1rem, 34.7222222222vw, 20rem);
-      height: clamp(1rem, 17.3611111111vw, 10rem);
-      border-radius: 0 0 clamp(1rem, 34.7222222222vw, 20rem) clamp(1rem, 34.7222222222vw, 20rem);
-      margin-top: clamp(1rem, 85.0694444444vw, 49rem);
-      margin-left: clamp(1rem, 46.875vw, 27rem);
+      margin-top: clamp(1rem, 98.9583333333vw, 57rem);
+      margin-left: clamp(1rem, 38.1944444444vw, 22rem);
+      width: clamp(1rem, 46.875vw, 27rem);
+      height: clamp(1rem, 23.4375vw, 13.5rem);
+      border-radius: 0 0 clamp(1rem, 46.875vw, 27rem) clamp(1rem, 46.875vw, 27rem);
     }
     to {
       opacity: 1;
-      width: clamp(1rem, 34.7222222222vw, 20rem);
-      height: clamp(1rem, 17.3611111111vw, 10rem);
-      border-radius: 0 0 clamp(1rem, 34.7222222222vw, 20rem) clamp(1rem, 34.7222222222vw, 20rem);
-      margin-top: clamp(1rem, 85.0694444444vw, 49rem);
-      margin-left: clamp(1rem, 46.875vw, 27rem);
+      margin-top: clamp(1rem, 98.9583333333vw, 57rem);
+      margin-left: clamp(1rem, 38.1944444444vw, 22rem);
+      width: clamp(1rem, 46.875vw, 27rem);
+      height: clamp(1rem, 23.4375vw, 13.5rem);
+      border-radius: 0 0 clamp(1rem, 46.875vw, 27rem) clamp(1rem, 46.875vw, 27rem);
     }
   }
   @keyframes cha_up1-1 {

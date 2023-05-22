@@ -1618,19 +1618,19 @@ input {outline-offset:-1px;}
             //---꽁지--
             @keyframes hair_dw {
               from {
-                margin-top: 0;margin-left: clampMunMb(520);
+                margin-top: 0;margin-left: clampMunMb(540);
                 width: clampMunMb(40);height: clampMunMb(40);
                 background-color: #FF4713;
               }
               to {
-                margin-top: clampMunMb(230);margin-left: clampMunMb(520);
+                margin-top: clampMunMb(230);margin-left: clampMunMb(540);
                 width: clampMunMb(40);height: clampMunMb(40);
                 background-color: #FF4713;
               }
             }
             @keyframes hair_bomb {
               from {}
-              to{width: clampMunMb(50);height: clampMunMb(50);background-color: #fff;border: 1px solid #FF4713;}
+              to{width: clampMunMb(60);height: clampMunMb(60);background-color: #fff;border: 1px solid #FF4713;}
               to{}
             }
             @keyframes hair_ct {
@@ -1652,11 +1652,11 @@ input {outline-offset:-1px;}
             }
             @keyframes head_bomb {
               from{}
-              to{width: clampMunMb(200);height: clampMunMb(200);margin-left: clampMunMb(350);background-color: #fff;border: 1px solid #FF4713;}
+              to{width: clampMunMb(270);height: clampMunMb(270);margin-left: clampMunMb(350);background-color: #fff;border: 1px solid #FF4713;}
             }
             @keyframes head_ct {
               from{}
-              to{margin-left: clampMunMb(250);}
+              to{margin-left: clampMunMb(200);}
             }
             //---몸통--
             .circle3.on{animation: body_bomb 1s 2s forwards, body_ct 2s 4.5s forwards;}
@@ -1668,13 +1668,13 @@ input {outline-offset:-1px;}
                 opacity: 0;
               }
               to{
-                width: clampMunMb(200);height: clampMunMb(100);border-radius: 0 0 clampMunMb(200) clampMunMb(200);
-                margin-top: clampMunMb(490);margin-left: clampMunMb(370);background-color: #fff;border: 1px solid #FF4713;
+                width: clampMunMb(270);height: clampMunMb(135);border-radius: 0 0 clampMunMb(270) clampMunMb(270);
+                margin-top: clampMunMb(570);margin-left: clampMunMb(370);background-color: #fff;border: 1px solid #FF4713;
               }
             }
             @keyframes body_ct {
               from{}
-              to{margin-left: clampMunMb(270);}
+              to{margin-left: clampMunMb(220);}
             }
             //스크롤 내릴때 끝
 
@@ -1683,18 +1683,22 @@ input {outline-offset:-1px;}
             @keyframes hair_up_dw{
               0%{margin-top: -800px;}
               100%{
-                margin-top: clampMunMb(230);margin-left: clampMunMb(420);width: clampMunMb(50);height: clampMunMb(50);background-color: #fff;border: 1px solid #FF4713;
+                margin-top: clampMunMb(230);margin-left: clampMunMb(420);
+                width: clampMunMb(60);height: clampMunMb(60);background-color: #fff;border: 1px solid #FF4713;
               }
             }
             @keyframes head_up_dw{
               0%{margin-top: -800px;}
-              100%{width: clampMunMb(200);height: clampMunMb(200);margin-left: clampMunMb(250);background-color: #fff;border: 1px solid #FF4713;}
+              100%{
+                margin-top: clampMunMb(270);margin-left: clampMunMb(200);
+                width: clampMunMb(270);height: clampMunMb(270);background-color: #fff;border: 1px solid #FF4713;
+              }
             }
             @keyframes body_up_dw{
               0%{margin-left: clampMun(64);margin-top: clamp(-92rem, -47.9166666667vw, -1rem);background-color: #FF4713;border: transparent;width: clampMun(2650);height: clampMun(1325);border-radius: 0 0 clampMun(1325) clampMun(1325);transform: rotate(0deg);}
               100%{
-                width: clampMunMb(200);height: clampMunMb(100);border-radius: 0 0 clampMunMb(200) clampMunMb(200);
-                margin-top: clampMunMb(490);margin-left: clampMunMb(270);background-color: #fff;border: 1px solid #FF4713;
+                margin-top: clampMunMb(570);margin-left: clampMunMb(220);
+                width: clampMunMb(270);height: clampMunMb(135);border-radius: 0 0 clampMunMb(270) clampMunMb(270);background-color: #fff;border: 1px solid #FF4713;
               }
             }
 
@@ -1858,9 +1862,9 @@ input {outline-offset:-1px;}
             to{opacity: 0;margin-top: -300px;}
           }
           //캐릭터
-          .move4_circle.on > .circle3-25{animation: cha_up1 1s forwards, cha_up1-1 2s 1s forwards;}
-          .move4_circle.on > .circle3-26{animation: cha_up2 1s forwards, cha_up2-1 2s 1s forwards;}
-          .move4_circle.on > .circle3-27{animation: cha_up3 1s forwards, cha_up3-1 2s 1s forwards;}
+          .move4_circle.on > .circle3-25{animation: cha_up1 .1s forwards, cha_up1-1 2s .1s forwards;}
+          .move4_circle.on > .circle3-26{animation: cha_up2 .1s forwards, cha_up2-1 2s .1s forwards;}
+          .move4_circle.on > .circle3-27{animation: cha_up3 .1s forwards, cha_up3-1 2s .1s forwards;}
           @keyframes cha_up1 {from{opacity: 1;} to{opacity: 1; margin-top: clampMun(350);}}
           @keyframes cha_up2 {from{opacity: 1;} to{opacity: 1; margin-top: clampMun(260);}}
           @keyframes cha_up3 {from{opacity: 1;} to{opacity: 1; margin-top: clampMun(850);}}
@@ -1970,15 +1974,15 @@ input {outline-offset:-1px;}
             .cnt_box.on h1{
               width: 100%;
               font-size: clampMunMb(25);
-              margin-top: clampMun(200);
+              // margin-top: clampMun(200);
             }
             .cnt_box.on p{
-              margin: 0 auto;margin-top: clampMun(100);
+              margin: 0 auto;margin-top: clampMun(150);
               font-size: clampMunMb(23);
               width: 70%;text-align: center;
-              line-height: clampMun(100);
+              line-height: clampMun(130);
             }
-            .job_btn{margin-top: clampMun(200);}
+            .job_btn{margin-top: clampMun(250);}
             .job_btn a{
               font-size: clampMunMb(20);
             }
@@ -2006,25 +2010,23 @@ input {outline-offset:-1px;}
             }
             //---꽁지--
             @keyframes cha_up1 {
-              from {opacity: 1;width: clampMunMb(50);height: clampMunMb(50);margin-top: clampMunMb(230);margin-left: clampMunMb(420);}
-              to{opacity: 1;width: clampMunMb(50);height: clampMunMb(50);margin-top: clampMunMb(230);margin-left: clampMunMb(420);}
+              from {opacity: 1;margin-top: clampMunMb(230);margin-left: clampMunMb(420);width: clampMunMb(60);height: clampMunMb(60);}
+              to{opacity: 1;margin-top: clampMunMb(230);margin-left: clampMunMb(420);width: clampMunMb(60);height: clampMunMb(60);}
             }
             //---머리--
             @keyframes cha_up2 {
-              from{opacity: 1;width: clampMunMb(200);height: clampMunMb(200);margin-top: clampMunMb(270);margin-left: clampMunMb(250);}
-              to{opacity: 1;width: clampMunMb(200);height: clampMunMb(200);margin-top: clampMunMb(270);margin-left: clampMunMb(250);}
+              from{opacity: 1;margin-top: clampMunMb(270);margin-left: clampMunMb(200);width: clampMunMb(270);height: clampMunMb(270);}
+              to{opacity: 1;margin-top: clampMunMb(270);margin-left: clampMunMb(200);width: clampMunMb(270);height: clampMunMb(270);}
             }
             //---몸통--
             @keyframes cha_up3 {
               from{
-                opacity: 1;
-                width: clampMunMb(200);height: clampMunMb(100);border-radius: 0 0 clampMunMb(200) clampMunMb(200);
-                margin-top: clampMunMb(490);margin-left: clampMunMb(270);
+                opacity: 1;margin-top: clampMunMb(570);margin-left: clampMunMb(220);
+                width: clampMunMb(270);height: clampMunMb(135);border-radius: 0 0 clampMunMb(270) clampMunMb(270);
               }
               to{
-                opacity: 1;
-                width: clampMunMb(200);height: clampMunMb(100);border-radius: 0 0 clampMunMb(200) clampMunMb(200);
-                margin-top: clampMunMb(490);margin-left: clampMunMb(270);
+                opacity: 1;margin-top: clampMunMb(570);margin-left: clampMunMb(220);
+                width: clampMunMb(270);height: clampMunMb(135);border-radius: 0 0 clampMunMb(270) clampMunMb(270);
               }
             }
             @keyframes cha_up1-1 {from{opacity: 1;} to{opacity: 0;margin-top: -800px;}}
