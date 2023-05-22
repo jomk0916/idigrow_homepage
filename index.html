@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IDIGROW</title>
-  <link rel="shortcut icon" href="./images/icon_idi.png" type="image/x-icon">
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="./js/lib/jquery.min.js"></script>
+  <link rel="shortcut icon" href="./idigrow/images/icon_idi.png" type="image/x-icon">
+  <link rel="stylesheet" href="./idigrow/css/style.css">
+  <script src="./idigrow/js/lib/jquery.min.js"></script>
 </head>
 <body>
   <!-- 마우스포인터 -->
@@ -367,7 +367,7 @@
     camera2.position.set(0,0.1,21);  // x, y, 확대?
 
     let loader = new GLTFLoader();
-    loader.load('./images/logo.glb', function(gltf){
+    loader.load('./idigrow/images/logo.glb', function(gltf){
       gltf.scene.traverse(function (child) {
        if (child.isMesh) {
           // 로고 모델의 첫 번째 재질의 색상을 흰색으로 변경
@@ -411,8 +411,8 @@
   </script>
 
   <!-- 공용 js -->
-  <script src="./js/common.js"></script>
-  <script src="./js/slide.js"></script>
+  <script src="./idigrow/js/common.js"></script>
+  <script src="./idigrow/js/slide.js"></script>
   <!-- 풀페이지 스크롤 시 주석 풀 것 -->
 </body>
 </html>
