@@ -33,15 +33,23 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
 
     
     cover_bg:function(){
-      $('.start_btn').hover(function(){
-        $('.loader').addClass('coverBg_start');
-        $('.loader').removeClass('coverBg_end');
-        $('#cover_mouse_custom').fadeIn(500);
-      }, function(){
-        $('.loader').removeClass('coverBg_start');
-        $('.loader').addClass('coverBg_end');
-        $('#cover_mouse_custom').fadeOut(200);
-      });
+
+      if(matchMedia("screen and (min-width: 992px)").matches){
+        // console.log("WWW");
+        $('.cover_bg .loader').css('display','block');
+        $('.start_btn').hover(function(){
+          $('.loader').addClass('coverBg_start');
+          $('.loader').removeClass('coverBg_end');
+          $('#cover_mouse_custom').fadeIn(500);
+        }, function(){
+          $('.loader').removeClass('coverBg_start');
+          $('.loader').addClass('coverBg_end');
+          $('#cover_mouse_custom').fadeOut(200);
+        });
+      }
+      else {
+        $('.cover_bg .loader').css('display','none');
+      }
 
       // 표지 마우스 포인터 관련
       const coords = { x:0, y:0 };
@@ -187,8 +195,8 @@ const Sound0203 = new Audio('./media/sound02_03.mp3');
               $('.circle_g').addClass('goo');
               setTimeout(function(){
                 $('.circle_g').removeClass('goo');
-              },2000);
-            }, 2500);
+              },1000);
+            }, 3300);
 
             // 1p 효과음 관련
             startId = setTimeout(()=>{
