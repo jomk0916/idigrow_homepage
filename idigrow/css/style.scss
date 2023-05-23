@@ -128,6 +128,7 @@ input {outline-offset:-1px;}
     }
   }
 
+
   @keyframes balloon_ani {
     0% {
       transform: translateY(0%);
@@ -150,23 +151,66 @@ input {outline-offset:-1px;}
     justify-content: center;
     align-items: center;
     .start_btn {
-      // border: 1px solid blue;
+      position: relative;
       z-index: 2;
       width: 350px;
       height: 350px;
-      // border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: clampSang(30);
       font-weight: 600;
       color: #fff;
-      // border:1px solid rgba(255,255,255,0.3);
-      // filter: drop-shadow(0px 0px 1px #fff);
       cursor: pointer;
       canvas {
         width: 100%;
       }
+      .gap_m {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 120px;
+        left: 0%;
+        display: none;
+        #cover_mouse_custom_mobile {
+          z-index: 2;
+          display: block;
+          .balloon {
+            position: relative;
+            width: 50px;
+            height: 30px;
+            animation: balloon_ani 2s ease-in-out infinite;
+            .box {
+              opacity: 1;
+              width: 100%;
+              height: 20px;
+              background-color: #f54401;
+              border-radius: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          
+            .box h3 {
+              font-family: 'SUIT-Variable';
+              font-size: 10px;
+              font-weight: 600;
+              color:#fff;
+            }
+  
+            .tale {
+              opacity: 1;
+              margin:0 auto;
+              width: 0px;
+              height: 0px;
+              border-bottom: 10px solid #f54401;
+              border-left: 4px solid transparent;
+              border-right: 4px solid transparent;
+            }
+          }
+        }
+      }
+
     }
     svg {
       display: none;
@@ -2282,6 +2326,10 @@ input {outline-offset:-1px;}
       display: none;
     }
 
+    .cover_bg .gap .start_btn .gap_m {
+      top: 200px;
+    }
+
 
     // modal
     #wrap #modal .container {
@@ -2319,20 +2367,6 @@ input {outline-offset:-1px;}
     #wrap #main #section1 .container .loader circle {
       stroke-width: 2;
     }
-
-    // #section1 {
-    //   &.sec1_ani_start .container .loader {
-    //     .circle_g .main_circle {
-    //       animation: circleScale 5s ease-in-out 1 both, circleScale2_m 3s ease-in-out 8s forwards;
-    //     }
-    //     .circle_g .second_circle {
-    //       animation: circleSecond 3s 5s forwards, circleScale3_m 3s ease-in-out 8s forwards;
-    //     }
-    //     .halfCircle {
-    //       animation: circleThird 2s 6s forwards, circleScale3_m 3s ease-in-out 8s forwards;
-    //     }
-    //   }
-    // }
 
     // 2p
     #wrap #main #section2 .container .gap {
@@ -2381,6 +2415,10 @@ input {outline-offset:-1px;}
         width: 280px;
         height: 280px;
       }
+    }
+
+    .cover_bg .gap .start_btn .gap_m {
+      top: 110px;
     }
 
     // modal
@@ -2480,6 +2518,7 @@ input {outline-offset:-1px;}
     }
   }
 
+
   /////////////////////////// 가로 반응형
 
 
@@ -2494,6 +2533,11 @@ input {outline-offset:-1px;}
     #section1 .container .loader {
       transform: translateY(-10%);
     }
+
+    .cover_bg .gap .start_btn .gap_m {
+      top: 140px;
+    }
+
   }
 
 
@@ -2524,6 +2568,10 @@ input {outline-offset:-1px;}
     // 표지
     .cover_bg .gap {
       width: 300px;
+    }
+
+    .cover_bg .gap .start_btn .gap_m {
+      top: 120px;
     }
 
     // 헤더
@@ -2563,5 +2611,23 @@ input {outline-offset:-1px;}
           font-size: 100px;
         }
       }
+    }
+  }
+
+
+  // PC , 모바일 기기 판단
+  @media (hover: hover) {
+    /* hover 가능한 경우 */
+    .cover_bg .gap .start_btn .gap_m {
+      display: none;
+    }
+  }
+  
+  @media (hover: none) { 
+   /* hover 불가능한 경우 */  
+    .cover_bg .gap .start_btn .gap_m {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }

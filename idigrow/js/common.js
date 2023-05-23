@@ -34,7 +34,13 @@ const Sound0203 = new Audio('./idigrow/media/sound02_03.mp3');
     
     cover_bg:function(){
 
-      if(matchMedia("screen and (min-width: 992px)").matches){
+      // 모바일 클릭 말풍선 추가
+      var isMobile = /Mobi/i.test(window.navigator.userAgent); // "Mobi" 가 User agent에 포함되어 있으면 모바일
+
+      if( isMobile === true ){ // 모바일
+        $('.cover_bg .loader').css('display','none');
+      }
+      else { // PC
         $('.cover_bg .loader').css('display','block');
         $('.start_btn').hover(function(){
           $('.loader').addClass('coverBg_start');
@@ -45,10 +51,7 @@ const Sound0203 = new Audio('./idigrow/media/sound02_03.mp3');
           $('.loader').addClass('coverBg_end');
           $('#cover_mouse_custom').fadeOut(200);
         });
-      }
-      else {
-        $('.cover_bg .loader').css('display','none');
-      }
+      }  
 
       // 표지 마우스 포인터 관련
       const coords = { x:0, y:0 };
@@ -325,8 +328,7 @@ const Sound0203 = new Audio('./idigrow/media/sound02_03.mp3');
       }
 
       if (window.matchMedia('(orientation: landscape)').matches && matchMedia("screen and (max-width: 899px)").matches) {
-        console.log("최초실행");
-        // portrait_m();   
+        // console.log("최초실행");
         landscape();
       }
 
@@ -335,11 +337,9 @@ const Sound0203 = new Audio('./idigrow/media/sound02_03.mp3');
       window.addEventListener('resize', function () {        
         if (window.matchMedia('(orientation: landscape)').matches && matchMedia("screen and (max-width: 1199px)").matches) {
           // 테블릿 가로모드
-          console.log("가로 모드");
           landscape();  
         }
         else {
-          console.log("세로 모드");
           portrait();    
         }
         
