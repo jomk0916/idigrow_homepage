@@ -237,27 +237,27 @@ const Sound0203 = new Audio('./idigrow/media/sound02_03.mp3');
     },
     section2:function(){
 
-      function landscape(){ // 세로모드
+      function landscape(){ // 가로모드
         let attrX = 0;
         let attrX_2 = 0;
         for(let i = 1; i < 16; i++ ){
           if( i < 9 ){
-            $(`#text${i}`).attr({ x: attrX, y : "40%" });
-            attrX += 75;
+            $(`#text${i}`).attr({ x: attrX, y : "50%" });
+            attrX += 80;
           }
           else {
-            $(`#text${i}`).attr({ x: 638 + attrX_2, y : "40%" });
+            $(`#text${i}`).attr({ x: 638 + attrX_2, y : "50%" });
             if( i == 10 ){
               attrX_2 += 30;
             }
             else {
-              attrX_2 += 70;
+              attrX_2 += 80;
             }
           }
         }
       }
 
-      function portrait(){ // 가로모드
+      function portrait(){ // 세로모드
         let attrX = 0;
         let attrX_2 = 0;
         for(let i = 1; i < 16; i++ ){
@@ -318,9 +318,16 @@ const Sound0203 = new Audio('./idigrow/media/sound02_03.mp3');
         }
       }
 
+
       if (window.matchMedia('(orientation: landscape)').matches && matchMedia("screen and (max-width: 1199px)").matches) {
         // console.log("최초실행");
         landscape();        
+      }
+
+      if (window.matchMedia('(orientation: landscape)').matches && matchMedia("screen and (max-width: 899px)").matches) {
+        console.log("최초실행");
+        // portrait_m();   
+        landscape();
       }
 
    
@@ -328,13 +335,14 @@ const Sound0203 = new Audio('./idigrow/media/sound02_03.mp3');
       window.addEventListener('resize', function () {        
         if (window.matchMedia('(orientation: landscape)').matches && matchMedia("screen and (max-width: 1199px)").matches) {
           // 테블릿 가로모드
-          // console.log("가로 모드");
-          landscape();          
+          console.log("가로 모드");
+          landscape();  
         }
         else {
-          // console.log("세로 모드");
+          console.log("세로 모드");
           portrait();    
         }
+        
       });
 
      

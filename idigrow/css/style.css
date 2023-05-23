@@ -3223,7 +3223,7 @@ input {
 }
 @media all and (max-width: 992px) {
   .cover_bg .gap {
-    margin: 0 0 0 0;
+    padding: 0 0 0 0;
   }
   .cover_bg .gap .start_btn {
     width: 500px;
@@ -3292,7 +3292,7 @@ input {
 }
 @media all and (max-width: 576px) {
   .cover_bg .gap {
-    margin: 0 0 0 0;
+    padding: 0 0 0 0;
   }
   .cover_bg .gap .start_btn {
     width: 280px;
@@ -3301,12 +3301,15 @@ input {
   #wrap #modal .container {
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   #wrap #modal .container ul {
-    padding: 80px 0px 0 0;
+    padding: 50px 0px 0 0;
     height: auto;
     font-size: 7rem;
+  }
+  #wrap #modal .container ul li {
+    line-height: 0.5;
   }
   #wrap #modal .container #modal_3d_model {
     width: 30rem;
@@ -3378,11 +3381,64 @@ input {
   }
 }
 @media screen and (max-width: 1199px) and (orientation: landscape) {
-  /* 타블렛 가로 */
   #wrap #main #section1 .container .textBox {
     top: 18%;
   }
   #section1 .container .loader {
     transform: translateY(-10%);
+  }
+}
+@media screen and (max-width: 899px) and (orientation: landscape) {
+  #wrap #modal .container {
+    display: flex;
+    flex-direction: row;
+  }
+  #wrap #modal .container ul {
+    padding: 30px 0 0 50px;
+    display: block;
+  }
+  #wrap #modal .container ul li {
+    line-height: 0.3;
+    display: block;
+  }
+  #wrap #modal .container #modal_3d_model {
+    margin: 0px 0 0 0;
+    width: 30rem;
+    height: 30rem;
+  }
+  .cover_bg .gap {
+    width: 300px;
+  }
+  #wrap #header .container {
+    padding: 0px 20px;
+  }
+  #wrap #header .container .left a {
+    width: 120px;
+  }
+  #wrap #header .container .right .ham {
+    transform: scale(0.8);
+  }
+  #wrap #main #section1 .container .textBox {
+    position: absolute;
+    top: 20%;
+  }
+  #wrap #main #section1 .container .textBox h1 {
+    font-size: 30px;
+  }
+  #wrap #main #section1 .container .textBox p {
+    font-size: 12px;
+  }
+  #section1 .container .loader {
+    transform: translateY(10%);
+    padding: 0 0 80px 0;
+  }
+  #wrap #main #section2 .container .gap .sec2_textBox {
+    margin: 30px 0 0 0;
+  }
+  #wrap #main #section2 .container .gap .sec2_textBox .main_text svg {
+    height: 100px;
+  }
+  #wrap #main #section2 .container .gap .sec2_textBox .main_text svg text {
+    font-size: 100px;
   }
 }
