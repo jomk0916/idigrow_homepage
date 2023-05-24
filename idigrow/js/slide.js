@@ -1,4 +1,7 @@
 let sec2_soundEffect = '';
+let dist = 0;
+let startY;
+let scroll = false;
 
 
 $(document).ready(function(){
@@ -366,9 +369,6 @@ $(document).ready(function(){
         stopSound(Sound0203);
     }
 
-    let dist = 0;
-    let startY;
-
     $(window).on("touchstart",function(e){
         startY = e.originalEvent.changedTouches[0].clientY;
     });
@@ -381,171 +381,177 @@ $(document).ready(function(){
         // const currentY = e.originalEvent.changedTouches[0].clientY;/
         //     dist = currentY - startY;
         if( startValue == 1 ){ // 표지 lock
-            ///////////////////////////// 스크롤 내릴 때 /////////////////////////////
-            if (e.type === "wheel" && e.originalEvent.deltaY > 0 || e.type === "touchend" && dist < 0) {   
-                playSound(next);
-                if(i == 3){
+            if(!scroll){
+                scroll = true;
+                ///////////////////////////// 스크롤 내릴 때 /////////////////////////////
+                if (e.type === "wheel" && e.originalEvent.deltaY > 0 || e.type === "touchend" && dist < 0) {   
+                    playSound(next);
+                    if(i == 3){
 
-                }else{
-                    i++;
-                }
-                $("#btn li").removeClass("on");
-                $("#btn li").eq(i).addClass("on");
-                $("#main section").css({'opacity':'0','transition':'all 0.5s'});
-                $("#main section").eq(i).css({'opacity':'1','transition':'all 0.5s'});
-
-                if(i == 0){
-                    $('#section2').removeClass('sec2_ani_re');
-                }
-                if(i == 1){
-                    // 1p 효과음 정지
-                    sec1_soundEffect_stop();
-
-                    // 1p 끝
-                    $('.circle_all').addClass('js_animation');
-                    $('.textBox').addClass('js_animation');
-
-                    $('.circle_all').removeClass('js_animation_re');
-                    $('.textBox').removeClass('js_animation_re');
-
-                    $("#main section").css({'opacity':'0','transition':'all 0.5s','transition-delay':'0s'});
-                    $("#main section").eq(i).css({'opacity':'1','transition':'all 0.5s','transition-delay':'0s'});
-
-                    // 2p
-                    if($("#section2").hasClass("sec2_ani_start") === false) {
-                        $('#section2').addClass('sec2_ani_start');
-                        sec2_optimi();
-                        // 2p 효과음 시작
-                        sec2_soundEffect_start();
+                    }else{
+                        i++;
                     }
-                    else {
-                        $('#section2').addClass('sec2_ani_re');
+                    $("#btn li").removeClass("on");
+                    $("#btn li").eq(i).addClass("on");
+                    $("#main section").css({'opacity':'0','transition':'all 0.5s'});
+                    $("#main section").eq(i).css({'opacity':'1','transition':'all 0.5s'});
+
+                    if(i == 0){
+                        $('#section2').removeClass('sec2_ani_re');
+                    }
+                    if(i == 1){
+                        // 1p 효과음 정지
+                        sec1_soundEffect_stop();
+
+                        // 1p 끝
+                        $('.circle_all').addClass('js_animation');
+                        $('.textBox').addClass('js_animation');
+
+                        $('.circle_all').removeClass('js_animation_re');
+                        $('.textBox').removeClass('js_animation_re');
+
+                        $("#main section").css({'opacity':'0','transition':'all 0.5s','transition-delay':'0s'});
+                        $("#main section").eq(i).css({'opacity':'1','transition':'all 0.5s','transition-delay':'0s'});
+
+                        // 2p
+                        if($("#section2").hasClass("sec2_ani_start") === false) {
+                            $('#section2').addClass('sec2_ani_start');
+                            sec2_optimi();
+                            // 2p 효과음 시작
+                            sec2_soundEffect_start();
+                        }
+                        else {
+                            $('#section2').addClass('sec2_ani_re');
+                        }
+
+                        // 헤더 흰색 로고 제거
+                        $('#header').removeClass('logo_active');
+
+                    value = 1;
+                    }
+                    if(i == 2){
+                        // 2p 끝
+                        $('#section2').removeClass('sec2_ani_re');
+
+                        // 2p 효과음 정지
+                        sec2_soundEffect_stop();
+
+                        // 3p 시작
+                        $('#header').addClass('logo_active_3p');
+
+                        $('.top_btn').addClass('on');
+                        $('.ani_box').addClass('on');
+                        $('.circle1').addClass('on');
+                        $('.circle2').addClass('on');
+                        $('.circle3').addClass('on');
+                        $('.move_circle').addClass('on');
+                        $('.cnt3_box').addClass('on');
+                    }
+                    if(i == 3){
+                        $('#section2').removeClass('sec2_ani_re');
+                        $('#header').removeClass('logo_active');
+                        $('#header').removeClass('logo_active_3p');
+                        //4p 모션 시작
+                        $('.move4_circle').addClass('on');
+                        $('.cnt_box').addClass('on');
+                        $('.bg_box').addClass('on');
+                        //4p 모션 끝
+
+                        //3p 모션 제거 시작
+                        $('.ani_box').removeClass('on');
+                        $('.circle1').removeClass('on');
+                        $('.circle2').removeClass('on');
+                        $('.circle3').removeClass('on');
+                        $('.move_circle').removeClass('on');
+                        $('.cnt3_box').removeClass('on');
+                        //3p 모션 제거 끝
+                        //3p 올라갈때 모션 제거 시작
+                        $('.move_circle').removeClass('up');
+                        $('.ani_box').removeClass('up');
+                        $('.circle1').removeClass('up');
+                        $('.circle2').removeClass('up');
+                        $('.circle3').removeClass('up');
+                        $('.cnt3_box').removeClass('up');
+                        //3p 올라갈때 모션 제거 끝
                     }
 
-                    // 헤더 흰색 로고 제거
-                    $('#header').removeClass('logo_active');
+                ///////////////////////////// 스크롤 올릴 때 /////////////////////////////
+                }else if (e.type === "wheel" || e.type === "touchend" && dist > 0) {                
+                    playSound(next);
+                    if(i == 0){
 
-                value = 1;
+                    }else{
+                        i--;
+                    }
+                    $("#btn li").removeClass("on");
+                    $("#btn li").eq(i).addClass("on");
+                    $("#main section").css('opacity','0');
+                    $("#main section").eq(i).css('opacity','1');
+
+                    if(i == 0 && value == 1){
+                        $('.circle_all').addClass('js_animation_re');
+                        $('.textBox').addClass('js_animation_re');
+
+                        $('.circle_all').removeClass('js_animation');
+                        $('.textBox').removeClass('js_animation');
+
+                        $('#header').removeClass('logo_active');
+                        $('#section2').removeClass('sec2_ani_re');
+
+                        // 2p 효과음 정지
+                        sec2_soundEffect_stop();
+                    }
+                    else if (i == 1){
+                        // 2p
+                        if($("#section2").hasClass("sec2_ani_start") === false) {
+                            $('#section2').addClass('sec2_ani_start');
+                        }
+                        else {
+                            $('#section2').addClass('sec2_ani_re');
+                        }
+                        $('#header').removeClass('logo_active_3p');
+                        $('#header').removeClass('logo_active');
+                        $('.top_btn').removeClass('on');
+                        //3p 모션 제거 시작
+                        $('.ani_box').removeClass('on');
+                        $('.circle1').removeClass('on');
+                        $('.circle2').removeClass('on');
+                        $('.circle3').removeClass('on');
+                        $('.move_circle').removeClass('on');
+                        $('.cnt3_box').removeClass('on');
+                        //3p 모션 제거 끝
+                        //3p 올라갈때 모션 제거 시작
+                        $('.move_circle').removeClass('up');
+                        $('.ani_box').removeClass('up');
+                        $('.circle1').removeClass('up');
+                        $('.circle2').removeClass('up');
+                        $('.circle3').removeClass('up');
+                        $('.cnt3_box').removeClass('up');
+                        //3p 올라갈때 모션 제거 끝
+                    }
+                    else if (i == 2){
+                        $('#header').addClass('logo_active_3p');
+                        //3p 올라갈때 모션 시작
+                        $('.move_circle').addClass('up');
+                        $('.ani_box').addClass('up');
+                        $('.circle1').addClass('up');
+                        $('.circle2').addClass('up');
+                        $('.circle3').addClass('up');
+                        $('.cnt3_box').addClass('up');
+                        //3p 올라갈때 모션 끝
+                        //4p 모션 제거 시작
+                        $('.move4_circle').removeClass('on');
+                        $('.cnt_box').removeClass('on');
+                        $('.bg_box').removeClass('on');
+                        //4p 모션 제거 끝
+                    }
+                }
+                dist = 0; // 값 초기화
+                navi_start();
+                setTimeout(function(){
+                    scroll = false;
+                }, 500);
             }
-            if(i == 2){
-                // 2p 끝
-                $('#section2').removeClass('sec2_ani_re');
-
-                // 2p 효과음 정지
-                sec2_soundEffect_stop();
-
-                // 3p 시작
-                $('#header').addClass('logo_active_3p');
-
-                $('.top_btn').addClass('on');
-                $('.ani_box').addClass('on');
-                $('.circle1').addClass('on');
-                $('.circle2').addClass('on');
-                $('.circle3').addClass('on');
-                $('.move_circle').addClass('on');
-                $('.cnt3_box').addClass('on');
-            }
-            if(i == 3){
-                $('#section2').removeClass('sec2_ani_re');
-                $('#header').removeClass('logo_active');
-                $('#header').removeClass('logo_active_3p');
-                //4p 모션 시작
-                $('.move4_circle').addClass('on');
-                $('.cnt_box').addClass('on');
-                $('.bg_box').addClass('on');
-                //4p 모션 끝
-
-                //3p 모션 제거 시작
-                $('.ani_box').removeClass('on');
-                $('.circle1').removeClass('on');
-                $('.circle2').removeClass('on');
-                $('.circle3').removeClass('on');
-                $('.move_circle').removeClass('on');
-                $('.cnt3_box').removeClass('on');
-                //3p 모션 제거 끝
-                //3p 올라갈때 모션 제거 시작
-                $('.move_circle').removeClass('up');
-                $('.ani_box').removeClass('up');
-                $('.circle1').removeClass('up');
-                $('.circle2').removeClass('up');
-                $('.circle3').removeClass('up');
-                $('.cnt3_box').removeClass('up');
-                //3p 올라갈때 모션 제거 끝
-            }
-
-            ///////////////////////////// 스크롤 올릴 때 /////////////////////////////
-            }else if (e.type === "wheel" || e.type === "touchend" && dist > 0) {                
-                playSound(next);
-                if(i == 0){
-
-                }else{
-                    i--;
-                }
-                $("#btn li").removeClass("on");
-                $("#btn li").eq(i).addClass("on");
-                $("#main section").css('opacity','0');
-                $("#main section").eq(i).css('opacity','1');
-
-                if(i == 0 && value == 1){
-                    $('.circle_all').addClass('js_animation_re');
-                    $('.textBox').addClass('js_animation_re');
-
-                    $('.circle_all').removeClass('js_animation');
-                    $('.textBox').removeClass('js_animation');
-
-                    $('#header').removeClass('logo_active');
-                    $('#section2').removeClass('sec2_ani_re');
-
-                    // 2p 효과음 정지
-                    sec2_soundEffect_stop();
-                }
-                else if (i == 1){
-                    // 2p
-                    if($("#section2").hasClass("sec2_ani_start") === false) {
-                        $('#section2').addClass('sec2_ani_start');
-                    }
-                    else {
-                        $('#section2').addClass('sec2_ani_re');
-                    }
-                    $('#header').removeClass('logo_active_3p');
-                    $('#header').removeClass('logo_active');
-                    $('.top_btn').removeClass('on');
-                    //3p 모션 제거 시작
-                    $('.ani_box').removeClass('on');
-                    $('.circle1').removeClass('on');
-                    $('.circle2').removeClass('on');
-                    $('.circle3').removeClass('on');
-                    $('.move_circle').removeClass('on');
-                    $('.cnt3_box').removeClass('on');
-                    //3p 모션 제거 끝
-                    //3p 올라갈때 모션 제거 시작
-                    $('.move_circle').removeClass('up');
-                    $('.ani_box').removeClass('up');
-                    $('.circle1').removeClass('up');
-                    $('.circle2').removeClass('up');
-                    $('.circle3').removeClass('up');
-                    $('.cnt3_box').removeClass('up');
-                    //3p 올라갈때 모션 제거 끝
-                }
-                else if (i == 2){
-                    $('#header').addClass('logo_active_3p');
-                    //3p 올라갈때 모션 시작
-                    $('.move_circle').addClass('up');
-                    $('.ani_box').addClass('up');
-                    $('.circle1').addClass('up');
-                    $('.circle2').addClass('up');
-                    $('.circle3').addClass('up');
-                    $('.cnt3_box').addClass('up');
-                    //3p 올라갈때 모션 끝
-                    //4p 모션 제거 시작
-                    $('.move4_circle').removeClass('on');
-                    $('.cnt_box').removeClass('on');
-                    $('.bg_box').removeClass('on');
-                    //4p 모션 제거 끝
-                }
-        }
-        dist = 0; // 값 초기화
-        navi_start();
         }
     });
 
