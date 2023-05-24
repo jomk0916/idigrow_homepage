@@ -15,9 +15,6 @@ const click = new Audio('./idigrow/media/click.mp3');
 const next = new Audio('./idigrow/media/next.mp3');
 const Sound0101 = new Audio('./idigrow/media/sound01_01.mp3');
 const Sound0102 = new Audio('./idigrow/media/sound01_02.mp3');
-const Sound0201 = new Audio('./idigrow/media/sound02_01.mp3');
-const Sound0202 = new Audio('./idigrow/media/sound02_02.mp3');
-const Sound0203 = new Audio('./idigrow/media/sound02_03.mp3');
 
 ;(function($){
   const idgrow = {
@@ -205,8 +202,8 @@ const Sound0203 = new Audio('./idigrow/media/sound02_03.mp3');
               playSound(Sound0101);
               startId = setTimeout(()=>{
                 playSound(Sound0102);
-              }, 3800)
-            }, 300)
+              }, 3000)
+            }, 1000)
           }
         }
       });

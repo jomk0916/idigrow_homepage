@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* 기본 애니메이션 스타일 */
+    .animation {
+        animation-name: example;
+        animation-duration: 4s;
+    }
+
+    /* 화면 너비 600px 이하에서의 애니메이션 스타일 */
+    @media screen and (max-width: 600px) {
+        .animation {
+            animation-name: example-small;
+            animation-duration: 2s;
+        }
+    }
+
+    /* 키프레임 애니메이션 정의 */
+    @keyframes example {
+        0%   {background-color:red; left:0px; top:0px;}
+        50%  {background-color:yellow; left:200px; top:0px;}
+        100% {background-color:red; left:0px; top:0px;}
+    }
+
+    /* 작은 화면을 위한 키프레임 애니메이션 정의 */
+    @keyframes example-small {
+        0%   {background-color:black; left:0px; top:0px;}
+        50%  {background-color:blue; left:100px; top:0px;}
+        100% {background-color:red; left:0px; top:0px;}
+    }
+</style>
+</head>
+<body>
+
+<div class="animation" style="width: 100px; height: 100px; position: relative;"></div>
+
+</body>
+</html>

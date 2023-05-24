@@ -361,9 +361,6 @@ $(document).ready(function(){
     }
     function sec2_soundEffect_stop(){
         clearTimeout(sec2_soundEffect);
-        stopSound(Sound0201);
-        stopSound(Sound0202);
-        stopSound(Sound0203);
     }
 
     let dist = 0;
@@ -566,6 +563,7 @@ $(document).ready(function(){
         $('.top_btn').removeClass('on');
 
         $('#header').removeClass('logo_active_3p');
+        $('#header').removeClass('logo_active');
     });
 
 });

@@ -3155,24 +3155,6 @@ input {
     transform: translateX(17%);
   }
 }
-@keyframes circleScale2_m {
-  0% {
-    fill: #FF4713;
-    transform: scale(1);
-  }
-  100% {
-    fill: #FF4713;
-    transform: translateX(25%) scale(1);
-  }
-}
-@keyframes circleScale3_m {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(25%);
-  }
-}
 @keyframes circleSecond {
   0% {
     transform: translate(-20%, 20%);
@@ -3487,6 +3469,33 @@ input {
   #section1 .container .loader {
     transform: translateY(10%);
     padding: 0 0 80px 0;
+  }
+  @keyframes circleScale2_m {
+    0% {
+      fill: #FF4713;
+      transform: translateX(0%) scale(1);
+    }
+    100% {
+      fill: #FF4713;
+      transform: translateX(65%) scale(1);
+    }
+  }
+  @keyframes circleScale3_m {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(65%);
+    }
+  }
+  #wrap #main #section1.sec1_ani_start .container .loader .circle_g .main_circle {
+    animation: circleScale 3s ease-in-out 1 both, circleScale2_m 1s ease-in-out 5s forwards;
+  }
+  #wrap #main #section1.sec1_ani_start .container .loader .circle_g .second_circle {
+    animation: circleSecond 2s 3s forwards, circleScale3_m 1s ease-in-out 5s forwards;
+  }
+  #wrap #main #section1.sec1_ani_start .container .loader .halfCircle {
+    animation: circleThird 2s 3s forwards, circleScale3_m 1s ease-in-out 5s forwards;
   }
   #wrap #main #section2 .container .gap .sec2_textBox {
     margin: 30px 0 0 0;
