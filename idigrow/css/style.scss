@@ -1645,9 +1645,9 @@ input {outline-offset:-1px;}
             .contact_wrap{margin-top: -10px;margin-left: -10px;width: clampMunMb(470);height: clampMunMb(350);}
             .contact_wrapper{width: clampMunMb(430);height: clampMunMb(350);padding: clampMunMb(20) clampMunMb(10);}
             .input_box{margin-top: clampMunMb(20);}
-            input[placeholder]{width: clampMunMb(200);height: clampMunMb(50);font-size: clampMunMb(20);margin-bottom: clampMunMb(20);}
-            .input_box p:nth-child(2) input, .input_box p:nth-child(4) input{margin-left: 0;}
-            .input_box p:last-child input{width: clampMunMb(410);}
+            input[placeholder]{width: clampMunMb(190);height: clampMunMb(50);font-size: clampMunMb(20);margin-bottom: clampMunMb(20);}
+            .input_box p:nth-child(2) input, .input_box p:nth-child(4) input{margin-left: clampMunMb(10);}
+            .input_box p:last-child input{width: clampMunMb(400);}
             .send_btn{width: clampMunMb(300);height: clampMunMb(50);border-radius: clampMunMb(50);font-size: clampMunMb(20);line-height: clampMunMb(50);margin-top: clampMunMb(30);}
             .close_btn{width: clampMunMb(30);height: clampMunMb(30);margin-left: clampMunMb(10);}
 

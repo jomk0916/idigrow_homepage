@@ -2226,16 +2226,16 @@ input {
     margin-top: clamp(1rem, 3.4722222222vw, 2rem);
   }
   #wrap #main #section3 input[placeholder] {
-    width: clamp(1rem, 34.7222222222vw, 20rem);
+    width: clamp(1rem, 32.9861111111vw, 19rem);
     height: clamp(1rem, 8.6805555556vw, 5rem);
     font-size: clamp(1rem, 3.4722222222vw, 2rem);
     margin-bottom: clamp(1rem, 3.4722222222vw, 2rem);
   }
   #wrap #main #section3 .input_box p:nth-child(2) input, #wrap #main #section3 .input_box p:nth-child(4) input {
-    margin-left: 0;
+    margin-left: clamp(1rem, 1.7361111111vw, 1rem);
   }
   #wrap #main #section3 .input_box p:last-child input {
-    width: clamp(1rem, 71.1805555556vw, 41rem);
+    width: clamp(1rem, 69.4444444444vw, 40rem);
   }
   #wrap #main #section3 .send_btn {
     width: clamp(1rem, 52.0833333333vw, 30rem);
